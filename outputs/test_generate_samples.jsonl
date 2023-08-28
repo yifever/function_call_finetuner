@@ -1,0 +1,232 @@
+{
+    "description": {
+        "name": "get_current_weather",
+        "description": "Get the current weather in a given location",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "location": {
+                    "type": "string",
+                    "description": "The city and state, e.g. San Francisco, CA"
+                },
+                "unit": {
+                    "type": "string",
+                    "enum": [
+                        "celsius",
+                        "fahrenheit"
+                    ]
+                }
+            },
+            "required": [
+                "location"
+            ]
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"get_current_weather\",\n        \"description\": \"Get the current weather in a given location\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"location\": {\n                    \"type\": \"string\",\n                    \"description\": \"The city and state, e.g. San Francisco, CA\"\n                },\n                \"unit\": {\n                    \"type\": \"string\",\n                    \"enum\": [\"celsius\", \"fahrenheit\"]\n                }\n            },\n            \"required\": [\"location\"]\n        }\n    },\n    \"user_prompt\": \"What is the current weather in San Francisco, CA?\",\n    \"function_call\": {\n        \"name\": \"get_current_weather\",\n        \"arguments\": {\n            \"location\": \"San Francisco, CA\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "get_current_weather",
+            "description": "Get the current weather in a given location",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "location": {
+                        "type": "string",
+                        "description": "The city and state, e.g. San Francisco, CA"
+                    },
+                    "unit": {
+                        "type": "string",
+                        "enum": [
+                            "celsius",
+                            "fahrenheit"
+                        ]
+                    }
+                },
+                "required": [
+                    "location"
+                ]
+            }
+        },
+        "user_prompt": "What is the current weather in San Francisco, CA?",
+        "function_call": {
+            "name": "get_current_weather",
+            "arguments": {
+                "location": "San Francisco, CA"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}    \n\n### \nWrite a user prompt that would call this function, and the function call.\nReturn the output as this example:\n    {{\n        \"function_description\": \n        {FUNCTION_EXAMPLE},\n        \"user_prompt\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'name': 'get_current_weather', 'description': 'Get the current weather in a given location', 'parameters': {'type': 'object', 'properties': {'location': {'type': 'string', 'description': 'The city and state, e.g. San Francisco, CA'}, 'unit': {'type': 'string', 'enum': ['celsius', 'fahrenheit']}}, 'required': ['location']}}",
+        "PROMPT_EXAMPLE": "\n\"what is the weather going to be like in Glasgow, Scotland over the next 7 days\"\n",
+        "FUNCTION_EXAMPLE": "\n{\n    \"name\": \"get_n_day_weather_forecast\",\n    \"description\": \"Get an N-day weather forecast\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"format\": {\n                \"type\": \"string\",\n                \"enum\": [\"celsius\", \"fahrenheit\"],\n                \"description\": \"The temperature unit to use. Infer this from the users location.\",\n            },\n            \"num_days\": {\n                \"type\": \"integer\",\n                \"description\": \"The number of days to forecast\",\n            }\n        },\n        \"required\": [\"location\", \"format\", \"num_days\"]\n    },\n}\n",
+        "CALL_EXAMPLE": "\n    {\n        \"name\": \"get_n_day_weather_forecast\",\n        \"arguments\": \"{\n  \"location\": \"Glasgow, Scotland\",\n  \"format\": \"celsius\",\n  \"num_days\": 5\n}\"\n    }\n"
+    }
+}
+{
+    "description": {
+        "name": "ask_database",
+        "description": "Use this function to answer user questions about music. Input should be a fully formed SQL query.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "query": {
+                    "type": "string",
+                    "description": "\nSQL query extracting info to answer the user's question.\nSQL should be written using this database schema:\n\nTable: albums\nColumns: AlbumId, Title, ArtistId\nTable: sqlite_sequence\nColumns: name, seq\nTable: artists\nColumns: ArtistId, Name\nTable: customers\nColumns: CustomerId, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId\nTable: employees\nColumns: EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email\nTable: genres\nColumns: GenreId, Name\nTable: invoices\nColumns: InvoiceId, CustomerId, InvoiceDate, BillingAddress, BillingCity, BillingState, BillingCountry, BillingPostalCode, Total\nTable: invoice_items\nColumns: InvoiceLineId, InvoiceId, TrackId, UnitPrice, Quantity\nTable: media_types\nColumns: MediaTypeId, Name\nTable: playlists\nColumns: PlaylistId, Name\nTable: playlist_track\nColumns: PlaylistId, TrackId\nTable: tracks\nColumns: TrackId, Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice\nTable: sqlite_stat1\nColumns: tbl, idx, stat\n\nThe query should be returned in plain text, not in JSON.\n"
+                }
+            },
+            "required": [
+                "query"
+            ]
+        }
+    },
+    "completion-content": "{\n    \"function_description\": \n{\n    \"name\": \"ask_database\",\n    \"description\": \"Use this function to answer user questions about music. Input should be a fully formed SQL query.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"query\": {\n                \"type\": \"string\",\n                \"description\": \"\\nSQL query extracting info to answer the user's question.\\nSQL should be written using this database schema:\\n\\nTable: albums\\nColumns: AlbumId, Title, ArtistId\\nTable: sqlite_sequence\\nColumns: name, seq\\nTable: artists\\nColumns: ArtistId, Name\\nTable: customers\\nColumns: CustomerId, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId\\nTable: employees\\nColumns: EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email\\nTable: genres\\nColumns: GenreId, Name\\nTable: invoices\\nColumns: InvoiceId, CustomerId, InvoiceDate, BillingAddress, BillingCity, BillingState, BillingCountry, BillingPostalCode, Total\\nTable: invoice_items\\nColumns: InvoiceLineId, InvoiceId, TrackId, UnitPrice, Quantity\\nTable: media_types\\nColumns: MediaTypeId, Name\\nTable: playlists\\nColumns: PlaylistId, Name\\nTable: playlist_track\\nColumns: PlaylistId, TrackId\\nTable: tracks\\nColumns: TrackId, Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice\\nTable: sqlite_stat1\\nColumns: tbl, idx, stat\\n\\nThe query should be returned in plain text, not in JSON.\\n\"\n            }\n        },\n        \"required\": [\"query\"]\n    }\n}\n,\n        \"user_prompt\": \n\"Please provide a SQL query to extract information about the albums with the genre 'Rock'\"\n,\n        \"function_call\": \n    {\n        \"name\": \"ask_database\",\n        \"arguments\": {\n            \"query\": \"SELECT * FROM albums WHERE GenreId = (SELECT GenreId FROM genres WHERE Name = 'Rock')\"\n        }\n    }\n\n}",
+    "data": {
+        "function_description": {
+            "name": "ask_database",
+            "description": "Use this function to answer user questions about music. Input should be a fully formed SQL query.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "query": {
+                        "type": "string",
+                        "description": "\nSQL query extracting info to answer the user's question.\nSQL should be written using this database schema:\n\nTable: albums\nColumns: AlbumId, Title, ArtistId\nTable: sqlite_sequence\nColumns: name, seq\nTable: artists\nColumns: ArtistId, Name\nTable: customers\nColumns: CustomerId, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId\nTable: employees\nColumns: EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email\nTable: genres\nColumns: GenreId, Name\nTable: invoices\nColumns: InvoiceId, CustomerId, InvoiceDate, BillingAddress, BillingCity, BillingState, BillingCountry, BillingPostalCode, Total\nTable: invoice_items\nColumns: InvoiceLineId, InvoiceId, TrackId, UnitPrice, Quantity\nTable: media_types\nColumns: MediaTypeId, Name\nTable: playlists\nColumns: PlaylistId, Name\nTable: playlist_track\nColumns: PlaylistId, TrackId\nTable: tracks\nColumns: TrackId, Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice\nTable: sqlite_stat1\nColumns: tbl, idx, stat\n\nThe query should be returned in plain text, not in JSON.\n"
+                    }
+                },
+                "required": [
+                    "query"
+                ]
+            }
+        },
+        "user_prompt": "Please provide a SQL query to extract information about the albums with the genre 'Rock'",
+        "function_call": {
+            "name": "ask_database",
+            "arguments": {
+                "query": "SELECT * FROM albums WHERE GenreId = (SELECT GenreId FROM genres WHERE Name = 'Rock')"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}    \n\n### \nWrite a user prompt that would call this function, and the function call.\nReturn the output as this example:\n    {{\n        \"function_description\": \n        {FUNCTION_EXAMPLE},\n        \"user_prompt\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'name': 'ask_database', 'description': 'Use this function to answer user questions about music. Input should be a fully formed SQL query.', 'parameters': {'type': 'object', 'properties': {'query': {'type': 'string', 'description': \"\\nSQL query extracting info to answer the user's question.\\nSQL should be written using this database schema:\\n\\nTable: albums\\nColumns: AlbumId, Title, ArtistId\\nTable: sqlite_sequence\\nColumns: name, seq\\nTable: artists\\nColumns: ArtistId, Name\\nTable: customers\\nColumns: CustomerId, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId\\nTable: employees\\nColumns: EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email\\nTable: genres\\nColumns: GenreId, Name\\nTable: invoices\\nColumns: InvoiceId, CustomerId, InvoiceDate, BillingAddress, BillingCity, BillingState, BillingCountry, BillingPostalCode, Total\\nTable: invoice_items\\nColumns: InvoiceLineId, InvoiceId, TrackId, UnitPrice, Quantity\\nTable: media_types\\nColumns: MediaTypeId, Name\\nTable: playlists\\nColumns: PlaylistId, Name\\nTable: playlist_track\\nColumns: PlaylistId, TrackId\\nTable: tracks\\nColumns: TrackId, Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice\\nTable: sqlite_stat1\\nColumns: tbl, idx, stat\\n\\nThe query should be returned in plain text, not in JSON.\\n\"}}, 'required': ['query']}}",
+        "PROMPT_EXAMPLE": "\n\"what is the weather going to be like in Glasgow, Scotland over the next 7 days\"\n",
+        "FUNCTION_EXAMPLE": "\n{\n    \"name\": \"get_n_day_weather_forecast\",\n    \"description\": \"Get an N-day weather forecast\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"format\": {\n                \"type\": \"string\",\n                \"enum\": [\"celsius\", \"fahrenheit\"],\n                \"description\": \"The temperature unit to use. Infer this from the users location.\",\n            },\n            \"num_days\": {\n                \"type\": \"integer\",\n                \"description\": \"The number of days to forecast\",\n            }\n        },\n        \"required\": [\"location\", \"format\", \"num_days\"]\n    },\n}\n",
+        "CALL_EXAMPLE": "\n    {\n        \"name\": \"get_n_day_weather_forecast\",\n        \"arguments\": \"{\n  \"location\": \"Glasgow, Scotland\",\n  \"format\": \"celsius\",\n  \"num_days\": 5\n}\"\n    }\n"
+    }
+}
+{
+    "description": {
+        "name": "get_current_weather",
+        "description": "Get the current weather in a given location",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "location": {
+                    "type": "string",
+                    "description": "The city and state, e.g. San Francisco, CA"
+                },
+                "unit": {
+                    "type": "string",
+                    "enum": [
+                        "celsius",
+                        "fahrenheit"
+                    ]
+                }
+            },
+            "required": [
+                "location"
+            ]
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"get_current_weather\",\n        \"description\": \"Get the current weather in a given location\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"location\": {\n                    \"type\": \"string\",\n                    \"description\": \"The city and state, e.g. San Francisco, CA\"\n                },\n                \"unit\": {\n                    \"type\": \"string\",\n                    \"enum\": [\"celsius\", \"fahrenheit\"]\n                }\n            },\n            \"required\": [\"location\"]\n        }\n    },\n    \"user_prompt\": \"What is the current weather in New York, NY?\",\n    \"function_call\": {\n        \"name\": \"get_current_weather\",\n        \"arguments\": {\n            \"location\": \"New York, NY\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "get_current_weather",
+            "description": "Get the current weather in a given location",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "location": {
+                        "type": "string",
+                        "description": "The city and state, e.g. San Francisco, CA"
+                    },
+                    "unit": {
+                        "type": "string",
+                        "enum": [
+                            "celsius",
+                            "fahrenheit"
+                        ]
+                    }
+                },
+                "required": [
+                    "location"
+                ]
+            }
+        },
+        "user_prompt": "What is the current weather in New York, NY?",
+        "function_call": {
+            "name": "get_current_weather",
+            "arguments": {
+                "location": "New York, NY"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}    \n\n### \nWrite a user prompt that would call this function, and the function call.\nReturn the output as this example:\n    {{\n        \"function_description\": \n        {FUNCTION_EXAMPLE},\n        \"user_prompt\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'name': 'get_current_weather', 'description': 'Get the current weather in a given location', 'parameters': {'type': 'object', 'properties': {'location': {'type': 'string', 'description': 'The city and state, e.g. San Francisco, CA'}, 'unit': {'type': 'string', 'enum': ['celsius', 'fahrenheit']}}, 'required': ['location']}}",
+        "PROMPT_EXAMPLE": "\n\"what is the weather going to be like in Glasgow, Scotland over the next 7 days\"\n",
+        "FUNCTION_EXAMPLE": "\n{\n    \"name\": \"get_n_day_weather_forecast\",\n    \"description\": \"Get an N-day weather forecast\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"format\": {\n                \"type\": \"string\",\n                \"enum\": [\"celsius\", \"fahrenheit\"],\n                \"description\": \"The temperature unit to use. Infer this from the users location.\",\n            },\n            \"num_days\": {\n                \"type\": \"integer\",\n                \"description\": \"The number of days to forecast\",\n            }\n        },\n        \"required\": [\"location\", \"format\", \"num_days\"]\n    },\n}\n",
+        "CALL_EXAMPLE": "\n    {\n        \"name\": \"get_n_day_weather_forecast\",\n        \"arguments\": \"{\n  \"location\": \"Glasgow, Scotland\",\n  \"format\": \"celsius\",\n  \"num_days\": 5\n}\"\n    }\n"
+    }
+}
+{
+    "description": {
+        "name": "ask_database",
+        "description": "Use this function to answer user questions about music. Input should be a fully formed SQL query.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "query": {
+                    "type": "string",
+                    "description": "\nSQL query extracting info to answer the user's question.\nSQL should be written using this database schema:\n\nTable: albums\nColumns: AlbumId, Title, ArtistId\nTable: sqlite_sequence\nColumns: name, seq\nTable: artists\nColumns: ArtistId, Name\nTable: customers\nColumns: CustomerId, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId\nTable: employees\nColumns: EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email\nTable: genres\nColumns: GenreId, Name\nTable: invoices\nColumns: InvoiceId, CustomerId, InvoiceDate, BillingAddress, BillingCity, BillingState, BillingCountry, BillingPostalCode, Total\nTable: invoice_items\nColumns: InvoiceLineId, InvoiceId, TrackId, UnitPrice, Quantity\nTable: media_types\nColumns: MediaTypeId, Name\nTable: playlists\nColumns: PlaylistId, Name\nTable: playlist_track\nColumns: PlaylistId, TrackId\nTable: tracks\nColumns: TrackId, Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice\nTable: sqlite_stat1\nColumns: tbl, idx, stat\n\nThe query should be returned in plain text, not in JSON.\n"
+                }
+            },
+            "required": [
+                "query"
+            ]
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"ask_database\",\n        \"description\": \"Use this function to answer user questions about music. Input should be a fully formed SQL query.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"query\": {\n                    \"type\": \"string\",\n                    \"description\": \"\\nSQL query extracting info to answer the user's question.\\nSQL should be written using this database schema:\\n\\nTable: albums\\nColumns: AlbumId, Title, ArtistId\\nTable: sqlite_sequence\\nColumns: name, seq\\nTable: artists\\nColumns: ArtistId, Name\\nTable: customers\\nColumns: CustomerId, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId\\nTable: employees\\nColumns: EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email\\nTable: genres\\nColumns: GenreId, Name\\nTable: invoices\\nColumns: InvoiceId, CustomerId, InvoiceDate, BillingAddress, BillingCity, BillingState, BillingCountry, BillingPostalCode, Total\\nTable: invoice_items\\nColumns: InvoiceLineId, InvoiceId, TrackId, UnitPrice, Quantity\\nTable: media_types\\nColumns: MediaTypeId, Name\\nTable: playlists\\nColumns: PlaylistId, Name\\nTable: playlist_track\\nColumns: PlaylistId, TrackId\\nTable: tracks\\nColumns: TrackId, Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice\\nTable: sqlite_stat1\\nColumns: tbl, idx, stat\\n\\nThe query should be returned in plain text, not in JSON.\\n\"\n                }\n            },\n            \"required\": [\"query\"]\n        }\n    },\n    \"user_prompt\": \"Please provide an SQL query to extract information about music.\",\n    \"function_call\": {\n        \"name\": \"ask_database\",\n        \"arguments\": {\n            \"query\": \"SELECT * FROM albums WHERE ArtistId = 1;\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "ask_database",
+            "description": "Use this function to answer user questions about music. Input should be a fully formed SQL query.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "query": {
+                        "type": "string",
+                        "description": "\nSQL query extracting info to answer the user's question.\nSQL should be written using this database schema:\n\nTable: albums\nColumns: AlbumId, Title, ArtistId\nTable: sqlite_sequence\nColumns: name, seq\nTable: artists\nColumns: ArtistId, Name\nTable: customers\nColumns: CustomerId, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId\nTable: employees\nColumns: EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email\nTable: genres\nColumns: GenreId, Name\nTable: invoices\nColumns: InvoiceId, CustomerId, InvoiceDate, BillingAddress, BillingCity, BillingState, BillingCountry, BillingPostalCode, Total\nTable: invoice_items\nColumns: InvoiceLineId, InvoiceId, TrackId, UnitPrice, Quantity\nTable: media_types\nColumns: MediaTypeId, Name\nTable: playlists\nColumns: PlaylistId, Name\nTable: playlist_track\nColumns: PlaylistId, TrackId\nTable: tracks\nColumns: TrackId, Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice\nTable: sqlite_stat1\nColumns: tbl, idx, stat\n\nThe query should be returned in plain text, not in JSON.\n"
+                    }
+                },
+                "required": [
+                    "query"
+                ]
+            }
+        },
+        "user_prompt": "Please provide an SQL query to extract information about music.",
+        "function_call": {
+            "name": "ask_database",
+            "arguments": {
+                "query": "SELECT * FROM albums WHERE ArtistId = 1;"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}    \n\n### \nWrite a user prompt that would call this function, and the function call.\nReturn the output as this example:\n    {{\n        \"function_description\": \n        {FUNCTION_EXAMPLE},\n        \"user_prompt\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'name': 'ask_database', 'description': 'Use this function to answer user questions about music. Input should be a fully formed SQL query.', 'parameters': {'type': 'object', 'properties': {'query': {'type': 'string', 'description': \"\\nSQL query extracting info to answer the user's question.\\nSQL should be written using this database schema:\\n\\nTable: albums\\nColumns: AlbumId, Title, ArtistId\\nTable: sqlite_sequence\\nColumns: name, seq\\nTable: artists\\nColumns: ArtistId, Name\\nTable: customers\\nColumns: CustomerId, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId\\nTable: employees\\nColumns: EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email\\nTable: genres\\nColumns: GenreId, Name\\nTable: invoices\\nColumns: InvoiceId, CustomerId, InvoiceDate, BillingAddress, BillingCity, BillingState, BillingCountry, BillingPostalCode, Total\\nTable: invoice_items\\nColumns: InvoiceLineId, InvoiceId, TrackId, UnitPrice, Quantity\\nTable: media_types\\nColumns: MediaTypeId, Name\\nTable: playlists\\nColumns: PlaylistId, Name\\nTable: playlist_track\\nColumns: PlaylistId, TrackId\\nTable: tracks\\nColumns: TrackId, Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice\\nTable: sqlite_stat1\\nColumns: tbl, idx, stat\\n\\nThe query should be returned in plain text, not in JSON.\\n\"}}, 'required': ['query']}}",
+        "PROMPT_EXAMPLE": "\n\"what is the weather going to be like in Glasgow, Scotland over the next 7 days\"\n",
+        "FUNCTION_EXAMPLE": "\n{\n    \"name\": \"get_n_day_weather_forecast\",\n    \"description\": \"Get an N-day weather forecast\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"format\": {\n                \"type\": \"string\",\n                \"enum\": [\"celsius\", \"fahrenheit\"],\n                \"description\": \"The temperature unit to use. Infer this from the users location.\",\n            },\n            \"num_days\": {\n                \"type\": \"integer\",\n                \"description\": \"The number of days to forecast\",\n            }\n        },\n        \"required\": [\"location\", \"format\", \"num_days\"]\n    },\n}\n",
+        "CALL_EXAMPLE": "\n    {\n        \"name\": \"get_n_day_weather_forecast\",\n        \"arguments\": \"{\n  \"location\": \"Glasgow, Scotland\",\n  \"format\": \"celsius\",\n  \"num_days\": 5\n}\"\n    }\n"
+    }
+}

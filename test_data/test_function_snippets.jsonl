@@ -1,0 +1,4 @@
+{
+    "func_id": "test-0",
+    "snippet": "\ndef order_airplane_tickets(\n    num_tickets: int,\n    destination: str,\n    departure_date: str,\n    passengers: List[Dict[str, str]],\n) -> Dict[str, float]:\n    \"\"\"\n    Orders airplane tickets and returns the total price.\n\n    Parameters:\n        num_tickets (int): The number of tickets to buy.\n        destination (str): The destination city.\n        departure_date (str): The departure date in YYYY-MM-DD format.\n        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.\n                                          Each dictionary should have 'name' and 'age' keys.\n\n    Returns:\n        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.\n    \"\"\"\n"
+}

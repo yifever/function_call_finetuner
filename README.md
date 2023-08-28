@@ -1,9 +1,9 @@
 ## TODO 
-Implement a snippet generator to generate code snippets for some specialized agent.
-Implement format converteds to convert training sample data to
-    Llama strings
-    Alcapa instruct strings
-    openai strings
+- Implement a snippet generator to generate code snippets for some specialized agent.
+- Implement format converteds to convert training sample data to
+    - Llama strings
+    - Alcapa instruct strings
+    - openai strings
 for training. These may have different canonical formats. 
 
 ## Function Call Finetuner

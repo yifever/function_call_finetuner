@@ -1,0 +1,786 @@
+user: 
+Generate a snippet of a python function that accomplishes the task 'Accept a new ride request.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def accept_ride_request(
+    ride_id: int,
+    passenger_name: str,
+    pickup_location: str,
+    dropoff_location: str,
+    pickup_time: str,
+    fare: float,
+) -> None:
+    """
+    Accepts a new ride request.
+
+    Parameters:
+        ride_id (int): The ID of the ride request.
+        passenger_name (str): The name of the passenger.
+        pickup_location (str): The pickup location.
+        dropoff_location (str): The dropoff location.
+        pickup_time (str): The pickup time in HH:MM format.
+        fare (float): The fare for the ride.
+
+    Returns:
+        None
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Decline a new ride request.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def decline_ride_request(
+    ride_id: str
+) -> None:
+    """
+    Declines a new ride request.
+
+    Parameters:
+        ride_id (str): The ID of the ride to decline.
+
+    Returns:
+        None
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Start navigation to the pickup location.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def start_navigation_to_pickup_location():
+    """
+    Starts navigation to the pickup location.
+    """
+    return
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Notify passenger upon arrival at the pickup location.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def notify_passenger_upon_arrival(pickup_location: str, passenger_name: str) -> None:
+    """
+    Notifies a passenger upon arrival at the pickup location.
+
+    Parameters:
+        pickup_location (str): The pickup location.
+        passenger_name (str): The name of the passenger.
+
+    Returns:
+        None
+    """
+    # implementation code here
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Start the ride after picking up the passenger.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def start_ride():
+    """
+    Starts the ride after picking up the passenger.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'End the ride upon arrival at the destination.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def end_ride(destination: str) -> None:
+    """
+    Ends the ride upon arrival at the destination.
+
+    Parameters:
+        destination (str): The destination city.
+
+    Returns:
+        None
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Rate the passenger.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def rate_passenger(
+    passenger: Dict[str, str]
+) -> float:
+    """
+    Rates the passenger based on certain criteria.
+
+    Parameters:
+        passenger (Dict[str, str]): A dictionary containing passenger details.
+                                    The dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        float: The rating of the passenger.
+    """
+    pass
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Retrieve estimated earnings for the day or week.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def retrieve_estimated_earnings(day_or_week: str) -> float:
+    """
+    Retrieves estimated earnings for the day or week.
+
+    Parameters:
+        day_or_week (str): The time period to retrieve earnings for. Can be 'day' or 'week'.
+
+    Returns:
+        float: The estimated earnings for the specified time period.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'View the ride history for the day.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def view_ride_history(day: str) -> List[Dict[str, str]]:
+    """
+    View the ride history for the specified day.
+
+    Parameters:
+        day (str): The day for which to view the ride history in YYYY-MM-DD format.
+
+    Returns:
+        List[Dict[str, str]]: A list of dictionaries containing ride details.
+                              Each dictionary should have 'ride_id', 'start_time', 'end_time',
+                              'distance', and 'fare' keys.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Send a message or call the passenger through the app.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def send_message_or_call_passenger(passenger_id: int, message: str) -> None:
+    """
+    Sends a message or call the passenger through the app.
+
+    Parameters:
+        passenger_id (int): The ID of the passenger to contact.
+        message (str): The message to send or the call to make.
+
+    Returns:
+        None
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Update driver profile details, such as photo or vehicle information.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def update_driver_profile(
+    photo: str,
+    vehicle_info: Dict[str, str]
+) -> None:
+    """
+    Update driver profile details, such as photo or vehicle information.
+
+    Parameters:
+        photo (str): The path or URL to the new driver photo.
+        vehicle_info (Dict[str, str]): A dictionary containing the updated vehicle information.
+                                        The dictionary should have 'make', 'model', and 'year' keys.
+
+    Returns:
+        None
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Switch to or from 'Delivery Mode' for Uber Eats.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def switch_delivery_mode(restaurant_id: str, mode: str) -> bool:
+    """
+    Switches the delivery mode for Uber Eats.
+
+    Parameters:
+        restaurant_id (str): The ID of the restaurant.
+        mode (str): The mode to switch to or from. Can be 'delivery' or 'pickup'.
+
+    Returns:
+        bool: True if the mode was successfully switched, False otherwise.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Withdraw earnings to a linked bank account.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def withdraw_earnings(
+    amount: float,
+    bank_account: str,
+) -> bool:
+    """
+    Withdraws earnings to a linked bank account.
+
+    Parameters:
+        amount (float): The amount of earnings to withdraw.
+        bank_account (str): The linked bank account to withdraw to.
+
+    Returns:
+        bool: True if the withdrawal is successful, False otherwise.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Review and dispute fare adjustments.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def review_and_dispute_fare_adjustments(
+    fare_adjustments: List[Dict[str, Union[str, float]]]
+) -> Dict[str, Union[str, float]]:
+    """
+    Reviews and disputes fare adjustments.
+
+    Parameters:
+        fare_adjustments (List[Dict[str, Union[str, float]]]): A list of dictionaries containing fare adjustment details.
+                                                              Each dictionary should have 'ticket_number', 'adjustment_reason',
+                                                              and 'adjusted_amount' keys.
+
+    Returns:
+        Dict[str, Union[str, float]]: A dictionary with 'disputed_amount' as a key and the disputed amount as a value.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Enable or disable notifications for new ride requests.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def enable_disable_notifications(enable: bool) -> None:
+    """
+    Enable or disable notifications for new ride requests.
+
+    Parameters:
+        enable (bool): True to enable notifications, False to disable notifications.
+
+    Returns:
+        None
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Report an issue or incident related to a ride.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def report_issue_or_incident(
+    ride_id: str,
+    issue_description: str,
+    incident_date: str,
+    incident_location: str,
+    contact_info: str,
+) -> None:
+    """
+    Reports an issue or incident related to a ride.
+
+    Parameters:
+        ride_id (str): The ID of the ride.
+        issue_description (str): A description of the issue or incident.
+        incident_date (str): The date of the incident in YYYY-MM-DD format.
+        incident_location (str): The location of the incident.
+        contact_info (str): Contact information of the person reporting the issue.
+
+    Returns:
+        None
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Review driver ratings and feedback received.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def review_driver_ratings_and_feedback() -> Dict[str, List[Dict[str, Any]]]:
+    """
+    Retrieves and returns the driver ratings and feedback received.
+
+    Returns:
+        Dict[str, List[Dict[str, Any]]]: A dictionary with 'ratings' as a key and a list of dictionaries as the value.
+                                         Each dictionary should have 'driver_name', 'rating', and 'feedback' keys.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Check the status of a background check or document verification.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def check_background_status(
+    applicant_id: str,
+    document_type: str,
+) -> str:
+    """
+    Checks the status of a background check or document verification.
+
+    Parameters:
+        applicant_id (str): The ID of the applicant.
+        document_type (str): The type of document to be verified.
+
+    Returns:
+        str: The status of the background check or document verification.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Schedule or modify a vehicle inspection appointment.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def schedule_or_modify_vehicle_inspection(
+    vehicle_id: str,
+    appointment_date: str,
+    appointment_time: str,
+) -> str:
+    """
+    Schedules or modifies a vehicle inspection appointment.
+
+    Parameters:
+        vehicle_id (str): The unique identifier of the vehicle.
+        appointment_date (str): The desired appointment date in YYYY-MM-DD format.
+        appointment_time (str): The desired appointment time in HH:MM format.
+
+    Returns:
+        str: A confirmation message indicating that the appointment has been scheduled or modified.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Enable or disable receiving ride requests in specific categories (e.g., UberXL, UberPool).'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def enable_disable_ride_requests(categories: List[str], enable: bool) -> None:
+    """
+    Enable or disable receiving ride requests in specific categories.
+
+    Parameters:
+        categories (List[str]): A list of categories to enable or disable.
+        enable (bool): True to enable the categories, False to disable them.
+
+    Returns:
+        None
+    """
+    pass
+

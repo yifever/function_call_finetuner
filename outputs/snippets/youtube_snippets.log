@@ -1,0 +1,1250 @@
+user: 
+Generate a snippet of a python function that accomplishes the task 'Upload a video file as a video to a YouTube channel.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def upload_video_to_youtube(
+    video_file_path: str,
+    title: str,
+    description: str,
+    category: str,
+    tags: List[str],
+) -> str:
+    """
+    Uploads a video file as a video to a YouTube channel.
+
+    Parameters:
+        video_file_path (str): The path to the video file.
+        title (str): The title of the video.
+        description (str): The description of the video.
+        category (str): The category of the video.
+        tags (List[str]): A list of tags for the video.
+
+    Returns:
+        str: The ID of the uploaded video.
+    """
+    pass
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Delete a specific video from a channel.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def delete_video_from_channel(
+    channel_id: str,
+    video_id: str,
+) -> bool:
+    """
+    Deletes a specific video from a channel.
+
+    Parameters:
+        channel_id (str): The ID of the channel from which the video should be deleted.
+        video_id (str): The ID of the video to be deleted.
+
+    Returns:
+        bool: True if the video was successfully deleted, False otherwise.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Edit video details such as title, description, and tags.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def edit_video_details(
+    video_id: str,
+    new_title: str,
+    new_description: str,
+    new_tags: List[str],
+) -> Dict[str, str]:
+    """
+    Edits the details of a video and returns the new details.
+
+    Parameters:
+        video_id (str): The ID of the video to edit.
+        new_title (str): The new title of the video.
+        new_description (str): The new description of the video.
+        new_tags (List[str]): A list of new tags for the video.
+
+    Returns:
+        Dict[str, str]: A dictionary with the new video details.
+    """
+    pass
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Set a specific time for a video to be made public.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def set_video_public_time(
+    video_id: str,
+    schedule_time: str,
+) -> bool:
+    """
+    Sets a specific time for a video to be made public.
+
+    Parameters:
+        video_id (str): The unique identifier of the video.
+        schedule_time (str): The time to make the video public in YYYY-MM-DD HH:MM:SS format.
+
+    Returns:
+        bool: True if the operation was successful, False otherwise.
+    """
+    pass
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Generate new playlists for categorizing videos.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def generate_playlists(
+    video_data: List[Dict[str, str]],
+    categories: List[str],
+) -> Dict[str, List[str]]:
+    """
+    Generate new playlists for categorizing videos.
+
+    Parameters:
+        video_data (List[Dict[str, str]]): A list of dictionaries containing video details.
+                                           Each dictionary should have 'title' and 'category' keys.
+        categories (List[str]): A list of categories for which playlists will be created.
+
+    Returns:
+        Dict[str, List[str]]: A dictionary with categories as keys and list of video titles as values.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Insert specific videos into an existing playlist.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def insert_videos_into_playlist(
+    playlist_id: str,
+    video_ids: List[str],
+) -> str:
+    """
+    Inserts specific videos into an existing playlist.
+
+    Parameters:
+        playlist_id (str): The ID of the playlist to which videos need to be added.
+        video_ids (List[str]): A list of IDs of the videos to be added to the playlist.
+
+    Returns:
+        str: A confirmation message stating successful addition of videos to the playlist.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Delete videos from a playlist.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def delete_videos_from_playlist(
+    playlist_id: str,
+    video_ids: List[str]
+) -> Dict[str, str]:
+    """
+    Deletes videos from a playlist and returns a status message.
+
+    Parameters:
+        playlist_id (str): The ID of the playlist.
+        video_ids (List[str]): A list of video IDs to be deleted from the playlist.
+
+    Returns:
+        Dict[str, str]: A dictionary with 'status' as a key and the status message as a value.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Modify the channel description, profile picture, and other details.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def modify_channel_details(
+    channel_id: str,
+    new_description: str,
+    new_profile_picture: str,
+    other_details: Dict[str, str]
+) -> None:
+    """
+    Modifies the channel description, profile picture, and other details.
+
+    Parameters:
+        channel_id (str): The ID of the channel to modify.
+        new_description (str): The new description for the channel.
+        new_profile_picture (str): The new profile picture for the channel. This should be a URL or file path.
+        other_details (Dict[str, str]): A dictionary of other details to modify. The keys should be the detail names,
+                                         and the values should be the new values for those details.
+
+    Returns:
+        None
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Access analytics such as views, watch time, and subscriber count for specific videos.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def get_video_analytics(
+    video_id: str
+) -> Dict[str, Union[int, str]]:
+    """
+    Gets analytics such as views, watch time, and subscriber count for a specific video.
+
+    Parameters:
+        video_id (str): The ID of the video.
+
+    Returns:
+        Dict[str, Union[int, str]]: A dictionary with 'views', 'watch_time' and 'subscriber_count' as keys, 
+                                     and the corresponding values as values.
+    """
+    pass
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Acquire broader analytics for the entire channel.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def get_channel_analytics(channel_id: str) -> Dict[str, Any]:
+    """
+    Acquire broader analytics for the entire channel.
+
+    Parameters:
+        channel_id (str): The unique identifier for the channel.
+
+    Returns:
+        Dict[str, Any]: A dictionary containing various analytics data for the channel.
+    """
+    pass
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Understand user engagement by capturing data on likes, dislikes, and comments.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def capture_user_engagement(
+    user_id: str,
+    post_id: str,
+    likes: int,
+    dislikes: int,
+    comments: List[str],
+) -> Dict[str, Union[int, List[str]]]:
+    """
+    Captures user engagement data such as likes, dislikes, and comments.
+
+    Parameters:
+        user_id (str): The ID of the user.
+        post_id (str): The ID of the post.
+        likes (int): The number of likes the post has.
+        dislikes (int): The number of dislikes the post has.
+        comments (List[str]): A list of comments on the post.
+
+    Returns:
+        Dict[str, Union[int, List[str]]]: A dictionary containing 'likes', 'dislikes', and 'comments' as keys,
+                                          and corresponding data as values.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Automatically post preset comments or updates in the comment section of a video.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def post_video_comments(
+    video_id: str,
+    comments: List[str],
+    delay: int = 0,
+) -> None:
+    """
+    Automatically posts preset comments or updates in the comment section of a video.
+
+    Parameters:
+        video_id (str): The identifier for the video.
+        comments (List[str]): A list of comments to be posted.
+        delay (int, optional): The delay between posting each comment in seconds. Defaults to 0.
+
+    Returns:
+        None
+    """
+
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Remove specific comments that violate community guidelines.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def remove_violating_comments(
+    comments: List[str],
+    guidelines: Dict[str, str]
+) -> List[str]:
+    """
+    Removes comments that violate community guidelines.
+
+    Parameters:
+        comments (List[str]): A list of comments to be checked.
+        guidelines (Dict[str, str]): A dictionary with keys as violation categories and values as phrases or words 
+                                     that violate community guidelines in corresponding category.
+
+    Returns:
+        List[str]: A list of comments that do not violate any community guidelines.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Generate automated replies to user comments.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def generate_auto_reply(
+    user_comments: List[str],
+    reply_templates: Dict[str, str],
+) -> List[str]:
+    """
+    Generate automated replies to user comments based on predefined reply templates.
+
+    Parameters:
+        user_comments (List[str]): List of user comments.
+        reply_templates (Dict[str, str]): Dictionary of reply templates. The keys represent 
+                                          different categories of comments and the values 
+                                          are the corresponding reply templates.
+    Returns:
+        List[str]: A list of automated replies to the user comments.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Control the ad settings for specific videos.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def control_ad_settings(
+    video_id: str,
+    ad_settings: Dict[str, Any],
+) -> None:
+    """
+    Controls the ad settings for a specific video.
+
+    Parameters:
+        video_id (str): The identifier of the video to adjust ad settings for.
+        ad_settings (Dict[str, Any]): A dictionary containing the ad settings to be updated.
+                                      The keys represent the setting names and the values are the setting values.
+    """
+
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Fetch details about earnings, including estimated revenue and ad performance.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def fetch_earnings_details(
+    account_id: str,
+    start_date: str,
+    end_date: str,
+) -> Dict[str, Union[float, Dict[str, float]]]:
+    """
+    Fetches earnings details, including estimated revenue and ad performance.
+
+    Parameters:
+        account_id (str): The ID of the account to fetch earnings details for.
+        start_date (str): The start date to fetch earnings details from in YYYY-MM-DD format.
+        end_date (str): The end date to fetch earnings details until in YYYY-MM-DD format.
+
+    Returns:
+        Dict[str, Union[float, Dict[str, float]]]: A dictionary with 'estimated_revenue' as a key and the estimated 
+        revenue as a value, and 'ad_performance' as a key and a dictionary with ad performance details as a value.
+    """
+    pass
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Change the payment and billing information for the channel.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def update_channel_billing_info(
+    channel_id: str,
+    payment_info: Dict[str, str],
+    billing_info: Dict[str, str],
+) -> bool:
+    """
+    Updates the payment and billing information for a specific channel.
+
+    Parameters:
+        channel_id (str): The id of the channel to update.
+        payment_info (Dict[str, str]): A dictionary containing payment information. 
+                                        It should have keys like 'card_number', 'expiry_date', 'cvv' etc.
+        billing_info (Dict[str, str]): A dictionary containing billing information. 
+                                        It should have keys like 'billing_address', 'city', 'zip_code' etc.
+
+    Returns:
+        bool: Returns True if the update was successful, False otherwise.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Automatically upload caption files to videos.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def upload_caption_files(
+    video_ids: List[str],
+    caption_files: List[str],
+) -> Dict[str, str]:
+    """
+    Uploads caption files to the corresponding videos and returns a status report.
+
+    Parameters:
+        video_ids (List[str]): The list of video IDs.
+        caption_files (List[str]): The list of paths to the caption files.
+
+    Returns:
+        Dict[str, str]: A dictionary with video IDs as keys and the upload status as values.
+                        The status could be 'success' or 'failure'.
+    """
+    pass
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Replace or update existing captions.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def update_captions(
+    captions: Dict[str, str],
+    new_captions: Dict[str, str]
+) -> Dict[str, str]:
+    """
+    Replaces or updates existing captions.
+
+    Parameters:
+        captions (Dict[str, str]): A dictionary of existing captions. Each key is the caption identifier 
+                                   and the value is the caption text.
+        new_captions (Dict[str, str]): A dictionary of new captions to be added or existing captions to be updated. 
+                                        Each key is the caption identifier and the value is the new caption text.
+
+    Returns:
+        Dict[str, str]: A dictionary of updated captions.
+    """
+    pass
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Remove captions from a specific video.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def remove_captions_from_video(
+    video_file: str,
+    output_file: str,
+) -> str:
+    """
+    Removes captions from a specific video and saves the video without captions to a new file.
+
+    Parameters:
+        video_file (str): The path to the video file from which to remove captions.
+        output_file (str): The path to the file where the video without captions should be saved.
+
+    Returns:
+        str: A message indicating whether the operation was successful or not.
+    """
+
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Conduct a search for videos based on specific keywords or criteria.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def search_videos(
+    keywords: List[str],
+    criteria: Dict[str, str],
+) -> List[Dict[str, Any]]:
+    """
+    Conducts a search for videos based on specific keywords or criteria.
+
+    Parameters:
+        keywords (List[str]): The list of keywords to search for in the video titles and descriptions.
+        criteria (Dict[str, str]): A dictionary of specific criteria to narrow down the search.
+                                   The keys can be things like 'duration', 'upload_date', etc.
+
+    Returns:
+        List[Dict[str, Any]]: A list of dictionaries where each dictionary represents a video that matches the search.
+                              Each dictionary should contain 'title', 'url', 'duration', 'upload_date', and 'views'.
+    """
+    pass
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Retrieve a specific video using its unique ID.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def retrieve_video_by_id(video_id: str) -> Dict[str, Union[str, int, float]]:
+    """
+    Retrieves a specific video using its unique ID.
+    
+    Parameters:
+        video_id (str): The unique ID of the video.
+        
+    Returns:
+        Dict[str, Union[str, int, float]]: A dictionary containing video details such as 'title', 
+                                            'duration', 'views', etc.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Obtain a list of currently trending videos in a specific region or category.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def fetch_trending_videos(
+    region: str,
+    category: str,
+) -> List[Dict[str, str]]:
+    """
+    Fetches a list of currently trending videos in a specific region or category.
+
+    Parameters:
+        region (str): The region to fetch trending videos from.
+        category (str): The category of videos to fetch.
+
+    Returns:
+        List[Dict[str, str]]: A list of dictionaries, each representing a trending video. Each dictionary
+                              should have 'title', 'video_id', 'views', 'likes', 'dislikes', and 'comments' keys.
+    """
+
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Set up a future live stream event.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def setup_live_stream_event(
+    event_title: str,
+    start_time: str,
+    end_time: str,
+    description: str,
+    location: str,
+) -> Dict[str, str]:
+    """
+    Sets up a future live stream event and returns the details.
+
+    Parameters:
+        event_title (str): The title of the event.
+        start_time (str): The start time of the event in YYYY-MM-DD HH:MM:SS format.
+        end_time (str): The end time of the event in YYYY-MM-DD HH:MM:SS format.
+        description (str): A short description about the event.
+        location (str): The location or platform where the event will be streamed.
+
+    Returns:
+        Dict[str, str]: A dictionary with 'event_id' as a key and the unique event identifier as a value.
+    """
+    pass
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Initiate or end a live stream.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def control_live_stream(
+    stream_id: str,
+    action: str,
+) -> None:
+    """
+    Initiate or end a live stream.
+
+    Parameters:
+        stream_id (str): The unique identifier of the stream.
+        action (str): The action to perform, either 'start' or 'stop'.
+    """
+    pass
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Automatically post messages, moderate comments, or collect metrics from a live chat during a live stream.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def manage_live_stream_chat(
+    stream_id: str,
+    auto_post_messages: List[str],
+    moderation_rules: Dict[str, Any],
+    metric_collection: bool
+) -> Dict[str, Any]:
+    """
+    Manages a live stream chat by automatically posting messages, moderating comments, and collecting metrics.
+
+    Parameters:
+        stream_id (str): The ID of the live stream.
+        auto_post_messages (List[str]): A list of messages to be automatically posted in the chat.
+        moderation_rules (Dict[str, Any]): A dictionary of rules for moderating comments. 
+                                            The structure of this dictionary would depend on the specific 
+                                            implementation and requirements.
+        metric_collection (bool): A flag indicating whether to collect metrics from the chat.
+
+    Returns:
+        Dict[str, Any]: A dictionary containing the results of the chat management. The structure of this 
+                        dictionary would depend on the specific implementation and requirements.
+    """
+    pass
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Automate the process of subscribing to other YouTube channels.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def subscribe_to_youtube_channels(
+    channel_ids: List[str],
+    user_token: str,
+) -> Dict[str, str]:
+    """
+    Automates the process of subscribing to other YouTube channels.
+
+    Parameters:
+        channel_ids (List[str]): The list of channel IDs to subscribe to.
+        user_token (str): The user's authorization token.
+
+    Returns:
+        Dict[str, str]: A dictionary with 'status' as a key and the subscription status as a value.
+    """
+    pass
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Remove existing subscriptions.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def remove_existing_subscriptions(
+    user_id: int,
+    subscriptions: List[str],
+) -> bool:
+    """
+    Removes existing subscriptions for a specific user.
+
+    Parameters:
+        user_id (int): The id of the user.
+        subscriptions (List[str]): A list of subscriptions to be removed.
+
+    Returns:
+        bool: True if the operation was successful, False otherwise.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Alert subscribers when new content is available or when a live stream is starting.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def alert_subscribers(
+    new_content: bool,
+    live_stream_starting: bool,
+    subscribers: List[Dict[str, str]],
+) -> None:
+    """
+    Alerts subscribers when new content is available or when a live stream is starting.
+
+    Parameters:
+        new_content (bool): A boolean indicating whether new content is available.
+        live_stream_starting (bool): A boolean indicating whether a live stream is starting.
+        subscribers (List[Dict[str, str]]): A list of dictionaries containing subscriber details.
+                                             Each dictionary should have 'email' and 'name' keys.
+
+    Returns:
+        None
+    """
+    pass
+

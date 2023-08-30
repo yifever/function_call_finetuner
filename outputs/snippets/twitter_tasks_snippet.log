@@ -1,0 +1,1102 @@
+user: 
+Generate a snippet of a python function that accomplishes the task 'Post a tweet to a user's timeline.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def post_tweet(user_id: str, tweet: str) -> bool:
+    """
+    Posts a tweet to a user's timeline.
+
+    Parameters:
+        user_id (str): The user's ID.
+        tweet (str): The content of the tweet.
+
+    Returns:
+        bool: True if the tweet was successfully posted, False otherwise.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Delete a specific tweet from a user's timeline.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def delete_tweet(user_id: str, tweet_id: str) -> None:
+    """
+    Deletes a specific tweet from a user's timeline.
+
+    Parameters:
+        user_id (str): The ID of the user whose tweet to delete.
+        tweet_id (str): The ID of the tweet to delete.
+
+    Returns:
+        None
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Retrieve a user's timeline, including tweets, retweets, and replies.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def retrieve_user_timeline(user_id: str) -> List[Dict[str, str]]:
+    """
+    Retrieves a user's timeline, including tweets, retweets, and replies.
+
+    Parameters:
+        user_id (str): The ID of the user.
+
+    Returns:
+        List[Dict[str, str]]: A list of dictionaries representing each tweet
+                              in the user's timeline. Each dictionary should have
+                              'tweet_id', 'text', 'author', and 'date' keys.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Retrieve information about a specific user based on their username.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def retrieve_user_info(username: str) -> Dict[str, Any]:
+    """
+    Retrieve information about a specific user based on their username.
+
+    Parameters:
+        username (str): The username of the user.
+
+    Returns:
+        Dict[str, Any]: A dictionary containing information about the user.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Follow a specific user.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def follow_user(username: str) -> bool:
+    """
+    Follows a specific user.
+
+    Parameters:
+        username (str): The username of the user to follow.
+
+    Returns:
+        bool: True if the user was successfully followed, False otherwise.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Unfollow a specific user.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def unfollow_user(username: str) -> None:
+    """
+    Unfollows a specific user.
+
+    Parameters:
+        username (str): The username of the user to unfollow.
+
+    Returns:
+        None
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Like a specific tweet.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def like_tweet(tweet_id: str) -> None:
+    """
+    Likes a specific tweet.
+
+    Parameters:
+        tweet_id (str): The ID of the tweet to like.
+
+    Returns:
+        None
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Unlike a specific tweet.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def unlike_tweet(tweet_id: str) -> None:
+    """
+    Unlike a specific tweet.
+
+    Parameters:
+        tweet_id (str): The ID of the tweet to unlike.
+
+    Returns:
+        None
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Retweet a specific tweet.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def retweet_tweet(
+    tweet_id: str,
+) -> bool:
+    """
+    Retweets a specific tweet.
+
+    Parameters:
+        tweet_id (str): The ID of the tweet to retweet.
+
+    Returns:
+        bool: True if the tweet was successfully retweeted, False otherwise.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Undo a retweet.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def undo_retweet(tweet_id: str) -> None:
+    """
+    Undo a retweet.
+
+    Parameters:
+        tweet_id (str): The ID of the tweet to undo the retweet.
+
+    Returns:
+        None
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Send a direct message to a specific user.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def send_direct_message(
+    recipient: str,
+    message: str,
+) -> None:
+    """
+    Sends a direct message to a specific user.
+
+    Parameters:
+        recipient (str): The username or ID of the recipient.
+        message (str): The content of the message.
+
+    Returns:
+        None
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Delete a sent direct message.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def delete_direct_message(
+    message_id: str,
+) -> bool:
+    """
+    Deletes a sent direct message.
+
+    Parameters:
+        message_id (str): The ID of the direct message to delete.
+
+    Returns:
+        bool: True if the direct message was successfully deleted, False otherwise.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Retrieve a list of direct messages sent and received.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def retrieve_direct_messages(
+    user_id: str,
+) -> List[Dict[str, str]]:
+    """
+    Retrieves a list of direct messages sent and received by a user.
+
+    Parameters:
+        user_id (str): The ID of the user.
+
+    Returns:
+        List[Dict[str, str]]: A list of dictionaries containing direct message details.
+                              Each dictionary should have 'sender' and 'message' keys.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Retrieve trending topics for a specific location.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def retrieve_trending_topics(location: str) -> List[str]:
+    """
+    Retrieves trending topics for a specific location.
+
+    Parameters:
+        location (str): The specific location to retrieve trending topics for.
+
+    Returns:
+        List[str]: A list of trending topics for the specified location.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Retrieve a list of followers for a specific user.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def get_followers(user_id: int) -> List[str]:
+    """
+    Retrieves a list of followers for a specific user.
+
+    Parameters:
+        user_id (int): The ID of the user.
+
+    Returns:
+        List[str]: A list of usernames of the followers.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Retrieve a list of accounts a specific user is following.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def get_following_accounts(user_id: int) -> List[str]:
+    """
+    Retrieves a list of accounts that a specific user is following.
+
+    Parameters:
+        user_id (int): The ID of the user whose following accounts are to be retrieved.
+
+    Returns:
+        List[str]: A list of account names that the user is following.
+    """
+    pass
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Search for tweets containing specific keywords, hashtags, or mentioning specific users.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def search_tweets(
+    keywords: List[str],
+    hashtags: List[str],
+    users: List[str],
+) -> List[str]:
+    """
+    Searches for tweets containing specific keywords, hashtags, or mentioning specific users.
+
+    Parameters:
+        keywords (List[str]): A list of keywords to search for in tweets.
+        hashtags (List[str]): A list of hashtags to search for in tweets.
+        users (List[str]): A list of usernames to search for in tweets.
+
+    Returns:
+        List[str]: A list of tweets matching the specified criteria.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Update the profile details such as description, location, and profile image.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def update_profile_details(
+    description: str,
+    location: str,
+    profile_image: str,
+) -> None:
+    """
+    Updates the profile details such as description, location, and profile image.
+
+    Parameters:
+        description (str): The new description for the profile.
+        location (str): The new location for the profile.
+        profile_image (str): The new profile image for the profile.
+
+    Returns:
+        None
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Retrieve user engagement metrics like likes, retweets, and impressions for specific tweets.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def retrieve_user_engagement_metrics(
+    tweet_ids: List[str]
+) -> Dict[str, Dict[str, int]]:
+    """
+    Retrieves user engagement metrics like likes, retweets, and impressions for specific tweets.
+
+    Parameters:
+        tweet_ids (List[str]): A list of tweet IDs for which to retrieve metrics.
+
+    Returns:
+        Dict[str, Dict[str, int]]: A dictionary with tweet IDs as keys and a dictionary of engagement metrics as values.
+                                   The engagement metrics dictionary should have 'likes', 'retweets', and 'impressions' as keys.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Pin a tweet to the top of a user's timeline.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def pin_tweet(tweet_id: str) -> bool:
+    """
+    Pins a tweet to the top of a user's timeline.
+
+    Parameters:
+        tweet_id (str): The ID of the tweet to be pinned.
+
+    Returns:
+        bool: Returns True if the tweet was successfully pinned, False otherwise.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Unpin a tweet from the top of a user's timeline.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def unpin_tweet():
+    """
+    Unpins a tweet from the top of a user's timeline.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Retrieve lists that a user is a member of.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def get_member_lists(user_id: str) -> List[str]:
+    """
+    Retrieves the lists that a user is a member of.
+
+    Parameters:
+        user_id (str): The ID of the user.
+
+    Returns:
+        List[str]: A list of the names of the lists that the user is a member of.
+    """
+    # Implementation goes here
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Create a new list.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def create_new_list() -> List:
+    """
+    Creates a new empty list.
+
+    Returns:
+        List: An empty list.
+    """
+    return []
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Add users to an existing list.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def add_users_to_list(users: List[str], new_users: List[str]) -> List[str]:
+    """
+    Adds new users to an existing list of users.
+
+    Parameters:
+        users (List[str]): The existing list of users.
+        new_users (List[str]): The list of new users to add.
+
+    Returns:
+        List[str]: The updated list of users.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Remove users from an existing list.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def remove_users(existing_list: List[str], users_to_remove: List[str]) -> List[str]:
+    """
+    Removes users from an existing list.
+
+    Parameters:
+        existing_list (List[str]): The original list of users.
+        users_to_remove (List[str]): The list of users to remove.
+
+    Returns:
+        List[str]: The updated list with the specified users removed.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Delete an existing list.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def delete_list(existing_list: List) -> None:
+    """
+    Deletes an existing list.
+
+    Parameters:
+        existing_list (List): The list to be deleted.
+
+    Returns:
+        None
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Check if a user is following another user.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def check_follow(user: str, followed_user: str) -> bool:
+    """
+    Checks if a user is following another user.
+
+    Parameters:
+        user (str): The username of the user.
+        followed_user (str): The username of the user being followed.
+
+    Returns:
+        bool: True if the user is following the followed_user, False otherwise.
+    """
+    # Implementation code to check if user is following followed_user
+    return result
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Block a specific user.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def block_user(username: str) -> None:
+    """
+    Blocks a specific user.
+
+    Parameters:
+        username (str): The username of the user to be blocked.
+
+    Returns:
+        None
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Unblock a specific user.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def unblock_user(user_id: str) -> None:
+    """
+    Unblock a specific user.
+
+    Parameters:
+        user_id (str): The ID of the user to unblock.
+
+    Returns:
+        None
+    """
+

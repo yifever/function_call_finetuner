@@ -1,0 +1,820 @@
+user: 
+Generate a snippet of a python function that accomplishes the task 'Conduct a literature search on AI papers from academic databases.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def conduct_literature_search(query: str, databases: List[str]) -> List[str]:
+    """
+    Conducts a literature search on AI papers from academic databases.
+
+    Parameters:
+        query (str): The search query.
+        databases (List[str]): A list of academic databases to search.
+
+    Returns:
+        List[str]: A list of paper titles that match the search query.
+    """
+    pass
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Retrieve text from specified academic papers for analysis.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def retrieve_text_from_papers(paper_list: List[str]) -> List[str]:
+    """
+    Retrieves text from specified academic papers for analysis.
+
+    Parameters:
+        paper_list (List[str]): A list of paper names or IDs.
+
+    Returns:
+        List[str]: A list of text contents retrieved from the specified academic papers.
+    """
+    pass
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Submit research papers or articles to preprint servers or journals.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def submit_research_papers(
+    papers: List[str],
+    server: str,
+    journals: List[str],
+) -> bool:
+    """
+    Submits research papers or articles to preprint servers or journals.
+
+    Parameters:
+        papers (List[str]): A list of strings representing the research papers or articles.
+        server (str): The preprint server to submit the papers to.
+        journals (List[str]): A list of strings representing the journals to submit the papers to.
+
+    Returns:
+        bool: True if the papers were successfully submitted, False otherwise.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Run code for machine learning experiments on cloud-based compute resources.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def run_experiments_on_cloud() -> None:
+    """
+    Runs code for machine learning experiments on cloud-based compute resources.
+    """
+    pass
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Fetch and preprocess datasets from public or private repositories.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def fetch_and_preprocess_datasets(
+    repository_url: str,
+    access_token: str,
+    dataset_names: List[str]
+) -> List[pd.DataFrame]:
+    """
+    Fetches and preprocesses datasets from public or private repositories.
+
+    Parameters:
+        repository_url (str): The URL of the repository.
+        access_token (str): The access token for accessing private repositories.
+        dataset_names (List[str]): A list of names of datasets to fetch and preprocess.
+
+    Returns:
+        List[pd.DataFrame]: A list of pandas DataFrames containing the fetched and preprocessed datasets.
+    """
+    pass
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Perform hyperparameter tuning for machine learning models.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def hyperparameter_tuning(
+    model: Any,
+    X: Any,
+    y: Any,
+    params: Dict[str, Any],
+    scoring: str,
+    cv: int,
+) -> Dict[str, Any]:
+    """
+    Performs hyperparameter tuning for machine learning models.
+
+    Parameters:
+        model (Any): The machine learning model to tune.
+        X (Any): The input features.
+        y (Any): The target variable.
+        params (Dict[str, Any]): A dictionary of hyperparameters to tune.
+        scoring (str): The scoring metric to use for evaluation.
+        cv (int): The number of cross-validation folds.
+
+    Returns:
+        Dict[str, Any]: A dictionary with 'best_params' as a key and the best hyperparameters as a value.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Visualize model performance metrics and experimental results.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def visualize_model_performance(
+    metrics: List[str],
+    results: Dict[str, float],
+) -> None:
+    """
+    Visualizes the model performance metrics and experimental results.
+
+    Parameters:
+        metrics (List[str]): A list of performance metrics.
+        results (Dict[str, float]): A dictionary containing experimental results.
+                                    Each key is a metric and the value is the corresponding result.
+
+    Returns:
+        None
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Run sentiment analysis on social media posts related to AI technologies.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def sentiment_analysis_ai_technologies() -> None:
+    """
+    Run sentiment analysis on social media posts related to AI technologies.
+
+    Returns:
+        None
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Automatically update a personal website or blog with new publications.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def update_website_with_publications():
+    """
+    Automatically updates a personal website or blog with new publications.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Schedule and conduct virtual meetings for research collaborations.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def schedule_virtual_meetings(
+    research_collaborators: List[str],
+    meeting_dates: List[str],
+    meeting_times: List[str],
+    meeting_length: int,
+) -> List[str]:
+    """
+    Schedule and conduct virtual meetings for research collaborations.
+
+    Parameters:
+        research_collaborators (List[str]): A list of names of research collaborators.
+        meeting_dates (List[str]): A list of meeting dates in YYYY-MM-DD format.
+        meeting_times (List[str]): A list of meeting times in HH:MM format.
+        meeting_length (int): The duration of each meeting in minutes.
+
+    Returns:
+        List[str]: A list of strings describing the scheduled virtual meetings.
+    """
+
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Retrieve real-time analytics or citations for published works.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def retrieve_real_time_analytics_or_citations(
+    work_id: str,
+    analytics_type: str
+) -> List[Dict[str, Union[str, int]]]:
+    """
+    Retrieves real-time analytics or citations for published works.
+
+    Parameters:
+        work_id (str): The unique identifier of the published work.
+        analytics_type (str): The type of analytics or citations to retrieve.
+
+    Returns:
+        List[Dict[str, Union[str, int]]]: A list of dictionaries containing the requested analytics or citations.
+        Each dictionary should have specific keys depending on the analytics_type.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Run automated code tests and validations for published algorithms.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def run_tests_and_validations() -> None:
+    """
+    Run automated code tests and validations for published algorithms.
+
+    Returns:
+        None
+    """
+    pass
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Analyze web traffic and interaction on research portfolio website.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def analyze_web_traffic() -> None:
+    """
+    Analyzes web traffic and interaction on research portfolio website.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Convert experimental results into formats suitable for academic publishing.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def convert_results(results: pd.DataFrame, output_format: str) -> str:
+    """
+    Convert experimental results into formats suitable for academic publishing.
+
+    Parameters:
+        results (pd.DataFrame): A pandas DataFrame containing the experimental results.
+        output_format (str): The desired output format for the converted results.
+
+    Returns:
+        str: The converted results in the specified output format.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Scrape online job boards for research positions or grants in the field of AI.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def scrape_job_boards() -> List[Dict[str, str]]:
+    """
+    Scrapes online job boards for research positions or grants in the field of AI.
+
+    Returns:
+        List[Dict[str, str]]: A list of dictionaries containing job details.
+                              Each dictionary should have 'title', 'company', and 'location' keys.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Automatically follow and collect posts from AI influencers or research leaders on social media platforms.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def follow_ai_influencers() -> List[str]:
+    """
+    Automatically follows and collects posts from AI influencers or research leaders on social media platforms.
+
+    Returns:
+        List[str]: A list of usernames or handles of the AI influencers or research leaders.
+    """
+    pass
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Generate automated summaries of trending AI research topics.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def generate_summary(
+    research_papers: List[str],
+    num_topics: int,
+) -> List[str]:
+    """
+    Generates automated summaries of trending AI research topics.
+
+    Parameters:
+        research_papers (List[str]): A list of research papers.
+        num_topics (int): The number of topics to generate summaries for.
+
+    Returns:
+        List[str]: A list of automated summaries of trending AI research topics.
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Translate research papers or articles into multiple languages.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def translate_research_papers(
+        papers: List[str],
+        languages: List[str]
+) -> Dict[str, List[str]]:
+    """
+    Translates research papers into multiple languages.
+
+    Parameters:
+        papers (List[str]): A list of research papers or articles to be translated.
+        languages (List[str]): A list of target languages to translate the papers into.
+
+    Returns:
+        Dict[str, List[str]]: A dictionary with languages as keys and translated papers as values.
+    """
+    pass
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Automate the backup of research data and code.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def automate_backup(
+    data_folder: str,
+    code_folder: str,
+    backup_folder: str,
+) -> None:
+    """
+    Automates the backup of research data and code.
+
+    Parameters:
+        data_folder (str): The path to the folder containing research data.
+        code_folder (str): The path to the folder containing code.
+        backup_folder (str): The path to the folder where the backup will be stored.
+
+    Returns:
+        None
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Create visual representations of data sets or algorithms for presentations.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def create_visuals(
+    data: Any,
+    algorithm: str,
+    presentation_type: str,
+    slide_count: int,
+) -> None:
+    """
+    Create visual representations of data sets or algorithms for presentations.
+
+    Parameters:
+        data (Any): The data set or algorithm to be visualized.
+        algorithm (str): The name of the algorithm (if applicable).
+        presentation_type (str): The type of presentation (e.g., bar chart, line graph).
+        slide_count (int): The number of slides to be created.
+
+    Returns:
+        None
+    """
+
+user: 
+Generate a snippet of a python function that accomplishes the task 'Generate and distribute a monthly newsletter on AI research findings.'.
+Do not include an inputs or actual code implementation. Only return the snippet.
+An example of a snippet is:
+
+def order_airplane_tickets(
+    num_tickets: int,
+    destination: str,
+    departure_date: str,
+    passengers: List[Dict[str, str]],
+) -> Dict[str, float]:
+    """
+    Orders airplane tickets and returns the total price.
+
+    Parameters:
+        num_tickets (int): The number of tickets to buy.
+        destination (str): The destination city.
+        departure_date (str): The departure date in YYYY-MM-DD format.
+        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.
+                                          Each dictionary should have 'name' and 'age' keys.
+
+    Returns:
+        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
+    """
+
+
+assistant: def generate_newsletter() -> str:
+    """
+    Generates a monthly newsletter on AI research findings.
+
+    Returns:
+        str: The generated newsletter.
+    """
+    # Code implementation to generate the newsletter goes here
+

@@ -1,0 +1,200 @@
+{
+    "function_id": "ubereats-1",
+    "task": "Accept a new delivery request.",
+    "completion-content": "def accept_delivery_request(\n    delivery_request: Dict[str, Any]\n) -> Dict[str, Any]:\n    \"\"\"\n    Accepts a new delivery request.\n\n    Parameters:\n        delivery_request (Dict[str, Any]): A dictionary containing the details of the delivery request.\n\n    Returns:\n        Dict[str, Any]: A dictionary confirming the acceptance of the delivery request.\n    \"\"\"\n    # Implementation of accepting the delivery request\n    pass",
+    "snippet": "def accept_delivery_request(\n    delivery_request: Dict[str, Any]\n) -> Dict[str, Any]:\n    \"\"\"\n    Accepts a new delivery request.\n\n    Parameters:\n        delivery_request (Dict[str, Any]): A dictionary containing the details of the delivery request.\n\n    Returns:\n        Dict[str, Any]: A dictionary confirming the acceptance of the delivery request.\n    \"\"\"\n    # Implementation of accepting the delivery request\n    pass",
+    "metadata": {
+        "TEMPLATE": "\nGenerate a snippet of a python function that accomplishes the task '{FUNCTION_TASK}'.\nDo not include an inputs or actual code implementation. Only return the snippet.\nAn example of a snippet is:\n\ndef order_airplane_tickets(\n    num_tickets: int,\n    destination: str,\n    departure_date: str,\n    passengers: List[Dict[str, str]],\n) -> Dict[str, float]:\n    \"\"\"\n    Orders airplane tickets and returns the total price.\n\n    Parameters:\n        num_tickets (int): The number of tickets to buy.\n        destination (str): The destination city.\n        departure_date (str): The departure date in YYYY-MM-DD format.\n        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.\n                                          Each dictionary should have 'name' and 'age' keys.\n\n    Returns:\n        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.\n    \"\"\"\n",
+        "FUNCTION_TASK": "Accept a new delivery request."
+    }
+}
+{
+    "function_id": "ubereats-2",
+    "task": "Navigate to the restaurant for food pickup.",
+    "completion-content": "def navigate_to_restaurant():\n    \"\"\"\n    Navigates to the restaurant for food pickup.\n    \"\"\"\n    pass",
+    "snippet": "def navigate_to_restaurant():\n    \"\"\"\n    Navigates to the restaurant for food pickup.\n    \"\"\"\n    pass",
+    "metadata": {
+        "TEMPLATE": "\nGenerate a snippet of a python function that accomplishes the task '{FUNCTION_TASK}'.\nDo not include an inputs or actual code implementation. Only return the snippet.\nAn example of a snippet is:\n\ndef order_airplane_tickets(\n    num_tickets: int,\n    destination: str,\n    departure_date: str,\n    passengers: List[Dict[str, str]],\n) -> Dict[str, float]:\n    \"\"\"\n    Orders airplane tickets and returns the total price.\n\n    Parameters:\n        num_tickets (int): The number of tickets to buy.\n        destination (str): The destination city.\n        departure_date (str): The departure date in YYYY-MM-DD format.\n        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.\n                                          Each dictionary should have 'name' and 'age' keys.\n\n    Returns:\n        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.\n    \"\"\"\n",
+        "FUNCTION_TASK": "Navigate to the restaurant for food pickup."
+    }
+}
+{
+    "function_id": "ubereats-3",
+    "task": "Confirm the pickup of the food items from the restaurant.",
+    "completion-content": "def confirm_pickup(food_items: List[str]) -> bool:\n    \"\"\"\n    Confirms the pickup of the food items from the restaurant.\n\n    Parameters:\n        food_items (List[str]): A list of food items to confirm pickup.\n\n    Returns:\n        bool: True if the pickup is confirmed, False otherwise.\n    \"\"\"\n    # Implementation code here",
+    "snippet": "def confirm_pickup(food_items: List[str]) -> bool:\n    \"\"\"\n    Confirms the pickup of the food items from the restaurant.\n\n    Parameters:\n        food_items (List[str]): A list of food items to confirm pickup.\n\n    Returns:\n        bool: True if the pickup is confirmed, False otherwise.\n    \"\"\"\n    # Implementation code here",
+    "metadata": {
+        "TEMPLATE": "\nGenerate a snippet of a python function that accomplishes the task '{FUNCTION_TASK}'.\nDo not include an inputs or actual code implementation. Only return the snippet.\nAn example of a snippet is:\n\ndef order_airplane_tickets(\n    num_tickets: int,\n    destination: str,\n    departure_date: str,\n    passengers: List[Dict[str, str]],\n) -> Dict[str, float]:\n    \"\"\"\n    Orders airplane tickets and returns the total price.\n\n    Parameters:\n        num_tickets (int): The number of tickets to buy.\n        destination (str): The destination city.\n        departure_date (str): The departure date in YYYY-MM-DD format.\n        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.\n                                          Each dictionary should have 'name' and 'age' keys.\n\n    Returns:\n        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.\n    \"\"\"\n",
+        "FUNCTION_TASK": "Confirm the pickup of the food items from the restaurant."
+    }
+}
+{
+    "function_id": "ubereats-4",
+    "task": "Notify the customer about the estimated delivery time.",
+    "completion-content": "def notify_customer_delivery_time(\n    estimated_delivery_time: str,\n):\n    \"\"\"\n    Notifies the customer about the estimated delivery time.\n\n    Parameters:\n        estimated_delivery_time (str): The estimated delivery time in HH:MM format.\n\n    Returns:\n        None\n    \"\"\".",
+    "snippet": "def notify_customer_delivery_time(\n    estimated_delivery_time: str,\n):\n    \"\"\"\n    Notifies the customer about the estimated delivery time.\n\n    Parameters:\n        estimated_delivery_time (str): The estimated delivery time in HH:MM format.\n\n    Returns:\n        None\n    \"\"\".",
+    "metadata": {
+        "TEMPLATE": "\nGenerate a snippet of a python function that accomplishes the task '{FUNCTION_TASK}'.\nDo not include an inputs or actual code implementation. Only return the snippet.\nAn example of a snippet is:\n\ndef order_airplane_tickets(\n    num_tickets: int,\n    destination: str,\n    departure_date: str,\n    passengers: List[Dict[str, str]],\n) -> Dict[str, float]:\n    \"\"\"\n    Orders airplane tickets and returns the total price.\n\n    Parameters:\n        num_tickets (int): The number of tickets to buy.\n        destination (str): The destination city.\n        departure_date (str): The departure date in YYYY-MM-DD format.\n        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.\n                                          Each dictionary should have 'name' and 'age' keys.\n\n    Returns:\n        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.\n    \"\"\"\n",
+        "FUNCTION_TASK": "Notify the customer about the estimated delivery time."
+    }
+}
+{
+    "function_id": "ubereats-5",
+    "task": "Navigate to the customer's location for food delivery.",
+    "completion-content": "def navigate_to_customer_location():\n    \"\"\"\n    Navigates to the customer's location for food delivery.\n    \"\"\"\n    # code to navigate to the customer's location goes here\n    pass",
+    "snippet": "def navigate_to_customer_location():\n    \"\"\"\n    Navigates to the customer's location for food delivery.\n    \"\"\"\n    # code to navigate to the customer's location goes here\n    pass",
+    "metadata": {
+        "TEMPLATE": "\nGenerate a snippet of a python function that accomplishes the task '{FUNCTION_TASK}'.\nDo not include an inputs or actual code implementation. Only return the snippet.\nAn example of a snippet is:\n\ndef order_airplane_tickets(\n    num_tickets: int,\n    destination: str,\n    departure_date: str,\n    passengers: List[Dict[str, str]],\n) -> Dict[str, float]:\n    \"\"\"\n    Orders airplane tickets and returns the total price.\n\n    Parameters:\n        num_tickets (int): The number of tickets to buy.\n        destination (str): The destination city.\n        departure_date (str): The departure date in YYYY-MM-DD format.\n        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.\n                                          Each dictionary should have 'name' and 'age' keys.\n\n    Returns:\n        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.\n    \"\"\"\n",
+        "FUNCTION_TASK": "Navigate to the customer's location for food delivery."
+    }
+}
+{
+    "function_id": "ubereats-6",
+    "task": "Confirm the successful delivery of the food items to the customer.",
+    "completion-content": "def confirm_delivery():\n    \"\"\"\n    Confirms the successful delivery of the food items to the customer.\n\n    Returns:\n        bool: True if the delivery is successful, False otherwise.\n    \"\"\"",
+    "snippet": "def confirm_delivery():\n    \"\"\"\n    Confirms the successful delivery of the food items to the customer.\n\n    Returns:\n        bool: True if the delivery is successful, False otherwise.\n    \"\"\"",
+    "metadata": {
+        "TEMPLATE": "\nGenerate a snippet of a python function that accomplishes the task '{FUNCTION_TASK}'.\nDo not include an inputs or actual code implementation. Only return the snippet.\nAn example of a snippet is:\n\ndef order_airplane_tickets(\n    num_tickets: int,\n    destination: str,\n    departure_date: str,\n    passengers: List[Dict[str, str]],\n) -> Dict[str, float]:\n    \"\"\"\n    Orders airplane tickets and returns the total price.\n\n    Parameters:\n        num_tickets (int): The number of tickets to buy.\n        destination (str): The destination city.\n        departure_date (str): The departure date in YYYY-MM-DD format.\n        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.\n                                          Each dictionary should have 'name' and 'age' keys.\n\n    Returns:\n        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.\n    \"\"\"\n",
+        "FUNCTION_TASK": "Confirm the successful delivery of the food items to the customer."
+    }
+}
+{
+    "function_id": "ubereats-7",
+    "task": "Handle and report any issues with the order (e.g., missing items, delays).",
+    "completion-content": "def handle_order_issues(order: Dict[str, Any]) -> str:\n    \"\"\"\n    Handles and reports any issues with the order.\n\n    Parameters:\n        order (Dict[str, Any]): A dictionary containing order details.\n\n    Returns:\n        str: A message indicating any issues with the order.\n    \"\"\"\n    # Code to handle and report any issues with the order\n\n    return \"Order issues handled and reported successfully.\"",
+    "snippet": "def handle_order_issues(order: Dict[str, Any]) -> str:\n    \"\"\"\n    Handles and reports any issues with the order.\n\n    Parameters:\n        order (Dict[str, Any]): A dictionary containing order details.\n\n    Returns:\n        str: A message indicating any issues with the order.\n    \"\"\"\n    # Code to handle and report any issues with the order\n\n    return \"Order issues handled and reported successfully.\"",
+    "metadata": {
+        "TEMPLATE": "\nGenerate a snippet of a python function that accomplishes the task '{FUNCTION_TASK}'.\nDo not include an inputs or actual code implementation. Only return the snippet.\nAn example of a snippet is:\n\ndef order_airplane_tickets(\n    num_tickets: int,\n    destination: str,\n    departure_date: str,\n    passengers: List[Dict[str, str]],\n) -> Dict[str, float]:\n    \"\"\"\n    Orders airplane tickets and returns the total price.\n\n    Parameters:\n        num_tickets (int): The number of tickets to buy.\n        destination (str): The destination city.\n        departure_date (str): The departure date in YYYY-MM-DD format.\n        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.\n                                          Each dictionary should have 'name' and 'age' keys.\n\n    Returns:\n        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.\n    \"\"\"\n",
+        "FUNCTION_TASK": "Handle and report any issues with the order (e.g., missing items, delays)."
+    }
+}
+{
+    "function_id": "ubereats-8",
+    "task": "Record and submit daily earnings for review.",
+    "completion-content": "def record_and_submit_daily_earnings() -> None:\n    \"\"\"\n    Records and submits the daily earnings for review.\n\n    Parameters:\n        None\n\n    Returns:\n        None\n    \"\"\"",
+    "snippet": "def record_and_submit_daily_earnings() -> None:\n    \"\"\"\n    Records and submits the daily earnings for review.\n\n    Parameters:\n        None\n\n    Returns:\n        None\n    \"\"\"",
+    "metadata": {
+        "TEMPLATE": "\nGenerate a snippet of a python function that accomplishes the task '{FUNCTION_TASK}'.\nDo not include an inputs or actual code implementation. Only return the snippet.\nAn example of a snippet is:\n\ndef order_airplane_tickets(\n    num_tickets: int,\n    destination: str,\n    departure_date: str,\n    passengers: List[Dict[str, str]],\n) -> Dict[str, float]:\n    \"\"\"\n    Orders airplane tickets and returns the total price.\n\n    Parameters:\n        num_tickets (int): The number of tickets to buy.\n        destination (str): The destination city.\n        departure_date (str): The departure date in YYYY-MM-DD format.\n        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.\n                                          Each dictionary should have 'name' and 'age' keys.\n\n    Returns:\n        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.\n    \"\"\"\n",
+        "FUNCTION_TASK": "Record and submit daily earnings for review."
+    }
+}
+{
+    "function_id": "ubereats-9",
+    "task": "Monitor fuel level and find the nearest gas station if needed.",
+    "completion-content": "def monitor_fuel_level() -> str:\n    \"\"\"\n    Monitors the fuel level and finds the nearest gas station if needed.\n\n    Returns:\n        str: A message indicating the fuel level status and the nearest gas station if needed.\n    \"\"\"\n    pass",
+    "snippet": "def monitor_fuel_level() -> str:\n    \"\"\"\n    Monitors the fuel level and finds the nearest gas station if needed.\n\n    Returns:\n        str: A message indicating the fuel level status and the nearest gas station if needed.\n    \"\"\"\n    pass",
+    "metadata": {
+        "TEMPLATE": "\nGenerate a snippet of a python function that accomplishes the task '{FUNCTION_TASK}'.\nDo not include an inputs or actual code implementation. Only return the snippet.\nAn example of a snippet is:\n\ndef order_airplane_tickets(\n    num_tickets: int,\n    destination: str,\n    departure_date: str,\n    passengers: List[Dict[str, str]],\n) -> Dict[str, float]:\n    \"\"\"\n    Orders airplane tickets and returns the total price.\n\n    Parameters:\n        num_tickets (int): The number of tickets to buy.\n        destination (str): The destination city.\n        departure_date (str): The departure date in YYYY-MM-DD format.\n        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.\n                                          Each dictionary should have 'name' and 'age' keys.\n\n    Returns:\n        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.\n    \"\"\"\n",
+        "FUNCTION_TASK": "Monitor fuel level and find the nearest gas station if needed."
+    }
+}
+{
+    "function_id": "ubereats-10",
+    "task": "Update availability status (e.g., going offline, taking a break).",
+    "completion-content": "def update_availability_status(status: str) -> None:\n    \"\"\"\n    Updates the availability status of a user.\n\n    Parameters:\n        status (str): The new availability status.\n\n    Returns:\n        None\n    \"\"\"\n    # Code to update the availability status goes here",
+    "snippet": "def update_availability_status(status: str) -> None:\n    \"\"\"\n    Updates the availability status of a user.\n\n    Parameters:\n        status (str): The new availability status.\n\n    Returns:\n        None\n    \"\"\"\n    # Code to update the availability status goes here",
+    "metadata": {
+        "TEMPLATE": "\nGenerate a snippet of a python function that accomplishes the task '{FUNCTION_TASK}'.\nDo not include an inputs or actual code implementation. Only return the snippet.\nAn example of a snippet is:\n\ndef order_airplane_tickets(\n    num_tickets: int,\n    destination: str,\n    departure_date: str,\n    passengers: List[Dict[str, str]],\n) -> Dict[str, float]:\n    \"\"\"\n    Orders airplane tickets and returns the total price.\n\n    Parameters:\n        num_tickets (int): The number of tickets to buy.\n        destination (str): The destination city.\n        departure_date (str): The departure date in YYYY-MM-DD format.\n        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.\n                                          Each dictionary should have 'name' and 'age' keys.\n\n    Returns:\n        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.\n    \"\"\"\n",
+        "FUNCTION_TASK": "Update availability status (e.g., going offline, taking a break)."
+    }
+}
+{
+    "function_id": "ubereats-11",
+    "task": "Rate the restaurant based on the ease of the pickup process.",
+    "completion-content": "def rate_restaurant_pickup(ease_of_pickup: str) -> int:\n    \"\"\"\n    Rates the restaurant based on the ease of the pickup process.\n\n    Parameters:\n        ease_of_pickup (str): The ease of the pickup process.\n\n    Returns:\n        int: The rating of the restaurant based on the ease of the pickup process.\n    \"\"\"\n    # Code to calculate the rating based on the ease of the pickup process\n    return rating",
+    "snippet": "def rate_restaurant_pickup(ease_of_pickup: str) -> int:\n    \"\"\"\n    Rates the restaurant based on the ease of the pickup process.\n\n    Parameters:\n        ease_of_pickup (str): The ease of the pickup process.\n\n    Returns:\n        int: The rating of the restaurant based on the ease of the pickup process.\n    \"\"\"\n    # Code to calculate the rating based on the ease of the pickup process\n    return rating",
+    "metadata": {
+        "TEMPLATE": "\nGenerate a snippet of a python function that accomplishes the task '{FUNCTION_TASK}'.\nDo not include an inputs or actual code implementation. Only return the snippet.\nAn example of a snippet is:\n\ndef order_airplane_tickets(\n    num_tickets: int,\n    destination: str,\n    departure_date: str,\n    passengers: List[Dict[str, str]],\n) -> Dict[str, float]:\n    \"\"\"\n    Orders airplane tickets and returns the total price.\n\n    Parameters:\n        num_tickets (int): The number of tickets to buy.\n        destination (str): The destination city.\n        departure_date (str): The departure date in YYYY-MM-DD format.\n        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.\n                                          Each dictionary should have 'name' and 'age' keys.\n\n    Returns:\n        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.\n    \"\"\"\n",
+        "FUNCTION_TASK": "Rate the restaurant based on the ease of the pickup process."
+    }
+}
+{
+    "function_id": "ubereats-12",
+    "task": "Rate the customer based on the ease of the delivery process.",
+    "completion-content": "def rate_customer_delivery(ease_of_delivery: int) -> str:\n    \"\"\"\n    Rates the customer based on the ease of the delivery process.\n\n    Parameters:\n        ease_of_delivery (int): The rating of the ease of the delivery process.\n\n    Returns:\n        str: A string indicating the customer rating based on the ease of delivery.\n    \"\"\"\n    pass",
+    "snippet": "def rate_customer_delivery(ease_of_delivery: int) -> str:\n    \"\"\"\n    Rates the customer based on the ease of the delivery process.\n\n    Parameters:\n        ease_of_delivery (int): The rating of the ease of the delivery process.\n\n    Returns:\n        str: A string indicating the customer rating based on the ease of delivery.\n    \"\"\"\n    pass",
+    "metadata": {
+        "TEMPLATE": "\nGenerate a snippet of a python function that accomplishes the task '{FUNCTION_TASK}'.\nDo not include an inputs or actual code implementation. Only return the snippet.\nAn example of a snippet is:\n\ndef order_airplane_tickets(\n    num_tickets: int,\n    destination: str,\n    departure_date: str,\n    passengers: List[Dict[str, str]],\n) -> Dict[str, float]:\n    \"\"\"\n    Orders airplane tickets and returns the total price.\n\n    Parameters:\n        num_tickets (int): The number of tickets to buy.\n        destination (str): The destination city.\n        departure_date (str): The departure date in YYYY-MM-DD format.\n        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.\n                                          Each dictionary should have 'name' and 'age' keys.\n\n    Returns:\n        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.\n    \"\"\"\n",
+        "FUNCTION_TASK": "Rate the customer based on the ease of the delivery process."
+    }
+}
+{
+    "function_id": "ubereats-13",
+    "task": "Review customer feedback and ratings.",
+    "completion-content": "def review_customer_feedback_and_ratings(\n    feedback: List[Dict[str, Union[str, int]]],\n    ratings: List[Dict[str, Union[str, int]]]\n) -> Dict[str, Union[float, int]]:\n    \"\"\"\n    Review customer feedback and ratings.\n\n    Parameters:\n        feedback (List[Dict[str, Union[str, int]]]): A list of dictionaries containing customer feedback.\n                                                    Each dictionary should have 'customer_name' and 'comment' keys.\n        ratings (List[Dict[str, Union[str, int]]]): A list of dictionaries containing customer ratings.\n                                                    Each dictionary should have 'customer_name' and 'rating' keys.\n\n    Returns:\n        Dict[str, Union[float, int]]: A dictionary with 'average_rating' as a key and the average rating as a value,\n                                      and 'comments' as a key and a list of customer comments as a value.\n    \"\"\"",
+    "snippet": "def review_customer_feedback_and_ratings(\n    feedback: List[Dict[str, Union[str, int]]],\n    ratings: List[Dict[str, Union[str, int]]]\n) -> Dict[str, Union[float, int]]:\n    \"\"\"\n    Review customer feedback and ratings.\n\n    Parameters:\n        feedback (List[Dict[str, Union[str, int]]]): A list of dictionaries containing customer feedback.\n                                                    Each dictionary should have 'customer_name' and 'comment' keys.\n        ratings (List[Dict[str, Union[str, int]]]): A list of dictionaries containing customer ratings.\n                                                    Each dictionary should have 'customer_name' and 'rating' keys.\n\n    Returns:\n        Dict[str, Union[float, int]]: A dictionary with 'average_rating' as a key and the average rating as a value,\n                                      and 'comments' as a key and a list of customer comments as a value.\n    \"\"\"",
+    "metadata": {
+        "TEMPLATE": "\nGenerate a snippet of a python function that accomplishes the task '{FUNCTION_TASK}'.\nDo not include an inputs or actual code implementation. Only return the snippet.\nAn example of a snippet is:\n\ndef order_airplane_tickets(\n    num_tickets: int,\n    destination: str,\n    departure_date: str,\n    passengers: List[Dict[str, str]],\n) -> Dict[str, float]:\n    \"\"\"\n    Orders airplane tickets and returns the total price.\n\n    Parameters:\n        num_tickets (int): The number of tickets to buy.\n        destination (str): The destination city.\n        departure_date (str): The departure date in YYYY-MM-DD format.\n        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.\n                                          Each dictionary should have 'name' and 'age' keys.\n\n    Returns:\n        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.\n    \"\"\"\n",
+        "FUNCTION_TASK": "Review customer feedback and ratings."
+    }
+}
+{
+    "function_id": "ubereats-14",
+    "task": "Contact support for resolving any disputes or issues.",
+    "completion-content": "def contact_support() -> None:\n    \"\"\"\n    Contact support for resolving any disputes or issues.\n    \n    Returns:\n        None\n    \"\"\"\n    # code to contact support goes here\n    pass",
+    "snippet": "def contact_support() -> None:\n    \"\"\"\n    Contact support for resolving any disputes or issues.\n    \n    Returns:\n        None\n    \"\"\"\n    # code to contact support goes here\n    pass",
+    "metadata": {
+        "TEMPLATE": "\nGenerate a snippet of a python function that accomplishes the task '{FUNCTION_TASK}'.\nDo not include an inputs or actual code implementation. Only return the snippet.\nAn example of a snippet is:\n\ndef order_airplane_tickets(\n    num_tickets: int,\n    destination: str,\n    departure_date: str,\n    passengers: List[Dict[str, str]],\n) -> Dict[str, float]:\n    \"\"\"\n    Orders airplane tickets and returns the total price.\n\n    Parameters:\n        num_tickets (int): The number of tickets to buy.\n        destination (str): The destination city.\n        departure_date (str): The departure date in YYYY-MM-DD format.\n        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.\n                                          Each dictionary should have 'name' and 'age' keys.\n\n    Returns:\n        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.\n    \"\"\"\n",
+        "FUNCTION_TASK": "Contact support for resolving any disputes or issues."
+    }
+}
+{
+    "function_id": "ubereats-15",
+    "task": "Submit receipts for any work-related expenses for reimbursement.",
+    "completion-content": "def submit_receipts_for_reimbursement(\n    receipts: List[str],\n    employee_id: int,\n    reimbursement_amount: float,\n) -> bool:\n    \"\"\"\n    Submit receipts for any work-related expenses for reimbursement.\n\n    Parameters:\n        receipts (List[str]): A list of receipts as strings.\n        employee_id (int): The employee's ID.\n        reimbursement_amount (float): The amount to be reimbursed.\n\n    Returns:\n        bool: True if the receipts were successfully submitted for reimbursement, False otherwise.\n    \"\"\"\n    # Code implementation goes here",
+    "snippet": "def submit_receipts_for_reimbursement(\n    receipts: List[str],\n    employee_id: int,\n    reimbursement_amount: float,\n) -> bool:\n    \"\"\"\n    Submit receipts for any work-related expenses for reimbursement.\n\n    Parameters:\n        receipts (List[str]): A list of receipts as strings.\n        employee_id (int): The employee's ID.\n        reimbursement_amount (float): The amount to be reimbursed.\n\n    Returns:\n        bool: True if the receipts were successfully submitted for reimbursement, False otherwise.\n    \"\"\"\n    # Code implementation goes here",
+    "metadata": {
+        "TEMPLATE": "\nGenerate a snippet of a python function that accomplishes the task '{FUNCTION_TASK}'.\nDo not include an inputs or actual code implementation. Only return the snippet.\nAn example of a snippet is:\n\ndef order_airplane_tickets(\n    num_tickets: int,\n    destination: str,\n    departure_date: str,\n    passengers: List[Dict[str, str]],\n) -> Dict[str, float]:\n    \"\"\"\n    Orders airplane tickets and returns the total price.\n\n    Parameters:\n        num_tickets (int): The number of tickets to buy.\n        destination (str): The destination city.\n        departure_date (str): The departure date in YYYY-MM-DD format.\n        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.\n                                          Each dictionary should have 'name' and 'age' keys.\n\n    Returns:\n        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.\n    \"\"\"\n",
+        "FUNCTION_TASK": "Submit receipts for any work-related expenses for reimbursement."
+    }
+}
+{
+    "function_id": "ubereats-16",
+    "task": "View and accept any promotional tasks or bonus opportunities.",
+    "completion-content": "def view_and_accept_promotions() -> None:\n    \"\"\"\n    View and accept any promotional tasks or bonus opportunities.\n    \"\"\"",
+    "snippet": "def view_and_accept_promotions() -> None:\n    \"\"\"\n    View and accept any promotional tasks or bonus opportunities.\n    \"\"\"",
+    "metadata": {
+        "TEMPLATE": "\nGenerate a snippet of a python function that accomplishes the task '{FUNCTION_TASK}'.\nDo not include an inputs or actual code implementation. Only return the snippet.\nAn example of a snippet is:\n\ndef order_airplane_tickets(\n    num_tickets: int,\n    destination: str,\n    departure_date: str,\n    passengers: List[Dict[str, str]],\n) -> Dict[str, float]:\n    \"\"\"\n    Orders airplane tickets and returns the total price.\n\n    Parameters:\n        num_tickets (int): The number of tickets to buy.\n        destination (str): The destination city.\n        departure_date (str): The departure date in YYYY-MM-DD format.\n        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.\n                                          Each dictionary should have 'name' and 'age' keys.\n\n    Returns:\n        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.\n    \"\"\"\n",
+        "FUNCTION_TASK": "View and accept any promotional tasks or bonus opportunities."
+    }
+}
+{
+    "function_id": "ubereats-17",
+    "task": "Check and maintain vehicle condition (e.g., tire pressure, oil level).",
+    "completion-content": "def check_vehicle_condition() -> bool:\n    \"\"\"\n    Checks and maintains the condition of a vehicle.\n\n    Returns:\n        bool: True if the vehicle condition is maintained, False otherwise.\n    \"\"\"",
+    "snippet": "def check_vehicle_condition() -> bool:\n    \"\"\"\n    Checks and maintains the condition of a vehicle.\n\n    Returns:\n        bool: True if the vehicle condition is maintained, False otherwise.\n    \"\"\"",
+    "metadata": {
+        "TEMPLATE": "\nGenerate a snippet of a python function that accomplishes the task '{FUNCTION_TASK}'.\nDo not include an inputs or actual code implementation. Only return the snippet.\nAn example of a snippet is:\n\ndef order_airplane_tickets(\n    num_tickets: int,\n    destination: str,\n    departure_date: str,\n    passengers: List[Dict[str, str]],\n) -> Dict[str, float]:\n    \"\"\"\n    Orders airplane tickets and returns the total price.\n\n    Parameters:\n        num_tickets (int): The number of tickets to buy.\n        destination (str): The destination city.\n        departure_date (str): The departure date in YYYY-MM-DD format.\n        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.\n                                          Each dictionary should have 'name' and 'age' keys.\n\n    Returns:\n        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.\n    \"\"\"\n",
+        "FUNCTION_TASK": "Check and maintain vehicle condition (e.g., tire pressure, oil level)."
+    }
+}
+{
+    "function_id": "ubereats-18",
+    "task": "Keep track of miles driven for tax purposes.",
+    "completion-content": "def keep_track_of_miles_driven() -> None:\n    \"\"\"\n    Keeps track of miles driven for tax purposes.\n\n    Returns:\n        None\n    \"\"\"\n    pass",
+    "snippet": "def keep_track_of_miles_driven() -> None:\n    \"\"\"\n    Keeps track of miles driven for tax purposes.\n\n    Returns:\n        None\n    \"\"\"\n    pass",
+    "metadata": {
+        "TEMPLATE": "\nGenerate a snippet of a python function that accomplishes the task '{FUNCTION_TASK}'.\nDo not include an inputs or actual code implementation. Only return the snippet.\nAn example of a snippet is:\n\ndef order_airplane_tickets(\n    num_tickets: int,\n    destination: str,\n    departure_date: str,\n    passengers: List[Dict[str, str]],\n) -> Dict[str, float]:\n    \"\"\"\n    Orders airplane tickets and returns the total price.\n\n    Parameters:\n        num_tickets (int): The number of tickets to buy.\n        destination (str): The destination city.\n        departure_date (str): The departure date in YYYY-MM-DD format.\n        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.\n                                          Each dictionary should have 'name' and 'age' keys.\n\n    Returns:\n        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.\n    \"\"\"\n",
+        "FUNCTION_TASK": "Keep track of miles driven for tax purposes."
+    }
+}
+{
+    "function_id": "ubereats-19",
+    "task": "Receive and confirm batched orders (multiple pickups or deliveries).",
+    "completion-content": "def receive_and_confirm_batched_orders(\n    orders: List[Dict[str, Any]]\n) -> List[Dict[str, Any]]:\n    \"\"\"\n    Receive and confirm batched orders (multiple pickups or deliveries).\n\n    Parameters:\n        orders (List[Dict[str, Any]]): A list of dictionaries containing order details.\n                                       Each dictionary should contain the necessary information\n                                       for processing the order.\n\n    Returns:\n        List[Dict[str, Any]]: A list of dictionaries containing confirmed orders.\n                              Each dictionary should contain the necessary information\n                              for each confirmed order.\n    \"\"\"",
+    "snippet": "def receive_and_confirm_batched_orders(\n    orders: List[Dict[str, Any]]\n) -> List[Dict[str, Any]]:\n    \"\"\"\n    Receive and confirm batched orders (multiple pickups or deliveries).\n\n    Parameters:\n        orders (List[Dict[str, Any]]): A list of dictionaries containing order details.\n                                       Each dictionary should contain the necessary information\n                                       for processing the order.\n\n    Returns:\n        List[Dict[str, Any]]: A list of dictionaries containing confirmed orders.\n                              Each dictionary should contain the necessary information\n                              for each confirmed order.\n    \"\"\"",
+    "metadata": {
+        "TEMPLATE": "\nGenerate a snippet of a python function that accomplishes the task '{FUNCTION_TASK}'.\nDo not include an inputs or actual code implementation. Only return the snippet.\nAn example of a snippet is:\n\ndef order_airplane_tickets(\n    num_tickets: int,\n    destination: str,\n    departure_date: str,\n    passengers: List[Dict[str, str]],\n) -> Dict[str, float]:\n    \"\"\"\n    Orders airplane tickets and returns the total price.\n\n    Parameters:\n        num_tickets (int): The number of tickets to buy.\n        destination (str): The destination city.\n        departure_date (str): The departure date in YYYY-MM-DD format.\n        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.\n                                          Each dictionary should have 'name' and 'age' keys.\n\n    Returns:\n        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.\n    \"\"\"\n",
+        "FUNCTION_TASK": "Receive and confirm batched orders (multiple pickups or deliveries)."
+    }
+}
+{
+    "function_id": "ubereats-20",
+    "task": "Track and report any tips received.",
+    "completion-content": "def track_and_report_tips(\n    tips: List[float],\n) -> Dict[str, float]:\n    \"\"\"\n    Tracks and reports any tips received.\n\n    Parameters:\n        tips (List[float]): A list of tip amounts.\n\n    Returns:\n        Dict[str, float]: A dictionary with 'total_tips' as a key and the total tips received as a value.\n    \"\"\"",
+    "snippet": "def track_and_report_tips(\n    tips: List[float],\n) -> Dict[str, float]:\n    \"\"\"\n    Tracks and reports any tips received.\n\n    Parameters:\n        tips (List[float]): A list of tip amounts.\n\n    Returns:\n        Dict[str, float]: A dictionary with 'total_tips' as a key and the total tips received as a value.\n    \"\"\"",
+    "metadata": {
+        "TEMPLATE": "\nGenerate a snippet of a python function that accomplishes the task '{FUNCTION_TASK}'.\nDo not include an inputs or actual code implementation. Only return the snippet.\nAn example of a snippet is:\n\ndef order_airplane_tickets(\n    num_tickets: int,\n    destination: str,\n    departure_date: str,\n    passengers: List[Dict[str, str]],\n) -> Dict[str, float]:\n    \"\"\"\n    Orders airplane tickets and returns the total price.\n\n    Parameters:\n        num_tickets (int): The number of tickets to buy.\n        destination (str): The destination city.\n        departure_date (str): The departure date in YYYY-MM-DD format.\n        passengers (List[Dict[str, str]]): A list of dictionaries containing passenger details.\n                                          Each dictionary should have 'name' and 'age' keys.\n\n    Returns:\n        Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.\n    \"\"\"\n",
+        "FUNCTION_TASK": "Track and report any tips received."
+    }
+}

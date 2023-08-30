@@ -90,3 +90,417 @@
         "DESCRIPTION_EXAMPLE": "\n{\n    \"name\": \"get_current_weather\",\n    \"description\": \"Get the current weather in a given location\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n        },\n        \"required\": [\"location\"],\n    },\n}\n"
     }
 }
+{
+    "description": "send a client an invoice",
+    "completion-content": "{\n    \"function_snippet\": \"def send_invoice(client: str) -> None:\\n    \\\"\\\"\\\"\\n    Send an invoice to a client\\n    \\\"\\\"\\\"\\n    <function implementation...>\",\n    \"function_description\": {\n        \"name\": \"send_invoice\",\n        \"description\": \"Send an invoice to a client\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"client\": {\n                    \"type\": \"string\",\n                    \"description\": \"The name or identifier of the client\",\n                }\n            },\n            \"required\": [\"client\"],\n        }\n    }\n}",
+    "data": null,
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is a short summary of a python function in natural language:\n    {FUNCTION_SNIPPET}    \n\n### \nWrite a description of this function.\nReturn the output as this example:\n    {{\n        \"function_snippet\": \n        {SNIPPET_EXAMPLE},\n        \"function_description\": {DESCRIPTION_EXAMPLE}\n    }}\n",
+        "FUNCTION_SNIPPET": "send a client an invoice",
+        "SNIPPET_EXAMPLE": "\ndef get_current_weather(\n    location: str,\n    unit: str=\"fahrenheit\"\n) -> str:\n    \"\"\"\n    Get the current weather in a given location\n    \"\"\"\n    <function implementation...>\n",
+        "DESCRIPTION_EXAMPLE": "\n{\n    \"name\": \"get_current_weather\",\n    \"description\": \"Get the current weather in a given location\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n        },\n        \"required\": [\"location\"],\n    },\n}\n"
+    }
+}
+{
+    "description": "schedule a meeting",
+    "completion-content": "{\n\"function_snippet\": \"def schedule_meeting():\\n    \\\"\\\"\\\"\\n    Schedule a meeting\\n    \\\"\\\"\\\"\\n    <function implementation...>\",\n\"function_description\": {\n    \"name\": \"schedule_meeting\",\n    \"description\": \"Schedule a meeting\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {},\n        \"required\": [],\n    },\n}\n}",
+    "data": null,
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is a short summary of a python function in natural language:\n    {FUNCTION_SNIPPET}    \n\n### \nWrite a description of this function.\nReturn the output as this example:\n    {{\n        \"function_snippet\": \n        {SNIPPET_EXAMPLE},\n        \"function_description\": {DESCRIPTION_EXAMPLE}\n    }}\n",
+        "FUNCTION_SNIPPET": "schedule a meeting",
+        "SNIPPET_EXAMPLE": "\ndef get_current_weather(\n    location: str,\n    unit: str=\"fahrenheit\"\n) -> str:\n    \"\"\"\n    Get the current weather in a given location\n    \"\"\"\n    <function implementation...>\n",
+        "DESCRIPTION_EXAMPLE": "\n{\n    \"name\": \"get_current_weather\",\n    \"description\": \"Get the current weather in a given location\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n        },\n        \"required\": [\"location\"],\n    },\n}\n"
+    }
+}
+{
+    "description": "generate a sales report",
+    "completion-content": "{\n    \"function_snippet\": \"\"\"\ndef generate_sales_report():\n    \"\"\"\n    Generate a sales report\n    \"\"\"\n    <function implementation...>\n\"\"\",\n    \"function_description\": {\n        \"name\": \"generate_sales_report\",\n        \"description\": \"Generate a sales report\",\n        \"parameters\": null\n    }\n}",
+    "data": null,
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is a short summary of a python function in natural language:\n    {FUNCTION_SNIPPET}    \n\n### \nWrite a description of this function.\nReturn the output as this example:\n    {{\n        \"function_snippet\": \n        {SNIPPET_EXAMPLE},\n        \"function_description\": {DESCRIPTION_EXAMPLE}\n    }}\n",
+        "FUNCTION_SNIPPET": "generate a sales report",
+        "SNIPPET_EXAMPLE": "\ndef get_current_weather(\n    location: str,\n    unit: str=\"fahrenheit\"\n) -> str:\n    \"\"\"\n    Get the current weather in a given location\n    \"\"\"\n    <function implementation...>\n",
+        "DESCRIPTION_EXAMPLE": "\n{\n    \"name\": \"get_current_weather\",\n    \"description\": \"Get the current weather in a given location\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n        },\n        \"required\": [\"location\"],\n    },\n}\n"
+    }
+}
+{
+    "description": "perform an employee evaluation",
+    "completion-content": "{\n    \"function_snippet\": \"def get_current_weather(\\n    location: str,\\n    unit: str=\\\"fahrenheit\\\"\\n) -> str:\\n    \\\"\\\"\\\"\\n    Get the current weather in a given location\\n    \\\"\\\"\\\"\\n    <function implementation...>\",\n    \"function_description\": {\n        \"name\": \"get_current_weather\",\n        \"description\": \"Get the current weather in a given location\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"location\": {\n                    \"type\": \"string\",\n                    \"description\": \"The city and state, e.g. San Francisco, CA\"\n                },\n                \"unit\": {\n                    \"type\": \"string\",\n                    \"enum\": [\"celsius\", \"fahrenheit\"]\n                }\n            },\n            \"required\": [\"location\"]\n        }\n    }\n}",
+    "data": {
+        "function_snippet": "def get_current_weather(\n    location: str,\n    unit: str=\"fahrenheit\"\n) -> str:\n    \"\"\"\n    Get the current weather in a given location\n    \"\"\"\n    <function implementation...>",
+        "function_description": {
+            "name": "get_current_weather",
+            "description": "Get the current weather in a given location",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "location": {
+                        "type": "string",
+                        "description": "The city and state, e.g. San Francisco, CA"
+                    },
+                    "unit": {
+                        "type": "string",
+                        "enum": [
+                            "celsius",
+                            "fahrenheit"
+                        ]
+                    }
+                },
+                "required": [
+                    "location"
+                ]
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is a short summary of a python function in natural language:\n    {FUNCTION_SNIPPET}    \n\n### \nWrite a description of this function.\nReturn the output as this example:\n    {{\n        \"function_snippet\": \n        {SNIPPET_EXAMPLE},\n        \"function_description\": {DESCRIPTION_EXAMPLE}\n    }}\n",
+        "FUNCTION_SNIPPET": "perform an employee evaluation",
+        "SNIPPET_EXAMPLE": "\ndef get_current_weather(\n    location: str,\n    unit: str=\"fahrenheit\"\n) -> str:\n    \"\"\"\n    Get the current weather in a given location\n    \"\"\"\n    <function implementation...>\n",
+        "DESCRIPTION_EXAMPLE": "\n{\n    \"name\": \"get_current_weather\",\n    \"description\": \"Get the current weather in a given location\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n        },\n        \"required\": [\"location\"],\n    },\n}\n"
+    }
+}
+{
+    "description": "create an account for a new customer",
+    "completion-content": "{\n    \"function_snippet\": \n\ndef create_account(\n    name: str,\n    email: str,\n    password: str,\n    contact_number: str\n) -> str:\n    \"\"\"\n    Create an account for a new customer\n    \"\"\"\n    <function implementation...>\n,\n\n    \"function_description\": \n    {\n        \"name\": \"create_account\",\n        \"description\": \"Create an account for a new customer\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"name\": {\n                    \"type\": \"string\",\n                    \"description\": \"The name of the new customer\",\n                },\n                \"email\": {\n                    \"type\": \"string\",\n                    \"description\": \"The email address of the new customer\",\n                },\n                \"password\": {\n                    \"type\": \"string\",\n                    \"description\": \"The password for the new customer's account\",\n                },\n                \"contact_number\": {\n                    \"type\": \"string\",\n                    \"description\": \"The contact number of the new customer\",\n                }\n            },\n            \"required\": [\"name\", \"email\", \"password\", \"contact_number\"],\n        },\n    }\n}",
+    "data": null,
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is a short summary of a python function in natural language:\n    {FUNCTION_SNIPPET}    \n\n### \nWrite a description of this function.\nReturn the output as this example:\n    {{\n        \"function_snippet\": \n        {SNIPPET_EXAMPLE},\n        \"function_description\": {DESCRIPTION_EXAMPLE}\n    }}\n",
+        "FUNCTION_SNIPPET": "create an account for a new customer",
+        "SNIPPET_EXAMPLE": "\ndef get_current_weather(\n    location: str,\n    unit: str=\"fahrenheit\"\n) -> str:\n    \"\"\"\n    Get the current weather in a given location\n    \"\"\"\n    <function implementation...>\n",
+        "DESCRIPTION_EXAMPLE": "\n{\n    \"name\": \"get_current_weather\",\n    \"description\": \"Get the current weather in a given location\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n        },\n        \"required\": [\"location\"],\n    },\n}\n"
+    }
+}
+{
+    "description": "calculate payroll for someone",
+    "completion-content": "{\n    \"function_snippet\": \"def calculate_payroll(employee: str, hours_worked: int, hourly_rate: float) -> float:\\n    \\\"\\\"\\\"\\n    Calculate the payroll for an employee\\n    \\\"\\\"\\\"\\n    <function implementation...>\",\n    \"function_description\": {\n        \"name\": \"calculate_payroll\",\n        \"description\": \"Calculate the payroll for an employee\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"employee\": {\n                    \"type\": \"string\",\n                    \"description\": \"The name of the employee\",\n                },\n                \"hours_worked\": {\n                    \"type\": \"integer\",\n                    \"description\": \"The number of hours worked by the employee\",\n                },\n                \"hourly_rate\": {\n                    \"type\": \"number\",\n                    \"description\": \"The hourly rate of the employee\",\n                },\n            },\n            \"required\": [\"employee\", \"hours_worked\", \"hourly_rate\"],\n        },\n    }\n}",
+    "data": null,
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is a short summary of a python function in natural language:\n    {FUNCTION_SNIPPET}    \n\n### \nWrite a description of this function.\nReturn the output as this example:\n    {{\n        \"function_snippet\": \n        {SNIPPET_EXAMPLE},\n        \"function_description\": {DESCRIPTION_EXAMPLE}\n    }}\n",
+        "FUNCTION_SNIPPET": "calculate payroll for someone",
+        "SNIPPET_EXAMPLE": "\ndef get_current_weather(\n    location: str,\n    unit: str=\"fahrenheit\"\n) -> str:\n    \"\"\"\n    Get the current weather in a given location\n    \"\"\"\n    <function implementation...>\n",
+        "DESCRIPTION_EXAMPLE": "\n{\n    \"name\": \"get_current_weather\",\n    \"description\": \"Get the current weather in a given location\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n        },\n        \"required\": [\"location\"],\n    },\n}\n"
+    }
+}
+{
+    "description": "calculate payroll for a team",
+    "completion-content": "{\n        \"function_snippet\": def calculate_payroll(team):\n    \"\"\"\n    Calculates the payroll for a team\n    \"\"\"\n    <function implementation...>,\n        \"function_description\": \n{\n    \"name\": \"calculate_payroll\",\n    \"description\": \"Calculates the payroll for a team\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"team\": {\n                \"type\": \"string\",\n                \"description\": \"The team for which to calculate the payroll\"\n            }\n        },\n        \"required\": [\"team\"],\n    },\n}\n\n    }",
+    "data": null,
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is a short summary of a python function in natural language:\n    {FUNCTION_SNIPPET}    \n\n### \nWrite a description of this function.\nReturn the output as this example:\n    {{\n        \"function_snippet\": \n        {SNIPPET_EXAMPLE},\n        \"function_description\": {DESCRIPTION_EXAMPLE}\n    }}\n",
+        "FUNCTION_SNIPPET": "calculate payroll for a team",
+        "SNIPPET_EXAMPLE": "\ndef get_current_weather(\n    location: str,\n    unit: str=\"fahrenheit\"\n) -> str:\n    \"\"\"\n    Get the current weather in a given location\n    \"\"\"\n    <function implementation...>\n",
+        "DESCRIPTION_EXAMPLE": "\n{\n    \"name\": \"get_current_weather\",\n    \"description\": \"Get the current weather in a given location\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n        },\n        \"required\": [\"location\"],\n    },\n}\n"
+    }
+}
+{
+    "description": "update inventory stock data",
+    "completion-content": "{\n    \"function_snippet\": \"def update_inventory_stock_data():\\n    <function implementation...>\",\n    \"function_description\": {\n        \"name\": \"update_inventory_stock_data\",\n        \"description\": \"Update the stock data for inventory\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {},\n            \"required\": []\n        }\n    }\n}",
+    "data": {
+        "function_snippet": "def update_inventory_stock_data():\n    <function implementation...>",
+        "function_description": {
+            "name": "update_inventory_stock_data",
+            "description": "Update the stock data for inventory",
+            "parameters": {
+                "type": "object",
+                "properties": {},
+                "required": []
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is a short summary of a python function in natural language:\n    {FUNCTION_SNIPPET}    \n\n### \nWrite a description of this function.\nReturn the output as this example:\n    {{\n        \"function_snippet\": \n        {SNIPPET_EXAMPLE},\n        \"function_description\": {DESCRIPTION_EXAMPLE}\n    }}\n",
+        "FUNCTION_SNIPPET": "update inventory stock data",
+        "SNIPPET_EXAMPLE": "\ndef get_current_weather(\n    location: str,\n    unit: str=\"fahrenheit\"\n) -> str:\n    \"\"\"\n    Get the current weather in a given location\n    \"\"\"\n    <function implementation...>\n",
+        "DESCRIPTION_EXAMPLE": "\n{\n    \"name\": \"get_current_weather\",\n    \"description\": \"Get the current weather in a given location\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n        },\n        \"required\": [\"location\"],\n    },\n}\n"
+    }
+}
+{
+    "description": "track the status of a shipment",
+    "completion-content": "{\n        \"function_snippet\": \"def track_shipment(shipment_id: str) -> str:\\n    \\\"\\\"\\\"\\n    Track the status of a shipment\\n    \\\"\\\"\\\"\\n    <function implementation...>\",\n        \"function_description\": {\n            \"name\": \"track_shipment\",\n            \"description\": \"Track the status of a shipment\",\n            \"parameters\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"shipment_id\": {\n                        \"type\": \"string\",\n                        \"description\": \"The ID of the shipment being tracked\"\n                    }\n                },\n                \"required\": [\"shipment_id\"]\n            }\n        }\n    }",
+    "data": {
+        "function_snippet": "def track_shipment(shipment_id: str) -> str:\n    \"\"\"\n    Track the status of a shipment\n    \"\"\"\n    <function implementation...>",
+        "function_description": {
+            "name": "track_shipment",
+            "description": "Track the status of a shipment",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "shipment_id": {
+                        "type": "string",
+                        "description": "The ID of the shipment being tracked"
+                    }
+                },
+                "required": [
+                    "shipment_id"
+                ]
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is a short summary of a python function in natural language:\n    {FUNCTION_SNIPPET}    \n\n### \nWrite a description of this function.\nReturn the output as this example:\n    {{\n        \"function_snippet\": \n        {SNIPPET_EXAMPLE},\n        \"function_description\": {DESCRIPTION_EXAMPLE}\n    }}\n",
+        "FUNCTION_SNIPPET": "track the status of a shipment",
+        "SNIPPET_EXAMPLE": "\ndef get_current_weather(\n    location: str,\n    unit: str=\"fahrenheit\"\n) -> str:\n    \"\"\"\n    Get the current weather in a given location\n    \"\"\"\n    <function implementation...>\n",
+        "DESCRIPTION_EXAMPLE": "\n{\n    \"name\": \"get_current_weather\",\n    \"description\": \"Get the current weather in a given location\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n        },\n        \"required\": [\"location\"],\n    },\n}\n"
+    }
+}
+{
+    "description": "assign a customer support ticket to an agent",
+    "completion-content": "{\n    \"function_snippet\": \"def assign_ticket_to_agent(ticket_id: str, agent_id: str) -> None:\\n    \\\"\\\"\\\"\\n    Assign a customer support ticket to an agent\\n    \\\"\\\"\\\"\\n    <function implementation...>\",\n    \"function_description\": {\n        \"name\": \"assign_ticket_to_agent\",\n        \"description\": \"Assign a customer support ticket to an agent\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"ticket_id\": {\n                    \"type\": \"string\",\n                    \"description\": \"The identifier of the customer support ticket\"\n                },\n                \"agent_id\": {\n                    \"type\": \"string\",\n                    \"description\": \"The identifier of the agent\"\n                }\n            },\n            \"required\": [\"ticket_id\", \"agent_id\"]\n        }\n    }\n}",
+    "data": {
+        "function_snippet": "def assign_ticket_to_agent(ticket_id: str, agent_id: str) -> None:\n    \"\"\"\n    Assign a customer support ticket to an agent\n    \"\"\"\n    <function implementation...>",
+        "function_description": {
+            "name": "assign_ticket_to_agent",
+            "description": "Assign a customer support ticket to an agent",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "ticket_id": {
+                        "type": "string",
+                        "description": "The identifier of the customer support ticket"
+                    },
+                    "agent_id": {
+                        "type": "string",
+                        "description": "The identifier of the agent"
+                    }
+                },
+                "required": [
+                    "ticket_id",
+                    "agent_id"
+                ]
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is a short summary of a python function in natural language:\n    {FUNCTION_SNIPPET}    \n\n### \nWrite a description of this function.\nReturn the output as this example:\n    {{\n        \"function_snippet\": \n        {SNIPPET_EXAMPLE},\n        \"function_description\": {DESCRIPTION_EXAMPLE}\n    }}\n",
+        "FUNCTION_SNIPPET": "assign a customer support ticket to an agent",
+        "SNIPPET_EXAMPLE": "\ndef get_current_weather(\n    location: str,\n    unit: str=\"fahrenheit\"\n) -> str:\n    \"\"\"\n    Get the current weather in a given location\n    \"\"\"\n    <function implementation...>\n",
+        "DESCRIPTION_EXAMPLE": "\n{\n    \"name\": \"get_current_weather\",\n    \"description\": \"Get the current weather in a given location\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n        },\n        \"required\": [\"location\"],\n    },\n}\n"
+    }
+}
+{
+    "description": "generate a unique discount code for a customer for maketing promotions",
+    "completion-content": "{\n    \"function_snippet\": def generate_discount_code(customer_id: str) -> str:\n    \"\"\"\n    Generate a unique discount code for a customer for marketing promotions\n    \"\"\"\n    <function implementation...>,\n    \"function_description\": {\n        \"name\": \"generate_discount_code\",\n        \"description\": \"Generate a unique discount code for a customer for marketing promotions\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"customer_id\": {\n                    \"type\": \"string\",\n                    \"description\": \"The unique identifier of the customer\",\n                }\n            },\n            \"required\": [\"customer_id\"],\n        },\n    }\n}",
+    "data": null,
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is a short summary of a python function in natural language:\n    {FUNCTION_SNIPPET}    \n\n### \nWrite a description of this function.\nReturn the output as this example:\n    {{\n        \"function_snippet\": \n        {SNIPPET_EXAMPLE},\n        \"function_description\": {DESCRIPTION_EXAMPLE}\n    }}\n",
+        "FUNCTION_SNIPPET": "generate a unique discount code for a customer for maketing promotions",
+        "SNIPPET_EXAMPLE": "\ndef get_current_weather(\n    location: str,\n    unit: str=\"fahrenheit\"\n) -> str:\n    \"\"\"\n    Get the current weather in a given location\n    \"\"\"\n    <function implementation...>\n",
+        "DESCRIPTION_EXAMPLE": "\n{\n    \"name\": \"get_current_weather\",\n    \"description\": \"Get the current weather in a given location\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n        },\n        \"required\": [\"location\"],\n    },\n}\n"
+    }
+}
+{
+    "description": "enable a customer's subscription to various services",
+    "completion-content": "{\n    \"function_snippet\": \"def enable_subscription(customer_id: int, services: list[str]) -> None:\\n    \\\"\\\"\\\"\\n    Enable a customer's subscription to various services\\n    \\\"\\\"\\\"\\n    # implementation goes here\",\n    \"function_description\": {\n        \"name\": \"enable_subscription\",\n        \"description\": \"Enable a customer's subscription to various services\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"customer_id\": {\n                    \"type\": \"integer\",\n                    \"description\": \"The unique ID of the customer\",\n                },\n                \"services\": {\n                    \"type\": \"array\",\n                    \"items\": {\"type\": \"string\"},\n                    \"description\": \"The list of services to enable for the customer\",\n                }\n            },\n            \"required\": [\"customer_id\", \"services\"],\n        }\n    }\n}",
+    "data": null,
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is a short summary of a python function in natural language:\n    {FUNCTION_SNIPPET}    \n\n### \nWrite a description of this function.\nReturn the output as this example:\n    {{\n        \"function_snippet\": \n        {SNIPPET_EXAMPLE},\n        \"function_description\": {DESCRIPTION_EXAMPLE}\n    }}\n",
+        "FUNCTION_SNIPPET": "enable a customer's subscription to various services",
+        "SNIPPET_EXAMPLE": "\ndef get_current_weather(\n    location: str,\n    unit: str=\"fahrenheit\"\n) -> str:\n    \"\"\"\n    Get the current weather in a given location\n    \"\"\"\n    <function implementation...>\n",
+        "DESCRIPTION_EXAMPLE": "\n{\n    \"name\": \"get_current_weather\",\n    \"description\": \"Get the current weather in a given location\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n        },\n        \"required\": [\"location\"],\n    },\n}\n"
+    }
+}
+{
+    "description": "disable a customer's subscription to various services",
+    "completion-content": "{\n    \"function_snippet\": \"def disable_subscription(cust_id: str, service: str) -> str:\\n    \\\"\\\"\\\"\\n    Disable a customer's subscription to a service\\n    \\\"\\\"\\\"\\n    <function implementation...>\",\n    \"function_description\": {\n        \"name\": \"disable_subscription\",\n        \"description\": \"Disable a customer's subscription to a service\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"cust_id\": {\n                    \"type\": \"string\",\n                    \"description\": \"The customer's ID\",\n                },\n                \"service\": {\n                    \"type\": \"string\",\n                    \"description\": \"The service to be disabled\",\n                },\n            },\n            \"required\": [\"cust_id\", \"service\"],\n        },\n    }\n}",
+    "data": null,
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is a short summary of a python function in natural language:\n    {FUNCTION_SNIPPET}    \n\n### \nWrite a description of this function.\nReturn the output as this example:\n    {{\n        \"function_snippet\": \n        {SNIPPET_EXAMPLE},\n        \"function_description\": {DESCRIPTION_EXAMPLE}\n    }}\n",
+        "FUNCTION_SNIPPET": "disable a customer's subscription to various services",
+        "SNIPPET_EXAMPLE": "\ndef get_current_weather(\n    location: str,\n    unit: str=\"fahrenheit\"\n) -> str:\n    \"\"\"\n    Get the current weather in a given location\n    \"\"\"\n    <function implementation...>\n",
+        "DESCRIPTION_EXAMPLE": "\n{\n    \"name\": \"get_current_weather\",\n    \"description\": \"Get the current weather in a given location\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n        },\n        \"required\": [\"location\"],\n    },\n}\n"
+    }
+}
+{
+    "description": "modify a customer's subscription to various services",
+    "completion-content": "{\n    \"function_snippet\": \n\"\"\"\ndef modify_subscription(customer_id: str,\n                        services: List[str]) -> bool:\n    \"\"\"\n    Modify a customer's subscription to various services\n    \"\"\"\n    <function implementation...>\n\"\"\",\n    \"function_description\": \n{\n    \"name\": \"modify_subscription\",\n    \"description\": \"Modify a customer's subscription to various services\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"customer_id\": {\n                \"type\": \"string\",\n                \"description\": \"The unique identifier of the customer\",\n            },\n            \"services\": {\n                \"type\": \"array\",\n                \"items\": {\n                    \"type\": \"string\",\n                    \"description\": \"The list of services to modify the subscription\",\n                },\n            },\n        },\n        \"required\": [\"customer_id\", \"services\"],\n    },\n}\n}",
+    "data": null,
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is a short summary of a python function in natural language:\n    {FUNCTION_SNIPPET}    \n\n### \nWrite a description of this function.\nReturn the output as this example:\n    {{\n        \"function_snippet\": \n        {SNIPPET_EXAMPLE},\n        \"function_description\": {DESCRIPTION_EXAMPLE}\n    }}\n",
+        "FUNCTION_SNIPPET": "modify a customer's subscription to various services",
+        "SNIPPET_EXAMPLE": "\ndef get_current_weather(\n    location: str,\n    unit: str=\"fahrenheit\"\n) -> str:\n    \"\"\"\n    Get the current weather in a given location\n    \"\"\"\n    <function implementation...>\n",
+        "DESCRIPTION_EXAMPLE": "\n{\n    \"name\": \"get_current_weather\",\n    \"description\": \"Get the current weather in a given location\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n        },\n        \"required\": [\"location\"],\n    },\n}\n"
+    }
+}
+{
+    "description": "renew contracts for services and subscriptions that are expiring",
+    "completion-content": "{\n     \"function_snippet\": \"def renew_contracts() -> None:\\n    \\\"\\\"\\\"\\n    Renew contracts for services and subscriptions that are expiring\\n    \\\"\\\"\\\"\\n    <function implementation...>\",\n     \"function_description\": {\n         \"name\": \"renew_contracts\",\n         \"description\": \"Renew contracts for services and subscriptions that are expiring\",\n         \"parameters\": {\n             \"type\": \"object\",\n             \"properties\": {},\n             \"required\": []\n         }\n     }\n }",
+    "data": {
+        "function_snippet": "def renew_contracts() -> None:\n    \"\"\"\n    Renew contracts for services and subscriptions that are expiring\n    \"\"\"\n    <function implementation...>",
+        "function_description": {
+            "name": "renew_contracts",
+            "description": "Renew contracts for services and subscriptions that are expiring",
+            "parameters": {
+                "type": "object",
+                "properties": {},
+                "required": []
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is a short summary of a python function in natural language:\n    {FUNCTION_SNIPPET}    \n\n### \nWrite a description of this function.\nReturn the output as this example:\n    {{\n        \"function_snippet\": \n        {SNIPPET_EXAMPLE},\n        \"function_description\": {DESCRIPTION_EXAMPLE}\n    }}\n",
+        "FUNCTION_SNIPPET": "renew contracts for services and subscriptions that are expiring",
+        "SNIPPET_EXAMPLE": "\ndef get_current_weather(\n    location: str,\n    unit: str=\"fahrenheit\"\n) -> str:\n    \"\"\"\n    Get the current weather in a given location\n    \"\"\"\n    <function implementation...>\n",
+        "DESCRIPTION_EXAMPLE": "\n{\n    \"name\": \"get_current_weather\",\n    \"description\": \"Get the current weather in a given location\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n        },\n        \"required\": [\"location\"],\n    },\n}\n"
+    }
+}
+{
+    "description": "perform a backup process of important business data",
+    "completion-content": "{\n    \"function_snippet\": \"def perform_backup() -> None:\\n    \\\"\\\"\\\"\\n    Perform a backup process of important business data\\n    \\\"\\\"\\\"\\n    <function implementation...>\",\n    \"function_description\": {\n        \"name\": \"perform_backup\",\n        \"description\": \"Perform a backup process of important business data\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {},\n            \"required\": []\n        }\n    }\n}",
+    "data": {
+        "function_snippet": "def perform_backup() -> None:\n    \"\"\"\n    Perform a backup process of important business data\n    \"\"\"\n    <function implementation...>",
+        "function_description": {
+            "name": "perform_backup",
+            "description": "Perform a backup process of important business data",
+            "parameters": {
+                "type": "object",
+                "properties": {},
+                "required": []
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is a short summary of a python function in natural language:\n    {FUNCTION_SNIPPET}    \n\n### \nWrite a description of this function.\nReturn the output as this example:\n    {{\n        \"function_snippet\": \n        {SNIPPET_EXAMPLE},\n        \"function_description\": {DESCRIPTION_EXAMPLE}\n    }}\n",
+        "FUNCTION_SNIPPET": "perform a backup process of important business data",
+        "SNIPPET_EXAMPLE": "\ndef get_current_weather(\n    location: str,\n    unit: str=\"fahrenheit\"\n) -> str:\n    \"\"\"\n    Get the current weather in a given location\n    \"\"\"\n    <function implementation...>\n",
+        "DESCRIPTION_EXAMPLE": "\n{\n    \"name\": \"get_current_weather\",\n    \"description\": \"Get the current weather in a given location\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n        },\n        \"required\": [\"location\"],\n    },\n}\n"
+    }
+}
+{
+    "description": "check the validity of a software license for a given product",
+    "completion-content": "{\n    \"function_snippet\": \n\ndef check_license(\n    product: str,\n) -> bool:\n    \"\"\"\n    Check the validity of a software license for a given product\n    \"\"\"\n    <function implementation...>\n,\n    \"function_description\": \n{\n    \"name\": \"check_license\",\n    \"description\": \"Check the validity of a software license for a given product\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"product\": {\n                \"type\": \"string\",\n                \"description\": \"The name of the product\",\n            },\n        },\n        \"required\": [\"product\"],\n    },\n}\n\n}",
+    "data": null,
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is a short summary of a python function in natural language:\n    {FUNCTION_SNIPPET}    \n\n### \nWrite a description of this function.\nReturn the output as this example:\n    {{\n        \"function_snippet\": \n        {SNIPPET_EXAMPLE},\n        \"function_description\": {DESCRIPTION_EXAMPLE}\n    }}\n",
+        "FUNCTION_SNIPPET": "check the validity of a software license for a given product",
+        "SNIPPET_EXAMPLE": "\ndef get_current_weather(\n    location: str,\n    unit: str=\"fahrenheit\"\n) -> str:\n    \"\"\"\n    Get the current weather in a given location\n    \"\"\"\n    <function implementation...>\n",
+        "DESCRIPTION_EXAMPLE": "\n{\n    \"name\": \"get_current_weather\",\n    \"description\": \"Get the current weather in a given location\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n        },\n        \"required\": [\"location\"],\n    },\n}\n"
+    }
+}
+{
+    "description": "onboard a new employee and do things like generate a new id, new email account, etc.",
+    "completion-content": "{\n    \"function_snippet\": \"def onboard_new_employee():\\n    # function implementation...\",\n    \"function_description\": {\n        \"name\": \"onboard_new_employee\",\n        \"description\": \"Onboard a new employee by generating a new ID, email account, etc.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {},\n            \"required\": []\n        }\n    }\n}",
+    "data": {
+        "function_snippet": "def onboard_new_employee():\n    # function implementation...",
+        "function_description": {
+            "name": "onboard_new_employee",
+            "description": "Onboard a new employee by generating a new ID, email account, etc.",
+            "parameters": {
+                "type": "object",
+                "properties": {},
+                "required": []
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is a short summary of a python function in natural language:\n    {FUNCTION_SNIPPET}    \n\n### \nWrite a description of this function.\nReturn the output as this example:\n    {{\n        \"function_snippet\": \n        {SNIPPET_EXAMPLE},\n        \"function_description\": {DESCRIPTION_EXAMPLE}\n    }}\n",
+        "FUNCTION_SNIPPET": "onboard a new employee and do things like generate a new id, new email account, etc.",
+        "SNIPPET_EXAMPLE": "\ndef get_current_weather(\n    location: str,\n    unit: str=\"fahrenheit\"\n) -> str:\n    \"\"\"\n    Get the current weather in a given location\n    \"\"\"\n    <function implementation...>\n",
+        "DESCRIPTION_EXAMPLE": "\n{\n    \"name\": \"get_current_weather\",\n    \"description\": \"Get the current weather in a given location\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n        },\n        \"required\": [\"location\"],\n    },\n}\n"
+    }
+}
+{
+    "description": "allocate resources like meeting rooms, equipment, and personnel for a project or task force",
+    "completion-content": "{\n        \"function_snippet\": \"def allocate_resources(project, task_force):\\n    # Implementation of resource allocation\\n    <function code>\",\n        \"function_description\": {\n            \"name\": \"allocate_resources\",\n            \"description\": \"Allocate resources like meeting rooms, equipment, and personnel for a project or task force\",\n            \"parameters\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"project\": {\n                        \"type\": \"string\",\n                        \"description\": \"The name or identifier of the project\"\n                    },\n                    \"task_force\": {\n                        \"type\": \"string\",\n                        \"description\": \"The name or identifier of the task force\"\n                    }\n                },\n                \"required\": [\"project\", \"task_force\"]\n            }\n        }\n    }",
+    "data": {
+        "function_snippet": "def allocate_resources(project, task_force):\n    # Implementation of resource allocation\n    <function code>",
+        "function_description": {
+            "name": "allocate_resources",
+            "description": "Allocate resources like meeting rooms, equipment, and personnel for a project or task force",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "project": {
+                        "type": "string",
+                        "description": "The name or identifier of the project"
+                    },
+                    "task_force": {
+                        "type": "string",
+                        "description": "The name or identifier of the task force"
+                    }
+                },
+                "required": [
+                    "project",
+                    "task_force"
+                ]
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is a short summary of a python function in natural language:\n    {FUNCTION_SNIPPET}    \n\n### \nWrite a description of this function.\nReturn the output as this example:\n    {{\n        \"function_snippet\": \n        {SNIPPET_EXAMPLE},\n        \"function_description\": {DESCRIPTION_EXAMPLE}\n    }}\n",
+        "FUNCTION_SNIPPET": "allocate resources like meeting rooms, equipment, and personnel for a project or task force",
+        "SNIPPET_EXAMPLE": "\ndef get_current_weather(\n    location: str,\n    unit: str=\"fahrenheit\"\n) -> str:\n    \"\"\"\n    Get the current weather in a given location\n    \"\"\"\n    <function implementation...>\n",
+        "DESCRIPTION_EXAMPLE": "\n{\n    \"name\": \"get_current_weather\",\n    \"description\": \"Get the current weather in a given location\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n        },\n        \"required\": [\"location\"],\n    },\n}\n"
+    }
+}
+{
+    "description": "submit timesheets for employees, either for approval or archival",
+    "completion-content": "{\n    \"function_snippet\": \"submit_timesheets(employees: List[str], action: str='approval') -> None:\\n    \\\"\\\"\\\"\\n    Submit timesheets for employees, either for approval or archival\\n    \\\"\\\"\\\"\\n    <function implementation...>\",\n    \"function_description\": {\n        \"name\": \"submit_timesheets\",\n        \"description\": \"Submit timesheets for employees, either for approval or archival\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"employees\": {\n                    \"type\": \"array\",\n                    \"items\": {\n                        \"type\": \"string\"\n                    },\n                    \"description\": \"A list of employee names\"\n                },\n                \"action\": {\"type\": \"string\", \"enum\": [\"approval\", \"archival\"]}\n            },\n            \"required\": [\"employees\"]\n        }\n    }\n}",
+    "data": {
+        "function_snippet": "submit_timesheets(employees: List[str], action: str='approval') -> None:\n    \"\"\"\n    Submit timesheets for employees, either for approval or archival\n    \"\"\"\n    <function implementation...>",
+        "function_description": {
+            "name": "submit_timesheets",
+            "description": "Submit timesheets for employees, either for approval or archival",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "employees": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "A list of employee names"
+                    },
+                    "action": {
+                        "type": "string",
+                        "enum": [
+                            "approval",
+                            "archival"
+                        ]
+                    }
+                },
+                "required": [
+                    "employees"
+                ]
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is a short summary of a python function in natural language:\n    {FUNCTION_SNIPPET}    \n\n### \nWrite a description of this function.\nReturn the output as this example:\n    {{\n        \"function_snippet\": \n        {SNIPPET_EXAMPLE},\n        \"function_description\": {DESCRIPTION_EXAMPLE}\n    }}\n",
+        "FUNCTION_SNIPPET": "submit timesheets for employees, either for approval or archival",
+        "SNIPPET_EXAMPLE": "\ndef get_current_weather(\n    location: str,\n    unit: str=\"fahrenheit\"\n) -> str:\n    \"\"\"\n    Get the current weather in a given location\n    \"\"\"\n    <function implementation...>\n",
+        "DESCRIPTION_EXAMPLE": "\n{\n    \"name\": \"get_current_weather\",\n    \"description\": \"Get the current weather in a given location\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n        },\n        \"required\": [\"location\"],\n    },\n}\n"
+    }
+}
+{
+    "description": "calculate and distribute performance-based incentives or bonuses to employees",
+    "completion-content": "{\n    \"function_snippet\": \"def calculate_and_distribute_incentives() -> None:\\n    \\\"\\\"\\\"\\n    Calculate and distribute performance-based incentives or bonuses to employees\\n    \\\"\\\"\\\"\\n    <function implementation...>\",\n\n    \"function_description\": {\n        \"name\": \"calculate_and_distribute_incentives\",\n        \"description\": \"Calculate and distribute performance-based incentives or bonuses to employees\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {},\n            \"required\": [],\n        },\n    }\n}",
+    "data": null,
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is a short summary of a python function in natural language:\n    {FUNCTION_SNIPPET}    \n\n### \nWrite a description of this function.\nReturn the output as this example:\n    {{\n        \"function_snippet\": \n        {SNIPPET_EXAMPLE},\n        \"function_description\": {DESCRIPTION_EXAMPLE}\n    }}\n",
+        "FUNCTION_SNIPPET": "calculate and distribute performance-based incentives or bonuses to employees",
+        "SNIPPET_EXAMPLE": "\ndef get_current_weather(\n    location: str,\n    unit: str=\"fahrenheit\"\n) -> str:\n    \"\"\"\n    Get the current weather in a given location\n    \"\"\"\n    <function implementation...>\n",
+        "DESCRIPTION_EXAMPLE": "\n{\n    \"name\": \"get_current_weather\",\n    \"description\": \"Get the current weather in a given location\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n        },\n        \"required\": [\"location\"],\n    },\n}\n"
+    }
+}
+{
+    "description": "generate employee shift schedules based on availability and workload",
+    "completion-content": "{\n    \"function_snippet\": \"def generate_employee_shift_schedules(availability, workload):\\n    \\n    <function implementation...>\",\n    \"function_description\": {\n        \"name\": \"generate_employee_shift_schedules\",\n        \"description\": \"Generate employee shift schedules based on availability and workload\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"availability\": {\n                    \"type\": \"array\",\n                    \"items\": {\"type\": \"string\"},\n                    \"description\": \"List of employee availability, e.g. ['Monday: 9am-5pm', 'Tuesday: unavailable']\",\n                },\n                \"workload\": {\n                    \"type\": \"array\",\n                    \"items\": {\"type\": \"string\"},\n                    \"description\": \"List of employee workload, e.g. ['Monday: 3 shifts', 'Tuesday: 2 shifts']\",\n                },\n            },\n            \"required\": [\"availability\", \"workload\"],\n        },\n    }\n}",
+    "data": null,
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is a short summary of a python function in natural language:\n    {FUNCTION_SNIPPET}    \n\n### \nWrite a description of this function.\nReturn the output as this example:\n    {{\n        \"function_snippet\": \n        {SNIPPET_EXAMPLE},\n        \"function_description\": {DESCRIPTION_EXAMPLE}\n    }}\n",
+        "FUNCTION_SNIPPET": "generate employee shift schedules based on availability and workload",
+        "SNIPPET_EXAMPLE": "\ndef get_current_weather(\n    location: str,\n    unit: str=\"fahrenheit\"\n) -> str:\n    \"\"\"\n    Get the current weather in a given location\n    \"\"\"\n    <function implementation...>\n",
+        "DESCRIPTION_EXAMPLE": "\n{\n    \"name\": \"get_current_weather\",\n    \"description\": \"Get the current weather in a given location\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n        },\n        \"required\": [\"location\"],\n    },\n}\n"
+    }
+}
+{
+    "description": "create and approve budgets for different departments or projects",
+    "completion-content": "{\n    \"function_snippet\": \n\ndef create_and_approve_budgets(\n    departments: List[str],\n    projects: List[str]\n) -> None:\n    \"\"\"\n    Create and approve budgets for different departments or projects\n    \"\"\"\n    <function implementation...>\n,\n\n    \"function_description\": \n    {\n        \"name\": \"create_and_approve_budgets\",\n        \"description\": \"Create and approve budgets for different departments or projects\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"departments\": {\n                    \"type\": \"array\",\n                    \"items\": {\"type\": \"string\"},\n                    \"description\": \"List of departments to create and approve budgets for\",\n                },\n                \"projects\": {\n                    \"type\": \"array\",\n                    \"items\": {\"type\": \"string\"},\n                    \"description\": \"List of projects to create and approve budgets for\",\n                },\n            },\n            \"required\": [\"departments\", \"projects\"],\n        },\n    }\n}",
+    "data": null,
+    "metadata": {
+        "TEMPLATE": "\n###\nBelow is a short summary of a python function in natural language:\n    {FUNCTION_SNIPPET}    \n\n### \nWrite a description of this function.\nReturn the output as this example:\n    {{\n        \"function_snippet\": \n        {SNIPPET_EXAMPLE},\n        \"function_description\": {DESCRIPTION_EXAMPLE}\n    }}\n",
+        "FUNCTION_SNIPPET": "create and approve budgets for different departments or projects",
+        "SNIPPET_EXAMPLE": "\ndef get_current_weather(\n    location: str,\n    unit: str=\"fahrenheit\"\n) -> str:\n    \"\"\"\n    Get the current weather in a given location\n    \"\"\"\n    <function implementation...>\n",
+        "DESCRIPTION_EXAMPLE": "\n{\n    \"name\": \"get_current_weather\",\n    \"description\": \"Get the current weather in a given location\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\"type\": \"string\", \"enum\": [\"celsius\", \"fahrenheit\"]},\n        },\n        \"required\": [\"location\"],\n    },\n}\n"
+    }
+}

@@ -33,6 +33,11 @@ def parse_arguments() -> argparse.Namespace:
         default=1,
         help="How many prompt data samples to generate for 1 function description.",
     )
+    parser.add_argument(
+        "--mode",
+        type=str,
+        help="Choose generation mode from 'snippet', 'description', or 'sample'.",
+    )
     return parser.parse_args()
 
 

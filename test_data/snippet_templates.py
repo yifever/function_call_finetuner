@@ -24,15 +24,42 @@ def order_airplane_tickets(
     Returns:
         Dict[str, float]: A dictionary with 'total_price' as a key and the total price as a value.
     """
-    '''
+'''
+
+BUSINESS_TASKS = [
+    "send a client an invoice",
+    "schedule a meeting",
+    "generate a sales report",
+    "perform an employee evaluation",
+    "create an account for a new customer",
+    "calculate payroll for someone",
+    "calculate payroll for a team",
+    "update inventory stock data",
+    "track the status of a shipment",
+    "assign a customer support ticket to an agent",
+    "generate a unique discount code for a customer for maketing promotions",
+    "enable a customer's subscription to various services",
+    "disable a customer's subscription to various services",
+    "modify a customer's subscription to various services",
+    "renew contracts for services and subscriptions that are expiring",
+    "perform a backup process of important business data",
+    "check the validity of a software license for a given product",
+    "onboard a new employee and do things like generate a new id, new email account, etc.",
+    "allocate resources like meeting rooms, equipment, and personnel for a project or task force",
+    "submit timesheets for employees, either for approval or archival",
+    "calculate and distribute performance-based incentives or bonuses to employees",
+    "generate employee shift schedules based on availability and workload",
+    "create and approve budgets for different departments or projects"
+]
+
 
 if __name__ == "__main__":
     curr_path = os.path.dirname(os.path.abspath(__file__))
     output_file = os.path.join(curr_path, "test_function_snippets.jsonl")
     results = []
-    for i, func_snip in enumerate([SNIPPET_TEST_1]):
+    for i, func_snip in enumerate(BUSINESS_TASKS):
         results.append({
-            "func_id": f"test-{i}",
-            "snippet":  func_snip,
+            "function_id": f"business-{i}",
+            "task":  func_snip,
         })
     write_jsonl(output_file, results)

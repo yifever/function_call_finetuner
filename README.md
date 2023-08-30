@@ -16,13 +16,23 @@ The data format is generic so as to be able to be reformmated based on need.
 
 Sample outputs in `outputs/` are from inputs in `test_data/`.
 
-## HOW TO RUN
+## How to Run
+To generate code snippet from tasks:
+```
+poetry run python run_generate.py --mode snippet --input_file_name "./outputs/tasks/business_tasks.jsonl" --output_file_name "./outputs/snippets/business_snippets.jsonl > ./outputs/snippets/business_snippet.log"
+```
+
+To generate open-ai compatible function descriptions from a code snippet:
+```
+poetry run python run_generate.py --mode description --input_file_name "./outputs/snippets/business_snippets.jsonl" --output_file_name "./outputs/descriptions/business_descriptions.jsonl" > ./outputs/descriptions/business_descriptions.log
+```
+
 To generate data for training samples from the function descriptions:
 ```
 poetry run python run_generate_samples.py --n_samples 1 --input_file_name "./test_data/test_function_descriptions.jsonl" --output_file_name "./outputs/test_generate_samples.jsonl"
 ```
 
-To generate open-ai compatible function descriptions from a code snippet:
-```
-poetry run python run_generate_description.py --input_file_name "./test_data/test_function_snippets.jsonl" --output_file_name "./outputs/test_generate_snippets.jsonl"
-```
+## Why this many steps?
+During testing this (task-> code snippet -> json description) was better than trying to go directly from task -> json description.
+
+Going directly to json description resulted in a lot of data with null in the parameters field.

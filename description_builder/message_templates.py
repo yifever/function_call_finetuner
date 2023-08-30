@@ -18,6 +18,24 @@ MESSAGE_TEMPLATE_1 = textwrap.dedent(
     """
 )
 
+MESSAGE_TEMPLATE_2 = textwrap.dedent(
+    """
+    ###
+    Below is a short summary of a python function in natural language:
+        {FUNCTION_SNIPPET}    
+
+    ### 
+    Write a description of this function.
+    Return the output as this example:
+        {{
+            "function_snippet": 
+            {SNIPPET_EXAMPLE},
+            "function_description": {DESCRIPTION_EXAMPLE}
+        }}
+    """
+)
+
+
 SNIPPET_EXAMPLE_1 = textwrap.dedent(
     """
     def get_current_weather(

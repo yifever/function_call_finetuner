@@ -2,7 +2,7 @@ import openai
 from typing import Any
 # we can test some different templates
 from description_builder.message_templates import (
-    MESSAGE_TEMPLATE_1 as TEMPLATE,
+    MESSAGE_TEMPLATE_2 as TEMPLATE,
     SNIPPET_EXAMPLE_1 as SNIPPET_EX,
     DESCRIPTION_EXAMPLE_1 as DESCRIPTION_EX,
 )
@@ -29,6 +29,8 @@ def generate_description_from(
     } 
     messages = [{"role": "user", "content": prompt_message}]
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo-0613", messages=messages,
+        model=model,
+        temperature=temperature,
+        messages=messages,
     )
     return (messages, response["choices"][0], meta)

@@ -2,9 +2,9 @@ import openai
 from typing import Any
 # we can test some different templates
 from description_builder.message_templates import (
-    MESSAGE_TEMPLATE_2 as TEMPLATE,
-    SNIPPET_EXAMPLE_1 as SNIPPET_EX,
-    DESCRIPTION_EXAMPLE_1 as DESCRIPTION_EX,
+    MESSAGE_TEMPLATE_1 as TEMPLATE,
+    SNIPPET_EXAMPLE_2 as SNIPPET_EX,
+    DESCRIPTION_EXAMPLE_2 as DESCRIPTION_EX,
 )
 
 def generate_description_from(

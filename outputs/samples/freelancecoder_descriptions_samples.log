@@ -1,0 +1,2559 @@
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def send_project_proposal(\n    client_email: str,\n    project_details: Dict[str, str],\n    proposal_file: str,\n) -> bool:\n    """\n    Sends a project proposal to a potential client.\n\n    Parameters:\n        client_email (str): The email address of the potential client.\n        project_details (Dict[str, str]): A dictionary containing the details of the project.\n                                           Keys include \'name\', \'description\', \'budget\', \'timeline\', etc.\n        proposal_file (str): The file path of the project proposal document.\n\n    Returns:\n        bool: True if the project proposal was successfully sent, False otherwise.\n    """\n', 'function_description': {'name': 'send_project_proposal', 'description': 'Sends a project proposal to a potential client.', 'parameters': {'type': 'object', 'properties': {'client_email': {'type': 'string', 'description': 'The email address of the potential client.'}, 'project_details': {'type': 'object', 'description': "A dictionary containing the details of the project. Keys include 'name', 'description', 'budget', 'timeline', etc.", 'properties': {'name': {'type': 'string'}, 'description': {'type': 'string'}, 'budget': {'type': 'string'}, 'timeline': {'type': 'string'}}, 'required': ['name', 'description', 'budget', 'timeline']}, 'proposal_file': {'type': 'string', 'description': 'The file path of the project proposal document.'}}, 'required': ['client_email', 'project_details', 'proposal_file']}, 'returns': {'type': 'boolean', 'description': 'True if the project proposal was successfully sent, False otherwise.'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "send_project_proposal",
+        "description": "Sends a project proposal to a potential client.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "client_email": {
+                    "type": "string",
+                    "description": "The email address of the potential client."
+                },
+                "project_details": {
+                    "type": "object",
+                    "description": "A dictionary containing the details of the project. Keys include 'name', 'description', 'budget', 'timeline', etc.",
+                    "properties": {
+                        "name": {"type": "string"},
+                        "description": {"type": "string"},
+                        "budget": {"type": "string"},
+                        "timeline": {"type": "string"}
+                    },
+                    "required": ["name", "description", "budget", "timeline"]
+                },
+                "proposal_file": {
+                    "type": "string",
+                    "description": "The file path of the project proposal document."
+                }
+            },
+            "required": ["client_email", "project_details", "proposal_file"]
+        },
+        "returns": {
+            "type": "boolean",
+            "description": "True if the project proposal was successfully sent, False otherwise."
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you help me send a project proposal?"
+        },
+        {
+            "role": "assistant",
+            "text": "Of course! I can help you with that. Please provide me the following information:\n1. The email address of the potential client.\n2. The details of the project including the name, description, budget, and timeline.\n3. The file path of the project proposal document."
+        },
+        {
+            "role": "user",
+            "text": "The email address of the potential client is 'client@example.com'. The project details are as follows:\n- Name: 'Project X'\n- Description: 'This project aims to develop a mobile application'\n- Budget: '$10,000'\n- Timeline: '3 months'\nAnd the file path of the project proposal document is '/path/to/proposal.pdf'"
+        },
+        {
+            "role": "assistant",
+            "text": "Thank you for providing the information. I will now send the project proposal to the potential client."
+        }
+    ],
+    "function_call": {
+        "function_name": "send_project_proposal",
+        "parameters": {
+            "client_email": "client@example.com",
+            "project_details": {
+                "name": "Project X",
+                "description": "This project aims to develop a mobile application",
+                "budget": "$10,000",
+                "timeline": "3 months"
+            },
+            "proposal_file": "/path/to/proposal.pdf"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def track_billable_hours(\nproject_id: str,\nstart_date: str,\nend_date: str,\nemployee_id: str,\nhours_worked: float,\n) -> None:\n    """\n    Tracks the number of billable hours worked on a project.\n\n    Parameters:\n        project_id (str): The ID of the project.\n        start_date (str): The start date of the work in YYYY-MM-DD format.\n        end_date (str): The end date of the work in YYYY-MM-DD format.\n        employee_id (str): The ID of the employee who worked on the project.\n        hours_worked (float): The number of billable hours worked on the project.\n\n    Returns:\n        None\n    """\n', 'function_description': {'name': 'track_billable_hours', 'description': 'Tracks the number of billable hours worked on a project.', 'parameters': {'type': 'object', 'properties': {'project_id': {'type': 'string', 'description': 'The ID of the project.'}, 'start_date': {'type': 'string', 'description': 'The start date of the work in YYYY-MM-DD format.'}, 'end_date': {'type': 'string', 'description': 'The end date of the work in YYYY-MM-DD format.'}, 'employee_id': {'type': 'string', 'description': 'The ID of the employee who worked on the project.'}, 'hours_worked': {'type': 'float', 'description': 'The number of billable hours worked on the project.'}}, 'required': ['project_id', 'start_date', 'end_date', 'employee_id', 'hours_worked']}, 'returns': {'type': 'object', 'properties': {}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "track_billable_hours",
+        "description": "Tracks the number of billable hours worked on a project.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "project_id": {
+                    "type": "string",
+                    "description": "The ID of the project."
+                },
+                "start_date": {
+                    "type": "string",
+                    "description": "The start date of the work in YYYY-MM-DD format."
+                },
+                "end_date": {
+                    "type": "string",
+                    "description": "The end date of the work in YYYY-MM-DD format."
+                },
+                "employee_id": {
+                    "type": "string",
+                    "description": "The ID of the employee who worked on the project."
+                },
+                "hours_worked": {
+                    "type": "float",
+                    "description": "The number of billable hours worked on the project."
+                }
+            },
+            "required": ["project_id", "start_date", "end_date", "employee_id", "hours_worked"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {}
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you track the billable hours for project XYZ?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Can you please provide me with the project ID?"
+        },
+        {
+            "role": "user",
+            "text": "The project ID is 'XYZ'."
+        },
+        {
+            "role": "assistant",
+            "text": "Great. Now, could you provide me with the start date of the work?"
+        },
+        {
+            "role": "user",
+            "text": "The start date is '2022-01-01'."
+        },
+        {
+            "role": "assistant",
+            "text": "Got it. Lastly, can you provide me with the end date of the work?"
+        },
+        {
+            "role": "user",
+            "text": "The end date is '2022-01-31'."
+        },
+        {
+            "role": "assistant",
+            "text": "Thank you for providing the necessary information. I will now track the billable hours for project XYZ."
+        }
+    ],
+    "function_call": {
+        "function_name": "track_billable_hours",
+        "parameters": {
+            "project_id": "XYZ",
+            "start_date": "2022-01-01",
+            "end_date": "2022-01-31",
+            "employee_id": "",
+            "hours_worked": 0.0
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def invoice_clients(\n    client_list: List[Dict[str, Any]],\n    completed_work: Dict[str, float]\n) -> Dict[str, float]:\n    """\n    Invoice clients for completed work and returns the total amount to be invoiced.\n\n    Parameters:\n        client_list (List[Dict[str, Any]]): A list of dictionaries containing client details.\n                                            Each dictionary should have \'name\' and \'email\' keys.\n        completed_work (Dict[str, float]): A dictionary containing the completed work details.\n                                            Each key should be the client\'s name and the value should be the amount to be invoiced.\n\n    Returns:\n        Dict[str, float]: A dictionary with \'total_amount\' as a key and the total amount to be invoiced as a value.\n    """\n', 'function_description': {'name': 'invoice_clients', 'description': 'Invoice clients for completed work and returns the total amount to be invoiced.', 'parameters': {'type': 'object', 'properties': {'client_list': {'type': 'array', 'description': "A list of dictionaries containing client details. Each dictionary should have 'name' and 'email' keys.", 'items': {'type': 'object', 'properties': {'name': {'type': 'string'}, 'email': {'type': 'string'}}, 'required': ['name', 'email']}}, 'completed_work': {'type': 'object', 'description': "A dictionary containing the completed work details. Each key should be the client's name and the value should be the amount to be invoiced.", 'properties': {'name (str)': {'type': 'float'}}}}, 'required': ['client_list', 'completed_work']}, 'returns': {'type': 'object', 'properties': {'total_amount': {'type': 'float', 'description': 'The total amount to be invoiced.'}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "invoice_clients",
+        "description": "Invoice clients for completed work and returns the total amount to be invoiced.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "client_list": {
+                    "type": "array",
+                    "description": "A list of dictionaries containing client details. Each dictionary should have 'name' and 'email' keys.",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "email": {"type": "string"}
+                        },
+                        "required": ["name", "email"]
+                    }
+                },
+                "completed_work": {
+                    "type": "object",
+                    "description": "A dictionary containing the completed work details. Each key should be the client's name and the value should be the amount to be invoiced.",
+                    "properties": {
+                        "name (str)": {"type": "float"}
+                    }
+                }
+            },
+            "required": ["client_list", "completed_work"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "total_amount": {"type": "float", "description": "The total amount to be invoiced."}
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you help me with invoicing my clients?"
+        },
+        {
+            "role": "assistant",
+            "text": "Of course! I can assist you with that. Please provide me with the necessary information."
+        },
+        {
+            "role": "user",
+            "text": "Sure. I have a list of clients and the completed work details. How should I provide this information?"
+        },
+        {
+            "role": "assistant",
+            "text": "You can provide the client list as a list of dictionaries. Each dictionary should have 'name' and 'email' keys. The completed work details should be provided as a dictionary, where each key is the client's name and the value is the amount to be invoiced."
+        }
+    ],
+    "function_call": {
+        "function_name": "invoice_clients",
+        "parameters": {
+            "client_list": [
+                {"name": "John Doe", "email": "john.doe@example.com"},
+                {"name": "Jane Smith", "email": "jane.smith@example.com"}
+            ],
+            "completed_work": {
+                "John Doe": 100.0,
+                "Jane Smith": 150.0
+            }
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def schedule_meeting_with_client(\n    client_name: str,\n    project_description: str,\n    meeting_date: str,\n) -> str:\n    """\n    Schedules a meeting with a client for project discussion.\n\n    Parameters:\n        client_name (str): The name of the client.\n        project_description (str): A description of the project.\n        meeting_date (str): The date of the meeting in YYYY-MM-DD format.\n\n    Returns:\n        str: A string confirming the scheduled meeting.\n    """\n', 'function_description': {'name': 'schedule_meeting_with_client', 'description': 'Schedules a meeting with a client for project discussion.', 'parameters': {'type': 'object', 'properties': {'client_name': {'type': 'string', 'description': 'The name of the client.'}, 'project_description': {'type': 'string', 'description': 'A description of the project.'}, 'meeting_date': {'type': 'string', 'description': 'The date of the meeting in YYYY-MM-DD format.'}}, 'required': ['client_name', 'project_description', 'meeting_date']}, 'returns': {'type': 'string', 'description': 'A string confirming the scheduled meeting.'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "schedule_meeting_with_client",
+        "description": "Schedules a meeting with a client for project discussion.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "client_name": {
+                    "type": "string",
+                    "description": "The name of the client."
+                },
+                "project_description": {
+                    "type": "string",
+                    "description": "A description of the project."
+                },
+                "meeting_date": {
+                    "type": "string",
+                    "description": "The date of the meeting in YYYY-MM-DD format."
+                }
+            },
+            "required": ["client_name", "project_description", "meeting_date"]
+        },
+        "returns": {
+            "type": "string",
+            "description": "A string confirming the scheduled meeting."
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you help me schedule a meeting with a client for project discussion?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Can you provide me with the client's name, project description, and the meeting date?"
+        },
+        {
+            "role": "user",
+            "text": "The client's name is John Smith, the project is about creating a new website, and the meeting date is 2022-01-15."
+        },
+        {
+            "role": "assistant",
+            "text": "Great! I will schedule a meeting with John Smith for project discussion on 2022-01-15."
+        }
+    ],
+    "function_call": {
+        "function_name": "schedule_meeting_with_client",
+        "parameters": {
+            "client_name": "John Smith",
+            "project_description": "Creating a new website",
+            "meeting_date": "2022-01-15"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def example_function(\n    num_tickets: int,\n    ticket_type: Dict[str, str]\n    event_details: str,\n    attendees: List[Dict[str, str]],\n) -> Dict[str, float]:\n    """\n    Orders event tickets and returns the total price.\n\n    Parameters:\n        num_tickets (int): The number of tickets to buy.\n        ticket_type (str): The type of ticket.\n        event_details (Dict[str, str]): Details about the event, should contain a date in YYYY-MM-DD format.\n        passengers (List[Dict[str, str]]): A list of dictionaries containing attendee details.\n                                          Each dictionary should have \'name\' and \'age\' keys.\n\n    Returns:\n        Dict[str, float]: A dictionary with \'total_price\' as a key and the total price as a value.\n    """\n    ', 'function_description': {'name': 'example_function', 'description': 'Orders event tickets and returns the total price.', 'parameters': {'type': 'object', 'properties': {'num_tickets': {'type': 'integer', 'description': 'The number of tickets to buy.'}, 'ticket_type': {'type': 'object', 'description': 'The type of ticket.', 'properties': {'type': 'string'}}, 'event_details': {'type': 'object', 'description': 'Details about the event, should contain a date in YYYY-MM-DD format.', 'properties': {'date': {'type': 'string', 'description': 'Event data in YYYY-MM-DD format.'}}, 'required': ['date']}, 'attendees': {'type': 'array', 'description': "A list of dictionaries containing attendee details. Each dictionary should have 'name' and 'age' keys.", 'items': {'type': 'object', 'properties': {'name': {'type': 'string'}, 'age': {'type': 'string'}}, 'required': ['name', 'age']}}}, 'required': ['num_tickets', 'ticket_type', 'event_details', 'attendees']}, 'returns': {'type': 'object', 'properties': {'total_price': {'type': 'float', 'description': 'The total price for the tickets ordered.'}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "example_function",
+        "description": "Orders event tickets and returns the total price.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "num_tickets": {
+                    "type": "integer",
+                    "description": "The number of tickets to buy."
+                },
+                "ticket_type": {
+                    "type": "object",
+                    "description": "The type of ticket.",
+                    "properties": {
+                        "type": "string"
+                    }
+                },
+                "event_details": {
+                    "type": "object",
+                    "description": "Details about the event, should contain a date in YYYY-MM-DD format.",
+                    "properties": {
+                        "date": {
+                            "type": "string",
+                            "description": "Event data in YYYY-MM-DD format."
+                        }
+                    },
+                    "required": ["date"]
+                },
+                "attendees": {
+                    "type": "array",
+                    "description": "A list of dictionaries containing attendee details. Each dictionary should have 'name' and 'age' keys.",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "age": {"type": "string"}
+                        },
+                        "required": ["name", "age"]
+                    }
+                }
+            },
+            "required": ["num_tickets", "ticket_type", "event_details", "attendees"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "total_price": {
+                    "type": "float",
+                    "description": "The total price for the tickets ordered."
+                }
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you help me order event tickets?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. How many tickets do you want to buy?"
+        },
+        {
+            "role": "user",
+            "text": "I want to buy 4 tickets."
+        },
+        {
+            "role": "assistant",
+            "text": "Great! What type of ticket do you want to purchase?"
+        },
+        {
+            "role": "user",
+            "text": "I want to purchase VIP tickets."
+        },
+        {
+            "role": "assistant",
+            "text": "Please provide the event details, including the date in YYYY-MM-DD format."
+        },
+        {
+            "role": "user",
+            "text": "The event is on 2022-12-31."
+        },
+        {
+            "role": "assistant",
+            "text": "Lastly, please provide the details of the attendees."
+        },
+        {
+            "role": "user",
+            "text": "The attendees are John Doe (25 years old) and Jane Smith (30 years old)."
+        },
+        {
+            "role": "assistant",
+            "text": "Thank you for providing the information. I will now proceed to order the tickets."
+        }
+    ],
+    "function_call": {
+        "function_name": "example_function",
+        "parameters": {
+            "num_tickets": 4,
+            "ticket_type": "VIP",
+            "event_details": {
+                "date": "2022-12-31"
+            },
+            "attendees": [
+                {
+                    "name": "John Doe",
+                    "age": "25"
+                },
+                {
+                    "name": "Jane Smith",
+                    "age": "30"
+                }
+            ]
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def backup_to_cloud_storage(\n    code_files: List[str],\n    project_files: List[str],\n    cloud_storage: str,\n) -> bool:\n    """\n    Backup code and project files to a secure cloud storage.\n\n    Parameters:\n        code_files (List[str]): A list of file paths for code files.\n        project_files (List[str]): A list of file paths for project files.\n        cloud_storage (str): The name or URL of the secure cloud storage.\n\n    Returns:\n        bool: True if the backup is successful, False otherwise.\n    """\n', 'function_description': {'name': 'backup_to_cloud_storage', 'description': 'Backup code and project files to a secure cloud storage.', 'parameters': {'type': 'object', 'properties': {'code_files': {'type': 'array', 'description': 'A list of file paths for code files.', 'items': {'type': 'string'}}, 'project_files': {'type': 'array', 'description': 'A list of file paths for project files.', 'items': {'type': 'string'}}, 'cloud_storage': {'type': 'string', 'description': 'The name or URL of the secure cloud storage.'}}, 'required': ['code_files', 'project_files', 'cloud_storage']}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "backup_to_cloud_storage",
+        "description": "Backup code and project files to a secure cloud storage.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "code_files": {
+                    "type": "array",
+                    "description": "A list of file paths for code files.",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "project_files": {
+                    "type": "array",
+                    "description": "A list of file paths for project files.",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "cloud_storage": {
+                    "type": "string",
+                    "description": "The name or URL of the secure cloud storage."
+                }
+            },
+            "required": [
+                "code_files",
+                "project_files",
+                "cloud_storage"
+            ]
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, I need to backup my code and project files. Can you help me with that?"
+        },
+        {
+            "role": "assistant",
+            "text": "Of course! Could you please provide me with the list of file paths for your code files and project files, as well as the name or URL of the secure cloud storage?"
+        },
+        {
+            "role": "user",
+            "text": "Sure, here are the file paths for my code files: ['path/to/code/file1.py', 'path/to/code/file2.py']. And here are the file paths for my project files: ['path/to/project/file1.py', 'path/to/project/file2.py']. The name of the secure cloud storage is 'example_storage'."
+        },
+        {
+            "role": "assistant",
+            "text": "Thank you for providing the details. I will now backup your code and project files to the secure cloud storage."
+        }
+    ],
+    "function_call": {
+        "function_name": "backup_to_cloud_storage",
+        "parameters": {
+            "code_files": ["path/to/code/file1.py", "path/to/code/file2.py"],
+            "project_files": ["path/to/project/file1.py", "path/to/project/file2.py"],
+            "cloud_storage": "example_storage"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def perform_code_reviews(\n    code: str,\n    reviewer: str,\n) -> None:\n    """\n    Perform code reviews for quality assurance.\n\n    Parameters:\n        code (str): The code to be reviewed.\n        reviewer (str): The name of the reviewer.\n\n    Returns:\n        None\n    """\n', 'function_description': {'name': 'perform_code_reviews', 'description': 'Perform code reviews for quality assurance.', 'parameters': {'type': 'object', 'properties': {'code': {'type': 'string', 'description': 'The code to be reviewed.'}, 'reviewer': {'type': 'string', 'description': 'The name of the reviewer.'}}, 'required': ['code', 'reviewer']}, 'returns': {'type': 'None'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "perform_code_reviews",
+        "description": "Perform code reviews for quality assurance.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string",
+                    "description": "The code to be reviewed."
+                },
+                "reviewer": {
+                    "type": "string",
+                    "description": "The name of the reviewer."
+                }
+            },
+            "required": ["code", "reviewer"]
+        },
+        "returns": {
+            "type": "None"
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you help me with code reviews?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can assist you with that. Please provide the code and the name of the reviewer."
+        },
+        {
+            "role": "user",
+            "text": "Here is the code I want to be reviewed: 'print('Hello, World!')' and the reviewer's name is 'John'."
+        },
+        {
+            "role": "assistant",
+            "text": "Great, I will perform the code review for you."
+        }
+    ],
+    "function_call": {
+        "function_name": "perform_code_reviews",
+        "parameters": {
+            "code": "print('Hello, World!')",
+            "reviewer": "John"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def push_updates(repository: str) -> None:\n    """\n    Pushes updates to a repository on a version control system like Git.\n\n    Parameters:\n        repository (str): The path or URL of the repository to push updates to.\n\n    Returns:\n        None\n    """\n    # Code implementation for pushing updates to the repository', 'function_description': {'name': 'push_updates', 'description': 'Pushes updates to a repository on a version control system like Git.', 'parameters': {'type': 'object', 'properties': {'repository': {'type': 'string', 'description': 'The path or URL of the repository to push updates to.'}}, 'required': ['repository']}, 'returns': {'type': 'None'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+        "function_description": {
+            "name": "push_updates",
+            "description": "Pushes updates to a repository on a version control system like Git.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "repository": {
+                        "type": "string",
+                        "description": "The path or URL of the repository to push updates to."
+                    }
+                },
+                "required": ["repository"]
+            },
+            "returns": {
+                "type": "None"
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Can you help me push updates to my Git repository?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can help you with that. Please provide the path or URL of your Git repository."
+            },
+            {
+                "role": "user",
+                "text": "My Git repository is located at 'https://github.com/myusername/myrepo.git'."
+            },
+            {
+                "role": "assistant",
+                "text": "Great, I will push updates to your Git repository."
+            }
+        ],
+        "function_call": {
+            "function_name": "push_updates",
+            "parameters": {
+                "repository": "https://github.com/myusername/myrepo.git"
+            }
+        }
+    }
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def test_newly_developed_features_for_bugs():\n    """\n    Tests newly developed features for bugs.\n    """\n    pass', 'function_description': {'name': 'test_newly_developed_features_for_bugs', 'description': 'Tests newly developed features for bugs.', 'parameters': {}, 'returns': {}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "test_newly_developed_features_for_bugs",
+        "description": "Tests newly developed features for bugs.",
+        "parameters": {},
+        "returns": {}
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you test the newly developed features for bugs?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Do you have any specific features that you want me to test?"
+        },
+        {
+            "role": "user",
+            "text": "No, I just want to make sure all the newly developed features are bug-free."
+        },
+        {
+            "role": "assistant",
+            "text": "Alright, I will test all the newly developed features for bugs."
+        }
+    ],
+    "function_call": {
+        "function_name": "test_newly_developed_features_for_bugs",
+        "parameters": {}
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def update_project_documentation(\n    project_name: str,\n    documentation: str,\n    updates: List[str],\n) -> str:\n    """\n    Updates the project documentation with the provided updates.\n\n    Parameters:\n        project_name (str): The name of the project.\n        documentation (str): The current project documentation.\n        updates (List[str]): A list of strings containing the updates to be made.\n\n    Returns:\n        str: The updated project documentation.\n    """\n    ', 'function_description': {'name': 'update_project_documentation', 'description': 'Updates the project documentation with the provided updates.', 'parameters': {'type': 'object', 'properties': {'project_name': {'type': 'string', 'description': 'The name of the project.'}, 'documentation': {'type': 'string', 'description': 'The current project documentation.'}, 'updates': {'type': 'array', 'description': 'A list of strings containing the updates to be made.', 'items': {'type': 'string'}}}, 'required': ['project_name', 'documentation', 'updates']}, 'returns': {'type': 'string', 'description': 'The updated project documentation.'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "update_project_documentation",
+        "description": "Updates the project documentation with the provided updates.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "project_name": {
+                    "type": "string",
+                    "description": "The name of the project."
+                },
+                "documentation": {
+                    "type": "string",
+                    "description": "The current project documentation."
+                },
+                "updates": {
+                    "type": "array",
+                    "description": "A list of strings containing the updates to be made.",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": ["project_name", "documentation", "updates"]
+        },
+        "returns": {
+            "type": "string",
+            "description": "The updated project documentation."
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, I need to update the documentation for my project."
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can help you with that. Can you provide me the name of your project?"
+        },
+        {
+            "role": "user",
+            "text": "The name of my project is 'Project X'."
+        },
+        {
+            "role": "assistant",
+            "text": "Great! Please provide me the current project documentation."
+        },
+        {
+            "role": "user",
+            "text": "The current project documentation is 'Lorem ipsum dolor sit amet.'"
+        },
+        {
+            "role": "assistant",
+            "text": "Thank you. Now, please provide me the updates you want to make to the documentation."
+        },
+        {
+            "role": "user",
+            "text": "The updates I want to make are: 'Update 1', 'Update 2', 'Update 3'."
+        },
+        {
+            "role": "assistant",
+            "text": "Alright, I will update the project documentation with the provided updates."
+        }
+    ],
+    "function_call": {
+        "function_name": "update_project_documentation",
+        "parameters": {
+            "project_name": "Project X",
+            "documentation": "Lorem ipsum dolor sit amet.",
+            "updates": ["Update 1", "Update 2", "Update 3"]
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def submit_timesheets(\n    timesheets: List[Dict[str, Any]],\n    clients: List[str]\n) -> None:\n    """\n    Submits timesheets to clients for review or approval.\n\n    Parameters:\n        timesheets (List[Dict[str, Any]]): A list of dictionaries containing timesheet details.\n                                           Each dictionary should have \'client\' and \'hours\' keys.\n        clients (List[str]): A list of client names.\n\n    Returns:\n        None\n    """\n', 'function_description': {'name': 'submit_timesheets', 'description': 'Submits timesheets to clients for review or approval.', 'parameters': {'type': 'object', 'properties': {'timesheets': {'type': 'array', 'description': "A list of dictionaries containing timesheet details. Each dictionary should have 'client' and 'hours' keys.", 'items': {'type': 'object', 'properties': {'client': {'type': 'string'}, 'hours': {'type': 'number'}}, 'required': ['client', 'hours']}}, 'clients': {'type': 'array', 'description': 'A list of client names.', 'items': {'type': 'string'}}}, 'required': ['timesheets', 'clients']}, 'returns': {'type': 'null'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "submit_timesheets",
+        "description": "Submits timesheets to clients for review or approval.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "timesheets": {
+                    "type": "array",
+                    "description": "A list of dictionaries containing timesheet details. Each dictionary should have 'client' and 'hours' keys.",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "client": {"type": "string"},
+                            "hours": {"type": "number"}
+                        },
+                        "required": ["client", "hours"]
+                    }
+                },
+                "clients": {
+                    "type": "array",
+                    "description": "A list of client names.",
+                    "items": {"type": "string"}
+                }
+            },
+            "required": ["timesheets", "clients"]
+        },
+        "returns": {"type": "null"}
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you submit my timesheets?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Can you provide me the details of your timesheets and the client names?"
+        },
+        {
+            "role": "user",
+            "text": "Yes, here are the details of my timesheets and the client names."
+        },
+        {
+            "role": "assistant",
+            "text": "Great, I will submit your timesheets to the clients for review or approval."
+        }
+    ],
+    "function_call": {
+        "function_name": "submit_timesheets",
+        "parameters": {
+            "timesheets": [
+                {"client": "Client A", "hours": 40},
+                {"client": "Client B", "hours": 30}
+            ],
+            "clients": ["Client A", "Client B"]
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def communicate_project_updates(\nproject_name: str,\nupdates: str,\nstakeholders: List[str],\ncommunication_method: str = \'email\'\n) -> None:\n    """\n    Communicates project updates to stakeholders via email or messaging apps.\n\n    Parameters:\n        project_name (str): The name of the project.\n        updates (str): The updates to be communicated.\n        stakeholders (List[str]): A list of stakeholder email addresses or messaging app usernames.\n        communication_method (str): The method of communication, default is \'email\'.\n\n    Returns:\n        None\n    """\n', 'function_description': {'name': 'communicate_project_updates', 'description': 'Communicates project updates to stakeholders via email or messaging apps.', 'parameters': {'type': 'object', 'properties': {'project_name': {'type': 'string', 'description': 'The name of the project.'}, 'updates': {'type': 'string', 'description': 'The updates to be communicated.'}, 'stakeholders': {'type': 'array', 'description': 'A list of stakeholder email addresses or messaging app usernames.', 'items': {'type': 'string'}}, 'communication_method': {'type': 'string', 'description': "The method of communication, default is 'email'."}}, 'required': ['project_name', 'updates', 'stakeholders']}, 'returns': {'type': 'None'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "communicate_project_updates",
+        "description": "Communicates project updates to stakeholders via email or messaging apps.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "project_name": {
+                    "type": "string",
+                    "description": "The name of the project."
+                },
+                "updates": {
+                    "type": "string",
+                    "description": "The updates to be communicated."
+                },
+                "stakeholders": {
+                    "type": "array",
+                    "description": "A list of stakeholder email addresses or messaging app usernames.",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "communication_method": {
+                    "type": "string",
+                    "description": "The method of communication, default is 'email'."
+                }
+            },
+            "required": [
+                "project_name",
+                "updates",
+                "stakeholders"
+            ]
+        },
+        "returns": {
+            "type": "None"
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you communicate project updates to stakeholders?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please provide me with the project name, updates, and the stakeholders' information."
+        },
+        {
+            "role": "user",
+            "text": "The project name is 'Project X', the updates are 'Lorem ipsum dolor sit amet', and the stakeholders are ['john@example.com', 'jane@example.com']."
+        },
+        {
+            "role": "assistant",
+            "text": "Thank you for providing the information. I will communicate the project updates to the stakeholders."
+        }
+    ],
+    "function_call": {
+        "function_name": "communicate_project_updates",
+        "parameters": {
+            "project_name": "Project X",
+            "updates": "Lorem ipsum dolor sit amet",
+            "stakeholders": ["john@example.com", "jane@example.com"]
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def review_and_sign_legal_documents(documents: List[str], signature: str) -> bool:\n    """\n    Review and sign legal documents such as NDAs and contracts.\n\n    Parameters:\n        documents (List[str]): A list of legal documents to review and sign.\n        signature (str): The signature to use when signing the documents.\n\n    Returns:\n        bool: True if all documents are successfully reviewed and signed, False otherwise.\n    """', 'function_description': {'name': 'review_and_sign_legal_documents', 'description': 'Review and sign legal documents such as NDAs and contracts.', 'parameters': {'type': 'object', 'properties': {'documents': {'type': 'array', 'description': 'A list of legal documents to review and sign.', 'items': {'type': 'string'}}, 'signature': {'type': 'string', 'description': 'The signature to use when signing the documents.'}}, 'required': ['documents', 'signature']}, 'returns': {'type': 'boolean', 'description': 'True if all documents are successfully reviewed and signed, False otherwise.'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "review_and_sign_legal_documents",
+        "description": "Review and sign legal documents such as NDAs and contracts.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "documents": {
+                    "type": "array",
+                    "description": "A list of legal documents to review and sign.",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "signature": {
+                    "type": "string",
+                    "description": "The signature to use when signing the documents."
+                }
+            },
+            "required": [
+                "documents",
+                "signature"
+            ]
+        },
+        "returns": {
+            "type": "boolean",
+            "description": "True if all documents are successfully reviewed and signed, False otherwise."
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you help me review and sign some legal documents?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can assist you with that. Please provide the list of legal documents you want to review and sign."
+        },
+        {
+            "role": "user",
+            "text": "I have three documents: 'NDA', 'Contract', and 'Agreement'."
+        },
+        {
+            "role": "assistant",
+            "text": "Great, now please provide your signature for signing the documents."
+        },
+        {
+            "role": "user",
+            "text": "My signature is 'John Doe'."
+        },
+        {
+            "role": "assistant",
+            "text": "Thank you for providing the necessary information. I will now review and sign the legal documents for you."
+        }
+    ],
+    "function_call": {
+        "function_name": "review_and_sign_legal_documents",
+        "parameters": {
+            "documents": ["NDA", "Contract", "Agreement"],
+            "signature": "John Doe"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def analyze_project_analytics() -> None:\n    """\n    Analyzes project analytics for client reporting.\n    """\n    pass', 'function_description': {'name': 'analyze_project_analytics', 'description': 'Analyzes project analytics for client reporting.', 'parameters': {}, 'returns': {'type': 'None'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "analyze_project_analytics",
+        "description": "Analyzes project analytics for client reporting.",
+        "parameters": {},
+        "returns": {
+            "type": "None"
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you analyze the project analytics for client reporting?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please wait a moment while I analyze the project analytics."
+        }
+    ],
+    "function_call": {
+        "function_name": "analyze_project_analytics",
+        "parameters": {}
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def collect_client_feedback(\n    survey: str,\n    direct_communication: bool,\n) -> None:\n    """\n    Collects client feedback through surveys or direct communication.\n\n    Parameters:\n        survey (str): The survey to be used for collecting feedback.\n        direct_communication (bool): Indicates whether direct communication is also used for feedback collection.\n\n    Returns:\n        None\n    """\n', 'function_description': {'name': 'collect_client_feedback', 'description': 'Collects client feedback through surveys or direct communication.', 'parameters': {'type': 'object', 'properties': {'survey': {'type': 'string', 'description': 'The survey to be used for collecting feedback.'}, 'direct_communication': {'type': 'boolean', 'description': 'Indicates whether direct communication is also used for feedback collection.'}}, 'required': ['survey', 'direct_communication']}, 'returns': {'type': 'none'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "collect_client_feedback",
+        "description": "Collects client feedback through surveys or direct communication.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "survey": {
+                    "type": "string",
+                    "description": "The survey to be used for collecting feedback."
+                },
+                "direct_communication": {
+                    "type": "boolean",
+                    "description": "Indicates whether direct communication is also used for feedback collection."
+                }
+            },
+            "required": ["survey", "direct_communication"]
+        },
+        "returns": {
+            "type": "none"
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, I would like to collect client feedback."
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can help you with that. Do you have a specific survey in mind or would you prefer direct communication?"
+        },
+        {
+            "role": "user",
+            "text": "I have a survey that I would like to use."
+        },
+        {
+            "role": "assistant",
+            "text": "Please provide me with the survey details."
+        },
+        {
+            "role": "user",
+            "text": "The survey is called 'Customer Satisfaction Survey'."
+        },
+        {
+            "role": "assistant",
+            "text": "Got it. I will use the 'Customer Satisfaction Survey' to collect client feedback. Should I also consider direct communication for feedback collection?"
+        },
+        {
+            "role": "user",
+            "text": "No, only the survey is enough."
+        },
+        {
+            "role": "assistant",
+            "text": "Alright, I will only consider the survey for collecting client feedback. Initiating the feedback collection process now."
+        }
+    ],
+    "function_call": {
+        "function_name": "collect_client_feedback",
+        "parameters": {
+            "survey": "Customer Satisfaction Survey",
+            "direct_communication": false
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def manage_subcontractors(\n    subcontractors: List[Dict[str, str]],\n    tasks: List[str],\n    payment: float,\n) -> Dict[str, List[str]]:\n    """\n    Manages subcontractors or collaborators, including payment and task allocation.\n\n    Parameters:\n        subcontractors (List[Dict[str, str]]): A list of dictionaries containing subcontractor details.\n                                               Each dictionary should have \'name\' and \'email\' keys.\n        tasks (List[str]): A list of tasks to be allocated to subcontractors.\n        payment (float): The payment amount to be made to each subcontractor.\n\n    Returns:\n        Dict[str, List[str]]: A dictionary with \'subcontractor_tasks\' as a key and a list of allocated tasks as a value.\n    """\n\n', 'function_description': {'name': 'manage_subcontractors', 'description': 'Manages subcontractors or collaborators, including payment and task allocation.', 'parameters': {'type': 'object', 'properties': {'subcontractors': {'type': 'array', 'description': "A list of dictionaries containing subcontractor details. Each dictionary should have 'name' and 'email' keys.", 'items': {'type': 'object', 'properties': {'name': {'type': 'string'}, 'email': {'type': 'string'}}, 'required': ['name', 'email']}}, 'tasks': {'type': 'array', 'description': 'A list of tasks to be allocated to subcontractors.', 'items': {'type': 'string'}}, 'payment': {'type': 'number', 'description': 'The payment amount to be made to each subcontractor.'}}, 'required': ['subcontractors', 'tasks', 'payment']}, 'returns': {'type': 'object', 'properties': {'subcontractor_tasks': {'type': 'array', 'description': 'A list of allocated tasks.'}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "manage_subcontractors",
+        "description": "Manages subcontractors or collaborators, including payment and task allocation.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "subcontractors": {
+                    "type": "array",
+                    "description": "A list of dictionaries containing subcontractor details. Each dictionary should have 'name' and 'email' keys.",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "email": {"type": "string"}
+                        },
+                        "required": ["name", "email"]
+                    }
+                },
+                "tasks": {
+                    "type": "array",
+                    "description": "A list of tasks to be allocated to subcontractors.",
+                    "items": {"type": "string"}
+                },
+                "payment": {
+                    "type": "number",
+                    "description": "The payment amount to be made to each subcontractor."
+                }
+            },
+            "required": ["subcontractors", "tasks", "payment"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "subcontractor_tasks": {
+                    "type": "array",
+                    "description": "A list of allocated tasks."
+                }
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, I need help managing my subcontractors."
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can assist you with that. Could you please provide me with the details of your subcontractors?"
+        },
+        {
+            "role": "user",
+            "text": "Sure, here are the details:\n\nSubcontractor 1:\nName: John Doe\nEmail: john.doe@example.com\n\nSubcontractor 2:\nName: Jane Smith\nEmail: jane.smith@example.com"
+        },
+        {
+            "role": "assistant",
+            "text": "Thank you for providing the subcontractor details. Now, please let me know the tasks that need to be allocated to them."
+        },
+        {
+            "role": "user",
+            "text": "The tasks are as follows:\n\nTask 1: Design a logo\nTask 2: Develop a website\nTask 3: Write content for blog"
+        },
+        {
+            "role": "assistant",
+            "text": "Great! Lastly, what is the payment amount to be made to each subcontractor?"
+        },
+        {
+            "role": "user",
+            "text": "The payment amount is $1000."
+        },
+        {
+            "role": "assistant",
+            "text": "Thank you for providing all the necessary information. I will now manage your subcontractors and allocate tasks accordingly."
+        }
+    ],
+    "function_call": {
+        "function_name": "manage_subcontractors",
+        "parameters": {
+            "subcontractors": [
+                {
+                    "name": "John Doe",
+                    "email": "john.doe@example.com"
+                },
+                {
+                    "name": "Jane Smith",
+                    "email": "jane.smith@example.com"
+                }
+            ],
+            "tasks": ["Design a logo", "Develop a website", "Write content for blog"],
+            "payment": 1000.0
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def research_new_technologies_or_tools_relevant_to_project():\n    """\n    Researches new technologies or tools relevant to the project.\n\n    Returns:\n        None\n    """\n    # Code to research new technologies or tools relevant to the project', 'function_description': {'name': 'research_new_technologies_or_tools_relevant_to_project', 'description': 'Researches new technologies or tools relevant to the project.', 'parameters': {'type': 'object', 'properties': {}, 'required': []}, 'returns': {'type': 'None'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "research_new_technologies_or_tools_relevant_to_project",
+        "description": "Researches new technologies or tools relevant to the project.",
+        "parameters": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "returns": {
+            "type": "None"
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you research new technologies or tools relevant to my project?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Is there any specific information you are looking for?"
+        },
+        {
+            "role": "user",
+            "text": "No, I just need a general overview of new technologies or tools that can be useful for my project."
+        },
+        {
+            "role": "assistant",
+            "text": "Okay, I will research new technologies or tools relevant to your project now."
+        }
+    ],
+    "function_call": {
+        "function_name": "research_new_technologies_or_tools_relevant_to_project",
+        "parameters": {}
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def calculate_taxes_deductions_expenses(\n    income: float,\n    expenses: float,\n    deductions: float,\n) -> Dict[str, float]:\n    """\n    Calculates taxes, deductions, and expenses for financial records.\n\n    Parameters:\n        income (float): The total income.\n        expenses (float): The total expenses.\n        deductions (float): The total deductions.\n\n    Returns:\n        Dict[str, float]: A dictionary with \'taxes\', \'deductions\', and \'expenses\' as keys\n                          and their respective calculated values as values.\n    """\n', 'function_description': {'name': 'calculate_taxes_deductions_expenses', 'description': 'Calculates taxes, deductions, and expenses for financial records.', 'parameters': {'type': 'object', 'properties': {'income': {'type': 'float', 'description': 'The total income.'}, 'expenses': {'type': 'float', 'description': 'The total expenses.'}, 'deductions': {'type': 'float', 'description': 'The total deductions.'}}, 'required': ['income', 'expenses', 'deductions']}, 'returns': {'type': 'object', 'properties': {'taxes': {'type': 'float', 'description': 'The calculated taxes.'}, 'deductions': {'type': 'float', 'description': 'The calculated deductions.'}, 'expenses': {'type': 'float', 'description': 'The calculated expenses.'}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "calculate_taxes_deductions_expenses",
+        "description": "Calculates taxes, deductions, and expenses for financial records.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "income": {
+                    "type": "float",
+                    "description": "The total income."
+                },
+                "expenses": {
+                    "type": "float",
+                    "description": "The total expenses."
+                },
+                "deductions": {
+                    "type": "float",
+                    "description": "The total deductions."
+                }
+            },
+            "required": ["income", "expenses", "deductions"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "taxes": {
+                    "type": "float",
+                    "description": "The calculated taxes."
+                },
+                "deductions": {
+                    "type": "float",
+                    "description": "The calculated deductions."
+                },
+                "expenses": {
+                    "type": "float",
+                    "description": "The calculated expenses."
+                }
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you calculate my taxes, deductions, and expenses?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please provide me with your total income, expenses, and deductions."
+        },
+        {
+            "role": "user",
+            "text": "My total income is $5000, expenses are $2000, and deductions are $1000."
+        },
+        {
+            "role": "assistant",
+            "text": "Great, I'm calculating your taxes, deductions, and expenses now."
+        }
+    ],
+    "function_call": {
+        "function_name": "calculate_taxes_deductions_expenses",
+        "parameters": {
+            "income": 5000,
+            "expenses": 2000,
+            "deductions": 1000
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def network_with_professionals(\n    platform: str,\n    opportunities: List[str]\n) -> None:\n    """\n    Network with professionals on platforms like LinkedIn for new opportunities.\n\n    Parameters:\n        platform (str): The platform to network on (e.g. LinkedIn).\n        opportunities (List[str]): A list of new opportunities to explore.\n\n    Returns:\n        None\n    """\n    ', 'function_description': {'name': 'network_with_professionals', 'description': 'Network with professionals on platforms like LinkedIn for new opportunities.', 'parameters': {'type': 'object', 'properties': {'platform': {'type': 'string', 'description': 'The platform to network on (e.g. LinkedIn).'}, 'opportunities': {'type': 'array', 'description': 'A list of new opportunities to explore.', 'items': {'type': 'string'}}}, 'required': ['platform', 'opportunities']}, 'returns': {'type': 'None'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "network_with_professionals",
+        "description": "Network with professionals on platforms like LinkedIn for new opportunities.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "platform": {
+                    "type": "string",
+                    "description": "The platform to network on (e.g. LinkedIn)."
+                },
+                "opportunities": {
+                    "type": "array",
+                    "description": "A list of new opportunities to explore.",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": ["platform", "opportunities"]
+        },
+        "returns": {
+            "type": "None"
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you help me network with professionals on LinkedIn?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can help you with that. Could you please provide the platform and a list of opportunities you want to explore?"
+        },
+        {
+            "role": "user",
+            "text": "Yes, the platform is LinkedIn and the opportunities I want to explore are job openings in the tech industry."
+        },
+        {
+            "role": "assistant",
+            "text": "Great! I will network with professionals on LinkedIn for job openings in the tech industry."
+        }
+    ],
+    "function_call": {
+        "function_name": "network_with_professionals",
+        "parameters": {
+            "platform": "LinkedIn",
+            "opportunities": ["job openings in the tech industry"]
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def update_portfolio(completed_projects: List[Dict[str, str]]) -> None:\n    """\n    Updates the portfolio with completed projects for future client acquisition.\n\n    Parameters:\n        completed_projects (List[Dict[str, str]]): A list of dictionaries containing details of completed projects.\n                                                   Each dictionary should have \'project_name\', \'client_name\', and \'completion_date\' keys.\n\n    Returns:\n        None\n    """\n', 'function_description': {'name': 'update_portfolio', 'description': 'Updates the portfolio with completed projects for future client acquisition.', 'parameters': {'type': 'object', 'properties': {'completed_projects': {'type': 'array', 'description': "A list of dictionaries containing details of completed projects. Each dictionary should have 'project_name', 'client_name', and 'completion_date' keys.", 'items': {'type': 'object', 'properties': {'project_name': {'type': 'string'}, 'client_name': {'type': 'string'}, 'completion_date': {'type': 'string'}}, 'required': ['project_name', 'client_name', 'completion_date']}}}, 'required': ['completed_projects']}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "update_portfolio",
+        "description": "Updates the portfolio with completed projects for future client acquisition.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "completed_projects": {
+                    "type": "array",
+                    "description": "A list of dictionaries containing details of completed projects. Each dictionary should have 'project_name', 'client_name', and 'completion_date' keys.",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "project_name": {"type": "string"},
+                            "client_name": {"type": "string"},
+                            "completion_date": {"type": "string"}
+                        },
+                        "required": ["project_name", "client_name", "completion_date"]
+                    }
+                }
+            },
+            "required": ["completed_projects"]
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Can you update my portfolio with my completed projects?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please provide the details of your completed projects."
+        },
+        {
+            "role": "user",
+            "text": "I have completed the following projects:\n1. Project A for Client X, completed on January 1, 2022.\n2. Project B for Client Y, completed on February 1, 2022."
+        },
+        {
+            "role": "assistant",
+            "text": "Thank you for providing the details. I will update your portfolio now."
+        }
+    ],
+    "function_call": {
+        "function_name": "update_portfolio",
+        "parameters": {
+            "completed_projects": [
+                {
+                    "project_name": "Project A",
+                    "client_name": "Client X",
+                    "completion_date": "January 1, 2022"
+                },
+                {
+                    "project_name": "Project B",
+                    "client_name": "Client Y",
+                    "completion_date": "February 1, 2022"
+                }
+            ]
+        }
+    }
+}
+

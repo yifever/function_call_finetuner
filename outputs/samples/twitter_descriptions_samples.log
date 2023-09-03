@@ -1,0 +1,3317 @@
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def post_tweet(user_id: str, tweet: str) -> bool:\n    """\n    Posts a tweet to a user\'s timeline.\n\n    Parameters:\n        user_id (str): The user\'s ID.\n        tweet (str): The content of the tweet.\n\n    Returns:\n        bool: True if the tweet was successfully posted, False otherwise.\n    """\n', 'function_description': {'name': 'post_tweet', 'description': "Posts a tweet to a user's timeline.", 'parameters': {'type': 'object', 'properties': {'user_id': {'type': 'string', 'description': "The user's ID."}, 'tweet': {'type': 'string', 'description': 'The content of the tweet.'}}, 'required': ['user_id', 'tweet']}, 'returns': {'type': 'bool', 'description': 'True if the tweet was successfully posted, False otherwise.'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "post_tweet",
+        "description": "Posts a tweet to a user's timeline.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "user_id": {
+                    "type": "string",
+                    "description": "The user's ID."
+                },
+                "tweet": {
+                    "type": "string",
+                    "description": "The content of the tweet."
+                }
+            },
+            "required": ["user_id", "tweet"]
+        },
+        "returns": {
+            "type": "bool",
+            "description": "True if the tweet was successfully posted, False otherwise."
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you help me post a tweet?"
+        },
+        {
+            "role": "assistant",
+            "text": "Of course! Please provide me with your user ID and the content of your tweet."
+        },
+        {
+            "role": "user",
+            "text": "My user ID is '12345' and the tweet content is 'Hello world!'"
+        },
+        {
+            "role": "assistant",
+            "text": "Thank you for providing the information. I will now post the tweet for you."
+        }
+    ],
+    "function_call": {
+        "function_name": "post_tweet",
+        "parameters": {
+            "user_id": "12345",
+            "tweet": "Hello world!"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def delete_tweet(user_id: str, tweet_id: str) -> None:\n    """\n    Deletes a specific tweet from a user\'s timeline.\n\n    Parameters:\n        user_id (str): The ID of the user whose tweet to delete.\n        tweet_id (str): The ID of the tweet to delete.\n\n    Returns:\n        None\n    """\n', 'function_description': {'name': 'delete_tweet', 'description': "Deletes a specific tweet from a user's timeline.", 'parameters': {'type': 'object', 'properties': {'user_id': {'type': 'string', 'description': 'The ID of the user whose tweet to delete.'}, 'tweet_id': {'type': 'string', 'description': 'The ID of the tweet to delete.'}}, 'required': ['user_id', 'tweet_id']}, 'returns': {'type': 'None'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": 
+    {
+        "name": "delete_tweet",
+        "description": "Deletes a specific tweet from a user's timeline.",
+        "parameters": 
+        {
+            "type": "object",
+            "properties": 
+            {
+                "user_id": 
+                {
+                    "type": "string",
+                    "description": "The ID of the user whose tweet to delete."
+                },
+                "tweet_id": 
+                {
+                    "type": "string",
+                    "description": "The ID of the tweet to delete."
+                }
+            },
+            "required": ["user_id", "tweet_id"]
+        },
+        "returns": 
+        {
+            "type": "None"
+        }
+    },
+    "conversation": 
+    [
+        {
+            "role": "user",
+            "text": "Hey, can you help me delete a tweet from my timeline?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please provide me with your user ID and the tweet ID you want to delete."
+        },
+        {
+            "role": "user",
+            "text": "My user ID is '12345' and the tweet ID is '67890'."
+        },
+        {
+            "role": "assistant",
+            "text": "Alright, I will delete the tweet with the ID '67890' from your timeline."
+        }
+    ],
+    "function_call": 
+    {
+        "function_name": "delete_tweet",
+        "parameters": 
+        {
+            "user_id": "12345",
+            "tweet_id": "67890"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def retrieve_user_timeline(user_id: str) -> List[Dict[str, str]]:\n    """\n    Retrieves a user\'s timeline, including tweets, retweets, and replies.\n\n    Parameters:\n        user_id (str): The ID of the user.\n\n    Returns:\n        List[Dict[str, str]]: A list of dictionaries representing each tweet\n                              in the user\'s timeline. Each dictionary should have\n                              \'tweet_id\', \'text\', \'author\', and \'date\' keys.\n    """\n', 'function_description': {'name': 'retrieve_user_timeline', 'description': "Retrieves a user's timeline, including tweets, retweets, and replies.", 'parameters': {'type': 'object', 'properties': {'user_id': {'type': 'string', 'description': 'The ID of the user.'}}, 'required': ['user_id']}, 'returns': {'type': 'object', 'properties': {'tweet_id': {'type': 'string'}, 'text': {'type': 'string'}, 'author': {'type': 'string'}, 'date': {'type': 'string'}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "retrieve_user_timeline",
+        "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "user_id": {
+                    "type": "string",
+                    "description": "The ID of the user."
+                }
+            },
+            "required": ["user_id"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "tweet_id": {"type": "string"},
+                "text": {"type": "string"},
+                "author": {"type": "string"},
+                "date": {"type": "string"}
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you show me my Twitter timeline?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. May I know your Twitter user ID?"
+        },
+        {
+            "role": "user",
+            "text": "Yes, my Twitter user ID is '13579'."
+        },
+        {
+            "role": "assistant",
+            "text": "Great, I'm retrieving your Twitter timeline now."
+        }
+    ],
+    "function_call": {
+        "function_name": "retrieve_user_timeline",
+        "parameters": {
+            "user_id": "13579"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def retrieve_user_info(username: str) -> Dict[str, Any]:\n    """\n    Retrieve information about a specific user based on their username.\n\n    Parameters:\n        username (str): The username of the user.\n\n    Returns:\n        Dict[str, Any]: A dictionary containing information about the user.\n    """\n', 'function_description': {'name': 'retrieve_user_info', 'description': 'Retrieve information about a specific user based on their username.', 'parameters': {'type': 'object', 'properties': {'username': {'type': 'string', 'description': 'The username of the user.'}}, 'required': ['username']}, 'returns': {'type': 'object', 'properties': {'information': {'type': 'any', 'description': 'A dictionary containing information about the user.'}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "retrieve_user_info",
+        "description": "Retrieve information about a specific user based on their username.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "username": {
+                    "type": "string",
+                    "description": "The username of the user."
+                }
+            },
+            "required": ["username"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "information": {
+                    "type": "any",
+                    "description": "A dictionary containing information about the user."
+                }
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you retrieve information about a user?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Can you please provide me the username of the user?"
+        },
+        {
+            "role": "user",
+            "text": "Yes, the username is 'john_doe'."
+        },
+        {
+            "role": "assistant",
+            "text": "Great! I'm retrieving the information for user 'john_doe' now."
+        }
+    ],
+    "function_call": {
+        "function_name": "retrieve_user_info",
+        "parameters": {
+            "username": "john_doe"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def follow_user(username: str) -> bool:\n    """\n    Follows a specific user.\n\n    Parameters:\n        username (str): The username of the user to follow.\n\n    Returns:\n        bool: True if the user was successfully followed, False otherwise.\n    """\n    ', 'function_description': {'name': 'follow_user', 'description': 'Follows a specific user.', 'parameters': {'type': 'object', 'properties': {'username': {'type': 'string', 'description': 'The username of the user to follow.'}}, 'required': ['username']}, 'returns': {'type': 'object', 'properties': {'result': {'type': 'boolean', 'description': 'True if the user was successfully followed, False otherwise.'}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "follow_user",
+        "description": "Follows a specific user.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "username": {
+                    "type": "string",
+                    "description": "The username of the user to follow."
+                }
+            },
+            "required": ["username"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "result": {
+                    "type": "boolean",
+                    "description": "True if the user was successfully followed, False otherwise."
+                }
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you follow this user on my behalf?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please provide me with the username of the user you want to follow."
+        },
+        {
+            "role": "user",
+            "text": "The username is 'example_username'."
+        },
+        {
+            "role": "assistant",
+            "text": "Great, I'm following the user now."
+        }
+    ],
+    "function_call": {
+        "function_name": "follow_user",
+        "parameters": {
+            "username": "example_username"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def unfollow_user(username: str) -> None:\n    """\n    Unfollows a specific user.\n\n    Parameters:\n        username (str): The username of the user to unfollow.\n\n    Returns:\n        None\n    """\n\n', 'function_description': {'name': 'unfollow_user', 'description': 'Unfollows a specific user.', 'parameters': {'type': 'object', 'properties': {'username': {'type': 'string', 'description': 'The username of the user to unfollow.'}}, 'required': ['username']}, 'returns': {'type': 'object', 'properties': {}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "unfollow_user",
+        "description": "Unfollows a specific user.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "username": {
+                    "type": "string",
+                    "description": "The username of the user to unfollow."
+                }
+            },
+            "required": ["username"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {}
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Can you help me unfollow a user?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can assist you with that. Please provide me the username of the user you want to unfollow."
+        },
+        {
+            "role": "user",
+            "text": "The username is 'john_doe'."
+        },
+        {
+            "role": "assistant",
+            "text": "Alright, I will proceed with unfollowing the user 'john_doe'."
+        }
+    ],
+    "function_call": {
+        "function_name": "unfollow_user",
+        "parameters": {
+            "username": "john_doe"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def like_tweet(tweet_id: str) -> None:\n    """\n    Likes a specific tweet.\n\n    Parameters:\n        tweet_id (str): The ID of the tweet to like.\n\n    Returns:\n        None\n    """\n', 'function_description': {'name': 'like_tweet', 'description': 'Likes a specific tweet.', 'parameters': {'type': 'object', 'properties': {'tweet_id': {'type': 'string', 'description': 'The ID of the tweet to like.'}}, 'required': ['tweet_id']}, 'returns': {'type': 'None'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "like_tweet",
+        "description": "Likes a specific tweet.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "tweet_id": {
+                    "type": "string",
+                    "description": "The ID of the tweet to like."
+                }
+            },
+            "required": ["tweet_id"]
+        },
+        "returns": {
+            "type": "None"
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you like a tweet for me?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please provide me with the ID of the tweet you want to like."
+        },
+        {
+            "role": "user",
+            "text": "The ID of the tweet I want to like is '123456789'."
+        },
+        {
+            "role": "assistant",
+            "text": "Got it. I will like the tweet with ID '123456789' for you."
+        }
+    ],
+    "function_call": {
+        "function_name": "like_tweet",
+        "parameters": {
+            "tweet_id": "123456789"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def unlike_tweet(tweet_id: str) -> None:\n    """\n    Unlike a specific tweet.\n\n    Parameters:\n        tweet_id (str): The ID of the tweet to unlike.\n\n    Returns:\n        None\n    """\n', 'function_description': {'name': 'unlike_tweet', 'description': 'Unlike a specific tweet.', 'parameters': {'type': 'object', 'properties': {'tweet_id': {'type': 'string', 'description': 'The ID of the tweet to unlike.'}}, 'required': ['tweet_id']}, 'returns': {'type': 'None'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "unlike_tweet",
+        "description": "Unlike a specific tweet.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "tweet_id": {
+                    "type": "string",
+                    "description": "The ID of the tweet to unlike."
+                }
+            },
+            "required": ["tweet_id"]
+        },
+        "returns": {
+            "type": "None"
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you unlike a tweet for me?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please provide me with the ID of the tweet you want to unlike."
+        },
+        {
+            "role": "user",
+            "text": "The ID of the tweet is '12345'."
+        },
+        {
+            "role": "assistant",
+            "text": "Alright, I will unlike the tweet with ID '12345' for you."
+        }
+    ],
+    "function_call": {
+        "function_name": "unlike_tweet",
+        "parameters": {
+            "tweet_id": "12345"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def retweet_tweet(\n    tweet_id: str,\n) -> bool:\n    """\n    Retweets a specific tweet.\n\n    Parameters:\n        tweet_id (str): The ID of the tweet to retweet.\n\n    Returns:\n        bool: True if the tweet was successfully retweeted, False otherwise.\n    """\n', 'function_description': {'name': 'retweet_tweet', 'description': 'Retweets a specific tweet.', 'parameters': {'type': 'object', 'properties': {'tweet_id': {'type': 'string', 'description': 'The ID of the tweet to retweet.'}}, 'required': ['tweet_id']}, 'returns': {'type': 'object', 'properties': {'value': {'type': 'boolean', 'description': 'True if the tweet was successfully retweeted, False otherwise.'}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "retweet_tweet",
+        "description": "Retweets a specific tweet.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "tweet_id": {
+                    "type": "string",
+                    "description": "The ID of the tweet to retweet."
+                }
+            },
+            "required": ["tweet_id"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "boolean",
+                    "description": "True if the tweet was successfully retweeted, False otherwise."
+                }
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you retweet a tweet for me?"
+        },
+        {
+            "role": "assistant",
+            "text": "Of course! Please provide me with the ID of the tweet you want to retweet."
+        },
+        {
+            "role": "user",
+            "text": "The tweet ID is '12345'."
+        },
+        {
+            "role": "assistant",
+            "text": "Alright, I will now retweet the tweet with ID '12345'."
+        }
+    ],
+    "function_call": {
+        "function_name": "retweet_tweet",
+        "parameters": {
+            "tweet_id": "12345"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def undo_retweet(tweet_id: str) -> None:\n    """\n    Undo a retweet.\n\n    Parameters:\n        tweet_id (str): The ID of the tweet to undo the retweet.\n\n    Returns:\n        None\n    """\n', 'function_description': {'name': 'undo_retweet', 'description': 'Undo a retweet.', 'parameters': {'type': 'object', 'properties': {'tweet_id': {'type': 'string', 'description': 'The ID of the tweet to undo the retweet.'}}, 'required': ['tweet_id']}, 'returns': {'type': 'None'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "undo_retweet",
+        "description": "Undo a retweet.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "tweet_id": {
+                    "type": "string",
+                    "description": "The ID of the tweet to undo the retweet."
+                }
+            },
+            "required": ["tweet_id"]
+        },
+        "returns": {"type": "None"}
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you help me undo a retweet?"
+        },
+        {
+            "role": "assistant",
+            "text": "Of course! Please provide me with the tweet ID you want to undo the retweet for."
+        },
+        {
+            "role": "user",
+            "text": "The tweet ID is '987654321'."
+        },
+        {
+            "role": "assistant",
+            "text": "Alright, I will undo the retweet for tweet ID '987654321'."
+        }
+    ],
+    "function_call": {
+        "function_name": "undo_retweet",
+        "parameters": {
+            "tweet_id": "987654321"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def send_direct_message(\n    recipient: str,\n    message: str,\n) -> None:\n    """\n    Sends a direct message to a specific user.\n\n    Parameters:\n        recipient (str): The username or ID of the recipient.\n        message (str): The content of the message.\n\n    Returns:\n        None\n    """\n', 'function_description': {'name': 'send_direct_message', 'description': 'Sends a direct message to a specific user.', 'parameters': {'type': 'object', 'properties': {'recipient': {'type': 'string', 'description': 'The username or ID of the recipient.'}, 'message': {'type': 'string', 'description': 'The content of the message.'}}, 'required': ['recipient', 'message']}, 'returns': {'type': 'none'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "send_direct_message",
+        "description": "Sends a direct message to a specific user.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "recipient": {
+                    "type": "string",
+                    "description": "The username or ID of the recipient."
+                },
+                "message": {
+                    "type": "string",
+                    "description": "The content of the message."
+                }
+            },
+            "required": ["recipient", "message"]
+        },
+        "returns": {
+            "type": "none"
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you help me send a direct message?"
+        },
+        {
+            "role": "assistant",
+            "text": "Of course! To whom would you like to send the message?"
+        },
+        {
+            "role": "user",
+            "text": "I want to send a message to 'john_doe'."
+        },
+        {
+            "role": "assistant",
+            "text": "What message would you like to send?"
+        },
+        {
+            "role": "user",
+            "text": "I want to say 'Hello, how are you?'"
+        },
+        {
+            "role": "assistant",
+            "text": "Alright, I will send the message 'Hello, how are you?' to 'john_doe'."
+        }
+    ],
+    "function_call": {
+        "function_name": "send_direct_message",
+        "parameters": {
+            "recipient": "john_doe",
+            "message": "Hello, how are you?"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def delete_direct_message(\n    message_id: str,\n) -> bool:\n    """\n    Deletes a sent direct message.\n\n    Parameters:\n        message_id (str): The ID of the direct message to delete.\n\n    Returns:\n        bool: True if the direct message was successfully deleted, False otherwise.\n    """\n', 'function_description': {'name': 'delete_direct_message', 'description': 'Deletes a sent direct message.', 'parameters': {'type': 'object', 'properties': {'message_id': {'type': 'string', 'description': 'The ID of the direct message to delete.'}}, 'required': ['message_id']}, 'returns': {'type': 'boolean', 'description': 'True if the direct message was successfully deleted, False otherwise.'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "delete_direct_message",
+        "description": "Deletes a sent direct message.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "message_id": {
+                    "type": "string",
+                    "description": "The ID of the direct message to delete."
+                }
+            },
+            "required": ["message_id"]
+        },
+        "returns": {
+            "type": "boolean",
+            "description": "True if the direct message was successfully deleted, False otherwise."
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you delete a direct message for me?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please provide me with the ID of the direct message you want to delete."
+        },
+        {
+            "role": "user",
+            "text": "The ID of the direct message is '12345'."
+        },
+        {
+            "role": "assistant",
+            "text": "Alright, I will delete the direct message with ID '12345'."
+        }
+    ],
+    "function_call": {
+        "function_name": "delete_direct_message",
+        "parameters": {
+            "message_id": "12345"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def retrieve_direct_messages(\n    user_id: str,\n) -> List[Dict[str, str]]:\n    """\n    Retrieves a list of direct messages sent and received by a user.\n\n    Parameters:\n        user_id (str): The ID of the user.\n\n    Returns:\n        List[Dict[str, str]]: A list of dictionaries containing direct message details.\n                              Each dictionary should have \'sender\' and \'message\' keys.\n    """\n', 'function_description': {'name': 'retrieve_direct_messages', 'description': 'Retrieves a list of direct messages sent and received by a user.', 'parameters': {'type': 'object', 'properties': {'user_id': {'type': 'string', 'description': 'The ID of the user.'}}, 'required': ['user_id']}, 'returns': {'type': 'array', 'items': {'type': 'object', 'properties': {'sender': {'type': 'string'}, 'message': {'type': 'string'}}, 'required': ['sender', 'message']}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "retrieve_direct_messages",
+        "description": "Retrieves a list of direct messages sent and received by a user.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "user_id": {
+                    "type": "string",
+                    "description": "The ID of the user."
+                }
+            },
+            "required": ["user_id"]
+        },
+        "returns": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "sender": {"type": "string"},
+                    "message": {"type": "string"}
+                },
+                "required": ["sender", "message"]
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you retrieve my direct messages?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. May I know your user ID?"
+        },
+        {
+            "role": "user",
+            "text": "Yes, my user ID is '12345'."
+        },
+        {
+            "role": "assistant",
+            "text": "Great, I'm retrieving your direct messages now."
+        }
+    ],
+    "function_call": {
+        "function_name": "retrieve_direct_messages",
+        "parameters": {
+            "user_id": "12345"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def retrieve_trending_topics(location: str) -> List[str]:\n    """\n    Retrieves trending topics for a specific location.\n\n    Parameters:\n        location (str): The specific location to retrieve trending topics for.\n\n    Returns:\n        List[str]: A list of trending topics for the specified location.\n    """\n', 'function_description': {'name': 'retrieve_trending_topics', 'description': 'Retrieves trending topics for a specific location.', 'parameters': {'type': 'object', 'properties': {'location': {'type': 'string', 'description': 'The specific location to retrieve trending topics for.'}}, 'required': ['location']}, 'returns': {'type': 'object', 'properties': {'trending_topics': {'type': 'array', 'items': {'type': 'string'}, 'description': 'A list of trending topics for the specified location.'}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "retrieve_trending_topics",
+        "description": "Retrieves trending topics for a specific location.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "location": {
+                    "type": "string",
+                    "description": "The specific location to retrieve trending topics for."
+                }
+            },
+            "required": ["location"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "trending_topics": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "A list of trending topics for the specified location."
+                }
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you retrieve trending topics for a specific location?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. May I know the specific location you want to retrieve trending topics for?"
+        },
+        {
+            "role": "user",
+            "text": "I want to retrieve trending topics for New York City."
+        },
+        {
+            "role": "assistant",
+            "text": "Great, I'm retrieving the trending topics for New York City now."
+        }
+    ],
+    "function_call": {
+        "function_name": "retrieve_trending_topics",
+        "parameters": {
+            "location": "New York City"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def get_followers(user_id: int) -> List[str]:\n    """\n    Retrieves a list of followers for a specific user.\n\n    Parameters:\n        user_id (int): The ID of the user.\n\n    Returns:\n        List[str]: A list of usernames of the followers.\n    """', 'function_description': {'name': 'get_followers', 'description': 'Retrieves a list of followers for a specific user.', 'parameters': {'type': 'object', 'properties': {'user_id': {'type': 'integer', 'description': 'The ID of the user.'}}, 'required': ['user_id']}, 'returns': {'type': 'object', 'properties': {'followers': {'type': 'array', 'items': {'type': 'string'}, 'description': 'A list of usernames of the followers.'}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "get_followers",
+        "description": "Retrieves a list of followers for a specific user.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "user_id": {
+                    "type": "integer",
+                    "description": "The ID of the user."
+                }
+            },
+            "required": ["user_id"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "followers": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "A list of usernames of the followers."
+                }
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you show me the list of my followers?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. May I know your user ID?"
+        },
+        {
+            "role": "user",
+            "text": "Yes, my user ID is 12345."
+        },
+        {
+            "role": "assistant",
+            "text": "Great, I'm retrieving your list of followers now."
+        }
+    ],
+    "function_call": {
+        "function_name": "get_followers",
+        "parameters": {
+            "user_id": 12345
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def get_following_accounts(user_id: int) -> List[str]:\n    """\n    Retrieves a list of accounts that a specific user is following.\n\n    Parameters:\n        user_id (int): The ID of the user whose following accounts are to be retrieved.\n\n    Returns:\n        List[str]: A list of account names that the user is following.\n    """\n    pass', 'function_description': {'name': 'get_following_accounts', 'description': 'Retrieves a list of accounts that a specific user is following.', 'parameters': {'type': 'object', 'properties': {'user_id': {'type': 'integer', 'description': 'The ID of the user whose following accounts are to be retrieved.'}}, 'required': ['user_id']}, 'returns': {'type': 'object', 'properties': {'list': {'type': 'string', 'description': 'A list of account names that the user is following.'}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+        "function_description": {
+            "name": "get_following_accounts",
+            "description": "Retrieves a list of accounts that a specific user is following.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "user_id": {
+                        "type": "integer",
+                        "description": "The ID of the user whose following accounts are to be retrieved."
+                    }
+                },
+                "required": ["user_id"]
+            },
+            "returns": {
+                "type": "object",
+                "properties": {
+                    "list": {"type": "string", "description": "A list of account names that the user is following."}
+                }
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you show me the accounts I am following on Twitter?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. May I know your Twitter user ID?"
+            },
+            {
+                "role": "user",
+                "text": "Yes, my Twitter user ID is '12345'."
+            },
+            {
+                "role": "assistant",
+                "text": "Great, I'm retrieving the accounts you are following now."
+            }
+        ],
+        "function_call": {
+            "function_name": "get_following_accounts",
+            "parameters": {
+                "user_id": 12345
+            }
+        }
+    }
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def search_tweets(\n    keywords: List[str],\n    hashtags: List[str],\n    users: List[str],\n) -> List[str]:\n    """\n    Searches for tweets containing specific keywords, hashtags, or mentioning specific users.\n\n    Parameters:\n        keywords (List[str]): A list of keywords to search for in tweets.\n        hashtags (List[str]): A list of hashtags to search for in tweets.\n        users (List[str]): A list of usernames to search for in tweets.\n\n    Returns:\n        List[str]: A list of tweets matching the specified criteria.\n    """\n', 'function_description': {'name': 'search_tweets', 'description': 'Searches for tweets containing specific keywords, hashtags, or mentioning specific users.', 'parameters': {'type': 'object', 'properties': {'keywords': {'type': 'array', 'description': 'A list of keywords to search for in tweets.', 'items': {'type': 'string'}}, 'hashtags': {'type': 'array', 'description': 'A list of hashtags to search for in tweets.', 'items': {'type': 'string'}}, 'users': {'type': 'array', 'description': 'A list of usernames to search for in tweets.', 'items': {'type': 'string'}}}, 'required': ['keywords', 'hashtags', 'users']}, 'returns': {'type': 'array', 'items': {'type': 'string'}, 'description': 'A list of tweets matching the specified criteria.'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "search_tweets",
+        "description": "Searches for tweets containing specific keywords, hashtags, or mentioning specific users.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "keywords": {
+                    "type": "array",
+                    "description": "A list of keywords to search for in tweets.",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "hashtags": {
+                    "type": "array",
+                    "description": "A list of hashtags to search for in tweets.",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "users": {
+                    "type": "array",
+                    "description": "A list of usernames to search for in tweets.",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "keywords",
+                "hashtags",
+                "users"
+            ]
+        },
+        "returns": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "A list of tweets matching the specified criteria."
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you search for tweets with the keyword 'python' and the hashtag 'programming'?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please wait a moment while I search for the tweets."
+        }
+    ],
+    "function_call": {
+        "function_name": "search_tweets",
+        "parameters": {
+            "keywords": ["python"],
+            "hashtags": ["programming"],
+            "users": []
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def update_profile_details(\n    description: str,\n    location: str,\n    profile_image: str,\n) -> None:\n    """\n    Updates the profile details such as description, location, and profile image.\n\n    Parameters:\n        description (str): The new description for the profile.\n        location (str): The new location for the profile.\n        profile_image (str): The new profile image for the profile.\n\n    Returns:\n        None\n    """\n', 'function_description': {'name': 'update_profile_details', 'description': 'Updates the profile details such as description, location, and profile image.', 'parameters': {'type': 'object', 'properties': {'description': {'type': 'string', 'description': 'The new description for the profile.'}, 'location': {'type': 'string', 'description': 'The new location for the profile.'}, 'profile_image': {'type': 'string', 'description': 'The new profile image for the profile.'}}, 'required': ['description', 'location', 'profile_image']}, 'returns': {'type': 'none'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "update_profile_details",
+        "description": "Updates the profile details such as description, location, and profile image.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "The new description for the profile."
+                },
+                "location": {
+                    "type": "string",
+                    "description": "The new location for the profile."
+                },
+                "profile_image": {
+                    "type": "string",
+                    "description": "The new profile image for the profile."
+                }
+            },
+            "required": ["description", "location", "profile_image"]
+        },
+        "returns": {
+            "type": "none"
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, I want to update my profile details."
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can help you with that. Please provide me with the new description, location, and profile image."
+        },
+        {
+            "role": "user",
+            "text": "I would like to set my description as 'Software Engineer', my location as 'San Francisco', and my profile image as 'profile.jpg'."
+        },
+        {
+            "role": "assistant",
+            "text": "Great! Updating your profile details now."
+        }
+    ],
+    "function_call": {
+        "function_name": "update_profile_details",
+        "parameters": {
+            "description": "Software Engineer",
+            "location": "San Francisco",
+            "profile_image": "profile.jpg"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def retrieve_user_engagement_metrics(\n    tweet_ids: List[str]\n) -> Dict[str, Dict[str, int]]:\n    """\n    Retrieves user engagement metrics like likes, retweets, and impressions for specific tweets.\n\n    Parameters:\n        tweet_ids (List[str]): A list of tweet IDs for which to retrieve metrics.\n\n    Returns:\n        Dict[str, Dict[str, int]]: A dictionary with tweet IDs as keys and a dictionary of engagement metrics as values.\n                                   The engagement metrics dictionary should have \'likes\', \'retweets\', and \'impressions\' as keys.\n    """\n', 'function_description': {'name': 'retrieve_user_engagement_metrics', 'description': 'Retrieves user engagement metrics like likes, retweets, and impressions for specific tweets.', 'parameters': {'type': 'object', 'properties': {'tweet_ids': {'type': 'array', 'description': 'A list of tweet IDs for which to retrieve metrics.', 'items': {'type': 'string'}}}, 'required': ['tweet_ids']}, 'returns': {'type': 'object', 'properties': {'tweet_id': {'type': 'object', 'properties': {'likes': {'type': 'integer'}, 'retweets': {'type': 'integer'}, 'impressions': {'type': 'integer'}}}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "retrieve_user_engagement_metrics",
+        "description": "Retrieves user engagement metrics like likes, retweets, and impressions for specific tweets.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "tweet_ids": {
+                    "type": "array",
+                    "description": "A list of tweet IDs for which to retrieve metrics.",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": ["tweet_ids"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "tweet_id": {
+                    "type": "object",
+                    "properties": {
+                        "likes": {
+                            "type": "integer"
+                        },
+                        "retweets": {
+                            "type": "integer"
+                        },
+                        "impressions": {
+                            "type": "integer"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you retrieve the engagement metrics for my tweets?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please provide me with the tweet IDs for which you want to retrieve metrics."
+        },
+        {
+            "role": "user",
+            "text": "I want to retrieve metrics for the tweets with IDs '123' and '456'."
+        },
+        {
+            "role": "assistant",
+            "text": "Great, I'm retrieving the engagement metrics for the specified tweets now."
+        }
+    ],
+    "function_call": {
+        "function_name": "retrieve_user_engagement_metrics",
+        "parameters": {
+            "tweet_ids": ["123", "456"]
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def pin_tweet(tweet_id: str) -> bool:\n    """\n    Pins a tweet to the top of a user\'s timeline.\n\n    Parameters:\n        tweet_id (str): The ID of the tweet to be pinned.\n\n    Returns:\n        bool: Returns True if the tweet was successfully pinned, False otherwise.\n    """\n', 'function_description': {'name': 'pin_tweet', 'description': "Pins a tweet to the top of a user's timeline.", 'parameters': {'type': 'object', 'properties': {'tweet_id': {'type': 'string', 'description': 'The ID of the tweet to be pinned.'}}, 'required': ['tweet_id']}, 'returns': {'type': 'bool', 'description': 'Returns True if the tweet was successfully pinned, False otherwise.'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "pin_tweet",
+        "description": "Pins a tweet to the top of a user's timeline.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "tweet_id": {
+                    "type": "string",
+                    "description": "The ID of the tweet to be pinned."
+                }
+            },
+            "required": ["tweet_id"]
+        },
+        "returns": {
+            "type": "bool",
+            "description": "Returns True if the tweet was successfully pinned, False otherwise."
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Can you help me pin a tweet to the top of my timeline?"
+        },
+        {
+            "role": "assistant",
+            "text": "Of course! Please provide me with the ID of the tweet you want to pin."
+        },
+        {
+            "role": "user",
+            "text": "The ID of the tweet I want to pin is '12345'."
+        },
+        {
+            "role": "assistant",
+            "text": "Alright, I will proceed to pin the tweet with ID '12345' to the top of your timeline."
+        }
+    ],
+    "function_call": {
+        "function_name": "pin_tweet",
+        "parameters": {
+            "tweet_id": "12345"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def unpin_tweet():\n    """\n    Unpins a tweet from the top of a user\'s timeline.\n    """', 'function_description': {'name': 'unpin_tweet', 'description': "Unpins a tweet from the top of a user's timeline.", 'parameters': {}, 'returns': {}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "unpin_tweet",
+        "description": "Unpins a tweet from the top of a user's timeline.",
+        "parameters": {},
+        "returns": {}
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you unpin my tweet from the top of my timeline?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please give me a moment."
+        }
+    ],
+    "function_call": {
+        "function_name": "unpin_tweet",
+        "parameters": {}
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def get_member_lists(user_id: str) -> List[str]:\n    """\n    Retrieves the lists that a user is a member of.\n\n    Parameters:\n        user_id (str): The ID of the user.\n\n    Returns:\n        List[str]: A list of the names of the lists that the user is a member of.\n    """\n    # Implementation goes here', 'function_description': {'name': 'get_member_lists', 'description': 'Retrieves the lists that a user is a member of.', 'parameters': {'type': 'object', 'properties': {'user_id': {'type': 'string', 'description': 'The ID of the user.'}}, 'required': ['user_id']}, 'returns': {'type': 'object', 'properties': {'List[str]': {'type': 'array', 'items': {'type': 'string'}, 'description': 'A list of the names of the lists that the user is a member of.'}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "get_member_lists",
+        "description": "Retrieves the lists that a user is a member of.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "user_id": {
+                    "type": "string",
+                    "description": "The ID of the user."
+                }
+            },
+            "required": ["user_id"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "List[str]": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "A list of the names of the lists that the user is a member of."
+                }
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you show me the lists that I am a member of?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. May I know your user ID?"
+        },
+        {
+            "role": "user",
+            "text": "Yes, my user ID is '12345'."
+        },
+        {
+            "role": "assistant",
+            "text": "Great, I'm retrieving the lists that you are a member of now."
+        }
+    ],
+    "function_call": {
+        "function_name": "get_member_lists",
+        "parameters": {
+            "user_id": "12345"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def create_new_list() -> List:\n    """\n    Creates a new empty list.\n\n    Returns:\n        List: An empty list.\n    """\n    return []', 'function_description': {'name': 'create_new_list', 'description': 'Creates a new empty list.', 'parameters': {}, 'returns': {'type': 'List', 'description': 'An empty list.'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+  "function_description": {
+    "name": "create_new_list",
+    "description": "Creates a new empty list.",
+    "parameters": {},
+    "returns": {
+      "type": "List",
+      "description": "An empty list."
+    }
+  },
+  "conversation": [
+    {
+      "role": "user",
+      "text": "Can you create a new list for me?"
+    },
+    {
+      "role": "assistant",
+      "text": "Sure, I can do that. I will create a new empty list for you."
+    }
+  ],
+  "function_call": {
+    "function_name": "create_new_list",
+    "parameters": {}
+  }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def add_users_to_list(users: List[str], new_users: List[str]) -> List[str]:\n    """\n    Adds new users to an existing list of users.\n\n    Parameters:\n        users (List[str]): The existing list of users.\n        new_users (List[str]): The list of new users to add.\n\n    Returns:\n        List[str]: The updated list of users.\n    """\n', 'function_description': {'name': 'add_users_to_list', 'description': 'Adds new users to an existing list of users.', 'parameters': {'type': 'object', 'properties': {'users': {'type': 'array', 'description': 'The existing list of users.', 'items': {'type': 'string'}}, 'new_users': {'type': 'array', 'description': 'The list of new users to add.', 'items': {'type': 'string'}}}, 'required': ['users', 'new_users']}, 'returns': {'type': 'array', 'items': {'type': 'string'}, 'description': 'The updated list of users.'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "add_users_to_list",
+        "description": "Adds new users to an existing list of users.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "users": {
+                    "type": "array",
+                    "description": "The existing list of users.",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "new_users": {
+                    "type": "array",
+                    "description": "The list of new users to add.",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": ["users", "new_users"]
+        },
+        "returns": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "The updated list of users."
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you add some new users to my existing list?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please provide me with the existing list of users and the list of new users to add."
+        },
+        {
+            "role": "user",
+            "text": "The existing list of users is ['John', 'Mary', 'David'] and the new users to add are ['Emily', 'Michael']."
+        },
+        {
+            "role": "assistant",
+            "text": "Great, I will add the new users to the existing list now."
+        }
+    ],
+    "function_call": {
+        "function_name": "add_users_to_list",
+        "parameters": {
+            "users": ["John", "Mary", "David"],
+            "new_users": ["Emily", "Michael"]
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def remove_users(existing_list: List[str], users_to_remove: List[str]) -> List[str]:\n    """\n    Removes users from an existing list.\n\n    Parameters:\n        existing_list (List[str]): The original list of users.\n        users_to_remove (List[str]): The list of users to remove.\n\n    Returns:\n        List[str]: The updated list with the specified users removed.\n    """\n\n', 'function_description': {'name': 'remove_users', 'description': 'Removes users from an existing list.', 'parameters': {'type': 'object', 'properties': {'existing_list': {'type': 'array', 'items': {'type': 'string'}, 'description': 'The original list of users.'}, 'users_to_remove': {'type': 'array', 'items': {'type': 'string'}, 'description': 'The list of users to remove.'}}, 'required': ['existing_list', 'users_to_remove']}, 'returns': {'type': 'array', 'items': {'type': 'string'}, 'description': 'The updated list with the specified users removed.'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "remove_users",
+        "description": "Removes users from an existing list.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "existing_list": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "description": "The original list of users."
+                },
+                "users_to_remove": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "description": "The list of users to remove."
+                }
+            },
+            "required": ["existing_list", "users_to_remove"]
+        },
+        "returns": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "The updated list with the specified users removed."
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you help me remove some users from my list?"
+        },
+        {
+            "role": "assistant",
+            "text": "Of course! Please provide me with the list of users you want to remove."
+        },
+        {
+            "role": "user",
+            "text": "Sure, I want to remove users 'user1', 'user2', and 'user3'."
+        },
+        {
+            "role": "assistant",
+            "text": "Got it! I will remove those users from your list."
+        }
+    ],
+    "function_call": {
+        "function_name": "remove_users",
+        "parameters": {
+            "existing_list": ["user1", "user2", "user3"],
+            "users_to_remove": ["user1", "user2", "user3"]
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def delete_list(existing_list: List) -> None:\n    """\n    Deletes an existing list.\n\n    Parameters:\n        existing_list (List): The list to be deleted.\n\n    Returns:\n        None\n    """\n\n', 'function_description': {'name': 'delete_list', 'description': 'Deletes an existing list.', 'parameters': {'type': 'object', 'properties': {'existing_list': {'type': 'array', 'description': 'The list to be deleted.'}}, 'required': ['existing_list']}, 'returns': {'type': 'None'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "delete_list",
+        "description": "Deletes an existing list.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "existing_list": {
+                    "type": "array",
+                    "description": "The list to be deleted."
+                }
+            },
+            "required": ["existing_list"]
+        },
+        "returns": {
+            "type": "None"
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Can you help me delete my shopping list?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, please provide the list you want to delete."
+        },
+        {
+            "role": "user",
+            "text": "I want to delete the list ['eggs', 'milk', 'bread']."
+        },
+        {
+            "role": "assistant",
+            "text": "Okay, I will delete the list for you."
+        }
+    ],
+    "function_call": {
+        "function_name": "delete_list",
+        "parameters": {
+            "existing_list": ["eggs", "milk", "bread"]
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def check_follow(user: str, followed_user: str) -> bool:\n    """\n    Checks if a user is following another user.\n\n    Parameters:\n        user (str): The username of the user.\n        followed_user (str): The username of the user being followed.\n\n    Returns:\n        bool: True if the user is following the followed_user, False otherwise.\n    """\n    # Implementation code to check if user is following followed_user\n    return result', 'function_description': {'name': 'check_follow', 'description': 'Checks if a user is following another user.', 'parameters': {'type': 'object', 'properties': {'user': {'type': 'string', 'description': 'The username of the user.'}, 'followed_user': {'type': 'string', 'description': 'The username of the user being followed.'}}, 'required': ['user', 'followed_user']}, 'returns': {'type': 'bool', 'description': 'True if the user is following the followed_user, False otherwise.'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "check_follow",
+        "description": "Checks if a user is following another user.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "user": {
+                    "type": "string",
+                    "description": "The username of the user."
+                },
+                "followed_user": {
+                    "type": "string",
+                    "description": "The username of the user being followed."
+                }
+            },
+            "required": ["user", "followed_user"]
+        },
+        "returns": {
+            "type": "bool",
+            "description": "True if the user is following the followed_user, False otherwise."
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you check if I am following 'johndoe' on Twitter?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please provide your Twitter username and the username of the user you want to check."
+        },
+        {
+            "role": "user",
+            "text": "My username is 'janedoe' and the username I want to check is 'johndoe'."
+        },
+        {
+            "role": "assistant",
+            "text": "Great, let me check if 'janedoe' is following 'johndoe' on Twitter."
+        }
+    ],
+    "function_call": {
+        "function_name": "check_follow",
+        "parameters": {
+            "user": "janedoe",
+            "followed_user": "johndoe"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def block_user(username: str) -> None:\n    """\n    Blocks a specific user.\n\n    Parameters:\n        username (str): The username of the user to be blocked.\n\n    Returns:\n        None\n    """\n', 'function_description': {'name': 'block_user', 'description': 'Blocks a specific user.', 'parameters': {'type': 'object', 'properties': {'username': {'type': 'string', 'description': 'The username of the user to be blocked.'}}, 'required': ['username']}, 'returns': {'type': 'None'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "block_user",
+        "description": "Blocks a specific user.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "username": {
+                    "type": "string",
+                    "description": "The username of the user to be blocked."
+                }
+            },
+            "required": ["username"]
+        },
+        "returns": {
+            "type": "None"
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Can you please block the user with username 'john123'?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can help you with that. Please wait while I block the user 'john123'."
+        }
+    ],
+    "function_call": {
+        "function_name": "block_user",
+        "parameters": {
+            "username": "john123"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def unblock_user(user_id: str) -> None:', 'function_description': {'name': 'unblock_user', 'description': 'Unblock a specific user.', 'parameters': {'type': 'object', 'properties': {'user_id': {'type': 'string', 'description': 'The ID of the user to unblock.'}}, 'required': ['user_id']}, 'returns': {'type': 'None'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "unblock_user",
+        "description": "Unblock a specific user.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "user_id": {
+                    "type": "string",
+                    "description": "The ID of the user to unblock."
+                }
+            },
+            "required": ["user_id"]
+        },
+        "returns": {
+            "type": "None"
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you unblock a user for me?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can help you with that. Please provide me with the user ID of the user you want to unblock."
+        },
+        {
+            "role": "user",
+            "text": "The user ID is '12345'."
+        },
+        {
+            "role": "assistant",
+            "text": "Alright, I will proceed to unblock the user with the ID '12345'."
+        }
+    ],
+    "function_call": {
+        "function_name": "unblock_user",
+        "parameters": {
+            "user_id": "12345"
+        }
+    }
+}
+

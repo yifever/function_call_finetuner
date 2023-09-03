@@ -1,0 +1,2071 @@
+{
+    "function_id": "design-consultant-1",
+    "description": {
+        "function_snippet": "def create_project_outline(client_name: str, project_description: str) -> str:\n    \"\"\"\n    Creates a new project outline or scope of work for a client.\n\n    Parameters:\n        client_name (str): The name of the client.\n        project_description (str): A description of the project.\n\n    Returns:\n        str: The project outline or scope of work.\n    \"\"\"\n",
+        "function_description": {
+            "name": "create_project_outline",
+            "description": "Creates a new project outline or scope of work for a client.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "client_name": {
+                        "type": "string",
+                        "description": "The name of the client."
+                    },
+                    "project_description": {
+                        "type": "string",
+                        "description": "A description of the project."
+                    }
+                },
+                "required": [
+                    "client_name",
+                    "project_description"
+                ]
+            },
+            "returns": {
+                "type": "object",
+                "properties": {
+                    "type": "string",
+                    "description": "The project outline or scope of work."
+                }
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"create_project_outline\",\n        \"description\": \"Creates a new project outline or scope of work for a client.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"client_name\": {\n                    \"type\": \"string\",\n                    \"description\": \"The name of the client.\"\n                },\n                \"project_description\": {\n                    \"type\": \"string\",\n                    \"description\": \"A description of the project.\"\n                }\n            },\n            \"required\": [\"client_name\", \"project_description\"]\n        },\n        \"returns\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"type\": \"string\",\n                \"description\": \"The project outline or scope of work.\"\n            }\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you help me create a project outline?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Of course! I'd be happy to assist you. Please provide the client name and a description of the project.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"The client's name is ABC Company and the project is about developing a mobile app for their business.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Thank you for the information. I will now create the project outline for ABC Company's mobile app development.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"create_project_outline\",\n        \"parameters\": {\n            \"client_name\": \"ABC Company\",\n            \"project_description\": \"Developing a mobile app for their business.\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "create_project_outline",
+            "description": "Creates a new project outline or scope of work for a client.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "client_name": {
+                        "type": "string",
+                        "description": "The name of the client."
+                    },
+                    "project_description": {
+                        "type": "string",
+                        "description": "A description of the project."
+                    }
+                },
+                "required": [
+                    "client_name",
+                    "project_description"
+                ]
+            },
+            "returns": {
+                "type": "object",
+                "properties": {
+                    "type": "string",
+                    "description": "The project outline or scope of work."
+                }
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you help me create a project outline?"
+            },
+            {
+                "role": "assistant",
+                "text": "Of course! I'd be happy to assist you. Please provide the client name and a description of the project."
+            },
+            {
+                "role": "user",
+                "text": "The client's name is ABC Company and the project is about developing a mobile app for their business."
+            },
+            {
+                "role": "assistant",
+                "text": "Thank you for the information. I will now create the project outline for ABC Company's mobile app development."
+            }
+        ],
+        "function_call": {
+            "function_name": "create_project_outline",
+            "parameters": {
+                "client_name": "ABC Company",
+                "project_description": "Developing a mobile app for their business."
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def create_project_outline(client_name: str, project_description: str) -> str:\\n    \"\"\"\\n    Creates a new project outline or scope of work for a client.\\n\\n    Parameters:\\n        client_name (str): The name of the client.\\n        project_description (str): A description of the project.\\n\\n    Returns:\\n        str: The project outline or scope of work.\\n    \"\"\"\\n', 'function_description': {'name': 'create_project_outline', 'description': 'Creates a new project outline or scope of work for a client.', 'parameters': {'type': 'object', 'properties': {'client_name': {'type': 'string', 'description': 'The name of the client.'}, 'project_description': {'type': 'string', 'description': 'A description of the project.'}}, 'required': ['client_name', 'project_description']}, 'returns': {'type': 'object', 'properties': {'type': 'string', 'description': 'The project outline or scope of work.'}}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "design-consultant-2",
+    "description": {
+        "function_snippet": "def send_proposal_or_quotation(\n    client_email: str,\n    proposal_details: Dict[str, str],\n    attachments: List[str],\n) -> None:\n    \"\"\"\n    Sends a proposal or quotation to a prospective client.\n\n    Parameters:\n        client_email (str): The email address of the prospective client.\n        proposal_details (Dict[str, str]): A dictionary containing the details of the proposal or quotation.\n                                            Each key represents a specific detail (e.g., 'subject', 'body').\n        attachments (List[str]): A list of file paths to be attached to the email.\n\n    Returns:\n        None\n    \"\"\"\n",
+        "function_description": {
+            "name": "send_proposal_or_quotation",
+            "description": "Sends a proposal or quotation to a prospective client.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "client_email": {
+                        "type": "string",
+                        "description": "The email address of the prospective client."
+                    },
+                    "proposal_details": {
+                        "type": "object",
+                        "description": "A dictionary containing the details of the proposal or quotation. Each key represents a specific detail (e.g., 'subject', 'body').",
+                        "additionalProperties": {
+                            "type": "string"
+                        }
+                    },
+                    "attachments": {
+                        "type": "array",
+                        "description": "A list of file paths to be attached to the email.",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": [
+                    "client_email",
+                    "proposal_details",
+                    "attachments"
+                ]
+            },
+            "returns": {
+                "type": "none"
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"send_proposal_or_quotation\",\n        \"description\": \"Sends a proposal or quotation to a prospective client.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"client_email\": {\n                    \"type\": \"string\",\n                    \"description\": \"The email address of the prospective client.\"\n                },\n                \"proposal_details\": {\n                    \"type\": \"object\",\n                    \"description\": \"A dictionary containing the details of the proposal or quotation. Each key represents a specific detail (e.g., 'subject', 'body').\",\n                    \"additionalProperties\": {\n                        \"type\": \"string\"\n                    }\n                },\n                \"attachments\": {\n                    \"type\": \"array\",\n                    \"description\": \"A list of file paths to be attached to the email.\",\n                    \"items\": {\n                        \"type\": \"string\"\n                    }\n                }\n            },\n            \"required\": [\n                \"client_email\",\n                \"proposal_details\",\n                \"attachments\"\n            ]\n        },\n        \"returns\": {\n            \"type\": \"none\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you send a proposal or quotation to a prospective client?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Please provide me with the email address of the prospective client.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"The email address is 'example@example.com'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Great. Now, please provide me with the details of the proposal or quotation.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"The details are as follows: {\\\"subject\\\": \\\"Proposal for ABC project\\\", \\\"body\\\": \\\"Please find attached the proposal for the ABC project.\\\"}\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Thank you. Lastly, please provide me with the file paths of the attachments, if any.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"The file paths are ['/path/to/file1.pdf', '/path/to/file2.docx'].\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Got it. I will now send the proposal or quotation to the prospective client.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"send_proposal_or_quotation\",\n        \"parameters\": {\n            \"client_email\": \"example@example.com\",\n            \"proposal_details\": {\n                \"subject\": \"Proposal for ABC project\",\n                \"body\": \"Please find attached the proposal for the ABC project.\"\n            },\n            \"attachments\": [\n                \"/path/to/file1.pdf\",\n                \"/path/to/file2.docx\"\n            ]\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "send_proposal_or_quotation",
+            "description": "Sends a proposal or quotation to a prospective client.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "client_email": {
+                        "type": "string",
+                        "description": "The email address of the prospective client."
+                    },
+                    "proposal_details": {
+                        "type": "object",
+                        "description": "A dictionary containing the details of the proposal or quotation. Each key represents a specific detail (e.g., 'subject', 'body').",
+                        "additionalProperties": {
+                            "type": "string"
+                        }
+                    },
+                    "attachments": {
+                        "type": "array",
+                        "description": "A list of file paths to be attached to the email.",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": [
+                    "client_email",
+                    "proposal_details",
+                    "attachments"
+                ]
+            },
+            "returns": {
+                "type": "none"
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you send a proposal or quotation to a prospective client?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Please provide me with the email address of the prospective client."
+            },
+            {
+                "role": "user",
+                "text": "The email address is 'example@example.com'."
+            },
+            {
+                "role": "assistant",
+                "text": "Great. Now, please provide me with the details of the proposal or quotation."
+            },
+            {
+                "role": "user",
+                "text": "The details are as follows: {\"subject\": \"Proposal for ABC project\", \"body\": \"Please find attached the proposal for the ABC project.\"}"
+            },
+            {
+                "role": "assistant",
+                "text": "Thank you. Lastly, please provide me with the file paths of the attachments, if any."
+            },
+            {
+                "role": "user",
+                "text": "The file paths are ['/path/to/file1.pdf', '/path/to/file2.docx']."
+            },
+            {
+                "role": "assistant",
+                "text": "Got it. I will now send the proposal or quotation to the prospective client."
+            }
+        ],
+        "function_call": {
+            "function_name": "send_proposal_or_quotation",
+            "parameters": {
+                "client_email": "example@example.com",
+                "proposal_details": {
+                    "subject": "Proposal for ABC project",
+                    "body": "Please find attached the proposal for the ABC project."
+                },
+                "attachments": [
+                    "/path/to/file1.pdf",
+                    "/path/to/file2.docx"
+                ]
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def send_proposal_or_quotation(\\n    client_email: str,\\n    proposal_details: Dict[str, str],\\n    attachments: List[str],\\n) -> None:\\n    \"\"\"\\n    Sends a proposal or quotation to a prospective client.\\n\\n    Parameters:\\n        client_email (str): The email address of the prospective client.\\n        proposal_details (Dict[str, str]): A dictionary containing the details of the proposal or quotation.\\n                                            Each key represents a specific detail (e.g., \\'subject\\', \\'body\\').\\n        attachments (List[str]): A list of file paths to be attached to the email.\\n\\n    Returns:\\n        None\\n    \"\"\"\\n', 'function_description': {'name': 'send_proposal_or_quotation', 'description': 'Sends a proposal or quotation to a prospective client.', 'parameters': {'type': 'object', 'properties': {'client_email': {'type': 'string', 'description': 'The email address of the prospective client.'}, 'proposal_details': {'type': 'object', 'description': \"A dictionary containing the details of the proposal or quotation. Each key represents a specific detail (e.g., 'subject', 'body').\", 'additionalProperties': {'type': 'string'}}, 'attachments': {'type': 'array', 'description': 'A list of file paths to be attached to the email.', 'items': {'type': 'string'}}}, 'required': ['client_email', 'proposal_details', 'attachments']}, 'returns': {'type': 'none'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "design-consultant-3",
+    "description": {
+        "function_snippet": "def schedule_client_meeting(\n    client_name: str,\n    meeting_date: str,\n    meeting_time: str,\n    duration: int,\n    location: str,\n) -> None:\n    \n    \"\"\"\n    Schedule a client meeting or consultation.\n\n    Parameters:\n        client_name (str): The name of the client.\n        meeting_date (str): The date of the meeting in YYYY-MM-DD format.\n        meeting_time (str): The time of the meeting in HH:MM format.\n        duration (int): The duration of the meeting in minutes.\n        location (str): The location of the meeting.\n\n    Returns:\n        None\n    \"\"\"\n",
+        "function_description": {
+            "name": "schedule_client_meeting",
+            "description": "Schedule a client meeting or consultation.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "client_name": {
+                        "type": "string",
+                        "description": "The name of the client."
+                    },
+                    "meeting_date": {
+                        "type": "string",
+                        "description": "The date of the meeting in YYYY-MM-DD format."
+                    },
+                    "meeting_time": {
+                        "type": "string",
+                        "description": "The time of the meeting in HH:MM format."
+                    },
+                    "duration": {
+                        "type": "integer",
+                        "description": "The duration of the meeting in minutes."
+                    },
+                    "location": {
+                        "type": "string",
+                        "description": "The location of the meeting."
+                    }
+                },
+                "required": [
+                    "client_name",
+                    "meeting_date",
+                    "meeting_time",
+                    "duration",
+                    "location"
+                ]
+            },
+            "returns": {
+                "type": "none",
+                "description": "This function does not return any value."
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"schedule_client_meeting\",\n        \"description\": \"Schedule a client meeting or consultation.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"client_name\": {\n                    \"type\": \"string\",\n                    \"description\": \"The name of the client.\"\n                },\n                \"meeting_date\": {\n                    \"type\": \"string\",\n                    \"description\": \"The date of the meeting in YYYY-MM-DD format.\"\n                },\n                \"meeting_time\": {\n                    \"type\": \"string\",\n                    \"description\": \"The time of the meeting in HH:MM format.\"\n                },\n                \"duration\": {\n                    \"type\": \"integer\",\n                    \"description\": \"The duration of the meeting in minutes.\"\n                },\n                \"location\": {\n                    \"type\": \"string\",\n                    \"description\": \"The location of the meeting.\"\n                }\n            },\n            \"required\": [\"client_name\", \"meeting_date\", \"meeting_time\", \"duration\", \"location\"]\n        },\n        \"returns\": {\n            \"type\": \"none\",\n            \"description\": \"This function does not return any value.\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you help me schedule a client meeting?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Of course! I can help you with that. Please provide the following details:\\n- Client name\\n- Meeting date (YYYY-MM-DD format)\\n- Meeting time (HH:MM format)\\n- Meeting duration (in minutes)\\n- Meeting location\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"The client's name is John Doe. The meeting date is 2022-12-31. The meeting time is 14:30. The meeting duration is 60 minutes. The meeting location is our office.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Thank you for the details. I will schedule the client meeting with John Doe on 2022-12-31 at 14:30 for 60 minutes at our office.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"schedule_client_meeting\",\n        \"parameters\": {\n            \"client_name\": \"John Doe\",\n            \"meeting_date\": \"2022-12-31\",\n            \"meeting_time\": \"14:30\",\n            \"duration\": 60,\n            \"location\": \"our office\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "schedule_client_meeting",
+            "description": "Schedule a client meeting or consultation.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "client_name": {
+                        "type": "string",
+                        "description": "The name of the client."
+                    },
+                    "meeting_date": {
+                        "type": "string",
+                        "description": "The date of the meeting in YYYY-MM-DD format."
+                    },
+                    "meeting_time": {
+                        "type": "string",
+                        "description": "The time of the meeting in HH:MM format."
+                    },
+                    "duration": {
+                        "type": "integer",
+                        "description": "The duration of the meeting in minutes."
+                    },
+                    "location": {
+                        "type": "string",
+                        "description": "The location of the meeting."
+                    }
+                },
+                "required": [
+                    "client_name",
+                    "meeting_date",
+                    "meeting_time",
+                    "duration",
+                    "location"
+                ]
+            },
+            "returns": {
+                "type": "none",
+                "description": "This function does not return any value."
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you help me schedule a client meeting?"
+            },
+            {
+                "role": "assistant",
+                "text": "Of course! I can help you with that. Please provide the following details:\n- Client name\n- Meeting date (YYYY-MM-DD format)\n- Meeting time (HH:MM format)\n- Meeting duration (in minutes)\n- Meeting location"
+            },
+            {
+                "role": "user",
+                "text": "The client's name is John Doe. The meeting date is 2022-12-31. The meeting time is 14:30. The meeting duration is 60 minutes. The meeting location is our office."
+            },
+            {
+                "role": "assistant",
+                "text": "Thank you for the details. I will schedule the client meeting with John Doe on 2022-12-31 at 14:30 for 60 minutes at our office."
+            }
+        ],
+        "function_call": {
+            "function_name": "schedule_client_meeting",
+            "parameters": {
+                "client_name": "John Doe",
+                "meeting_date": "2022-12-31",
+                "meeting_time": "14:30",
+                "duration": 60,
+                "location": "our office"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def schedule_client_meeting(\\n    client_name: str,\\n    meeting_date: str,\\n    meeting_time: str,\\n    duration: int,\\n    location: str,\\n) -> None:\\n    \\n    \"\"\"\\n    Schedule a client meeting or consultation.\\n\\n    Parameters:\\n        client_name (str): The name of the client.\\n        meeting_date (str): The date of the meeting in YYYY-MM-DD format.\\n        meeting_time (str): The time of the meeting in HH:MM format.\\n        duration (int): The duration of the meeting in minutes.\\n        location (str): The location of the meeting.\\n\\n    Returns:\\n        None\\n    \"\"\"\\n', 'function_description': {'name': 'schedule_client_meeting', 'description': 'Schedule a client meeting or consultation.', 'parameters': {'type': 'object', 'properties': {'client_name': {'type': 'string', 'description': 'The name of the client.'}, 'meeting_date': {'type': 'string', 'description': 'The date of the meeting in YYYY-MM-DD format.'}, 'meeting_time': {'type': 'string', 'description': 'The time of the meeting in HH:MM format.'}, 'duration': {'type': 'integer', 'description': 'The duration of the meeting in minutes.'}, 'location': {'type': 'string', 'description': 'The location of the meeting.'}}, 'required': ['client_name', 'meeting_date', 'meeting_time', 'duration', 'location']}, 'returns': {'type': 'none', 'description': 'This function does not return any value.'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "design-consultant-4",
+    "description": {
+        "function_snippet": "def generate_and_send_invoices(\ncompleted_work: List[Dict[str, Union[str, float]]],\ninvoice_template: str,\nrecipient_email: str,\n) -> None:\n    \"\"\"\n    Generates and sends invoices for completed work.\n\n    Parameters:\n        completed_work (List[Dict[str, Union[str, float]]]): A list of dictionaries containing details of completed work.\n                                                            Each dictionary should have 'work_id', 'client_name', and 'amount' keys.\n        invoice_template (str): The template to use for generating the invoices.\n        recipient_email (str): The email address of the recipient.\n\n    Returns:\n        None\n    \"\"\"\n",
+        "function_description": {
+            "name": "generate_and_send_invoices",
+            "description": "Generates and sends invoices for completed work.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "completed_work": {
+                        "type": "array",
+                        "description": "A list of dictionaries containing details of completed work. Each dictionary should have 'work_id', 'client_name', and 'amount' keys.",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "work_id": {
+                                    "type": "string"
+                                },
+                                "client_name": {
+                                    "type": "string"
+                                },
+                                "amount": {
+                                    "type": "number"
+                                }
+                            },
+                            "required": [
+                                "work_id",
+                                "client_name",
+                                "amount"
+                            ]
+                        }
+                    },
+                    "invoice_template": {
+                        "type": "string",
+                        "description": "The template to use for generating the invoices."
+                    },
+                    "recipient_email": {
+                        "type": "string",
+                        "description": "The email address of the recipient."
+                    }
+                },
+                "required": [
+                    "completed_work",
+                    "invoice_template",
+                    "recipient_email"
+                ]
+            },
+            "returns": {
+                "type": "none"
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"generate_and_send_invoices\",\n        \"description\": \"Generates and sends invoices for completed work.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"completed_work\": {\n                    \"type\": \"array\",\n                    \"description\": \"A list of dictionaries containing details of completed work. Each dictionary should have 'work_id', 'client_name', and 'amount' keys.\",\n                    \"items\": {\n                        \"type\": \"object\",\n                        \"properties\": {\n                            \"work_id\": {\"type\": \"string\"},\n                            \"client_name\": {\"type\": \"string\"},\n                            \"amount\": {\"type\": \"number\"}\n                        },\n                        \"required\": [\"work_id\", \"client_name\", \"amount\"]\n                    }\n                },\n                \"invoice_template\": {\n                    \"type\": \"string\",\n                    \"description\": \"The template to use for generating the invoices.\"\n                },\n                \"recipient_email\": {\n                    \"type\": \"string\",\n                    \"description\": \"The email address of the recipient.\"\n                }\n            },\n            \"required\": [\"completed_work\", \"invoice_template\", \"recipient_email\"]\n        },\n        \"returns\": {\"type\": \"none\"}\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you generate and send invoices for completed work?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Can you provide me with the details of the completed work, invoice template, and recipient email?\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"Yes, here are the details: completed work - [{'work_id': '123', 'client_name': 'John Doe', 'amount': 100.0}, {'work_id': '456', 'client_name': 'Jane Smith', 'amount': 200.0}], invoice template - 'template.pdf', recipient email - 'example@example.com'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Great, I'm generating and sending the invoices now.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"generate_and_send_invoices\",\n        \"parameters\": {\n            \"completed_work\": [\n                {\"work_id\": \"123\", \"client_name\": \"John Doe\", \"amount\": 100.0},\n                {\"work_id\": \"456\", \"client_name\": \"Jane Smith\", \"amount\": 200.0}\n            ],\n            \"invoice_template\": \"template.pdf\",\n            \"recipient_email\": \"example@example.com\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "generate_and_send_invoices",
+            "description": "Generates and sends invoices for completed work.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "completed_work": {
+                        "type": "array",
+                        "description": "A list of dictionaries containing details of completed work. Each dictionary should have 'work_id', 'client_name', and 'amount' keys.",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "work_id": {
+                                    "type": "string"
+                                },
+                                "client_name": {
+                                    "type": "string"
+                                },
+                                "amount": {
+                                    "type": "number"
+                                }
+                            },
+                            "required": [
+                                "work_id",
+                                "client_name",
+                                "amount"
+                            ]
+                        }
+                    },
+                    "invoice_template": {
+                        "type": "string",
+                        "description": "The template to use for generating the invoices."
+                    },
+                    "recipient_email": {
+                        "type": "string",
+                        "description": "The email address of the recipient."
+                    }
+                },
+                "required": [
+                    "completed_work",
+                    "invoice_template",
+                    "recipient_email"
+                ]
+            },
+            "returns": {
+                "type": "none"
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you generate and send invoices for completed work?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Can you provide me with the details of the completed work, invoice template, and recipient email?"
+            },
+            {
+                "role": "user",
+                "text": "Yes, here are the details: completed work - [{'work_id': '123', 'client_name': 'John Doe', 'amount': 100.0}, {'work_id': '456', 'client_name': 'Jane Smith', 'amount': 200.0}], invoice template - 'template.pdf', recipient email - 'example@example.com'."
+            },
+            {
+                "role": "assistant",
+                "text": "Great, I'm generating and sending the invoices now."
+            }
+        ],
+        "function_call": {
+            "function_name": "generate_and_send_invoices",
+            "parameters": {
+                "completed_work": [
+                    {
+                        "work_id": "123",
+                        "client_name": "John Doe",
+                        "amount": 100.0
+                    },
+                    {
+                        "work_id": "456",
+                        "client_name": "Jane Smith",
+                        "amount": 200.0
+                    }
+                ],
+                "invoice_template": "template.pdf",
+                "recipient_email": "example@example.com"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def generate_and_send_invoices(\\ncompleted_work: List[Dict[str, Union[str, float]]],\\ninvoice_template: str,\\nrecipient_email: str,\\n) -> None:\\n    \"\"\"\\n    Generates and sends invoices for completed work.\\n\\n    Parameters:\\n        completed_work (List[Dict[str, Union[str, float]]]): A list of dictionaries containing details of completed work.\\n                                                            Each dictionary should have \\'work_id\\', \\'client_name\\', and \\'amount\\' keys.\\n        invoice_template (str): The template to use for generating the invoices.\\n        recipient_email (str): The email address of the recipient.\\n\\n    Returns:\\n        None\\n    \"\"\"\\n', 'function_description': {'name': 'generate_and_send_invoices', 'description': 'Generates and sends invoices for completed work.', 'parameters': {'type': 'object', 'properties': {'completed_work': {'type': 'array', 'description': \"A list of dictionaries containing details of completed work. Each dictionary should have 'work_id', 'client_name', and 'amount' keys.\", 'items': {'type': 'object', 'properties': {'work_id': {'type': 'string'}, 'client_name': {'type': 'string'}, 'amount': {'type': 'number'}}, 'required': ['work_id', 'client_name', 'amount']}}, 'invoice_template': {'type': 'string', 'description': 'The template to use for generating the invoices.'}, 'recipient_email': {'type': 'string', 'description': 'The email address of the recipient.'}}, 'required': ['completed_work', 'invoice_template', 'recipient_email']}, 'returns': {'type': 'none'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "design-consultant-5",
+    "description": {
+        "function_snippet": "def track_hours(\nprojects: List[str],\nstart_times: List[datetime],\nend_times: List[datetime]\n) -> Dict[str, float]:\n    \"\"\"\n    Tracks hours spent on each project for billing purposes.\n\n    Parameters:\n        projects (List[str]): A list of project names.\n        start_times (List[datetime]): A list of start times for each project.\n        end_times (List[datetime]): A list of end times for each project.\n\n    Returns:\n        Dict[str, float]: A dictionary with project names as keys and total hours spent as values.\n    \"\"\"\n",
+        "function_description": {
+            "name": "track_hours",
+            "description": "Tracks hours spent on each project for billing purposes.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "projects": {
+                        "type": "array",
+                        "description": "A list of project names.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "start_times": {
+                        "type": "array",
+                        "description": "A list of start times for each project.",
+                        "items": {
+                            "type": "datetime"
+                        }
+                    },
+                    "end_times": {
+                        "type": "array",
+                        "description": "A list of end times for each project.",
+                        "items": {
+                            "type": "datetime"
+                        }
+                    }
+                },
+                "required": [
+                    "projects",
+                    "start_times",
+                    "end_times"
+                ]
+            },
+            "returns": {
+                "type": "object",
+                "properties": {
+                    "project_hours": {
+                        "type": "float",
+                        "description": "A dictionary with project names as keys and total hours spent as values."
+                    }
+                }
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"track_hours\",\n        \"description\": \"Tracks hours spent on each project for billing purposes.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"projects\": {\n                    \"type\": \"array\",\n                    \"description\": \"A list of project names.\",\n                    \"items\": {\n                        \"type\": \"string\"\n                    }\n                },\n                \"start_times\": {\n                    \"type\": \"array\",\n                    \"description\": \"A list of start times for each project.\",\n                    \"items\": {\n                        \"type\": \"datetime\"\n                    }\n                },\n                \"end_times\": {\n                    \"type\": \"array\",\n                    \"description\": \"A list of end times for each project.\",\n                    \"items\": {\n                        \"type\": \"datetime\"\n                    }\n                }\n            },\n            \"required\": [\"projects\", \"start_times\", \"end_times\"]\n        },\n        \"returns\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"project_hours\": {\n                    \"type\": \"float\",\n                    \"description\": \"A dictionary with project names as keys and total hours spent as values.\"\n                }\n            }\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you track the hours spent on my projects for billing purposes?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Please provide me with the following information:\\n1. A list of project names\\n2. A list of start times for each project\\n3. A list of end times for each project\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"I have the following projects:\\n- Project A\\n- Project B\\n- Project C\\n\\nThe start times for each project are:\\n- Project A: 2022-01-01 09:00:00\\n- Project B: 2022-01-02 10:00:00\\n- Project C: 2022-01-03 11:00:00\\n\\nThe end times for each project are:\\n- Project A: 2022-01-01 17:00:00\\n- Project B: 2022-01-02 18:00:00\\n- Project C: 2022-01-03 19:00:00\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Thank you for providing the information. I will now track the hours spent on your projects.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"track_hours\",\n        \"parameters\": {\n            \"projects\": [\"Project A\", \"Project B\", \"Project C\"],\n            \"start_times\": [\"2022-01-01 09:00:00\", \"2022-01-02 10:00:00\", \"2022-01-03 11:00:00\"],\n            \"end_times\": [\"2022-01-01 17:00:00\", \"2022-01-02 18:00:00\", \"2022-01-03 19:00:00\"]\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "track_hours",
+            "description": "Tracks hours spent on each project for billing purposes.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "projects": {
+                        "type": "array",
+                        "description": "A list of project names.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "start_times": {
+                        "type": "array",
+                        "description": "A list of start times for each project.",
+                        "items": {
+                            "type": "datetime"
+                        }
+                    },
+                    "end_times": {
+                        "type": "array",
+                        "description": "A list of end times for each project.",
+                        "items": {
+                            "type": "datetime"
+                        }
+                    }
+                },
+                "required": [
+                    "projects",
+                    "start_times",
+                    "end_times"
+                ]
+            },
+            "returns": {
+                "type": "object",
+                "properties": {
+                    "project_hours": {
+                        "type": "float",
+                        "description": "A dictionary with project names as keys and total hours spent as values."
+                    }
+                }
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you track the hours spent on my projects for billing purposes?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Please provide me with the following information:\n1. A list of project names\n2. A list of start times for each project\n3. A list of end times for each project"
+            },
+            {
+                "role": "user",
+                "text": "I have the following projects:\n- Project A\n- Project B\n- Project C\n\nThe start times for each project are:\n- Project A: 2022-01-01 09:00:00\n- Project B: 2022-01-02 10:00:00\n- Project C: 2022-01-03 11:00:00\n\nThe end times for each project are:\n- Project A: 2022-01-01 17:00:00\n- Project B: 2022-01-02 18:00:00\n- Project C: 2022-01-03 19:00:00"
+            },
+            {
+                "role": "assistant",
+                "text": "Thank you for providing the information. I will now track the hours spent on your projects."
+            }
+        ],
+        "function_call": {
+            "function_name": "track_hours",
+            "parameters": {
+                "projects": [
+                    "Project A",
+                    "Project B",
+                    "Project C"
+                ],
+                "start_times": [
+                    "2022-01-01 09:00:00",
+                    "2022-01-02 10:00:00",
+                    "2022-01-03 11:00:00"
+                ],
+                "end_times": [
+                    "2022-01-01 17:00:00",
+                    "2022-01-02 18:00:00",
+                    "2022-01-03 19:00:00"
+                ]
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def track_hours(\\nprojects: List[str],\\nstart_times: List[datetime],\\nend_times: List[datetime]\\n) -> Dict[str, float]:\\n    \"\"\"\\n    Tracks hours spent on each project for billing purposes.\\n\\n    Parameters:\\n        projects (List[str]): A list of project names.\\n        start_times (List[datetime]): A list of start times for each project.\\n        end_times (List[datetime]): A list of end times for each project.\\n\\n    Returns:\\n        Dict[str, float]: A dictionary with project names as keys and total hours spent as values.\\n    \"\"\"\\n', 'function_description': {'name': 'track_hours', 'description': 'Tracks hours spent on each project for billing purposes.', 'parameters': {'type': 'object', 'properties': {'projects': {'type': 'array', 'description': 'A list of project names.', 'items': {'type': 'string'}}, 'start_times': {'type': 'array', 'description': 'A list of start times for each project.', 'items': {'type': 'datetime'}}, 'end_times': {'type': 'array', 'description': 'A list of end times for each project.', 'items': {'type': 'datetime'}}}, 'required': ['projects', 'start_times', 'end_times']}, 'returns': {'type': 'object', 'properties': {'project_hours': {'type': 'float', 'description': 'A dictionary with project names as keys and total hours spent as values.'}}}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "design-consultant-6",
+    "description": {
+        "function_snippet": "def upload_design_drafts_to_shared_folder(\n    design_drafts: List[str],\n    client_folder: str,\n) -> None:\n    \"\"\"\n    Uploads design drafts to a shared client folder.\n\n    Parameters:\n        design_drafts (List[str]): A list of design drafts to upload.\n        client_folder (str): The path of the shared client folder.\n\n    Returns:\n        None\n    \"\"\"\n",
+        "function_description": {
+            "name": "upload_design_drafts_to_shared_folder",
+            "description": "Uploads design drafts to a shared client folder.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "design_drafts": {
+                        "type": "array",
+                        "description": "A list of design drafts to upload.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "client_folder": {
+                        "type": "string",
+                        "description": "The path of the shared client folder."
+                    }
+                },
+                "required": [
+                    "design_drafts",
+                    "client_folder"
+                ]
+            },
+            "returns": {
+                "type": "none",
+                "description": "None"
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"upload_design_drafts_to_shared_folder\",\n        \"description\": \"Uploads design drafts to a shared client folder.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"design_drafts\": {\n                    \"type\": \"array\",\n                    \"description\": \"A list of design drafts to upload.\",\n                    \"items\": {\n                        \"type\": \"string\"\n                    }\n                },\n                \"client_folder\": {\n                    \"type\": \"string\",\n                    \"description\": \"The path of the shared client folder.\"\n                }\n            },\n            \"required\": [\"design_drafts\", \"client_folder\"]\n        },\n        \"returns\": {\n            \"type\": \"none\",\n            \"description\": \"None\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you upload my design drafts to the shared client folder?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Can you provide me with the list of design drafts and the path of the shared client folder?\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"Yes, here is the list of design drafts: ['draft1.jpg', 'draft2.jpg', 'draft3.jpg'] and the path of the shared client folder is '/shared/client_folder/'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Great, I'm uploading the design drafts to the shared client folder now.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"upload_design_drafts_to_shared_folder\",\n        \"parameters\": {\n            \"design_drafts\": [\"draft1.jpg\", \"draft2.jpg\", \"draft3.jpg\"],\n            \"client_folder\": \"/shared/client_folder/\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "upload_design_drafts_to_shared_folder",
+            "description": "Uploads design drafts to a shared client folder.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "design_drafts": {
+                        "type": "array",
+                        "description": "A list of design drafts to upload.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "client_folder": {
+                        "type": "string",
+                        "description": "The path of the shared client folder."
+                    }
+                },
+                "required": [
+                    "design_drafts",
+                    "client_folder"
+                ]
+            },
+            "returns": {
+                "type": "none",
+                "description": "None"
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you upload my design drafts to the shared client folder?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Can you provide me with the list of design drafts and the path of the shared client folder?"
+            },
+            {
+                "role": "user",
+                "text": "Yes, here is the list of design drafts: ['draft1.jpg', 'draft2.jpg', 'draft3.jpg'] and the path of the shared client folder is '/shared/client_folder/'."
+            },
+            {
+                "role": "assistant",
+                "text": "Great, I'm uploading the design drafts to the shared client folder now."
+            }
+        ],
+        "function_call": {
+            "function_name": "upload_design_drafts_to_shared_folder",
+            "parameters": {
+                "design_drafts": [
+                    "draft1.jpg",
+                    "draft2.jpg",
+                    "draft3.jpg"
+                ],
+                "client_folder": "/shared/client_folder/"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def upload_design_drafts_to_shared_folder(\\n    design_drafts: List[str],\\n    client_folder: str,\\n) -> None:\\n    \"\"\"\\n    Uploads design drafts to a shared client folder.\\n\\n    Parameters:\\n        design_drafts (List[str]): A list of design drafts to upload.\\n        client_folder (str): The path of the shared client folder.\\n\\n    Returns:\\n        None\\n    \"\"\"\\n', 'function_description': {'name': 'upload_design_drafts_to_shared_folder', 'description': 'Uploads design drafts to a shared client folder.', 'parameters': {'type': 'object', 'properties': {'design_drafts': {'type': 'array', 'description': 'A list of design drafts to upload.', 'items': {'type': 'string'}}, 'client_folder': {'type': 'string', 'description': 'The path of the shared client folder.'}}, 'required': ['design_drafts', 'client_folder']}, 'returns': {'type': 'none', 'description': 'None'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "design-consultant-7",
+    "description": {
+        "function_snippet": "def download_feedback_or_annotations(folder_path: str) -> List[str]:\n    \"\"\"\n    Download client feedback or annotations from a shared folder.\n\n    Parameters:\n        folder_path (str): The path of the shared folder.\n\n    Returns:\n        List[str]: A list of strings containing the downloaded feedback or annotations.\n    \"\"\"\n    pass",
+        "function_description": {
+            "name": "download_feedback_or_annotations",
+            "description": "Download client feedback or annotations from a shared folder.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "folder_path": {
+                        "type": "string",
+                        "description": "The path of the shared folder."
+                    }
+                },
+                "required": [
+                    "folder_path"
+                ]
+            },
+            "returns": {
+                "type": "object",
+                "properties": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "A list of strings containing the downloaded feedback or annotations."
+                }
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"download_feedback_or_annotations\",\n        \"description\": \"Download client feedback or annotations from a shared folder.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"folder_path\": {\n                    \"type\": \"string\",\n                    \"description\": \"The path of the shared folder.\"\n                }\n            },\n            \"required\": [\"folder_path\"]\n        },\n        \"returns\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"type\": \"array\",\n                \"items\": {\n                    \"type\": \"string\"\n                },\n                \"description\": \"A list of strings containing the downloaded feedback or annotations.\"\n            }\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hi, I need to download the client feedback. Can you assist me with that?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Of course! Could you please provide me with the path of the shared folder?\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"Sure, the path of the shared folder is '/path/to/folder'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Great! I will now proceed to download the client feedback from the shared folder.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"download_feedback_or_annotations\",\n        \"parameters\": {\n            \"folder_path\": \"/path/to/folder\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "download_feedback_or_annotations",
+            "description": "Download client feedback or annotations from a shared folder.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "folder_path": {
+                        "type": "string",
+                        "description": "The path of the shared folder."
+                    }
+                },
+                "required": [
+                    "folder_path"
+                ]
+            },
+            "returns": {
+                "type": "object",
+                "properties": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "A list of strings containing the downloaded feedback or annotations."
+                }
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hi, I need to download the client feedback. Can you assist me with that?"
+            },
+            {
+                "role": "assistant",
+                "text": "Of course! Could you please provide me with the path of the shared folder?"
+            },
+            {
+                "role": "user",
+                "text": "Sure, the path of the shared folder is '/path/to/folder'."
+            },
+            {
+                "role": "assistant",
+                "text": "Great! I will now proceed to download the client feedback from the shared folder."
+            }
+        ],
+        "function_call": {
+            "function_name": "download_feedback_or_annotations",
+            "parameters": {
+                "folder_path": "/path/to/folder"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def download_feedback_or_annotations(folder_path: str) -> List[str]:\\n    \"\"\"\\n    Download client feedback or annotations from a shared folder.\\n\\n    Parameters:\\n        folder_path (str): The path of the shared folder.\\n\\n    Returns:\\n        List[str]: A list of strings containing the downloaded feedback or annotations.\\n    \"\"\"\\n    pass', 'function_description': {'name': 'download_feedback_or_annotations', 'description': 'Download client feedback or annotations from a shared folder.', 'parameters': {'type': 'object', 'properties': {'folder_path': {'type': 'string', 'description': 'The path of the shared folder.'}}, 'required': ['folder_path']}, 'returns': {'type': 'object', 'properties': {'type': 'array', 'items': {'type': 'string'}, 'description': 'A list of strings containing the downloaded feedback or annotations.'}}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "design-consultant-8",
+    "description": {
+        "function_snippet": "def post_updates(\n    project_id: str,\n    updates: List[str],\n) -> bool:\n    \"\"\"\n    Posts updates to a project management tool or dashboard.\n\n    Parameters:\n        project_id (str): The ID of the project to post updates to.\n        updates (List[str]): A list of updates to post.\n\n    Returns:\n        bool: True if the updates were successfully posted, False otherwise.\n    \"\"\"\n    \n    # Function implementation here\n    pass",
+        "function_description": {
+            "name": "post_updates",
+            "description": "Posts updates to a project management tool or dashboard.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "project_id": {
+                        "type": "string",
+                        "description": "The ID of the project to post updates to."
+                    },
+                    "updates": {
+                        "type": "array",
+                        "description": "A list of updates to post.",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": [
+                    "project_id",
+                    "updates"
+                ]
+            },
+            "returns": {
+                "type": "boolean",
+                "description": "True if the updates were successfully posted, False otherwise."
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"post_updates\",\n        \"description\": \"Posts updates to a project management tool or dashboard.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"project_id\": {\n                    \"type\": \"string\",\n                    \"description\": \"The ID of the project to post updates to.\"\n                },\n                \"updates\": {\n                    \"type\": \"array\",\n                    \"description\": \"A list of updates to post.\",\n                    \"items\": {\n                        \"type\": \"string\"\n                    }\n                }\n            },\n            \"required\": [\"project_id\", \"updates\"]\n        },\n        \"returns\": {\n            \"type\": \"boolean\",\n            \"description\": \"True if the updates were successfully posted, False otherwise.\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you please post updates to my project?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Can you provide me the project ID and the updates you want to post?\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"Yes, the project ID is '12345' and the updates are ['Update 1', 'Update 2', 'Update 3'].\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Great, I will post the updates to the project now.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"post_updates\",\n        \"parameters\": {\n            \"project_id\": \"12345\",\n            \"updates\": [\"Update 1\", \"Update 2\", \"Update 3\"]\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "post_updates",
+            "description": "Posts updates to a project management tool or dashboard.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "project_id": {
+                        "type": "string",
+                        "description": "The ID of the project to post updates to."
+                    },
+                    "updates": {
+                        "type": "array",
+                        "description": "A list of updates to post.",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": [
+                    "project_id",
+                    "updates"
+                ]
+            },
+            "returns": {
+                "type": "boolean",
+                "description": "True if the updates were successfully posted, False otherwise."
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you please post updates to my project?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Can you provide me the project ID and the updates you want to post?"
+            },
+            {
+                "role": "user",
+                "text": "Yes, the project ID is '12345' and the updates are ['Update 1', 'Update 2', 'Update 3']."
+            },
+            {
+                "role": "assistant",
+                "text": "Great, I will post the updates to the project now."
+            }
+        ],
+        "function_call": {
+            "function_name": "post_updates",
+            "parameters": {
+                "project_id": "12345",
+                "updates": [
+                    "Update 1",
+                    "Update 2",
+                    "Update 3"
+                ]
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def post_updates(\\n    project_id: str,\\n    updates: List[str],\\n) -> bool:\\n    \"\"\"\\n    Posts updates to a project management tool or dashboard.\\n\\n    Parameters:\\n        project_id (str): The ID of the project to post updates to.\\n        updates (List[str]): A list of updates to post.\\n\\n    Returns:\\n        bool: True if the updates were successfully posted, False otherwise.\\n    \"\"\"\\n    \\n    # Function implementation here\\n    pass', 'function_description': {'name': 'post_updates', 'description': 'Posts updates to a project management tool or dashboard.', 'parameters': {'type': 'object', 'properties': {'project_id': {'type': 'string', 'description': 'The ID of the project to post updates to.'}, 'updates': {'type': 'array', 'description': 'A list of updates to post.', 'items': {'type': 'string'}}}, 'required': ['project_id', 'updates']}, 'returns': {'type': 'boolean', 'description': 'True if the updates were successfully posted, False otherwise.'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "design-consultant-9",
+    "description": {
+        "function_snippet": "def collect_final_approval(design_deliverables: List[str]) -> bool:\n    \"\"\"\n    Collects final approval from the client on design deliverables.\n\n    Parameters:\n        design_deliverables (List[str]): A list of design deliverables.\n\n    Returns:\n        bool: True if the client gives final approval, False otherwise.\n    \"\"\"\n    pass",
+        "function_description": {
+            "name": "collect_final_approval",
+            "description": "Collects final approval from the client on design deliverables.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "design_deliverables": {
+                        "type": "array",
+                        "description": "A list of design deliverables.",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": [
+                    "design_deliverables"
+                ]
+            },
+            "returns": {
+                "type": "boolean",
+                "description": "True if the client gives final approval, False otherwise."
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"collect_final_approval\",\n        \"description\": \"Collects final approval from the client on design deliverables.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"design_deliverables\": {\n                    \"type\": \"array\",\n                    \"description\": \"A list of design deliverables.\",\n                    \"items\": {\n                        \"type\": \"string\"\n                    }\n                }\n            },\n            \"required\": [\"design_deliverables\"]\n        },\n        \"returns\": {\n            \"type\": \"boolean\",\n            \"description\": \"True if the client gives final approval, False otherwise.\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, I need to collect final approval from the client on the design deliverables.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can help you with that. Can you provide me the list of design deliverables?\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"Yes, the design deliverables include the following: 'Logo Design', 'Website Mockup', 'Mobile App Screens'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Got it. I will now collect the final approval from the client on the design deliverables.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"collect_final_approval\",\n        \"parameters\": {\n            \"design_deliverables\": [\"Logo Design\", \"Website Mockup\", \"Mobile App Screens\"]\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "collect_final_approval",
+            "description": "Collects final approval from the client on design deliverables.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "design_deliverables": {
+                        "type": "array",
+                        "description": "A list of design deliverables.",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": [
+                    "design_deliverables"
+                ]
+            },
+            "returns": {
+                "type": "boolean",
+                "description": "True if the client gives final approval, False otherwise."
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, I need to collect final approval from the client on the design deliverables."
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can help you with that. Can you provide me the list of design deliverables?"
+            },
+            {
+                "role": "user",
+                "text": "Yes, the design deliverables include the following: 'Logo Design', 'Website Mockup', 'Mobile App Screens'."
+            },
+            {
+                "role": "assistant",
+                "text": "Got it. I will now collect the final approval from the client on the design deliverables."
+            }
+        ],
+        "function_call": {
+            "function_name": "collect_final_approval",
+            "parameters": {
+                "design_deliverables": [
+                    "Logo Design",
+                    "Website Mockup",
+                    "Mobile App Screens"
+                ]
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def collect_final_approval(design_deliverables: List[str]) -> bool:\\n    \"\"\"\\n    Collects final approval from the client on design deliverables.\\n\\n    Parameters:\\n        design_deliverables (List[str]): A list of design deliverables.\\n\\n    Returns:\\n        bool: True if the client gives final approval, False otherwise.\\n    \"\"\"\\n    pass', 'function_description': {'name': 'collect_final_approval', 'description': 'Collects final approval from the client on design deliverables.', 'parameters': {'type': 'object', 'properties': {'design_deliverables': {'type': 'array', 'description': 'A list of design deliverables.', 'items': {'type': 'string'}}}, 'required': ['design_deliverables']}, 'returns': {'type': 'boolean', 'description': 'True if the client gives final approval, False otherwise.'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "design-consultant-10",
+    "description": {
+        "function_snippet": "def send_client_satisfaction_survey(\n    project_id: str,\n    client_email: str,\n) -> None:\n    \"\"\"\n    Sends a client satisfaction survey upon project completion.\n\n    Parameters:\n        project_id (str): The unique identifier of the project.\n        client_email (str): The email address of the client.\n\n    Returns:\n        None\n    \"\"\"\n    pass",
+        "function_description": {
+            "name": "send_client_satisfaction_survey",
+            "description": "Sends a client satisfaction survey upon project completion.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "project_id": {
+                        "type": "string",
+                        "description": "The unique identifier of the project."
+                    },
+                    "client_email": {
+                        "type": "string",
+                        "description": "The email address of the client."
+                    }
+                },
+                "required": [
+                    "project_id",
+                    "client_email"
+                ]
+            },
+            "returns": {
+                "type": "None"
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"send_client_satisfaction_survey\",\n        \"description\": \"Sends a client satisfaction survey upon project completion.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"project_id\": {\n                    \"type\": \"string\",\n                    \"description\": \"The unique identifier of the project.\"\n                },\n                \"client_email\": {\n                    \"type\": \"string\",\n                    \"description\": \"The email address of the client.\"\n                }\n            },\n            \"required\": [\"project_id\", \"client_email\"]\n        },\n        \"returns\": {\n            \"type\": \"None\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you send the client satisfaction survey for project XYZ?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Please provide me with the project ID and the client's email address.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"The project ID is 'XYZ123' and the client's email is 'client@example.com'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Great, I'm sending the client satisfaction survey for project XYZ now.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"send_client_satisfaction_survey\",\n        \"parameters\": {\n            \"project_id\": \"XYZ123\",\n            \"client_email\": \"client@example.com\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "send_client_satisfaction_survey",
+            "description": "Sends a client satisfaction survey upon project completion.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "project_id": {
+                        "type": "string",
+                        "description": "The unique identifier of the project."
+                    },
+                    "client_email": {
+                        "type": "string",
+                        "description": "The email address of the client."
+                    }
+                },
+                "required": [
+                    "project_id",
+                    "client_email"
+                ]
+            },
+            "returns": {
+                "type": "None"
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you send the client satisfaction survey for project XYZ?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Please provide me with the project ID and the client's email address."
+            },
+            {
+                "role": "user",
+                "text": "The project ID is 'XYZ123' and the client's email is 'client@example.com'."
+            },
+            {
+                "role": "assistant",
+                "text": "Great, I'm sending the client satisfaction survey for project XYZ now."
+            }
+        ],
+        "function_call": {
+            "function_name": "send_client_satisfaction_survey",
+            "parameters": {
+                "project_id": "XYZ123",
+                "client_email": "client@example.com"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def send_client_satisfaction_survey(\\n    project_id: str,\\n    client_email: str,\\n) -> None:\\n    \"\"\"\\n    Sends a client satisfaction survey upon project completion.\\n\\n    Parameters:\\n        project_id (str): The unique identifier of the project.\\n        client_email (str): The email address of the client.\\n\\n    Returns:\\n        None\\n    \"\"\"\\n    pass', 'function_description': {'name': 'send_client_satisfaction_survey', 'description': 'Sends a client satisfaction survey upon project completion.', 'parameters': {'type': 'object', 'properties': {'project_id': {'type': 'string', 'description': 'The unique identifier of the project.'}, 'client_email': {'type': 'string', 'description': 'The email address of the client.'}}, 'required': ['project_id', 'client_email']}, 'returns': {'type': 'None'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "design-consultant-11",
+    "description": {
+        "function_snippet": "def request_testimonials_or_referrals(client_email: str) -> None:\n    \"\"\"\n    Requests testimonials or referrals from satisfied clients.\n\n    Parameters:\n        client_email (str): The email address of the client.\n\n    Returns:\n        None\n    \"\"\"\n",
+        "function_description": {
+            "name": "request_testimonials_or_referrals",
+            "description": "Requests testimonials or referrals from satisfied clients.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "client_email": {
+                        "type": "string",
+                        "description": "The email address of the client."
+                    }
+                },
+                "required": [
+                    "client_email"
+                ]
+            },
+            "returns": {
+                "type": "None",
+                "description": "This function does not return any value."
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"request_testimonials_or_referrals\",\n        \"description\": \"Requests testimonials or referrals from satisfied clients.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"client_email\": {\n                    \"type\": \"string\",\n                    \"description\": \"The email address of the client.\"\n                }\n            },\n            \"required\": [\"client_email\"]\n        },\n        \"returns\": {\n            \"type\": \"None\",\n            \"description\": \"This function does not return any value.\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you request testimonials or referrals from my satisfied clients?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Please provide me with the email address of your client.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"The email address of my client is 'example@example.com'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Great, I'm requesting testimonials or referrals from your satisfied client now.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"request_testimonials_or_referrals\",\n        \"parameters\": {\n            \"client_email\": \"example@example.com\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "request_testimonials_or_referrals",
+            "description": "Requests testimonials or referrals from satisfied clients.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "client_email": {
+                        "type": "string",
+                        "description": "The email address of the client."
+                    }
+                },
+                "required": [
+                    "client_email"
+                ]
+            },
+            "returns": {
+                "type": "None",
+                "description": "This function does not return any value."
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you request testimonials or referrals from my satisfied clients?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Please provide me with the email address of your client."
+            },
+            {
+                "role": "user",
+                "text": "The email address of my client is 'example@example.com'."
+            },
+            {
+                "role": "assistant",
+                "text": "Great, I'm requesting testimonials or referrals from your satisfied client now."
+            }
+        ],
+        "function_call": {
+            "function_name": "request_testimonials_or_referrals",
+            "parameters": {
+                "client_email": "example@example.com"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def request_testimonials_or_referrals(client_email: str) -> None:\\n    \"\"\"\\n    Requests testimonials or referrals from satisfied clients.\\n\\n    Parameters:\\n        client_email (str): The email address of the client.\\n\\n    Returns:\\n        None\\n    \"\"\"\\n', 'function_description': {'name': 'request_testimonials_or_referrals', 'description': 'Requests testimonials or referrals from satisfied clients.', 'parameters': {'type': 'object', 'properties': {'client_email': {'type': 'string', 'description': 'The email address of the client.'}}, 'required': ['client_email']}, 'returns': {'type': 'None', 'description': 'This function does not return any value.'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "design-consultant-12",
+    "description": {
+        "function_snippet": "def purchase_renew_licenses(\n    software: str,\n    num_licenses: int,\n    expiration_date: str,\n) -> Dict[str, int]:\n    \"\"\"\n    Purchase or renew software licenses for design tools.\n\n    Parameters:\n        software (str): The name of the software.\n        num_licenses (int): The number of licenses to purchase or renew.\n        expiration_date (str): The expiration date of the licenses in YYYY-MM-DD format.\n\n    Returns:\n        Dict[str, int]: A dictionary with 'num_licenses' as a key and the number of licenses purchased or renewed as a value.\n    \"\"\"\n\n",
+        "function_description": {
+            "name": "purchase_renew_licenses",
+            "description": "Purchase or renew software licenses for design tools.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "software": {
+                        "type": "string",
+                        "description": "The name of the software."
+                    },
+                    "num_licenses": {
+                        "type": "integer",
+                        "description": "The number of licenses to purchase or renew."
+                    },
+                    "expiration_date": {
+                        "type": "string",
+                        "description": "The expiration date of the licenses in YYYY-MM-DD format."
+                    }
+                },
+                "required": [
+                    "software",
+                    "num_licenses",
+                    "expiration_date"
+                ]
+            },
+            "returns": {
+                "type": "object",
+                "properties": {
+                    "num_licenses": {
+                        "type": "integer",
+                        "description": "The number of licenses purchased or renewed."
+                    }
+                }
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"purchase_renew_licenses\",\n        \"description\": \"Purchase or renew software licenses for design tools.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"software\": {\n                    \"type\": \"string\",\n                    \"description\": \"The name of the software.\"\n                },\n                \"num_licenses\": {\n                    \"type\": \"integer\",\n                    \"description\": \"The number of licenses to purchase or renew.\"\n                },\n                \"expiration_date\": {\n                    \"type\": \"string\",\n                    \"description\": \"The expiration date of the licenses in YYYY-MM-DD format.\"\n                }\n            },\n            \"required\": [\"software\", \"num_licenses\", \"expiration_date\"]\n        },\n        \"returns\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"num_licenses\": {\n                    \"type\": \"integer\",\n                    \"description\": \"The number of licenses purchased or renewed.\"\n                }\n            }\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you help me purchase or renew software licenses for design tools?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Of course! I can assist you with that. Can you please provide me the name of the software?\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"Sure, the software name is 'Example Software'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Thank you. How many licenses do you want to purchase or renew?\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"I need 10 licenses.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Got it. Lastly, please provide the expiration date of the licenses in YYYY-MM-DD format.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"The expiration date is '2022-12-31'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Thank you for providing the information. I will now proceed to purchase or renew 10 licenses of the software 'Example Software' with an expiration date of '2022-12-31'.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"purchase_renew_licenses\",\n        \"parameters\": {\n            \"software\": \"Example Software\",\n            \"num_licenses\": 10,\n            \"expiration_date\": \"2022-12-31\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "purchase_renew_licenses",
+            "description": "Purchase or renew software licenses for design tools.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "software": {
+                        "type": "string",
+                        "description": "The name of the software."
+                    },
+                    "num_licenses": {
+                        "type": "integer",
+                        "description": "The number of licenses to purchase or renew."
+                    },
+                    "expiration_date": {
+                        "type": "string",
+                        "description": "The expiration date of the licenses in YYYY-MM-DD format."
+                    }
+                },
+                "required": [
+                    "software",
+                    "num_licenses",
+                    "expiration_date"
+                ]
+            },
+            "returns": {
+                "type": "object",
+                "properties": {
+                    "num_licenses": {
+                        "type": "integer",
+                        "description": "The number of licenses purchased or renewed."
+                    }
+                }
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you help me purchase or renew software licenses for design tools?"
+            },
+            {
+                "role": "assistant",
+                "text": "Of course! I can assist you with that. Can you please provide me the name of the software?"
+            },
+            {
+                "role": "user",
+                "text": "Sure, the software name is 'Example Software'."
+            },
+            {
+                "role": "assistant",
+                "text": "Thank you. How many licenses do you want to purchase or renew?"
+            },
+            {
+                "role": "user",
+                "text": "I need 10 licenses."
+            },
+            {
+                "role": "assistant",
+                "text": "Got it. Lastly, please provide the expiration date of the licenses in YYYY-MM-DD format."
+            },
+            {
+                "role": "user",
+                "text": "The expiration date is '2022-12-31'."
+            },
+            {
+                "role": "assistant",
+                "text": "Thank you for providing the information. I will now proceed to purchase or renew 10 licenses of the software 'Example Software' with an expiration date of '2022-12-31'."
+            }
+        ],
+        "function_call": {
+            "function_name": "purchase_renew_licenses",
+            "parameters": {
+                "software": "Example Software",
+                "num_licenses": 10,
+                "expiration_date": "2022-12-31"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def purchase_renew_licenses(\\n    software: str,\\n    num_licenses: int,\\n    expiration_date: str,\\n) -> Dict[str, int]:\\n    \"\"\"\\n    Purchase or renew software licenses for design tools.\\n\\n    Parameters:\\n        software (str): The name of the software.\\n        num_licenses (int): The number of licenses to purchase or renew.\\n        expiration_date (str): The expiration date of the licenses in YYYY-MM-DD format.\\n\\n    Returns:\\n        Dict[str, int]: A dictionary with \\'num_licenses\\' as a key and the number of licenses purchased or renewed as a value.\\n    \"\"\"\\n\\n', 'function_description': {'name': 'purchase_renew_licenses', 'description': 'Purchase or renew software licenses for design tools.', 'parameters': {'type': 'object', 'properties': {'software': {'type': 'string', 'description': 'The name of the software.'}, 'num_licenses': {'type': 'integer', 'description': 'The number of licenses to purchase or renew.'}, 'expiration_date': {'type': 'string', 'description': 'The expiration date of the licenses in YYYY-MM-DD format.'}}, 'required': ['software', 'num_licenses', 'expiration_date']}, 'returns': {'type': 'object', 'properties': {'num_licenses': {'type': 'integer', 'description': 'The number of licenses purchased or renewed.'}}}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "design-consultant-13",
+    "description": {
+        "function_snippet": "def back_up_project_files(\n    project_directory: str,\n    cloud_storage: str,\n) -> None:\n    \"\"\"\n    Backs up project files to a secure cloud storage.\n\n    Parameters:\n        project_directory (str): The directory of the project files to be backed up.\n        cloud_storage (str): The secure cloud storage location.\n\n    Returns:\n        None\n    \"\"\"\n",
+        "function_description": {
+            "name": "back_up_project_files",
+            "description": "Backs up project files to a secure cloud storage.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "project_directory": {
+                        "type": "string",
+                        "description": "The directory of the project files to be backed up."
+                    },
+                    "cloud_storage": {
+                        "type": "string",
+                        "description": "The secure cloud storage location."
+                    }
+                },
+                "required": [
+                    "project_directory",
+                    "cloud_storage"
+                ]
+            },
+            "returns": {
+                "type": "None"
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"back_up_project_files\",\n        \"description\": \"Backs up project files to a secure cloud storage.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"project_directory\": {\n                    \"type\": \"string\",\n                    \"description\": \"The directory of the project files to be backed up.\"\n                },\n                \"cloud_storage\": {\n                    \"type\": \"string\",\n                    \"description\": \"The secure cloud storage location.\"\n                }\n            },\n            \"required\": [\"project_directory\", \"cloud_storage\"]\n        },\n        \"returns\": {\n            \"type\": \"None\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you help me back up my project files?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Of course! Please provide me with the directory of your project files and the secure cloud storage location.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"Sure, the directory of my project files is '/path/to/project' and the secure cloud storage location is 'https://cloud-storage.com'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Great! I will now back up your project files to the secure cloud storage.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"back_up_project_files\",\n        \"parameters\": {\n            \"project_directory\": \"/path/to/project\",\n            \"cloud_storage\": \"https://cloud-storage.com\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "back_up_project_files",
+            "description": "Backs up project files to a secure cloud storage.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "project_directory": {
+                        "type": "string",
+                        "description": "The directory of the project files to be backed up."
+                    },
+                    "cloud_storage": {
+                        "type": "string",
+                        "description": "The secure cloud storage location."
+                    }
+                },
+                "required": [
+                    "project_directory",
+                    "cloud_storage"
+                ]
+            },
+            "returns": {
+                "type": "None"
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you help me back up my project files?"
+            },
+            {
+                "role": "assistant",
+                "text": "Of course! Please provide me with the directory of your project files and the secure cloud storage location."
+            },
+            {
+                "role": "user",
+                "text": "Sure, the directory of my project files is '/path/to/project' and the secure cloud storage location is 'https://cloud-storage.com'."
+            },
+            {
+                "role": "assistant",
+                "text": "Great! I will now back up your project files to the secure cloud storage."
+            }
+        ],
+        "function_call": {
+            "function_name": "back_up_project_files",
+            "parameters": {
+                "project_directory": "/path/to/project",
+                "cloud_storage": "https://cloud-storage.com"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def back_up_project_files(\\n    project_directory: str,\\n    cloud_storage: str,\\n) -> None:\\n    \"\"\"\\n    Backs up project files to a secure cloud storage.\\n\\n    Parameters:\\n        project_directory (str): The directory of the project files to be backed up.\\n        cloud_storage (str): The secure cloud storage location.\\n\\n    Returns:\\n        None\\n    \"\"\"\\n', 'function_description': {'name': 'back_up_project_files', 'description': 'Backs up project files to a secure cloud storage.', 'parameters': {'type': 'object', 'properties': {'project_directory': {'type': 'string', 'description': 'The directory of the project files to be backed up.'}, 'cloud_storage': {'type': 'string', 'description': 'The secure cloud storage location.'}}, 'required': ['project_directory', 'cloud_storage']}, 'returns': {'type': 'None'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "design-consultant-14",
+    "description": {
+        "function_snippet": "def submit_freelance_tax_forms_or_documentation() -> None:\n    \"\"\"\n    Submits freelance tax forms or documentation.\n\n    Returns:\n        None\n    \"\"\"\n",
+        "function_description": {
+            "name": "submit_freelance_tax_forms_or_documentation",
+            "description": "Submits freelance tax forms or documentation.",
+            "parameters": {},
+            "returns": {
+                "type": "None"
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"submit_freelance_tax_forms_or_documentation\",\n        \"description\": \"Submits freelance tax forms or documentation.\",\n        \"parameters\": {},\n        \"returns\": {\n            \"type\": \"None\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Can you help me submit my freelance tax forms or documentation?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Of course! I can assist you with that. Please provide me with the necessary information and documents.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"I have all the required tax forms and documentation ready. How should I submit them?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"You can submit the freelance tax forms and documentation by calling the 'submit_freelance_tax_forms_or_documentation' function.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"submit_freelance_tax_forms_or_documentation\",\n        \"parameters\": {}\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "submit_freelance_tax_forms_or_documentation",
+            "description": "Submits freelance tax forms or documentation.",
+            "parameters": {},
+            "returns": {
+                "type": "None"
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Can you help me submit my freelance tax forms or documentation?"
+            },
+            {
+                "role": "assistant",
+                "text": "Of course! I can assist you with that. Please provide me with the necessary information and documents."
+            },
+            {
+                "role": "user",
+                "text": "I have all the required tax forms and documentation ready. How should I submit them?"
+            },
+            {
+                "role": "assistant",
+                "text": "You can submit the freelance tax forms and documentation by calling the 'submit_freelance_tax_forms_or_documentation' function."
+            }
+        ],
+        "function_call": {
+            "function_name": "submit_freelance_tax_forms_or_documentation",
+            "parameters": {}
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def submit_freelance_tax_forms_or_documentation() -> None:\\n    \"\"\"\\n    Submits freelance tax forms or documentation.\\n\\n    Returns:\\n        None\\n    \"\"\"\\n', 'function_description': {'name': 'submit_freelance_tax_forms_or_documentation', 'description': 'Submits freelance tax forms or documentation.', 'parameters': {}, 'returns': {'type': 'None'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "design-consultant-15",
+    "description": {
+        "function_snippet": "def update_portfolio_with_new_work_samples(\n    portfolio: List[str],\n    new_work_samples: List[str],\n) -> List[str]:\n    \"\"\"\n    Updates the portfolio with new work samples.\n\n    Parameters:\n        portfolio (List[str]): The current portfolio.\n        new_work_samples (List[str]): The new work samples to add.\n\n    Returns:\n        List[str]: The updated portfolio with the new work samples added.\n    \"\"\"\n\n",
+        "function_description": {
+            "name": "update_portfolio_with_new_work_samples",
+            "description": "Updates the portfolio with new work samples.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "portfolio": {
+                        "type": "array",
+                        "description": "The current portfolio.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "new_work_samples": {
+                        "type": "array",
+                        "description": "The new work samples to add.",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": [
+                    "portfolio",
+                    "new_work_samples"
+                ]
+            },
+            "returns": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                },
+                "description": "The updated portfolio with the new work samples added."
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"update_portfolio_with_new_work_samples\",\n        \"description\": \"Updates the portfolio with new work samples.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"portfolio\": {\n                    \"type\": \"array\",\n                    \"description\": \"The current portfolio.\",\n                    \"items\": {\n                        \"type\": \"string\"\n                    }\n                },\n                \"new_work_samples\": {\n                    \"type\": \"array\",\n                    \"description\": \"The new work samples to add.\",\n                    \"items\": {\n                        \"type\": \"string\"\n                    }\n                }\n            },\n            \"required\": [\"portfolio\", \"new_work_samples\"]\n        },\n        \"returns\": {\n            \"type\": \"array\",\n            \"items\": {\n                \"type\": \"string\"\n            },\n            \"description\": \"The updated portfolio with the new work samples added.\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you update my portfolio with new work samples?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can help you with that. Can you please provide me the current portfolio and the new work samples?\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"My current portfolio consists of ['Project A', 'Project B', 'Project C'] and the new work samples are ['Project D', 'Project E'].\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Thank you for providing the information. I will update your portfolio with the new work samples now.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"update_portfolio_with_new_work_samples\",\n        \"parameters\": {\n            \"portfolio\": [\"Project A\", \"Project B\", \"Project C\"],\n            \"new_work_samples\": [\"Project D\", \"Project E\"]\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "update_portfolio_with_new_work_samples",
+            "description": "Updates the portfolio with new work samples.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "portfolio": {
+                        "type": "array",
+                        "description": "The current portfolio.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "new_work_samples": {
+                        "type": "array",
+                        "description": "The new work samples to add.",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": [
+                    "portfolio",
+                    "new_work_samples"
+                ]
+            },
+            "returns": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                },
+                "description": "The updated portfolio with the new work samples added."
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you update my portfolio with new work samples?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can help you with that. Can you please provide me the current portfolio and the new work samples?"
+            },
+            {
+                "role": "user",
+                "text": "My current portfolio consists of ['Project A', 'Project B', 'Project C'] and the new work samples are ['Project D', 'Project E']."
+            },
+            {
+                "role": "assistant",
+                "text": "Thank you for providing the information. I will update your portfolio with the new work samples now."
+            }
+        ],
+        "function_call": {
+            "function_name": "update_portfolio_with_new_work_samples",
+            "parameters": {
+                "portfolio": [
+                    "Project A",
+                    "Project B",
+                    "Project C"
+                ],
+                "new_work_samples": [
+                    "Project D",
+                    "Project E"
+                ]
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def update_portfolio_with_new_work_samples(\\n    portfolio: List[str],\\n    new_work_samples: List[str],\\n) -> List[str]:\\n    \"\"\"\\n    Updates the portfolio with new work samples.\\n\\n    Parameters:\\n        portfolio (List[str]): The current portfolio.\\n        new_work_samples (List[str]): The new work samples to add.\\n\\n    Returns:\\n        List[str]: The updated portfolio with the new work samples added.\\n    \"\"\"\\n\\n', 'function_description': {'name': 'update_portfolio_with_new_work_samples', 'description': 'Updates the portfolio with new work samples.', 'parameters': {'type': 'object', 'properties': {'portfolio': {'type': 'array', 'description': 'The current portfolio.', 'items': {'type': 'string'}}, 'new_work_samples': {'type': 'array', 'description': 'The new work samples to add.', 'items': {'type': 'string'}}}, 'required': ['portfolio', 'new_work_samples']}, 'returns': {'type': 'array', 'items': {'type': 'string'}, 'description': 'The updated portfolio with the new work samples added.'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "design-consultant-16",
+    "description": {
+        "function_snippet": "def share_new_work_or_achievements(\n    title: str,\n    description: str,\n    link: str,\n) -> None:\n    \"\"\"\n    Shares new work or achievements on professional social media.\n\n    Parameters:\n        title (str): The title of the work or achievement.\n        description (str): A description of the work or achievement.\n        link (str): A link to the work or achievement.\n\n    Returns:\n        None\n    \"\"\"\n",
+        "function_description": {
+            "name": "share_new_work_or_achievements",
+            "description": "Shares new work or achievements on professional social media.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "description": "The title of the work or achievement."
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "A description of the work or achievement."
+                    },
+                    "link": {
+                        "type": "string",
+                        "description": "A link to the work or achievement."
+                    }
+                },
+                "required": [
+                    "title",
+                    "description",
+                    "link"
+                ]
+            },
+            "returns": {
+                "type": "None"
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"share_new_work_or_achievements\",\n        \"description\": \"Shares new work or achievements on professional social media.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"title\": {\n                    \"type\": \"string\",\n                    \"description\": \"The title of the work or achievement.\"\n                },\n                \"description\": {\n                    \"type\": \"string\",\n                    \"description\": \"A description of the work or achievement.\"\n                },\n                \"link\": {\n                    \"type\": \"string\",\n                    \"description\": \"A link to the work or achievement.\"\n                }\n            },\n            \"required\": [\"title\", \"description\", \"link\"]\n        },\n        \"returns\": {\n            \"type\": \"None\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you share my new work on professional social media?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure! Please provide me with the title, description, and link of your work or achievement.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"The title is 'My New Project', the description is 'I have completed a new project', and the link is 'www.example.com'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Thank you for providing the details. I will share your new work on professional social media now.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"share_new_work_or_achievements\",\n        \"parameters\": {\n            \"title\": \"My New Project\",\n            \"description\": \"I have completed a new project\",\n            \"link\": \"www.example.com\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "share_new_work_or_achievements",
+            "description": "Shares new work or achievements on professional social media.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "description": "The title of the work or achievement."
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "A description of the work or achievement."
+                    },
+                    "link": {
+                        "type": "string",
+                        "description": "A link to the work or achievement."
+                    }
+                },
+                "required": [
+                    "title",
+                    "description",
+                    "link"
+                ]
+            },
+            "returns": {
+                "type": "None"
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you share my new work on professional social media?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure! Please provide me with the title, description, and link of your work or achievement."
+            },
+            {
+                "role": "user",
+                "text": "The title is 'My New Project', the description is 'I have completed a new project', and the link is 'www.example.com'."
+            },
+            {
+                "role": "assistant",
+                "text": "Thank you for providing the details. I will share your new work on professional social media now."
+            }
+        ],
+        "function_call": {
+            "function_name": "share_new_work_or_achievements",
+            "parameters": {
+                "title": "My New Project",
+                "description": "I have completed a new project",
+                "link": "www.example.com"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def share_new_work_or_achievements(\\n    title: str,\\n    description: str,\\n    link: str,\\n) -> None:\\n    \"\"\"\\n    Shares new work or achievements on professional social media.\\n\\n    Parameters:\\n        title (str): The title of the work or achievement.\\n        description (str): A description of the work or achievement.\\n        link (str): A link to the work or achievement.\\n\\n    Returns:\\n        None\\n    \"\"\"\\n', 'function_description': {'name': 'share_new_work_or_achievements', 'description': 'Shares new work or achievements on professional social media.', 'parameters': {'type': 'object', 'properties': {'title': {'type': 'string', 'description': 'The title of the work or achievement.'}, 'description': {'type': 'string', 'description': 'A description of the work or achievement.'}, 'link': {'type': 'string', 'description': 'A link to the work or achievement.'}}, 'required': ['title', 'description', 'link']}, 'returns': {'type': 'None'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "design-consultant-17",
+    "description": {
+        "function_snippet": "def register_for_professional_development_courses_or_webinars(courses: List[str]) -> List[str]:\n    \"\"\"\n    Registers for professional development courses or webinars.\n\n    Parameters:\n        courses (List[str]): A list of strings containing the names of the courses/webinars to register for.\n\n    Returns:\n        List[str]: A list of strings containing the confirmation messages for each course/webinar registration.\n    \"\"\"\n    \n    # Function implementation goes here",
+        "function_description": {
+            "name": "register_for_professional_development_courses_or_webinars",
+            "description": "Registers for professional development courses or webinars.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "courses": {
+                        "type": "array",
+                        "description": "A list of strings containing the names of the courses/webinars to register for.",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": [
+                    "courses"
+                ]
+            },
+            "returns": {
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "description": "A list of strings containing the confirmation messages for each course/webinar registration."
+                }
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"register_for_professional_development_courses_or_webinars\",\n        \"description\": \"Registers for professional development courses or webinars.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"courses\": {\n                    \"type\": \"array\",\n                    \"description\": \"A list of strings containing the names of the courses/webinars to register for.\",\n                    \"items\": {\n                        \"type\": \"string\"\n                    }\n                }\n            },\n            \"required\": [\"courses\"]\n        },\n        \"returns\": {\n            \"type\": \"array\",\n            \"items\": {\n                \"type\": \"string\",\n                \"description\": \"A list of strings containing the confirmation messages for each course/webinar registration.\"\n            }\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you help me register for some professional development courses?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Of course! Please provide me with the names of the courses/webinars you would like to register for.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"I would like to register for 'Introduction to Python' and 'Data Analysis in Excel'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Alright, I will register you for 'Introduction to Python' and 'Data Analysis in Excel'.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"register_for_professional_development_courses_or_webinars\",\n        \"parameters\": {\n            \"courses\": [\"Introduction to Python\", \"Data Analysis in Excel\"]\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "register_for_professional_development_courses_or_webinars",
+            "description": "Registers for professional development courses or webinars.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "courses": {
+                        "type": "array",
+                        "description": "A list of strings containing the names of the courses/webinars to register for.",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": [
+                    "courses"
+                ]
+            },
+            "returns": {
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "description": "A list of strings containing the confirmation messages for each course/webinar registration."
+                }
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you help me register for some professional development courses?"
+            },
+            {
+                "role": "assistant",
+                "text": "Of course! Please provide me with the names of the courses/webinars you would like to register for."
+            },
+            {
+                "role": "user",
+                "text": "I would like to register for 'Introduction to Python' and 'Data Analysis in Excel'."
+            },
+            {
+                "role": "assistant",
+                "text": "Alright, I will register you for 'Introduction to Python' and 'Data Analysis in Excel'."
+            }
+        ],
+        "function_call": {
+            "function_name": "register_for_professional_development_courses_or_webinars",
+            "parameters": {
+                "courses": [
+                    "Introduction to Python",
+                    "Data Analysis in Excel"
+                ]
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def register_for_professional_development_courses_or_webinars(courses: List[str]) -> List[str]:\\n    \"\"\"\\n    Registers for professional development courses or webinars.\\n\\n    Parameters:\\n        courses (List[str]): A list of strings containing the names of the courses/webinars to register for.\\n\\n    Returns:\\n        List[str]: A list of strings containing the confirmation messages for each course/webinar registration.\\n    \"\"\"\\n    \\n    # Function implementation goes here', 'function_description': {'name': 'register_for_professional_development_courses_or_webinars', 'description': 'Registers for professional development courses or webinars.', 'parameters': {'type': 'object', 'properties': {'courses': {'type': 'array', 'description': 'A list of strings containing the names of the courses/webinars to register for.', 'items': {'type': 'string'}}}, 'required': ['courses']}, 'returns': {'type': 'array', 'items': {'type': 'string', 'description': 'A list of strings containing the confirmation messages for each course/webinar registration.'}}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "design-consultant-18",
+    "description": {
+        "function_snippet": "def renew_membership(\n    organization: str,\n    membership_cost: float,\n    renewal_date: str,\n) -> str:\n    \"\"\"\n    Renews membership in professional design organizations.\n\n    Parameters:\n        organization (str): The name of the organization to renew membership in.\n        membership_cost (float): The cost of membership renewal.\n        renewal_date (str): The date on which the membership needs to be renewed.\n\n    Returns:\n        str: A string indicating the success or failure of the membership renewal process.\n    \"\"\"\n",
+        "function_description": {
+            "name": "renew_membership",
+            "description": "Renews membership in professional design organizations.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "organization": {
+                        "type": "string",
+                        "description": "The name of the organization to renew membership in."
+                    },
+                    "membership_cost": {
+                        "type": "float",
+                        "description": "The cost of membership renewal."
+                    },
+                    "renewal_date": {
+                        "type": "string",
+                        "description": "The date on which the membership needs to be renewed."
+                    }
+                },
+                "required": [
+                    "organization",
+                    "membership_cost",
+                    "renewal_date"
+                ]
+            },
+            "returns": {
+                "type": "string",
+                "description": "A string indicating the success or failure of the membership renewal process."
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"renew_membership\",\n        \"description\": \"Renews membership in professional design organizations.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"organization\": {\n                    \"type\": \"string\",\n                    \"description\": \"The name of the organization to renew membership in.\"\n                },\n                \"membership_cost\": {\n                    \"type\": \"float\",\n                    \"description\": \"The cost of membership renewal.\"\n                },\n                \"renewal_date\": {\n                    \"type\": \"string\",\n                    \"description\": \"The date on which the membership needs to be renewed.\"\n                }\n            },\n            \"required\": [\"organization\", \"membership_cost\", \"renewal_date\"]\n        },\n        \"returns\": {\n            \"type\": \"string\",\n            \"description\": \"A string indicating the success or failure of the membership renewal process.\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you help me renew my membership?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Of course! Please provide me with the necessary details.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"I would like to renew my membership in 'Design Association'. The membership cost is $50 and the renewal date is '2022-05-01'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Thank you for the information. Let me process your membership renewal.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"renew_membership\",\n        \"parameters\": {\n            \"organization\": \"Design Association\",\n            \"membership_cost\": 50.0,\n            \"renewal_date\": \"2022-05-01\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "renew_membership",
+            "description": "Renews membership in professional design organizations.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "organization": {
+                        "type": "string",
+                        "description": "The name of the organization to renew membership in."
+                    },
+                    "membership_cost": {
+                        "type": "float",
+                        "description": "The cost of membership renewal."
+                    },
+                    "renewal_date": {
+                        "type": "string",
+                        "description": "The date on which the membership needs to be renewed."
+                    }
+                },
+                "required": [
+                    "organization",
+                    "membership_cost",
+                    "renewal_date"
+                ]
+            },
+            "returns": {
+                "type": "string",
+                "description": "A string indicating the success or failure of the membership renewal process."
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you help me renew my membership?"
+            },
+            {
+                "role": "assistant",
+                "text": "Of course! Please provide me with the necessary details."
+            },
+            {
+                "role": "user",
+                "text": "I would like to renew my membership in 'Design Association'. The membership cost is $50 and the renewal date is '2022-05-01'."
+            },
+            {
+                "role": "assistant",
+                "text": "Thank you for the information. Let me process your membership renewal."
+            }
+        ],
+        "function_call": {
+            "function_name": "renew_membership",
+            "parameters": {
+                "organization": "Design Association",
+                "membership_cost": 50.0,
+                "renewal_date": "2022-05-01"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def renew_membership(\\n    organization: str,\\n    membership_cost: float,\\n    renewal_date: str,\\n) -> str:\\n    \"\"\"\\n    Renews membership in professional design organizations.\\n\\n    Parameters:\\n        organization (str): The name of the organization to renew membership in.\\n        membership_cost (float): The cost of membership renewal.\\n        renewal_date (str): The date on which the membership needs to be renewed.\\n\\n    Returns:\\n        str: A string indicating the success or failure of the membership renewal process.\\n    \"\"\"\\n', 'function_description': {'name': 'renew_membership', 'description': 'Renews membership in professional design organizations.', 'parameters': {'type': 'object', 'properties': {'organization': {'type': 'string', 'description': 'The name of the organization to renew membership in.'}, 'membership_cost': {'type': 'float', 'description': 'The cost of membership renewal.'}, 'renewal_date': {'type': 'string', 'description': 'The date on which the membership needs to be renewed.'}}, 'required': ['organization', 'membership_cost', 'renewal_date']}, 'returns': {'type': 'string', 'description': 'A string indicating the success or failure of the membership renewal process.'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "design-consultant-19",
+    "description": {
+        "function_snippet": "def compile_and_analyze_feedback(feedback: List[str]) -> Dict[str, Any]:\n    \"\"\"\n    Compiles and analyzes client feedback for quality improvement.\n\n    Parameters:\n        feedback (List[str]): A list of strings containing client feedback.\n\n    Returns:\n        Dict[str, Any]: A dictionary with analysis results.\n    \"\"\"\n",
+        "function_description": {
+            "name": "compile_and_analyze_feedback",
+            "description": "Compiles and analyzes client feedback for quality improvement.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "feedback": {
+                        "type": "array",
+                        "description": "A list of strings containing client feedback."
+                    }
+                },
+                "required": [
+                    "feedback"
+                ]
+            },
+            "returns": {
+                "type": "object",
+                "properties": {
+                    "total_price": {
+                        "type": "float",
+                        "description": "A dictionary with analysis results."
+                    }
+                }
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"compile_and_analyze_feedback\",\n        \"description\": \"Compiles and analyzes client feedback for quality improvement.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"feedback\": {\n                    \"type\": \"array\",\n                    \"description\": \"A list of strings containing client feedback.\"\n                }\n            },\n            \"required\": [\"feedback\"]\n        },\n        \"returns\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"total_price\": {\n                    \"type\": \"float\",\n                    \"description\": \"A dictionary with analysis results.\"\n                }\n            }\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you compile and analyze my feedback?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Could you please provide me with your feedback?\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"Yes, here is my feedback: 'The product is great, but the packaging needs improvement.'\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Thank you for providing your feedback. I will compile and analyze it now.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"compile_and_analyze_feedback\",\n        \"parameters\": {\n            \"feedback\": [\"The product is great, but the packaging needs improvement.\"]\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "compile_and_analyze_feedback",
+            "description": "Compiles and analyzes client feedback for quality improvement.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "feedback": {
+                        "type": "array",
+                        "description": "A list of strings containing client feedback."
+                    }
+                },
+                "required": [
+                    "feedback"
+                ]
+            },
+            "returns": {
+                "type": "object",
+                "properties": {
+                    "total_price": {
+                        "type": "float",
+                        "description": "A dictionary with analysis results."
+                    }
+                }
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you compile and analyze my feedback?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Could you please provide me with your feedback?"
+            },
+            {
+                "role": "user",
+                "text": "Yes, here is my feedback: 'The product is great, but the packaging needs improvement.'"
+            },
+            {
+                "role": "assistant",
+                "text": "Thank you for providing your feedback. I will compile and analyze it now."
+            }
+        ],
+        "function_call": {
+            "function_name": "compile_and_analyze_feedback",
+            "parameters": {
+                "feedback": [
+                    "The product is great, but the packaging needs improvement."
+                ]
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def compile_and_analyze_feedback(feedback: List[str]) -> Dict[str, Any]:\\n    \"\"\"\\n    Compiles and analyzes client feedback for quality improvement.\\n\\n    Parameters:\\n        feedback (List[str]): A list of strings containing client feedback.\\n\\n    Returns:\\n        Dict[str, Any]: A dictionary with analysis results.\\n    \"\"\"\\n', 'function_description': {'name': 'compile_and_analyze_feedback', 'description': 'Compiles and analyzes client feedback for quality improvement.', 'parameters': {'type': 'object', 'properties': {'feedback': {'type': 'array', 'description': 'A list of strings containing client feedback.'}}, 'required': ['feedback']}, 'returns': {'type': 'object', 'properties': {'total_price': {'type': 'float', 'description': 'A dictionary with analysis results.'}}}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "design-consultant-20",
+    "description": {
+        "function_snippet": "def review_and_update_contract_templates(\ncontract_templates: List[str]\n) -> List[str]:\n    \"\"\"\n    Review and update standard contract templates.\n\n    Parameters:\n        contract_templates (List[str]): A list of contract templates to be reviewed and updated.\n\n    Returns:\n        List[str]: A list of updated contract templates.\n    \"\"\"\n    pass",
+        "function_description": {
+            "name": "review_and_update_contract_templates",
+            "description": "Review and update standard contract templates.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "contract_templates": {
+                        "type": "array",
+                        "description": "A list of contract templates to be reviewed and updated.",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": [
+                    "contract_templates"
+                ]
+            },
+            "returns": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                },
+                "description": "A list of updated contract templates."
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"review_and_update_contract_templates\",\n        \"description\": \"Review and update standard contract templates.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"contract_templates\": {\n                    \"type\": \"array\",\n                    \"description\": \"A list of contract templates to be reviewed and updated.\",\n                    \"items\": {\n                        \"type\": \"string\"\n                    }\n                }\n            },\n            \"required\": [\"contract_templates\"]\n        },\n        \"returns\": {\n            \"type\": \"array\",\n            \"items\": {\n                \"type\": \"string\"\n            },\n            \"description\": \"A list of updated contract templates.\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you review and update my contract templates?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Please provide me with the contract templates you want to review and update.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"I have three contract templates: 'template1', 'template2', and 'template3'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Great, I'm reviewing and updating your contract templates now.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"review_and_update_contract_templates\",\n        \"parameters\": {\n            \"contract_templates\": [\"template1\", \"template2\", \"template3\"]\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "review_and_update_contract_templates",
+            "description": "Review and update standard contract templates.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "contract_templates": {
+                        "type": "array",
+                        "description": "A list of contract templates to be reviewed and updated.",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": [
+                    "contract_templates"
+                ]
+            },
+            "returns": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                },
+                "description": "A list of updated contract templates."
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you review and update my contract templates?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Please provide me with the contract templates you want to review and update."
+            },
+            {
+                "role": "user",
+                "text": "I have three contract templates: 'template1', 'template2', and 'template3'."
+            },
+            {
+                "role": "assistant",
+                "text": "Great, I'm reviewing and updating your contract templates now."
+            }
+        ],
+        "function_call": {
+            "function_name": "review_and_update_contract_templates",
+            "parameters": {
+                "contract_templates": [
+                    "template1",
+                    "template2",
+                    "template3"
+                ]
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def review_and_update_contract_templates(\\ncontract_templates: List[str]\\n) -> List[str]:\\n    \"\"\"\\n    Review and update standard contract templates.\\n\\n    Parameters:\\n        contract_templates (List[str]): A list of contract templates to be reviewed and updated.\\n\\n    Returns:\\n        List[str]: A list of updated contract templates.\\n    \"\"\"\\n    pass', 'function_description': {'name': 'review_and_update_contract_templates', 'description': 'Review and update standard contract templates.', 'parameters': {'type': 'object', 'properties': {'contract_templates': {'type': 'array', 'description': 'A list of contract templates to be reviewed and updated.', 'items': {'type': 'string'}}}, 'required': ['contract_templates']}, 'returns': {'type': 'array', 'items': {'type': 'string'}, 'description': 'A list of updated contract templates.'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}

@@ -1,0 +1,1932 @@
+{
+    "function_id": "uber-driver-1",
+    "description": {
+        "function_snippet": "def accept_ride_request(\n    ride_id: int,\n    passenger_name: str,\n    pickup_location: str,\n    dropoff_location: str,\n    pickup_time: str,\n    fare: float,\n) -> None:\n    \"\"\"\n    Accepts a new ride request.\n\n    Parameters:\n        ride_id (int): The ID of the ride request.\n        passenger_name (str): The name of the passenger.\n        pickup_location (str): The pickup location.\n        dropoff_location (str): The dropoff location.\n        pickup_time (str): The pickup time in HH:MM format.\n        fare (float): The fare for the ride.\n\n    Returns:\n        None\n    \"\"\"\n",
+        "function_description": {
+            "name": "accept_ride_request",
+            "description": "Accepts a new ride request.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "ride_id": {
+                        "type": "integer",
+                        "description": "The ID of the ride request."
+                    },
+                    "passenger_name": {
+                        "type": "string",
+                        "description": "The name of the passenger."
+                    },
+                    "pickup_location": {
+                        "type": "string",
+                        "description": "The pickup location."
+                    },
+                    "dropoff_location": {
+                        "type": "string",
+                        "description": "The dropoff location."
+                    },
+                    "pickup_time": {
+                        "type": "string",
+                        "description": "The pickup time in HH:MM format."
+                    },
+                    "fare": {
+                        "type": "float",
+                        "description": "The fare for the ride."
+                    }
+                },
+                "required": [
+                    "ride_id",
+                    "passenger_name",
+                    "pickup_location",
+                    "dropoff_location",
+                    "pickup_time",
+                    "fare"
+                ]
+            },
+            "returns": {
+                "type": "None"
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"accept_ride_request\",\n        \"description\": \"Accepts a new ride request.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"ride_id\": {\n                    \"type\": \"integer\",\n                    \"description\": \"The ID of the ride request.\"\n                },\n                \"passenger_name\": {\n                    \"type\": \"string\",\n                    \"description\": \"The name of the passenger.\"\n                },\n                \"pickup_location\": {\n                    \"type\": \"string\",\n                    \"description\": \"The pickup location.\"\n                },\n                \"dropoff_location\": {\n                    \"type\": \"string\",\n                    \"description\": \"The dropoff location.\"\n                },\n                \"pickup_time\": {\n                    \"type\": \"string\",\n                    \"description\": \"The pickup time in HH:MM format.\"\n                },\n                \"fare\": {\n                    \"type\": \"float\",\n                    \"description\": \"The fare for the ride.\"\n                }\n            },\n            \"required\": [\"ride_id\", \"passenger_name\", \"pickup_location\", \"dropoff_location\", \"pickup_time\", \"fare\"]\n        },\n        \"returns\": {\n            \"type\": \"None\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you accept my ride request?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Can you provide me with the necessary details?\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"Yes, I want to accept the ride with ID 12345. The passenger's name is John Smith. The pickup location is Main Street. The dropoff location is Park Avenue. The pickup time is 12:00 PM. The fare is 25.50 dollars.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Great, I'm accepting your ride request now.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"accept_ride_request\",\n        \"parameters\": {\n            \"ride_id\": 12345,\n            \"passenger_name\": \"John Smith\",\n            \"pickup_location\": \"Main Street\",\n            \"dropoff_location\": \"Park Avenue\",\n            \"pickup_time\": \"12:00 PM\",\n            \"fare\": 25.50\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "accept_ride_request",
+            "description": "Accepts a new ride request.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "ride_id": {
+                        "type": "integer",
+                        "description": "The ID of the ride request."
+                    },
+                    "passenger_name": {
+                        "type": "string",
+                        "description": "The name of the passenger."
+                    },
+                    "pickup_location": {
+                        "type": "string",
+                        "description": "The pickup location."
+                    },
+                    "dropoff_location": {
+                        "type": "string",
+                        "description": "The dropoff location."
+                    },
+                    "pickup_time": {
+                        "type": "string",
+                        "description": "The pickup time in HH:MM format."
+                    },
+                    "fare": {
+                        "type": "float",
+                        "description": "The fare for the ride."
+                    }
+                },
+                "required": [
+                    "ride_id",
+                    "passenger_name",
+                    "pickup_location",
+                    "dropoff_location",
+                    "pickup_time",
+                    "fare"
+                ]
+            },
+            "returns": {
+                "type": "None"
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you accept my ride request?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Can you provide me with the necessary details?"
+            },
+            {
+                "role": "user",
+                "text": "Yes, I want to accept the ride with ID 12345. The passenger's name is John Smith. The pickup location is Main Street. The dropoff location is Park Avenue. The pickup time is 12:00 PM. The fare is 25.50 dollars."
+            },
+            {
+                "role": "assistant",
+                "text": "Great, I'm accepting your ride request now."
+            }
+        ],
+        "function_call": {
+            "function_name": "accept_ride_request",
+            "parameters": {
+                "ride_id": 12345,
+                "passenger_name": "John Smith",
+                "pickup_location": "Main Street",
+                "dropoff_location": "Park Avenue",
+                "pickup_time": "12:00 PM",
+                "fare": 25.5
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def accept_ride_request(\\n    ride_id: int,\\n    passenger_name: str,\\n    pickup_location: str,\\n    dropoff_location: str,\\n    pickup_time: str,\\n    fare: float,\\n) -> None:\\n    \"\"\"\\n    Accepts a new ride request.\\n\\n    Parameters:\\n        ride_id (int): The ID of the ride request.\\n        passenger_name (str): The name of the passenger.\\n        pickup_location (str): The pickup location.\\n        dropoff_location (str): The dropoff location.\\n        pickup_time (str): The pickup time in HH:MM format.\\n        fare (float): The fare for the ride.\\n\\n    Returns:\\n        None\\n    \"\"\"\\n', 'function_description': {'name': 'accept_ride_request', 'description': 'Accepts a new ride request.', 'parameters': {'type': 'object', 'properties': {'ride_id': {'type': 'integer', 'description': 'The ID of the ride request.'}, 'passenger_name': {'type': 'string', 'description': 'The name of the passenger.'}, 'pickup_location': {'type': 'string', 'description': 'The pickup location.'}, 'dropoff_location': {'type': 'string', 'description': 'The dropoff location.'}, 'pickup_time': {'type': 'string', 'description': 'The pickup time in HH:MM format.'}, 'fare': {'type': 'float', 'description': 'The fare for the ride.'}}, 'required': ['ride_id', 'passenger_name', 'pickup_location', 'dropoff_location', 'pickup_time', 'fare']}, 'returns': {'type': 'None'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "uber-driver-2",
+    "description": {
+        "function_snippet": "def decline_ride_request(\n    ride_id: str\n) -> None:\n    \"\"\"\n    Declines a new ride request.\n\n    Parameters:\n        ride_id (str): The ID of the ride to decline.\n\n    Returns:\n        None\n    \"\"\"\n",
+        "function_description": {
+            "name": "decline_ride_request",
+            "description": "Declines a new ride request.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "ride_id": {
+                        "type": "string",
+                        "description": "The ID of the ride to decline."
+                    }
+                },
+                "required": [
+                    "ride_id"
+                ]
+            },
+            "returns": {
+                "type": "None"
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"decline_ride_request\",\n        \"description\": \"Declines a new ride request.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"ride_id\": {\n                    \"type\": \"string\",\n                    \"description\": \"The ID of the ride to decline.\"\n                }\n            },\n            \"required\": [\"ride_id\"]\n        },\n        \"returns\": {\n            \"type\": \"None\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you decline this ride request for me?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Please provide me with the ride ID.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"The ride ID is '12345'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Alright, I will decline the ride request with ID '12345'.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"decline_ride_request\",\n        \"parameters\": {\n            \"ride_id\": \"12345\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "decline_ride_request",
+            "description": "Declines a new ride request.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "ride_id": {
+                        "type": "string",
+                        "description": "The ID of the ride to decline."
+                    }
+                },
+                "required": [
+                    "ride_id"
+                ]
+            },
+            "returns": {
+                "type": "None"
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you decline this ride request for me?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Please provide me with the ride ID."
+            },
+            {
+                "role": "user",
+                "text": "The ride ID is '12345'."
+            },
+            {
+                "role": "assistant",
+                "text": "Alright, I will decline the ride request with ID '12345'."
+            }
+        ],
+        "function_call": {
+            "function_name": "decline_ride_request",
+            "parameters": {
+                "ride_id": "12345"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def decline_ride_request(\\n    ride_id: str\\n) -> None:\\n    \"\"\"\\n    Declines a new ride request.\\n\\n    Parameters:\\n        ride_id (str): The ID of the ride to decline.\\n\\n    Returns:\\n        None\\n    \"\"\"\\n', 'function_description': {'name': 'decline_ride_request', 'description': 'Declines a new ride request.', 'parameters': {'type': 'object', 'properties': {'ride_id': {'type': 'string', 'description': 'The ID of the ride to decline.'}}, 'required': ['ride_id']}, 'returns': {'type': 'None'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "uber-driver-3",
+    "description": {
+        "function_snippet": "def start_navigation_to_pickup_location():\n    \"\"\"\n    Starts navigation to the pickup location.\n    \"\"\"\n    return",
+        "function_description": {
+            "name": "start_navigation_to_pickup_location",
+            "description": "Starts navigation to the pickup location.",
+            "parameters": {},
+            "returns": {}
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"start_navigation_to_pickup_location\",\n        \"description\": \"Starts navigation to the pickup location.\",\n        \"parameters\": {},\n        \"returns\": {}\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you start the navigation to the pickup location?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Starting the navigation now.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"start_navigation_to_pickup_location\",\n        \"parameters\": {}\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "start_navigation_to_pickup_location",
+            "description": "Starts navigation to the pickup location.",
+            "parameters": {},
+            "returns": {}
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you start the navigation to the pickup location?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Starting the navigation now."
+            }
+        ],
+        "function_call": {
+            "function_name": "start_navigation_to_pickup_location",
+            "parameters": {}
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def start_navigation_to_pickup_location():\\n    \"\"\"\\n    Starts navigation to the pickup location.\\n    \"\"\"\\n    return', 'function_description': {'name': 'start_navigation_to_pickup_location', 'description': 'Starts navigation to the pickup location.', 'parameters': {}, 'returns': {}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "uber-driver-4",
+    "description": {
+        "function_snippet": "def notify_passenger_upon_arrival(pickup_location: str, passenger_name: str) -> None:\n    \"\"\"\n    Notifies a passenger upon arrival at the pickup location.\n\n    Parameters:\n        pickup_location (str): The pickup location.\n        passenger_name (str): The name of the passenger.\n\n    Returns:\n        None\n    \"\"\"\n    # implementation code here",
+        "function_description": {
+            "name": "notify_passenger_upon_arrival",
+            "description": "Notifies a passenger upon arrival at the pickup location.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "pickup_location": {
+                        "type": "string",
+                        "description": "The pickup location."
+                    },
+                    "passenger_name": {
+                        "type": "string",
+                        "description": "The name of the passenger."
+                    }
+                },
+                "required": [
+                    "pickup_location",
+                    "passenger_name"
+                ]
+            },
+            "returns": {
+                "type": "None"
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"notify_passenger_upon_arrival\",\n        \"description\": \"Notifies a passenger upon arrival at the pickup location.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"pickup_location\": {\n                    \"type\": \"string\",\n                    \"description\": \"The pickup location.\"\n                },\n                \"passenger_name\": {\n                    \"type\": \"string\",\n                    \"description\": \"The name of the passenger.\"\n                }\n            },\n            \"required\": [\"pickup_location\", \"passenger_name\"]\n        },\n        \"returns\": {\n            \"type\": \"None\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you notify me when you arrive at my pickup location?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Can you please provide me with your pickup location and your name?\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"My pickup location is '123 Main Street' and my name is 'John Doe'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Great! I will notify you when I arrive at '123 Main Street'.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"notify_passenger_upon_arrival\",\n        \"parameters\": {\n            \"pickup_location\": \"123 Main Street\",\n            \"passenger_name\": \"John Doe\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "notify_passenger_upon_arrival",
+            "description": "Notifies a passenger upon arrival at the pickup location.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "pickup_location": {
+                        "type": "string",
+                        "description": "The pickup location."
+                    },
+                    "passenger_name": {
+                        "type": "string",
+                        "description": "The name of the passenger."
+                    }
+                },
+                "required": [
+                    "pickup_location",
+                    "passenger_name"
+                ]
+            },
+            "returns": {
+                "type": "None"
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you notify me when you arrive at my pickup location?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Can you please provide me with your pickup location and your name?"
+            },
+            {
+                "role": "user",
+                "text": "My pickup location is '123 Main Street' and my name is 'John Doe'."
+            },
+            {
+                "role": "assistant",
+                "text": "Great! I will notify you when I arrive at '123 Main Street'."
+            }
+        ],
+        "function_call": {
+            "function_name": "notify_passenger_upon_arrival",
+            "parameters": {
+                "pickup_location": "123 Main Street",
+                "passenger_name": "John Doe"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def notify_passenger_upon_arrival(pickup_location: str, passenger_name: str) -> None:\\n    \"\"\"\\n    Notifies a passenger upon arrival at the pickup location.\\n\\n    Parameters:\\n        pickup_location (str): The pickup location.\\n        passenger_name (str): The name of the passenger.\\n\\n    Returns:\\n        None\\n    \"\"\"\\n    # implementation code here', 'function_description': {'name': 'notify_passenger_upon_arrival', 'description': 'Notifies a passenger upon arrival at the pickup location.', 'parameters': {'type': 'object', 'properties': {'pickup_location': {'type': 'string', 'description': 'The pickup location.'}, 'passenger_name': {'type': 'string', 'description': 'The name of the passenger.'}}, 'required': ['pickup_location', 'passenger_name']}, 'returns': {'type': 'None'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "uber-driver-5",
+    "description": {
+        "function_snippet": "def start_ride():\n    \"\"\"\n    Starts the ride after picking up the passenger.\n    \"\"\"",
+        "function_description": {
+            "name": "start_ride",
+            "description": "Starts the ride after picking up the passenger.",
+            "parameters": {},
+            "returns": {}
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"start_ride\",\n        \"description\": \"Starts the ride after picking up the passenger.\",\n        \"parameters\": {},\n        \"returns\": {}\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you start the ride?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, starting the ride now.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"start_ride\",\n        \"parameters\": {}\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "start_ride",
+            "description": "Starts the ride after picking up the passenger.",
+            "parameters": {},
+            "returns": {}
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you start the ride?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, starting the ride now."
+            }
+        ],
+        "function_call": {
+            "function_name": "start_ride",
+            "parameters": {}
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def start_ride():\\n    \"\"\"\\n    Starts the ride after picking up the passenger.\\n    \"\"\"', 'function_description': {'name': 'start_ride', 'description': 'Starts the ride after picking up the passenger.', 'parameters': {}, 'returns': {}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "uber-driver-6",
+    "description": {
+        "function_snippet": "def end_ride(destination: str) -> None:\n    \"\"\"\n    Ends the ride upon arrival at the destination.\n\n    Parameters:\n        destination (str): The destination city.\n\n    Returns:\n        None\n    \"\"\"\n",
+        "function_description": {
+            "name": "end_ride",
+            "description": "Ends the ride upon arrival at the destination.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "destination": {
+                        "type": "string",
+                        "description": "The destination city."
+                    }
+                },
+                "required": [
+                    "destination"
+                ]
+            },
+            "returns": {
+                "type": "None"
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"end_ride\",\n        \"description\": \"Ends the ride upon arrival at the destination.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"destination\": {\n                    \"type\": \"string\",\n                    \"description\": \"The destination city.\"\n                }\n            },\n            \"required\": [\"destination\"]\n        },\n        \"returns\": {\n            \"type\": \"None\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you end my ride?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, may I know your destination city?\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"My destination city is 'New York'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Great! I will end your ride upon arrival at New York.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"end_ride\",\n        \"parameters\": {\n            \"destination\": \"New York\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "end_ride",
+            "description": "Ends the ride upon arrival at the destination.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "destination": {
+                        "type": "string",
+                        "description": "The destination city."
+                    }
+                },
+                "required": [
+                    "destination"
+                ]
+            },
+            "returns": {
+                "type": "None"
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you end my ride?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, may I know your destination city?"
+            },
+            {
+                "role": "user",
+                "text": "My destination city is 'New York'."
+            },
+            {
+                "role": "assistant",
+                "text": "Great! I will end your ride upon arrival at New York."
+            }
+        ],
+        "function_call": {
+            "function_name": "end_ride",
+            "parameters": {
+                "destination": "New York"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def end_ride(destination: str) -> None:\\n    \"\"\"\\n    Ends the ride upon arrival at the destination.\\n\\n    Parameters:\\n        destination (str): The destination city.\\n\\n    Returns:\\n        None\\n    \"\"\"\\n', 'function_description': {'name': 'end_ride', 'description': 'Ends the ride upon arrival at the destination.', 'parameters': {'type': 'object', 'properties': {'destination': {'type': 'string', 'description': 'The destination city.'}}, 'required': ['destination']}, 'returns': {'type': 'None'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "uber-driver-7",
+    "description": {
+        "function_snippet": "def rate_passenger(\n    passenger: Dict[str, str]\n) -> float:\n    \"\"\"\n    Rates the passenger based on certain criteria.\n\n    Parameters:\n        passenger (Dict[str, str]): A dictionary containing passenger details.\n                                    The dictionary should have 'name' and 'age' keys.\n\n    Returns:\n        float: The rating of the passenger.\n    \"\"\"\n    pass",
+        "function_description": {
+            "name": "rate_passenger",
+            "description": "Rates the passenger based on certain criteria.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "passenger": {
+                        "type": "object",
+                        "description": "A dictionary containing passenger details. The dictionary should have 'name' and 'age' keys.",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "age": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "age"
+                        ]
+                    }
+                },
+                "required": [
+                    "passenger"
+                ]
+            },
+            "returns": {
+                "type": "float",
+                "description": "The rating of the passenger."
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"rate_passenger\",\n        \"description\": \"Rates the passenger based on certain criteria.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"passenger\": {\n                    \"type\": \"object\",\n                    \"description\": \"A dictionary containing passenger details. The dictionary should have 'name' and 'age' keys.\",\n                    \"properties\": {\n                        \"name\": {\"type\": \"string\"},\n                        \"age\": {\"type\": \"string\"}\n                    },\n                    \"required\": [\"name\", \"age\"]\n                }\n            },\n            \"required\": [\"passenger\"]\n        },\n        \"returns\": {\n            \"type\": \"float\",\n            \"description\": \"The rating of the passenger.\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Can you rate this passenger for me?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Please provide the passenger's name and age.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"The passenger's name is John and his age is 25.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Great, I'm calculating the passenger's rating now.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"rate_passenger\",\n        \"parameters\": {\n            \"passenger\": {\n                \"name\": \"John\",\n                \"age\": \"25\"\n            }\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "rate_passenger",
+            "description": "Rates the passenger based on certain criteria.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "passenger": {
+                        "type": "object",
+                        "description": "A dictionary containing passenger details. The dictionary should have 'name' and 'age' keys.",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "age": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "age"
+                        ]
+                    }
+                },
+                "required": [
+                    "passenger"
+                ]
+            },
+            "returns": {
+                "type": "float",
+                "description": "The rating of the passenger."
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Can you rate this passenger for me?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Please provide the passenger's name and age."
+            },
+            {
+                "role": "user",
+                "text": "The passenger's name is John and his age is 25."
+            },
+            {
+                "role": "assistant",
+                "text": "Great, I'm calculating the passenger's rating now."
+            }
+        ],
+        "function_call": {
+            "function_name": "rate_passenger",
+            "parameters": {
+                "passenger": {
+                    "name": "John",
+                    "age": "25"
+                }
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def rate_passenger(\\n    passenger: Dict[str, str]\\n) -> float:\\n    \"\"\"\\n    Rates the passenger based on certain criteria.\\n\\n    Parameters:\\n        passenger (Dict[str, str]): A dictionary containing passenger details.\\n                                    The dictionary should have \\'name\\' and \\'age\\' keys.\\n\\n    Returns:\\n        float: The rating of the passenger.\\n    \"\"\"\\n    pass', 'function_description': {'name': 'rate_passenger', 'description': 'Rates the passenger based on certain criteria.', 'parameters': {'type': 'object', 'properties': {'passenger': {'type': 'object', 'description': \"A dictionary containing passenger details. The dictionary should have 'name' and 'age' keys.\", 'properties': {'name': {'type': 'string'}, 'age': {'type': 'string'}}, 'required': ['name', 'age']}}, 'required': ['passenger']}, 'returns': {'type': 'float', 'description': 'The rating of the passenger.'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "uber-driver-8",
+    "description": {
+        "function_snippet": "def retrieve_estimated_earnings(day_or_week: str) -> float:\n    \"\"\"\n    Retrieves estimated earnings for the day or week.\n\n    Parameters:\n        day_or_week (str): The time period to retrieve earnings for. Can be 'day' or 'week'.\n\n    Returns:\n        float: The estimated earnings for the specified time period.\n    \"\"\"",
+        "function_description": {
+            "name": "retrieve_estimated_earnings",
+            "description": "Retrieves estimated earnings for the day or week.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "day_or_week": {
+                        "type": "string",
+                        "description": "The time period to retrieve earnings for. Can be 'day' or 'week'."
+                    }
+                },
+                "required": [
+                    "day_or_week"
+                ]
+            },
+            "returns": {
+                "type": "object",
+                "properties": {
+                    "estimated_earnings": {
+                        "type": "float",
+                        "description": "The estimated earnings for the specified time period."
+                    }
+                }
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"retrieve_estimated_earnings\",\n        \"description\": \"Retrieves estimated earnings for the day or week.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"day_or_week\": {\n                    \"type\": \"string\",\n                    \"description\": \"The time period to retrieve earnings for. Can be 'day' or 'week'.\"\n                }\n            },\n            \"required\": [\"day_or_week\"]\n        },\n        \"returns\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"estimated_earnings\": {\n                    \"type\": \"float\",\n                    \"description\": \"The estimated earnings for the specified time period.\"\n                }\n            }\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you retrieve my estimated earnings?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Are you interested in the earnings for the day or week?\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"I want to know the estimated earnings for the week.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Alright, I will retrieve the estimated earnings for the week.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"retrieve_estimated_earnings\",\n        \"parameters\": {\n            \"day_or_week\": \"week\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "retrieve_estimated_earnings",
+            "description": "Retrieves estimated earnings for the day or week.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "day_or_week": {
+                        "type": "string",
+                        "description": "The time period to retrieve earnings for. Can be 'day' or 'week'."
+                    }
+                },
+                "required": [
+                    "day_or_week"
+                ]
+            },
+            "returns": {
+                "type": "object",
+                "properties": {
+                    "estimated_earnings": {
+                        "type": "float",
+                        "description": "The estimated earnings for the specified time period."
+                    }
+                }
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you retrieve my estimated earnings?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Are you interested in the earnings for the day or week?"
+            },
+            {
+                "role": "user",
+                "text": "I want to know the estimated earnings for the week."
+            },
+            {
+                "role": "assistant",
+                "text": "Alright, I will retrieve the estimated earnings for the week."
+            }
+        ],
+        "function_call": {
+            "function_name": "retrieve_estimated_earnings",
+            "parameters": {
+                "day_or_week": "week"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def retrieve_estimated_earnings(day_or_week: str) -> float:\\n    \"\"\"\\n    Retrieves estimated earnings for the day or week.\\n\\n    Parameters:\\n        day_or_week (str): The time period to retrieve earnings for. Can be \\'day\\' or \\'week\\'.\\n\\n    Returns:\\n        float: The estimated earnings for the specified time period.\\n    \"\"\"', 'function_description': {'name': 'retrieve_estimated_earnings', 'description': 'Retrieves estimated earnings for the day or week.', 'parameters': {'type': 'object', 'properties': {'day_or_week': {'type': 'string', 'description': \"The time period to retrieve earnings for. Can be 'day' or 'week'.\"}}, 'required': ['day_or_week']}, 'returns': {'type': 'object', 'properties': {'estimated_earnings': {'type': 'float', 'description': 'The estimated earnings for the specified time period.'}}}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "uber-driver-9",
+    "description": {
+        "function_snippet": "def view_ride_history(day: str) -> List[Dict[str, str]]:\n    \"\"\"\n    View the ride history for the specified day.\n\n    Parameters:\n        day (str): The day for which to view the ride history in YYYY-MM-DD format.\n\n    Returns:\n        List[Dict[str, str]]: A list of dictionaries containing ride details.\n                              Each dictionary should have 'ride_id', 'start_time', 'end_time',\n                              'distance', and 'fare' keys.\n    \"\"\"\n",
+        "function_description": {
+            "name": "view_ride_history",
+            "description": "View the ride history for the specified day.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "day": {
+                        "type": "string",
+                        "description": "The day for which to view the ride history in YYYY-MM-DD format."
+                    }
+                },
+                "required": [
+                    "day"
+                ]
+            },
+            "returns": {
+                "type": "object",
+                "properties": {
+                    "ride_id": {
+                        "type": "string"
+                    },
+                    "start_time": {
+                        "type": "string"
+                    },
+                    "end_time": {
+                        "type": "string"
+                    },
+                    "distance": {
+                        "type": "string"
+                    },
+                    "fare": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"view_ride_history\",\n        \"description\": \"View the ride history for the specified day.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"day\": {\n                    \"type\": \"string\",\n                    \"description\": \"The day for which to view the ride history in YYYY-MM-DD format.\"\n                }\n            },\n            \"required\": [\"day\"]\n        },\n        \"returns\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"ride_id\": {\"type\": \"string\"},\n                \"start_time\": {\"type\": \"string\"},\n                \"end_time\": {\"type\": \"string\"},\n                \"distance\": {\"type\": \"string\"},\n                \"fare\": {\"type\": \"string\"}\n            }\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you show me my ride history for January 1, 2022?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Please provide the date in YYYY-MM-DD format.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"The date is 2022-01-01.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Great, I'm retrieving your ride history for January 1, 2022 now.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"view_ride_history\",\n        \"parameters\": {\n            \"day\": \"2022-01-01\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "view_ride_history",
+            "description": "View the ride history for the specified day.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "day": {
+                        "type": "string",
+                        "description": "The day for which to view the ride history in YYYY-MM-DD format."
+                    }
+                },
+                "required": [
+                    "day"
+                ]
+            },
+            "returns": {
+                "type": "object",
+                "properties": {
+                    "ride_id": {
+                        "type": "string"
+                    },
+                    "start_time": {
+                        "type": "string"
+                    },
+                    "end_time": {
+                        "type": "string"
+                    },
+                    "distance": {
+                        "type": "string"
+                    },
+                    "fare": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you show me my ride history for January 1, 2022?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Please provide the date in YYYY-MM-DD format."
+            },
+            {
+                "role": "user",
+                "text": "The date is 2022-01-01."
+            },
+            {
+                "role": "assistant",
+                "text": "Great, I'm retrieving your ride history for January 1, 2022 now."
+            }
+        ],
+        "function_call": {
+            "function_name": "view_ride_history",
+            "parameters": {
+                "day": "2022-01-01"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def view_ride_history(day: str) -> List[Dict[str, str]]:\\n    \"\"\"\\n    View the ride history for the specified day.\\n\\n    Parameters:\\n        day (str): The day for which to view the ride history in YYYY-MM-DD format.\\n\\n    Returns:\\n        List[Dict[str, str]]: A list of dictionaries containing ride details.\\n                              Each dictionary should have \\'ride_id\\', \\'start_time\\', \\'end_time\\',\\n                              \\'distance\\', and \\'fare\\' keys.\\n    \"\"\"\\n', 'function_description': {'name': 'view_ride_history', 'description': 'View the ride history for the specified day.', 'parameters': {'type': 'object', 'properties': {'day': {'type': 'string', 'description': 'The day for which to view the ride history in YYYY-MM-DD format.'}}, 'required': ['day']}, 'returns': {'type': 'object', 'properties': {'ride_id': {'type': 'string'}, 'start_time': {'type': 'string'}, 'end_time': {'type': 'string'}, 'distance': {'type': 'string'}, 'fare': {'type': 'string'}}}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "uber-driver-10",
+    "description": {
+        "function_snippet": "def send_message_or_call_passenger(passenger_id: int, message: str) -> None:\n    \"\"\"\n    Sends a message or call the passenger through the app.\n\n    Parameters:\n        passenger_id (int): The ID of the passenger to contact.\n        message (str): The message to send or the call to make.\n\n    Returns:\n        None\n    \"\"\"\n\n",
+        "function_description": {
+            "name": "send_message_or_call_passenger",
+            "description": "Sends a message or call the passenger through the app.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "passenger_id": {
+                        "type": "integer",
+                        "description": "The ID of the passenger to contact."
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "The message to send or the call to make."
+                    }
+                },
+                "required": [
+                    "passenger_id",
+                    "message"
+                ]
+            },
+            "returns": {
+                "type": "None"
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"send_message_or_call_passenger\",\n        \"description\": \"Sends a message or call the passenger through the app.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"passenger_id\": {\n                    \"type\": \"integer\",\n                    \"description\": \"The ID of the passenger to contact.\"\n                },\n                \"message\": {\n                    \"type\": \"string\",\n                    \"description\": \"The message to send or the call to make.\"\n                }\n            },\n            \"required\": [\"passenger_id\", \"message\"]\n        },\n        \"returns\": {\n            \"type\": \"None\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you help me send a message to a passenger?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Please provide me the passenger ID and the message you want to send.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"The passenger ID is 12345 and the message is 'I'll be there in 5 minutes.'\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Great, I will send the message to the passenger with ID 12345.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"send_message_or_call_passenger\",\n        \"parameters\": {\n            \"passenger_id\": 12345,\n            \"message\": \"I'll be there in 5 minutes.\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "send_message_or_call_passenger",
+            "description": "Sends a message or call the passenger through the app.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "passenger_id": {
+                        "type": "integer",
+                        "description": "The ID of the passenger to contact."
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "The message to send or the call to make."
+                    }
+                },
+                "required": [
+                    "passenger_id",
+                    "message"
+                ]
+            },
+            "returns": {
+                "type": "None"
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you help me send a message to a passenger?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Please provide me the passenger ID and the message you want to send."
+            },
+            {
+                "role": "user",
+                "text": "The passenger ID is 12345 and the message is 'I'll be there in 5 minutes.'"
+            },
+            {
+                "role": "assistant",
+                "text": "Great, I will send the message to the passenger with ID 12345."
+            }
+        ],
+        "function_call": {
+            "function_name": "send_message_or_call_passenger",
+            "parameters": {
+                "passenger_id": 12345,
+                "message": "I'll be there in 5 minutes."
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def send_message_or_call_passenger(passenger_id: int, message: str) -> None:\\n    \"\"\"\\n    Sends a message or call the passenger through the app.\\n\\n    Parameters:\\n        passenger_id (int): The ID of the passenger to contact.\\n        message (str): The message to send or the call to make.\\n\\n    Returns:\\n        None\\n    \"\"\"\\n\\n', 'function_description': {'name': 'send_message_or_call_passenger', 'description': 'Sends a message or call the passenger through the app.', 'parameters': {'type': 'object', 'properties': {'passenger_id': {'type': 'integer', 'description': 'The ID of the passenger to contact.'}, 'message': {'type': 'string', 'description': 'The message to send or the call to make.'}}, 'required': ['passenger_id', 'message']}, 'returns': {'type': 'None'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "uber-driver-11",
+    "description": {
+        "function_snippet": "def update_driver_profile(\n    photo: str,\n    vehicle_info: Dict[str, str]\n) -> None:\n    \"\"\"\n    Update driver profile details, such as photo or vehicle information.\n\n    Parameters:\n        photo (str): The path or URL to the new driver photo.\n        vehicle_info (Dict[str, str]): A dictionary containing the updated vehicle information.\n                                        The dictionary should have 'make', 'model', and 'year' keys.\n\n    Returns:\n        None\n    \"\"\"\n",
+        "function_description": {
+            "name": "update_driver_profile",
+            "description": "Update driver profile details, such as photo or vehicle information.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "photo": {
+                        "type": "string",
+                        "description": "The path or URL to the new driver photo."
+                    },
+                    "vehicle_info": {
+                        "type": "object",
+                        "description": "A dictionary containing the updated vehicle information. The dictionary should have 'make', 'model', and 'year' keys.",
+                        "properties": {
+                            "make": {
+                                "type": "string"
+                            },
+                            "model": {
+                                "type": "string"
+                            },
+                            "year": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "make",
+                            "model",
+                            "year"
+                        ]
+                    }
+                },
+                "required": [
+                    "photo",
+                    "vehicle_info"
+                ]
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"update_driver_profile\",\n        \"description\": \"Update driver profile details, such as photo or vehicle information.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"photo\": {\n                    \"type\": \"string\",\n                    \"description\": \"The path or URL to the new driver photo.\"\n                },\n                \"vehicle_info\": {\n                    \"type\": \"object\",\n                    \"description\": \"A dictionary containing the updated vehicle information. The dictionary should have 'make', 'model', and 'year' keys.\",\n                    \"properties\": {\n                        \"make\": {\"type\": \"string\"},\n                        \"model\": {\"type\": \"string\"},\n                        \"year\": {\"type\": \"string\"}\n                    },\n                    \"required\": [\"make\", \"model\", \"year\"]\n                }\n            },\n            \"required\": [\"photo\", \"vehicle_info\"]\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you help me update my driver profile?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Of course! What changes would you like to make?\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"I want to update my driver photo and vehicle information.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Please provide the path or URL to your new driver photo.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"Sure, here is the path to my new driver photo: 'path/to/photo.jpg'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Thank you. Now, please provide the updated vehicle information.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"The make of my vehicle is 'Toyota', the model is 'Camry', and the year is '2022'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Thank you for the information. I will now update your driver profile.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"update_driver_profile\",\n        \"parameters\": {\n            \"photo\": \"path/to/photo.jpg\",\n            \"vehicle_info\": {\n                \"make\": \"Toyota\",\n                \"model\": \"Camry\",\n                \"year\": \"2022\"\n            }\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "update_driver_profile",
+            "description": "Update driver profile details, such as photo or vehicle information.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "photo": {
+                        "type": "string",
+                        "description": "The path or URL to the new driver photo."
+                    },
+                    "vehicle_info": {
+                        "type": "object",
+                        "description": "A dictionary containing the updated vehicle information. The dictionary should have 'make', 'model', and 'year' keys.",
+                        "properties": {
+                            "make": {
+                                "type": "string"
+                            },
+                            "model": {
+                                "type": "string"
+                            },
+                            "year": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "make",
+                            "model",
+                            "year"
+                        ]
+                    }
+                },
+                "required": [
+                    "photo",
+                    "vehicle_info"
+                ]
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you help me update my driver profile?"
+            },
+            {
+                "role": "assistant",
+                "text": "Of course! What changes would you like to make?"
+            },
+            {
+                "role": "user",
+                "text": "I want to update my driver photo and vehicle information."
+            },
+            {
+                "role": "assistant",
+                "text": "Please provide the path or URL to your new driver photo."
+            },
+            {
+                "role": "user",
+                "text": "Sure, here is the path to my new driver photo: 'path/to/photo.jpg'."
+            },
+            {
+                "role": "assistant",
+                "text": "Thank you. Now, please provide the updated vehicle information."
+            },
+            {
+                "role": "user",
+                "text": "The make of my vehicle is 'Toyota', the model is 'Camry', and the year is '2022'."
+            },
+            {
+                "role": "assistant",
+                "text": "Thank you for the information. I will now update your driver profile."
+            }
+        ],
+        "function_call": {
+            "function_name": "update_driver_profile",
+            "parameters": {
+                "photo": "path/to/photo.jpg",
+                "vehicle_info": {
+                    "make": "Toyota",
+                    "model": "Camry",
+                    "year": "2022"
+                }
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def update_driver_profile(\\n    photo: str,\\n    vehicle_info: Dict[str, str]\\n) -> None:\\n    \"\"\"\\n    Update driver profile details, such as photo or vehicle information.\\n\\n    Parameters:\\n        photo (str): The path or URL to the new driver photo.\\n        vehicle_info (Dict[str, str]): A dictionary containing the updated vehicle information.\\n                                        The dictionary should have \\'make\\', \\'model\\', and \\'year\\' keys.\\n\\n    Returns:\\n        None\\n    \"\"\"\\n', 'function_description': {'name': 'update_driver_profile', 'description': 'Update driver profile details, such as photo or vehicle information.', 'parameters': {'type': 'object', 'properties': {'photo': {'type': 'string', 'description': 'The path or URL to the new driver photo.'}, 'vehicle_info': {'type': 'object', 'description': \"A dictionary containing the updated vehicle information. The dictionary should have 'make', 'model', and 'year' keys.\", 'properties': {'make': {'type': 'string'}, 'model': {'type': 'string'}, 'year': {'type': 'string'}}, 'required': ['make', 'model', 'year']}}, 'required': ['photo', 'vehicle_info']}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "uber-driver-12",
+    "description": {
+        "function_snippet": "def switch_delivery_mode(restaurant_id: str, mode: str) -> bool:\n    \"\"\"\n    Switches the delivery mode for Uber Eats.\n\n    Parameters:\n        restaurant_id (str): The ID of the restaurant.\n        mode (str): The mode to switch to or from. Can be 'delivery' or 'pickup'.\n\n    Returns:\n        bool: True if the mode was successfully switched, False otherwise.\n    \"\"\"\n    ",
+        "function_description": {
+            "name": "switch_delivery_mode",
+            "description": "Switches the delivery mode for Uber Eats.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "restaurant_id": {
+                        "type": "string",
+                        "description": "The ID of the restaurant."
+                    },
+                    "mode": {
+                        "type": "string",
+                        "description": "The mode to switch to or from. Can be 'delivery' or 'pickup'."
+                    }
+                },
+                "required": [
+                    "restaurant_id",
+                    "mode"
+                ]
+            },
+            "returns": {
+                "type": "boolean",
+                "description": "True if the mode was successfully switched, False otherwise."
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"switch_delivery_mode\",\n        \"description\": \"Switches the delivery mode for Uber Eats.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"restaurant_id\": {\n                    \"type\": \"string\",\n                    \"description\": \"The ID of the restaurant.\"\n                },\n                \"mode\": {\n                    \"type\": \"string\",\n                    \"description\": \"The mode to switch to or from. Can be 'delivery' or 'pickup'.\"\n                }\n            },\n            \"required\": [\"restaurant_id\", \"mode\"]\n        },\n        \"returns\": {\n            \"type\": \"boolean\",\n            \"description\": \"True if the mode was successfully switched, False otherwise.\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you switch the delivery mode for Uber Eats?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Can you provide the restaurant ID and the mode you want to switch to or from?\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"Yes, the restaurant ID is '12345' and I want to switch to 'pickup' mode.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Great, I'm switching the delivery mode for Uber Eats now.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"switch_delivery_mode\",\n        \"parameters\": {\n            \"restaurant_id\": \"12345\",\n            \"mode\": \"pickup\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "switch_delivery_mode",
+            "description": "Switches the delivery mode for Uber Eats.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "restaurant_id": {
+                        "type": "string",
+                        "description": "The ID of the restaurant."
+                    },
+                    "mode": {
+                        "type": "string",
+                        "description": "The mode to switch to or from. Can be 'delivery' or 'pickup'."
+                    }
+                },
+                "required": [
+                    "restaurant_id",
+                    "mode"
+                ]
+            },
+            "returns": {
+                "type": "boolean",
+                "description": "True if the mode was successfully switched, False otherwise."
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you switch the delivery mode for Uber Eats?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Can you provide the restaurant ID and the mode you want to switch to or from?"
+            },
+            {
+                "role": "user",
+                "text": "Yes, the restaurant ID is '12345' and I want to switch to 'pickup' mode."
+            },
+            {
+                "role": "assistant",
+                "text": "Great, I'm switching the delivery mode for Uber Eats now."
+            }
+        ],
+        "function_call": {
+            "function_name": "switch_delivery_mode",
+            "parameters": {
+                "restaurant_id": "12345",
+                "mode": "pickup"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def switch_delivery_mode(restaurant_id: str, mode: str) -> bool:\\n    \"\"\"\\n    Switches the delivery mode for Uber Eats.\\n\\n    Parameters:\\n        restaurant_id (str): The ID of the restaurant.\\n        mode (str): The mode to switch to or from. Can be \\'delivery\\' or \\'pickup\\'.\\n\\n    Returns:\\n        bool: True if the mode was successfully switched, False otherwise.\\n    \"\"\"\\n    ', 'function_description': {'name': 'switch_delivery_mode', 'description': 'Switches the delivery mode for Uber Eats.', 'parameters': {'type': 'object', 'properties': {'restaurant_id': {'type': 'string', 'description': 'The ID of the restaurant.'}, 'mode': {'type': 'string', 'description': \"The mode to switch to or from. Can be 'delivery' or 'pickup'.\"}}, 'required': ['restaurant_id', 'mode']}, 'returns': {'type': 'boolean', 'description': 'True if the mode was successfully switched, False otherwise.'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "uber-driver-13",
+    "description": {
+        "function_snippet": "def withdraw_earnings(\n    amount: float,\n    bank_account: str,\n) -> bool:\n    \"\"\"\n    Withdraws earnings to a linked bank account.\n\n    Parameters:\n        amount (float): The amount of earnings to withdraw.\n        bank_account (str): The linked bank account to withdraw to.\n\n    Returns:\n        bool: True if the withdrawal is successful, False otherwise.\n    \"\"\"",
+        "function_description": {
+            "name": "withdraw_earnings",
+            "description": "Withdraws earnings to a linked bank account.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "amount": {
+                        "type": "float",
+                        "description": "The amount of earnings to withdraw."
+                    },
+                    "bank_account": {
+                        "type": "string",
+                        "description": "The linked bank account to withdraw to."
+                    }
+                },
+                "required": [
+                    "amount",
+                    "bank_account"
+                ]
+            },
+            "returns": {
+                "type": "bool",
+                "description": "True if the withdrawal is successful, False otherwise."
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"withdraw_earnings\",\n        \"description\": \"Withdraws earnings to a linked bank account.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"amount\": {\n                    \"type\": \"float\",\n                    \"description\": \"The amount of earnings to withdraw.\"\n                },\n                \"bank_account\": {\n                    \"type\": \"string\",\n                    \"description\": \"The linked bank account to withdraw to.\"\n                }\n            },\n            \"required\": [\"amount\", \"bank_account\"]\n        },\n        \"returns\": {\n            \"type\": \"bool\",\n            \"description\": \"True if the withdrawal is successful, False otherwise.\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, I want to withdraw my earnings.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can help you with that. How much would you like to withdraw and to which bank account?\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"I want to withdraw $100 to my Bank of America account.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Alright, let me process that for you.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"withdraw_earnings\",\n        \"parameters\": {\n            \"amount\": 100.0,\n            \"bank_account\": \"Bank of America\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "withdraw_earnings",
+            "description": "Withdraws earnings to a linked bank account.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "amount": {
+                        "type": "float",
+                        "description": "The amount of earnings to withdraw."
+                    },
+                    "bank_account": {
+                        "type": "string",
+                        "description": "The linked bank account to withdraw to."
+                    }
+                },
+                "required": [
+                    "amount",
+                    "bank_account"
+                ]
+            },
+            "returns": {
+                "type": "bool",
+                "description": "True if the withdrawal is successful, False otherwise."
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, I want to withdraw my earnings."
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can help you with that. How much would you like to withdraw and to which bank account?"
+            },
+            {
+                "role": "user",
+                "text": "I want to withdraw $100 to my Bank of America account."
+            },
+            {
+                "role": "assistant",
+                "text": "Alright, let me process that for you."
+            }
+        ],
+        "function_call": {
+            "function_name": "withdraw_earnings",
+            "parameters": {
+                "amount": 100.0,
+                "bank_account": "Bank of America"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def withdraw_earnings(\\n    amount: float,\\n    bank_account: str,\\n) -> bool:\\n    \"\"\"\\n    Withdraws earnings to a linked bank account.\\n\\n    Parameters:\\n        amount (float): The amount of earnings to withdraw.\\n        bank_account (str): The linked bank account to withdraw to.\\n\\n    Returns:\\n        bool: True if the withdrawal is successful, False otherwise.\\n    \"\"\"', 'function_description': {'name': 'withdraw_earnings', 'description': 'Withdraws earnings to a linked bank account.', 'parameters': {'type': 'object', 'properties': {'amount': {'type': 'float', 'description': 'The amount of earnings to withdraw.'}, 'bank_account': {'type': 'string', 'description': 'The linked bank account to withdraw to.'}}, 'required': ['amount', 'bank_account']}, 'returns': {'type': 'bool', 'description': 'True if the withdrawal is successful, False otherwise.'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "uber-driver-14",
+    "description": {
+        "function_snippet": "def review_and_dispute_fare_adjustments(\nfare_adjustments: List[Dict[str, Union[str, float]]]\n) -> Dict[str, Union[str, float]]:\n    \"\"\"\n    Reviews and disputes fare adjustments.\n\n    Parameters:\n        fare_adjustments (List[Dict[str, Union[str, float]]]): A list of dictionaries containing fare adjustment details.\n                                                              Each dictionary should have 'ticket_number', 'adjustment_reason',\n                                                              and 'adjusted_amount' keys.\n\n    Returns:\n        Dict[str, Union[str, float]]: A dictionary with 'disputed_amount' as a key and the disputed amount as a value.\n    \"\"\"\n",
+        "function_description": {
+            "name": "review_and_dispute_fare_adjustments",
+            "description": "Reviews and disputes fare adjustments.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "fare_adjustments": {
+                        "type": "array",
+                        "description": "A list of dictionaries containing fare adjustment details. Each dictionary should have 'ticket_number', 'adjustment_reason', and 'adjusted_amount' keys.",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "ticket_number": {
+                                    "type": "string"
+                                },
+                                "adjustment_reason": {
+                                    "type": "string"
+                                },
+                                "adjusted_amount": {
+                                    "type": "float"
+                                }
+                            },
+                            "required": [
+                                "ticket_number",
+                                "adjustment_reason",
+                                "adjusted_amount"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "fare_adjustments"
+                ]
+            }
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "disputed_amount": {
+                    "type": "float",
+                    "description": "The disputed amount after reviewing and disputing fare adjustments."
+                }
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"review_and_dispute_fare_adjustments\",\n        \"description\": \"Reviews and disputes fare adjustments.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"fare_adjustments\": {\n                    \"type\": \"array\",\n                    \"description\": \"A list of dictionaries containing fare adjustment details. Each dictionary should have 'ticket_number', 'adjustment_reason', and 'adjusted_amount' keys.\",\n                    \"items\": {\n                        \"type\": \"object\",\n                        \"properties\": {\n                            \"ticket_number\": {\n                                \"type\": \"string\"\n                            },\n                            \"adjustment_reason\": {\n                                \"type\": \"string\"\n                            },\n                            \"adjusted_amount\": {\n                                \"type\": \"float\"\n                            }\n                        },\n                        \"required\": [\"ticket_number\", \"adjustment_reason\", \"adjusted_amount\"]\n                    }\n                }\n            },\n            \"required\": [\"fare_adjustments\"]\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you review and dispute my fare adjustments?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Please provide me with the fare adjustment details.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"Here are my fare adjustment details: [{'ticket_number': '12345', 'adjustment_reason': 'Incorrect fare calculation', 'adjusted_amount': 10.0}, {'ticket_number': '67890', 'adjustment_reason': 'Wrong currency conversion', 'adjusted_amount': 5.0}]\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Great, I'm reviewing and disputing the fare adjustments now.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"review_and_dispute_fare_adjustments\",\n        \"parameters\": {\n            \"fare_adjustments\": [\n                {\n                    \"ticket_number\": \"12345\",\n                    \"adjustment_reason\": \"Incorrect fare calculation\",\n                    \"adjusted_amount\": 10.0\n                },\n                {\n                    \"ticket_number\": \"67890\",\n                    \"adjustment_reason\": \"Wrong currency conversion\",\n                    \"adjusted_amount\": 5.0\n                }\n            ]\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "review_and_dispute_fare_adjustments",
+            "description": "Reviews and disputes fare adjustments.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "fare_adjustments": {
+                        "type": "array",
+                        "description": "A list of dictionaries containing fare adjustment details. Each dictionary should have 'ticket_number', 'adjustment_reason', and 'adjusted_amount' keys.",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "ticket_number": {
+                                    "type": "string"
+                                },
+                                "adjustment_reason": {
+                                    "type": "string"
+                                },
+                                "adjusted_amount": {
+                                    "type": "float"
+                                }
+                            },
+                            "required": [
+                                "ticket_number",
+                                "adjustment_reason",
+                                "adjusted_amount"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "fare_adjustments"
+                ]
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you review and dispute my fare adjustments?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Please provide me with the fare adjustment details."
+            },
+            {
+                "role": "user",
+                "text": "Here are my fare adjustment details: [{'ticket_number': '12345', 'adjustment_reason': 'Incorrect fare calculation', 'adjusted_amount': 10.0}, {'ticket_number': '67890', 'adjustment_reason': 'Wrong currency conversion', 'adjusted_amount': 5.0}]"
+            },
+            {
+                "role": "assistant",
+                "text": "Great, I'm reviewing and disputing the fare adjustments now."
+            }
+        ],
+        "function_call": {
+            "function_name": "review_and_dispute_fare_adjustments",
+            "parameters": {
+                "fare_adjustments": [
+                    {
+                        "ticket_number": "12345",
+                        "adjustment_reason": "Incorrect fare calculation",
+                        "adjusted_amount": 10.0
+                    },
+                    {
+                        "ticket_number": "67890",
+                        "adjustment_reason": "Wrong currency conversion",
+                        "adjusted_amount": 5.0
+                    }
+                ]
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def review_and_dispute_fare_adjustments(\\nfare_adjustments: List[Dict[str, Union[str, float]]]\\n) -> Dict[str, Union[str, float]]:\\n    \"\"\"\\n    Reviews and disputes fare adjustments.\\n\\n    Parameters:\\n        fare_adjustments (List[Dict[str, Union[str, float]]]): A list of dictionaries containing fare adjustment details.\\n                                                              Each dictionary should have \\'ticket_number\\', \\'adjustment_reason\\',\\n                                                              and \\'adjusted_amount\\' keys.\\n\\n    Returns:\\n        Dict[str, Union[str, float]]: A dictionary with \\'disputed_amount\\' as a key and the disputed amount as a value.\\n    \"\"\"\\n', 'function_description': {'name': 'review_and_dispute_fare_adjustments', 'description': 'Reviews and disputes fare adjustments.', 'parameters': {'type': 'object', 'properties': {'fare_adjustments': {'type': 'array', 'description': \"A list of dictionaries containing fare adjustment details. Each dictionary should have 'ticket_number', 'adjustment_reason', and 'adjusted_amount' keys.\", 'items': {'type': 'object', 'properties': {'ticket_number': {'type': 'string'}, 'adjustment_reason': {'type': 'string'}, 'adjusted_amount': {'type': 'float'}}, 'required': ['ticket_number', 'adjustment_reason', 'adjusted_amount']}}}, 'required': ['fare_adjustments']}}, 'returns': {'type': 'object', 'properties': {'disputed_amount': {'type': 'float', 'description': 'The disputed amount after reviewing and disputing fare adjustments.'}}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "uber-driver-15",
+    "description": {
+        "function_snippet": "def enable_disable_notifications(enable: bool) -> None:\n    \"\"\"\n    Enable or disable notifications for new ride requests.\n\n    Parameters:\n        enable (bool): True to enable notifications, False to disable notifications.\n\n    Returns:\n        None\n    \"\"\"\n    ",
+        "function_description": {
+            "name": "enable_disable_notifications",
+            "description": "Enable or disable notifications for new ride requests.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "enable": {
+                        "type": "boolean",
+                        "description": "True to enable notifications, False to disable notifications."
+                    }
+                },
+                "required": [
+                    "enable"
+                ]
+            },
+            "returns": {
+                "type": "None"
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"enable_disable_notifications\",\n        \"description\": \"Enable or disable notifications for new ride requests.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"enable\": {\n                    \"type\": \"boolean\",\n                    \"description\": \"True to enable notifications, False to disable notifications.\"\n                }\n            },\n            \"required\": [\"enable\"]\n        },\n        \"returns\": {\n            \"type\": \"None\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Can you enable notifications for new ride requests?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Do you want to enable or disable the notifications?\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"I want to enable the notifications.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Alright, I will enable the notifications for new ride requests.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"enable_disable_notifications\",\n        \"parameters\": {\n            \"enable\": true\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "enable_disable_notifications",
+            "description": "Enable or disable notifications for new ride requests.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "enable": {
+                        "type": "boolean",
+                        "description": "True to enable notifications, False to disable notifications."
+                    }
+                },
+                "required": [
+                    "enable"
+                ]
+            },
+            "returns": {
+                "type": "None"
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Can you enable notifications for new ride requests?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Do you want to enable or disable the notifications?"
+            },
+            {
+                "role": "user",
+                "text": "I want to enable the notifications."
+            },
+            {
+                "role": "assistant",
+                "text": "Alright, I will enable the notifications for new ride requests."
+            }
+        ],
+        "function_call": {
+            "function_name": "enable_disable_notifications",
+            "parameters": {
+                "enable": true
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def enable_disable_notifications(enable: bool) -> None:\\n    \"\"\"\\n    Enable or disable notifications for new ride requests.\\n\\n    Parameters:\\n        enable (bool): True to enable notifications, False to disable notifications.\\n\\n    Returns:\\n        None\\n    \"\"\"\\n    ', 'function_description': {'name': 'enable_disable_notifications', 'description': 'Enable or disable notifications for new ride requests.', 'parameters': {'type': 'object', 'properties': {'enable': {'type': 'boolean', 'description': 'True to enable notifications, False to disable notifications.'}}, 'required': ['enable']}, 'returns': {'type': 'None'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "uber-driver-16",
+    "description": {
+        "function_snippet": "def report_issue_or_incident(\n    ride_id: str,\n    issue_description: str,\n    incident_date: str,\n    incident_location: str,\n    contact_info: str,\n) -> None:\n    \"\"\"\n    Reports an issue or incident related to a ride.\n\n    Parameters:\n        ride_id (str): The ID of the ride.\n        issue_description (str): A description of the issue or incident.\n        incident_date (str): The date of the incident in YYYY-MM-DD format.\n        incident_location (str): The location of the incident.\n        contact_info (str): Contact information of the person reporting the issue.\n\n    Returns:\n        None\n    \"\"\"\n\n",
+        "function_description": {
+            "name": "report_issue_or_incident",
+            "description": "Reports an issue or incident related to a ride.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "ride_id": {
+                        "type": "string",
+                        "description": "The ID of the ride."
+                    },
+                    "issue_description": {
+                        "type": "string",
+                        "description": "A description of the issue or incident."
+                    },
+                    "incident_date": {
+                        "type": "string",
+                        "description": "The date of the incident in YYYY-MM-DD format."
+                    },
+                    "incident_location": {
+                        "type": "string",
+                        "description": "The location of the incident."
+                    },
+                    "contact_info": {
+                        "type": "string",
+                        "description": "Contact information of the person reporting the issue."
+                    }
+                },
+                "required": [
+                    "ride_id",
+                    "issue_description",
+                    "incident_date",
+                    "incident_location",
+                    "contact_info"
+                ]
+            },
+            "returns": {
+                "type": "None"
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"report_issue_or_incident\",\n        \"description\": \"Reports an issue or incident related to a ride.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"ride_id\": {\n                    \"type\": \"string\",\n                    \"description\": \"The ID of the ride.\"\n                },\n                \"issue_description\": {\n                    \"type\": \"string\",\n                    \"description\": \"A description of the issue or incident.\"\n                },\n                \"incident_date\": {\n                    \"type\": \"string\",\n                    \"description\": \"The date of the incident in YYYY-MM-DD format.\"\n                },\n                \"incident_location\": {\n                    \"type\": \"string\",\n                    \"description\": \"The location of the incident.\"\n                },\n                \"contact_info\": {\n                    \"type\": \"string\",\n                    \"description\": \"Contact information of the person reporting the issue.\"\n                }\n            },\n            \"required\": [\"ride_id\", \"issue_description\", \"incident_date\", \"incident_location\", \"contact_info\"]\n        },\n        \"returns\": {\n            \"type\": \"None\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, I want to report an issue with my recent ride.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can help with that. Can you please provide me with the ride ID?\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"Yes, the ride ID is '12345'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Thank you. Please describe the issue or incident in detail.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"I encountered a problem with the driver's behavior and felt unsafe during the ride.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"I'm sorry to hear that. Can you provide me with the date of the incident?\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"The incident occurred on '2022-05-15'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Thank you. Lastly, please provide me with the location of the incident.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"The incident happened near the ABC Street.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Got it. Can you also share your contact information so that we can reach out to you if needed?\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"Sure, my contact information is 'example@example.com'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Thank you for providing all the necessary details. I will now report the issue or incident related to your ride.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"report_issue_or_incident\",\n        \"parameters\": {\n            \"ride_id\": \"12345\",\n            \"issue_description\": \"I encountered a problem with the driver's behavior and felt unsafe during the ride.\",\n            \"incident_date\": \"2022-05-15\",\n            \"incident_location\": \"ABC Street\",\n            \"contact_info\": \"example@example.com\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "report_issue_or_incident",
+            "description": "Reports an issue or incident related to a ride.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "ride_id": {
+                        "type": "string",
+                        "description": "The ID of the ride."
+                    },
+                    "issue_description": {
+                        "type": "string",
+                        "description": "A description of the issue or incident."
+                    },
+                    "incident_date": {
+                        "type": "string",
+                        "description": "The date of the incident in YYYY-MM-DD format."
+                    },
+                    "incident_location": {
+                        "type": "string",
+                        "description": "The location of the incident."
+                    },
+                    "contact_info": {
+                        "type": "string",
+                        "description": "Contact information of the person reporting the issue."
+                    }
+                },
+                "required": [
+                    "ride_id",
+                    "issue_description",
+                    "incident_date",
+                    "incident_location",
+                    "contact_info"
+                ]
+            },
+            "returns": {
+                "type": "None"
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, I want to report an issue with my recent ride."
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can help with that. Can you please provide me with the ride ID?"
+            },
+            {
+                "role": "user",
+                "text": "Yes, the ride ID is '12345'."
+            },
+            {
+                "role": "assistant",
+                "text": "Thank you. Please describe the issue or incident in detail."
+            },
+            {
+                "role": "user",
+                "text": "I encountered a problem with the driver's behavior and felt unsafe during the ride."
+            },
+            {
+                "role": "assistant",
+                "text": "I'm sorry to hear that. Can you provide me with the date of the incident?"
+            },
+            {
+                "role": "user",
+                "text": "The incident occurred on '2022-05-15'."
+            },
+            {
+                "role": "assistant",
+                "text": "Thank you. Lastly, please provide me with the location of the incident."
+            },
+            {
+                "role": "user",
+                "text": "The incident happened near the ABC Street."
+            },
+            {
+                "role": "assistant",
+                "text": "Got it. Can you also share your contact information so that we can reach out to you if needed?"
+            },
+            {
+                "role": "user",
+                "text": "Sure, my contact information is 'example@example.com'."
+            },
+            {
+                "role": "assistant",
+                "text": "Thank you for providing all the necessary details. I will now report the issue or incident related to your ride."
+            }
+        ],
+        "function_call": {
+            "function_name": "report_issue_or_incident",
+            "parameters": {
+                "ride_id": "12345",
+                "issue_description": "I encountered a problem with the driver's behavior and felt unsafe during the ride.",
+                "incident_date": "2022-05-15",
+                "incident_location": "ABC Street",
+                "contact_info": "example@example.com"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def report_issue_or_incident(\\n    ride_id: str,\\n    issue_description: str,\\n    incident_date: str,\\n    incident_location: str,\\n    contact_info: str,\\n) -> None:\\n    \"\"\"\\n    Reports an issue or incident related to a ride.\\n\\n    Parameters:\\n        ride_id (str): The ID of the ride.\\n        issue_description (str): A description of the issue or incident.\\n        incident_date (str): The date of the incident in YYYY-MM-DD format.\\n        incident_location (str): The location of the incident.\\n        contact_info (str): Contact information of the person reporting the issue.\\n\\n    Returns:\\n        None\\n    \"\"\"\\n\\n', 'function_description': {'name': 'report_issue_or_incident', 'description': 'Reports an issue or incident related to a ride.', 'parameters': {'type': 'object', 'properties': {'ride_id': {'type': 'string', 'description': 'The ID of the ride.'}, 'issue_description': {'type': 'string', 'description': 'A description of the issue or incident.'}, 'incident_date': {'type': 'string', 'description': 'The date of the incident in YYYY-MM-DD format.'}, 'incident_location': {'type': 'string', 'description': 'The location of the incident.'}, 'contact_info': {'type': 'string', 'description': 'Contact information of the person reporting the issue.'}}, 'required': ['ride_id', 'issue_description', 'incident_date', 'incident_location', 'contact_info']}, 'returns': {'type': 'None'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "uber-driver-17",
+    "description": {
+        "function_snippet": "def review_driver_ratings_and_feedback() -> Dict[str, List[Dict[str, Any]]]:\n    \"\"\"\n    Retrieves and returns the driver ratings and feedback received.\n\n    Returns:\n        Dict[str, List[Dict[str, Any]]]: A dictionary with 'ratings' as a key and a list of dictionaries as the value.\n                                         Each dictionary should have 'driver_name', 'rating', and 'feedback' keys.\n    \"\"\"\n",
+        "function_description": {
+            "name": "review_driver_ratings_and_feedback",
+            "description": "Retrieves and returns the driver ratings and feedback received.",
+            "parameters": {
+                "type": "object",
+                "properties": {}
+            },
+            "returns": {
+                "type": "object",
+                "properties": {
+                    "ratings": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "driver_name": {
+                                    "type": "string"
+                                },
+                                "rating": {
+                                    "type": "number"
+                                },
+                                "feedback": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "driver_name",
+                                "rating",
+                                "feedback"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"review_driver_ratings_and_feedback\",\n        \"description\": \"Retrieves and returns the driver ratings and feedback received.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {}\n        },\n        \"returns\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"ratings\": {\n                    \"type\": \"array\",\n                    \"items\": {\n                        \"type\": \"object\",\n                        \"properties\": {\n                            \"driver_name\": {\n                                \"type\": \"string\"\n                            },\n                            \"rating\": {\n                                \"type\": \"number\"\n                            },\n                            \"feedback\": {\n                                \"type\": \"string\"\n                            }\n                        },\n                        \"required\": [\"driver_name\", \"rating\", \"feedback\"]\n                    }\n                }\n            }\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you show me the driver ratings and feedback?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Please wait a moment.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"review_driver_ratings_and_feedback\",\n        \"parameters\": {}\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "review_driver_ratings_and_feedback",
+            "description": "Retrieves and returns the driver ratings and feedback received.",
+            "parameters": {
+                "type": "object",
+                "properties": {}
+            },
+            "returns": {
+                "type": "object",
+                "properties": {
+                    "ratings": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "driver_name": {
+                                    "type": "string"
+                                },
+                                "rating": {
+                                    "type": "number"
+                                },
+                                "feedback": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "driver_name",
+                                "rating",
+                                "feedback"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you show me the driver ratings and feedback?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Please wait a moment."
+            }
+        ],
+        "function_call": {
+            "function_name": "review_driver_ratings_and_feedback",
+            "parameters": {}
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def review_driver_ratings_and_feedback() -> Dict[str, List[Dict[str, Any]]]:\\n    \"\"\"\\n    Retrieves and returns the driver ratings and feedback received.\\n\\n    Returns:\\n        Dict[str, List[Dict[str, Any]]]: A dictionary with \\'ratings\\' as a key and a list of dictionaries as the value.\\n                                         Each dictionary should have \\'driver_name\\', \\'rating\\', and \\'feedback\\' keys.\\n    \"\"\"\\n', 'function_description': {'name': 'review_driver_ratings_and_feedback', 'description': 'Retrieves and returns the driver ratings and feedback received.', 'parameters': {'type': 'object', 'properties': {}}, 'returns': {'type': 'object', 'properties': {'ratings': {'type': 'array', 'items': {'type': 'object', 'properties': {'driver_name': {'type': 'string'}, 'rating': {'type': 'number'}, 'feedback': {'type': 'string'}}, 'required': ['driver_name', 'rating', 'feedback']}}}}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "uber-driver-18",
+    "description": {
+        "function_snippet": "def check_background_status(\n    applicant_id: str,\n    document_type: str,\n) -> str:\n    \"\"\"\n    Checks the status of a background check or document verification.\n\n    Parameters:\n        applicant_id (str): The ID of the applicant.\n        document_type (str): The type of document to be verified.\n\n    Returns:\n        str: The status of the background check or document verification.\n    \"\"\"\n",
+        "function_description": {
+            "name": "check_background_status",
+            "description": "Checks the status of a background check or document verification.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "applicant_id": {
+                        "type": "string",
+                        "description": "The ID of the applicant."
+                    },
+                    "document_type": {
+                        "type": "string",
+                        "description": "The type of document to be verified."
+                    }
+                },
+                "required": [
+                    "applicant_id",
+                    "document_type"
+                ]
+            },
+            "returns": {
+                "type": "string",
+                "description": "The status of the background check or document verification."
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"check_background_status\",\n        \"description\": \"Checks the status of a background check or document verification.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"applicant_id\": {\n                    \"type\": \"string\",\n                    \"description\": \"The ID of the applicant.\"\n                },\n                \"document_type\": {\n                    \"type\": \"string\",\n                    \"description\": \"The type of document to be verified.\"\n                }\n            },\n            \"required\": [\"applicant_id\", \"document_type\"]\n        },\n        \"returns\": {\n            \"type\": \"string\",\n            \"description\": \"The status of the background check or document verification.\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you check the status of my background check?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Please provide me with your applicant ID and the type of document to be verified.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"My applicant ID is '12345' and the document type is 'Passport'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Great, I'm checking the status of your background check now.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"check_background_status\",\n        \"parameters\": {\n            \"applicant_id\": \"12345\",\n            \"document_type\": \"Passport\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "check_background_status",
+            "description": "Checks the status of a background check or document verification.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "applicant_id": {
+                        "type": "string",
+                        "description": "The ID of the applicant."
+                    },
+                    "document_type": {
+                        "type": "string",
+                        "description": "The type of document to be verified."
+                    }
+                },
+                "required": [
+                    "applicant_id",
+                    "document_type"
+                ]
+            },
+            "returns": {
+                "type": "string",
+                "description": "The status of the background check or document verification."
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you check the status of my background check?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Please provide me with your applicant ID and the type of document to be verified."
+            },
+            {
+                "role": "user",
+                "text": "My applicant ID is '12345' and the document type is 'Passport'."
+            },
+            {
+                "role": "assistant",
+                "text": "Great, I'm checking the status of your background check now."
+            }
+        ],
+        "function_call": {
+            "function_name": "check_background_status",
+            "parameters": {
+                "applicant_id": "12345",
+                "document_type": "Passport"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def check_background_status(\\n    applicant_id: str,\\n    document_type: str,\\n) -> str:\\n    \"\"\"\\n    Checks the status of a background check or document verification.\\n\\n    Parameters:\\n        applicant_id (str): The ID of the applicant.\\n        document_type (str): The type of document to be verified.\\n\\n    Returns:\\n        str: The status of the background check or document verification.\\n    \"\"\"\\n', 'function_description': {'name': 'check_background_status', 'description': 'Checks the status of a background check or document verification.', 'parameters': {'type': 'object', 'properties': {'applicant_id': {'type': 'string', 'description': 'The ID of the applicant.'}, 'document_type': {'type': 'string', 'description': 'The type of document to be verified.'}}, 'required': ['applicant_id', 'document_type']}, 'returns': {'type': 'string', 'description': 'The status of the background check or document verification.'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "uber-driver-19",
+    "description": {
+        "function_snippet": "def schedule_or_modify_vehicle_inspection(vehicle_id: str, appointment_date: str, appointment_time: str) -> str:\n    \"\"\"\n    Schedules or modifies a vehicle inspection appointment.\n\n    Parameters:\n        vehicle_id (str): The unique identifier of the vehicle.\n        appointment_date (str): The desired appointment date in YYYY-MM-DD format.\n        appointment_time (str): The desired appointment time in HH:MM format.\n\n    Returns:\n        str: A confirmation message indicating that the appointment has been scheduled or modified.\n    \"\"\"\n",
+        "function_description": {
+            "name": "schedule_or_modify_vehicle_inspection",
+            "description": "Schedules or modifies a vehicle inspection appointment.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "vehicle_id": {
+                        "type": "string",
+                        "description": "The unique identifier of the vehicle."
+                    },
+                    "appointment_date": {
+                        "type": "string",
+                        "description": "The desired appointment date in YYYY-MM-DD format."
+                    },
+                    "appointment_time": {
+                        "type": "string",
+                        "description": "The desired appointment time in HH:MM format."
+                    }
+                },
+                "required": [
+                    "vehicle_id",
+                    "appointment_date",
+                    "appointment_time"
+                ]
+            },
+            "returns": {
+                "type": "string",
+                "description": "A confirmation message indicating that the appointment has been scheduled or modified."
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"schedule_or_modify_vehicle_inspection\",\n        \"description\": \"Schedules or modifies a vehicle inspection appointment.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"vehicle_id\": {\n                    \"type\": \"string\",\n                    \"description\": \"The unique identifier of the vehicle.\"\n                },\n                \"appointment_date\": {\n                    \"type\": \"string\",\n                    \"description\": \"The desired appointment date in YYYY-MM-DD format.\"\n                },\n                \"appointment_time\": {\n                    \"type\": \"string\",\n                    \"description\": \"The desired appointment time in HH:MM format.\"\n                }\n            },\n            \"required\": [\"vehicle_id\", \"appointment_date\", \"appointment_time\"]\n        },\n        \"returns\": {\n            \"type\": \"string\",\n            \"description\": \"A confirmation message indicating that the appointment has been scheduled or modified.\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you help me schedule a vehicle inspection appointment?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Of course! Please provide me with the following details: the unique identifier of the vehicle, the desired appointment date in YYYY-MM-DD format, and the desired appointment time in HH:MM format.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"The vehicle ID is '12345', the appointment date is '2022-09-15', and the appointment time is '10:30'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Thank you for providing the details. I will now schedule or modify the vehicle inspection appointment for you.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"schedule_or_modify_vehicle_inspection\",\n        \"parameters\": {\n            \"vehicle_id\": \"12345\",\n            \"appointment_date\": \"2022-09-15\",\n            \"appointment_time\": \"10:30\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "schedule_or_modify_vehicle_inspection",
+            "description": "Schedules or modifies a vehicle inspection appointment.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "vehicle_id": {
+                        "type": "string",
+                        "description": "The unique identifier of the vehicle."
+                    },
+                    "appointment_date": {
+                        "type": "string",
+                        "description": "The desired appointment date in YYYY-MM-DD format."
+                    },
+                    "appointment_time": {
+                        "type": "string",
+                        "description": "The desired appointment time in HH:MM format."
+                    }
+                },
+                "required": [
+                    "vehicle_id",
+                    "appointment_date",
+                    "appointment_time"
+                ]
+            },
+            "returns": {
+                "type": "string",
+                "description": "A confirmation message indicating that the appointment has been scheduled or modified."
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you help me schedule a vehicle inspection appointment?"
+            },
+            {
+                "role": "assistant",
+                "text": "Of course! Please provide me with the following details: the unique identifier of the vehicle, the desired appointment date in YYYY-MM-DD format, and the desired appointment time in HH:MM format."
+            },
+            {
+                "role": "user",
+                "text": "The vehicle ID is '12345', the appointment date is '2022-09-15', and the appointment time is '10:30'."
+            },
+            {
+                "role": "assistant",
+                "text": "Thank you for providing the details. I will now schedule or modify the vehicle inspection appointment for you."
+            }
+        ],
+        "function_call": {
+            "function_name": "schedule_or_modify_vehicle_inspection",
+            "parameters": {
+                "vehicle_id": "12345",
+                "appointment_date": "2022-09-15",
+                "appointment_time": "10:30"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def schedule_or_modify_vehicle_inspection(vehicle_id: str, appointment_date: str, appointment_time: str) -> str:\\n    \"\"\"\\n    Schedules or modifies a vehicle inspection appointment.\\n\\n    Parameters:\\n        vehicle_id (str): The unique identifier of the vehicle.\\n        appointment_date (str): The desired appointment date in YYYY-MM-DD format.\\n        appointment_time (str): The desired appointment time in HH:MM format.\\n\\n    Returns:\\n        str: A confirmation message indicating that the appointment has been scheduled or modified.\\n    \"\"\"\\n', 'function_description': {'name': 'schedule_or_modify_vehicle_inspection', 'description': 'Schedules or modifies a vehicle inspection appointment.', 'parameters': {'type': 'object', 'properties': {'vehicle_id': {'type': 'string', 'description': 'The unique identifier of the vehicle.'}, 'appointment_date': {'type': 'string', 'description': 'The desired appointment date in YYYY-MM-DD format.'}, 'appointment_time': {'type': 'string', 'description': 'The desired appointment time in HH:MM format.'}}, 'required': ['vehicle_id', 'appointment_date', 'appointment_time']}, 'returns': {'type': 'string', 'description': 'A confirmation message indicating that the appointment has been scheduled or modified.'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "uber-driver-20",
+    "description": {
+        "function_snippet": "def enable_disable_ride_requests(categories: List[str], enable: bool) -> None:\n    \"\"\"\n    Enable or disable receiving ride requests in specific categories.\n\n    Parameters:\n        categories (List[str]): A list of categories to enable or disable.\n        enable (bool): True to enable the categories, False to disable them.\n\n    Returns:\n        None\n    \"\"\"\n    pass",
+        "function_description": {
+            "name": "enable_disable_ride_requests",
+            "description": "Enable or disable receiving ride requests in specific categories.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "categories": {
+                        "type": "array",
+                        "description": "A list of categories to enable or disable.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "enable": {
+                        "type": "boolean",
+                        "description": "True to enable the categories, False to disable them."
+                    }
+                },
+                "required": [
+                    "categories",
+                    "enable"
+                ]
+            },
+            "returns": {
+                "type": "null",
+                "description": "None"
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"enable_disable_ride_requests\",\n        \"description\": \"Enable or disable receiving ride requests in specific categories.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"categories\": {\n                    \"type\": \"array\",\n                    \"description\": \"A list of categories to enable or disable.\",\n                    \"items\": {\n                        \"type\": \"string\"\n                    }\n                },\n                \"enable\": {\n                    \"type\": \"boolean\",\n                    \"description\": \"True to enable the categories, False to disable them.\"\n                }\n            },\n            \"required\": [\"categories\", \"enable\"]\n        },\n        \"returns\": {\n            \"type\": \"null\",\n            \"description\": \"None\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you enable ride requests in specific categories for me?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Of course! Please provide me with the categories you want to enable.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"Sure, I want to enable 'food delivery' and 'airport transfer' categories.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Got it. Should I enable these categories?\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"enable_disable_ride_requests\",\n        \"parameters\": {\n            \"categories\": [\"food delivery\", \"airport transfer\"],\n            \"enable\": true\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "enable_disable_ride_requests",
+            "description": "Enable or disable receiving ride requests in specific categories.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "categories": {
+                        "type": "array",
+                        "description": "A list of categories to enable or disable.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "enable": {
+                        "type": "boolean",
+                        "description": "True to enable the categories, False to disable them."
+                    }
+                },
+                "required": [
+                    "categories",
+                    "enable"
+                ]
+            },
+            "returns": {
+                "type": "null",
+                "description": "None"
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you enable ride requests in specific categories for me?"
+            },
+            {
+                "role": "assistant",
+                "text": "Of course! Please provide me with the categories you want to enable."
+            },
+            {
+                "role": "user",
+                "text": "Sure, I want to enable 'food delivery' and 'airport transfer' categories."
+            },
+            {
+                "role": "assistant",
+                "text": "Got it. Should I enable these categories?"
+            }
+        ],
+        "function_call": {
+            "function_name": "enable_disable_ride_requests",
+            "parameters": {
+                "categories": [
+                    "food delivery",
+                    "airport transfer"
+                ],
+                "enable": true
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def enable_disable_ride_requests(categories: List[str], enable: bool) -> None:\\n    \"\"\"\\n    Enable or disable receiving ride requests in specific categories.\\n\\n    Parameters:\\n        categories (List[str]): A list of categories to enable or disable.\\n        enable (bool): True to enable the categories, False to disable them.\\n\\n    Returns:\\n        None\\n    \"\"\"\\n    pass', 'function_description': {'name': 'enable_disable_ride_requests', 'description': 'Enable or disable receiving ride requests in specific categories.', 'parameters': {'type': 'object', 'properties': {'categories': {'type': 'array', 'description': 'A list of categories to enable or disable.', 'items': {'type': 'string'}}, 'enable': {'type': 'boolean', 'description': 'True to enable the categories, False to disable them.'}}, 'required': ['categories', 'enable']}, 'returns': {'type': 'null', 'description': 'None'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}

@@ -3,11 +3,12 @@ from typing import Any
 
 # we can test some different templates
 from dataset_builder.message_templates import (
-    MESSAGE_TEMPLATE_1 as TEMPLATE,
-    PROMPT_EXAMPLE as PROMPT_EX,
-    FUNCTION_EXAMPLE as FUNCTION_EX,
-    CALL_EXAMPLE as CALL_EX,
+    MESSAGE_TEMPLATE_2 as TEMPLATE,
+    CONVERSATION_EXAMPLE_2 as PROMPT_EX,
+    FUNCTION_EXAMPLE_2 as FUNCTION_EX,
+    CALL_EXAMPLE_2 as CALL_EX,
 )
+
 
 def generate_data_sample_from(
     function_description: dict[str, Any] | str,
@@ -52,5 +53,5 @@ def generate_data_sample_from(
     response = openai.ChatCompletion.create(
         model=model, messages=messages, temperature=temperature,
     )
-    
+
     return (messages, response["choices"][0], meta)

@@ -1,0 +1,83 @@
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def post_tweet(user_id: str, tweet: str) -> bool:\n    """\n    Posts a tweet to a user\'s timeline.\n\n    Parameters:\n        user_id (str): The user\'s ID.\n        tweet (str): The content of the tweet.\n\n    Returns:\n        bool: True if the tweet was successfully posted, False otherwise.\n    """\n', 'function_description': {'name': 'post_tweet', 'description': "Posts a tweet to a user's timeline.", 'parameters': {'type': 'object', 'properties': {'user_id': {'type': 'string', 'description': "The user's ID."}, 'tweet': {'type': 'string', 'description': 'The content of the tweet.'}}, 'required': ['user_id', 'tweet']}, 'returns': {'type': 'bool', 'description': 'True if the tweet was successfully posted, False otherwise.'}}}
+
+Write a user prompt that would call this function, and the function call.
+Return the output as this example:
+    {
+        "function_description":
+        
+{
+    "name": "get_n_day_weather_forecast",
+    "description": "Get an N-day weather forecast",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "location": {
+                "type": "string",
+                "description": "The city and state, e.g. San Francisco, CA",
+            },
+            "format": {
+                "type": "string",
+                "enum": ["celsius", "fahrenheit"],
+                "description": "The temperature unit to use. Infer this from the users location.",
+            },
+            "num_days": {
+                "type": "integer",
+                "description": "The number of days to forecast",
+            }
+        },
+        "required": ["location", "format", "num_days"]
+    },
+}
+,
+        "user_prompt": 
+"what is the weather going to be like in Glasgow, Scotland over the next 7 days"
+,
+        "function_call": 
+    {
+        "name": "get_n_day_weather_forecast",
+        "arguments": "{
+  "location": "Glasgow, Scotland",
+  "format": "celsius",
+  "num_days": 5
+}"
+    }
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "post_tweet",
+        "description": "Posts a tweet to a user's timeline.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "user_id": {
+                    "type": "string",
+                    "description": "The user's ID."
+                },
+                "tweet": {
+                    "type": "string",
+                    "description": "The content of the tweet."
+                }
+            },
+            "required": ["user_id", "tweet"]
+        },
+        "returns": {
+            "type": "bool",
+            "description": "True if the tweet was successfully posted, False otherwise."
+        }
+    },
+    "user_prompt": "What is the user ID and the content of the tweet?",
+    "function_call": {
+        "name": "post_tweet",
+        "arguments": {
+            "user_id": "12345",
+            "tweet": "Hello world!"
+        }
+    }
+}
+

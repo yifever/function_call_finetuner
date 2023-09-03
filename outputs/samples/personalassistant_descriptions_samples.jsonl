@@ -1,0 +1,912 @@
+{
+    "function_id": "personal_assistant-1",
+    "description": {
+        "function_snippet": "def schedule_appointment(\n    date: str,\n    time: str,\n    participants: List[str],\n    location: str,\n    description: str,\n) -> str:\n    \n    \"\"\"\n    Schedule an appointment or meeting in the calendar.\n\n    Parameters:\n        date (str): The date of the appointment in YYYY-MM-DD format.\n        time (str): The time of the appointment in HH:MM format.\n        participants (List[str]): A list of participants' names.\n        location (str): The location of the appointment.\n        description (str): A brief description of the appointment.\n\n    Returns:\n        str: A confirmation message indicating the appointment has been scheduled.\n    \"\"\"\n",
+        "function_description": {
+            "name": "schedule_appointment",
+            "description": "Schedule an appointment or meeting in the calendar.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "date": {
+                        "type": "string",
+                        "description": "The date of the appointment in YYYY-MM-DD format."
+                    },
+                    "time": {
+                        "type": "string",
+                        "description": "The time of the appointment in HH:MM format."
+                    },
+                    "participants": {
+                        "type": "array",
+                        "description": "A list of participants' names.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "location": {
+                        "type": "string",
+                        "description": "The location of the appointment."
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "A brief description of the appointment."
+                    }
+                },
+                "required": [
+                    "date",
+                    "time",
+                    "participants",
+                    "location",
+                    "description"
+                ]
+            },
+            "returns": {
+                "type": "string",
+                "description": "A confirmation message indicating the appointment has been scheduled."
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"schedule_appointment\",\n        \"description\": \"Schedule an appointment or meeting in the calendar.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"date\": {\n                    \"type\": \"string\",\n                    \"description\": \"The date of the appointment in YYYY-MM-DD format.\"\n                },\n                \"time\": {\n                    \"type\": \"string\",\n                    \"description\": \"The time of the appointment in HH:MM format.\"\n                },\n                \"participants\": {\n                    \"type\": \"array\",\n                    \"description\": \"A list of participants' names.\",\n                    \"items\": {\n                        \"type\": \"string\"\n                    }\n                },\n                \"location\": {\n                    \"type\": \"string\",\n                    \"description\": \"The location of the appointment.\"\n                },\n                \"description\": {\n                    \"type\": \"string\",\n                    \"description\": \"A brief description of the appointment.\"\n                }\n            },\n            \"required\": [\n                \"date\",\n                \"time\",\n                \"participants\",\n                \"location\",\n                \"description\"\n            ]\n        },\n        \"returns\": {\n            \"type\": \"string\",\n            \"description\": \"A confirmation message indicating the appointment has been scheduled.\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Can you help me schedule an appointment?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Of course! I can help you with that. Please provide me with the necessary details.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"I need to schedule an appointment on October 15th at 3:00 PM with John, Jane, and Michael. The meeting will be held at the conference room.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Got it. I will schedule the appointment as requested.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"schedule_appointment\",\n        \"parameters\": {\n            \"date\": \"2021-10-15\",\n            \"time\": \"15:00\",\n            \"participants\": [\"John\", \"Jane\", \"Michael\"],\n            \"location\": \"conference room\",\n            \"description\": \"Meeting\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "schedule_appointment",
+            "description": "Schedule an appointment or meeting in the calendar.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "date": {
+                        "type": "string",
+                        "description": "The date of the appointment in YYYY-MM-DD format."
+                    },
+                    "time": {
+                        "type": "string",
+                        "description": "The time of the appointment in HH:MM format."
+                    },
+                    "participants": {
+                        "type": "array",
+                        "description": "A list of participants' names.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "location": {
+                        "type": "string",
+                        "description": "The location of the appointment."
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "A brief description of the appointment."
+                    }
+                },
+                "required": [
+                    "date",
+                    "time",
+                    "participants",
+                    "location",
+                    "description"
+                ]
+            },
+            "returns": {
+                "type": "string",
+                "description": "A confirmation message indicating the appointment has been scheduled."
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Can you help me schedule an appointment?"
+            },
+            {
+                "role": "assistant",
+                "text": "Of course! I can help you with that. Please provide me with the necessary details."
+            },
+            {
+                "role": "user",
+                "text": "I need to schedule an appointment on October 15th at 3:00 PM with John, Jane, and Michael. The meeting will be held at the conference room."
+            },
+            {
+                "role": "assistant",
+                "text": "Got it. I will schedule the appointment as requested."
+            }
+        ],
+        "function_call": {
+            "function_name": "schedule_appointment",
+            "parameters": {
+                "date": "2021-10-15",
+                "time": "15:00",
+                "participants": [
+                    "John",
+                    "Jane",
+                    "Michael"
+                ],
+                "location": "conference room",
+                "description": "Meeting"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def schedule_appointment(\\n    date: str,\\n    time: str,\\n    participants: List[str],\\n    location: str,\\n    description: str,\\n) -> str:\\n    \\n    \"\"\"\\n    Schedule an appointment or meeting in the calendar.\\n\\n    Parameters:\\n        date (str): The date of the appointment in YYYY-MM-DD format.\\n        time (str): The time of the appointment in HH:MM format.\\n        participants (List[str]): A list of participants\\' names.\\n        location (str): The location of the appointment.\\n        description (str): A brief description of the appointment.\\n\\n    Returns:\\n        str: A confirmation message indicating the appointment has been scheduled.\\n    \"\"\"\\n', 'function_description': {'name': 'schedule_appointment', 'description': 'Schedule an appointment or meeting in the calendar.', 'parameters': {'type': 'object', 'properties': {'date': {'type': 'string', 'description': 'The date of the appointment in YYYY-MM-DD format.'}, 'time': {'type': 'string', 'description': 'The time of the appointment in HH:MM format.'}, 'participants': {'type': 'array', 'description': \"A list of participants' names.\", 'items': {'type': 'string'}}, 'location': {'type': 'string', 'description': 'The location of the appointment.'}, 'description': {'type': 'string', 'description': 'A brief description of the appointment.'}}, 'required': ['date', 'time', 'participants', 'location', 'description']}, 'returns': {'type': 'string', 'description': 'A confirmation message indicating the appointment has been scheduled.'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "personal_assistant-2",
+    "description": {
+        "function_snippet": "def send_reminder(events: List[Dict[str, Union[str, datetime.datetime]]]) -> None:\n    \"\"\"\n    Sends a reminder for upcoming events or deadlines.\n\n    Parameters:\n        events (List[Dict[str, Union[str, datetime.datetime]]]): A list of dictionaries containing event details.\n                                                               Each dictionary should have 'name' and 'date' keys.\n                                                               The 'date' key should have a value of type datetime.datetime.\n\n    Returns:\n        None\n    \"\"\"\n\n",
+        "function_description": {
+            "name": "send_reminder",
+            "description": "Sends a reminder for upcoming events or deadlines.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "events": {
+                        "type": "array",
+                        "description": "A list of dictionaries containing event details. Each dictionary should have 'name' and 'date' keys.",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "date": {
+                                    "type": "datetime",
+                                    "description": "Event date."
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "date"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "events"
+                ]
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"send_reminder\",\n        \"description\": \"Sends a reminder for upcoming events or deadlines.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"events\": {\n                    \"type\": \"array\",\n                    \"description\": \"A list of dictionaries containing event details. Each dictionary should have 'name' and 'date' keys.\",\n                    \"items\": {\n                        \"type\": \"object\",\n                        \"properties\": {\n                            \"name\": {\"type\": \"string\"},\n                            \"date\": {\"type\": \"datetime\", \"description\": \"Event date.\"}\n                        },\n                        \"required\": [\"name\", \"date\"]\n                    }\n                }\n            },\n            \"required\": [\"events\"]\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you send me a reminder for upcoming events?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Please provide me with the details of the events.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"I have two events. One is a meeting on October 10th, and the other is a presentation on November 5th.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Great, I will send you a reminder for those events.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"send_reminder\",\n        \"parameters\": {\n            \"events\": [\n                {\n                    \"name\": \"meeting\",\n                    \"date\": \"2022-10-10\"\n                },\n                {\n                    \"name\": \"presentation\",\n                    \"date\": \"2022-11-05\"\n                }\n            ]\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "send_reminder",
+            "description": "Sends a reminder for upcoming events or deadlines.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "events": {
+                        "type": "array",
+                        "description": "A list of dictionaries containing event details. Each dictionary should have 'name' and 'date' keys.",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "date": {
+                                    "type": "datetime",
+                                    "description": "Event date."
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "date"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "events"
+                ]
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you send me a reminder for upcoming events?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Please provide me with the details of the events."
+            },
+            {
+                "role": "user",
+                "text": "I have two events. One is a meeting on October 10th, and the other is a presentation on November 5th."
+            },
+            {
+                "role": "assistant",
+                "text": "Great, I will send you a reminder for those events."
+            }
+        ],
+        "function_call": {
+            "function_name": "send_reminder",
+            "parameters": {
+                "events": [
+                    {
+                        "name": "meeting",
+                        "date": "2022-10-10"
+                    },
+                    {
+                        "name": "presentation",
+                        "date": "2022-11-05"
+                    }
+                ]
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def send_reminder(events: List[Dict[str, Union[str, datetime.datetime]]]) -> None:\\n    \"\"\"\\n    Sends a reminder for upcoming events or deadlines.\\n\\n    Parameters:\\n        events (List[Dict[str, Union[str, datetime.datetime]]]): A list of dictionaries containing event details.\\n                                                               Each dictionary should have \\'name\\' and \\'date\\' keys.\\n                                                               The \\'date\\' key should have a value of type datetime.datetime.\\n\\n    Returns:\\n        None\\n    \"\"\"\\n\\n', 'function_description': {'name': 'send_reminder', 'description': 'Sends a reminder for upcoming events or deadlines.', 'parameters': {'type': 'object', 'properties': {'events': {'type': 'array', 'description': \"A list of dictionaries containing event details. Each dictionary should have 'name' and 'date' keys.\", 'items': {'type': 'object', 'properties': {'name': {'type': 'string'}, 'date': {'type': 'datetime', 'description': 'Event date.'}}, 'required': ['name', 'date']}}}, 'required': ['events']}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "personal_assistant-3",
+    "description": {
+        "function_snippet": "def send_email(\n    contact: str,\n    subject: str,\n    message: str,\n) -> None:\n    \"\"\"\n    Sends an email to a specific contact.\n\n    Parameters:\n        contact (str): The email address of the recipient.\n        subject (str): The subject of the email.\n        message (str): The content of the email.\n\n    Returns:\n        None\n    \"\"\"\n\n",
+        "function_description": {
+            "name": "send_email",
+            "description": "Sends an email to a specific contact.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "contact": {
+                        "type": "string",
+                        "description": "The email address of the recipient."
+                    },
+                    "subject": {
+                        "type": "string",
+                        "description": "The subject of the email."
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "The content of the email."
+                    }
+                },
+                "required": [
+                    "contact",
+                    "subject",
+                    "message"
+                ]
+            },
+            "returns": {
+                "type": "none"
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"send_email\",\n        \"description\": \"Sends an email to a specific contact.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"contact\": {\n                    \"type\": \"string\",\n                    \"description\": \"The email address of the recipient.\"\n                },\n                \"subject\": {\n                    \"type\": \"string\",\n                    \"description\": \"The subject of the email.\"\n                },\n                \"message\": {\n                    \"type\": \"string\",\n                    \"description\": \"The content of the email.\"\n                }\n            },\n            \"required\": [\"contact\", \"subject\", \"message\"]\n        },\n        \"returns\": {\n            \"type\": \"none\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you help me send an email?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Of course! Please provide the email address of the recipient, the subject of the email, and the content of the email.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"Sure, the recipient's email address is 'example@example.com', the subject is 'Hello', and the content is 'This is a test email.'\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Thank you for providing the details. I will now send the email.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"send_email\",\n        \"parameters\": {\n            \"contact\": \"example@example.com\",\n            \"subject\": \"Hello\",\n            \"message\": \"This is a test email.\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "send_email",
+            "description": "Sends an email to a specific contact.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "contact": {
+                        "type": "string",
+                        "description": "The email address of the recipient."
+                    },
+                    "subject": {
+                        "type": "string",
+                        "description": "The subject of the email."
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "The content of the email."
+                    }
+                },
+                "required": [
+                    "contact",
+                    "subject",
+                    "message"
+                ]
+            },
+            "returns": {
+                "type": "none"
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you help me send an email?"
+            },
+            {
+                "role": "assistant",
+                "text": "Of course! Please provide the email address of the recipient, the subject of the email, and the content of the email."
+            },
+            {
+                "role": "user",
+                "text": "Sure, the recipient's email address is 'example@example.com', the subject is 'Hello', and the content is 'This is a test email.'"
+            },
+            {
+                "role": "assistant",
+                "text": "Thank you for providing the details. I will now send the email."
+            }
+        ],
+        "function_call": {
+            "function_name": "send_email",
+            "parameters": {
+                "contact": "example@example.com",
+                "subject": "Hello",
+                "message": "This is a test email."
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def send_email(\\n    contact: str,\\n    subject: str,\\n    message: str,\\n) -> None:\\n    \"\"\"\\n    Sends an email to a specific contact.\\n\\n    Parameters:\\n        contact (str): The email address of the recipient.\\n        subject (str): The subject of the email.\\n        message (str): The content of the email.\\n\\n    Returns:\\n        None\\n    \"\"\"\\n\\n', 'function_description': {'name': 'send_email', 'description': 'Sends an email to a specific contact.', 'parameters': {'type': 'object', 'properties': {'contact': {'type': 'string', 'description': 'The email address of the recipient.'}, 'subject': {'type': 'string', 'description': 'The subject of the email.'}, 'message': {'type': 'string', 'description': 'The content of the email.'}}, 'required': ['contact', 'subject', 'message']}, 'returns': {'type': 'none'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "personal_assistant-4",
+    "description": {
+        "function_snippet": "def perform_web_search(query: str) -> str:\n    \"\"\"\n    Performs a web search and returns the search results.\n\n    Parameters:\n        query (str): The search query.\n\n    Returns:\n        str: The search results.\n    \"\"\"\n\n",
+        "function_description": {
+            "name": "perform_web_search",
+            "description": "Performs a web search and returns the search results.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "query": {
+                        "type": "string",
+                        "description": "The search query."
+                    }
+                },
+                "required": [
+                    "query"
+                ]
+            },
+            "returns": {
+                "type": "string",
+                "description": "The search results."
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"perform_web_search\",\n        \"description\": \"Performs a web search and returns the search results.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"query\": {\n                    \"type\": \"string\",\n                    \"description\": \"The search query.\"\n                }\n            },\n            \"required\": [\"query\"]\n        },\n        \"returns\": {\n            \"type\": \"string\",\n            \"description\": \"The search results.\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you perform a web search for me?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. What would you like to search for?\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"I want to search for 'cats'.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Great, I'm performing a web search for 'cats' now.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"perform_web_search\",\n        \"parameters\": {\n            \"query\": \"cats\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "perform_web_search",
+            "description": "Performs a web search and returns the search results.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "query": {
+                        "type": "string",
+                        "description": "The search query."
+                    }
+                },
+                "required": [
+                    "query"
+                ]
+            },
+            "returns": {
+                "type": "string",
+                "description": "The search results."
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you perform a web search for me?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. What would you like to search for?"
+            },
+            {
+                "role": "user",
+                "text": "I want to search for 'cats'."
+            },
+            {
+                "role": "assistant",
+                "text": "Great, I'm performing a web search for 'cats' now."
+            }
+        ],
+        "function_call": {
+            "function_name": "perform_web_search",
+            "parameters": {
+                "query": "cats"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def perform_web_search(query: str) -> str:\\n    \"\"\"\\n    Performs a web search and returns the search results.\\n\\n    Parameters:\\n        query (str): The search query.\\n\\n    Returns:\\n        str: The search results.\\n    \"\"\"\\n\\n', 'function_description': {'name': 'perform_web_search', 'description': 'Performs a web search and returns the search results.', 'parameters': {'type': 'object', 'properties': {'query': {'type': 'string', 'description': 'The search query.'}}, 'required': ['query']}, 'returns': {'type': 'string', 'description': 'The search results.'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "personal_assistant-5",
+    "description": {
+        "function_snippet": "def place_online_order(\nitems: List[str],\nquantity: List[int],\ndelivery_address: str,\npayment_method: str,\n) -> Dict[str, str]:\n    \"\"\"\n    Places an online order for groceries or other items.\n\n    Parameters:\n        items (List[str]): A list of items to order.\n        quantity (List[int]): A list of quantities corresponding to each item.\n        delivery_address (str): The address where the items should be delivered.\n        payment_method (str): The payment method to be used.\n\n    Returns:\n        Dict[str, str]: A dictionary with 'order_id' as a key and the order ID as a value.\n    \"\"\"",
+        "function_description": {
+            "name": "place_online_order",
+            "description": "Places an online order for groceries or other items.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "description": "A list of items to order.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "quantity": {
+                        "type": "array",
+                        "description": "A list of quantities corresponding to each item.",
+                        "items": {
+                            "type": "integer"
+                        }
+                    },
+                    "delivery_address": {
+                        "type": "string",
+                        "description": "The address where the items should be delivered."
+                    },
+                    "payment_method": {
+                        "type": "string",
+                        "description": "The payment method to be used."
+                    }
+                },
+                "required": [
+                    "items",
+                    "quantity",
+                    "delivery_address",
+                    "payment_method"
+                ]
+            },
+            "returns": {
+                "type": "object",
+                "properties": {
+                    "order_id": {
+                        "type": "string",
+                        "description": "The order ID."
+                    }
+                }
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"place_online_order\",\n        \"description\": \"Places an online order for groceries or other items.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"items\": {\n                    \"type\": \"array\",\n                    \"description\": \"A list of items to order.\",\n                    \"items\": {\"type\": \"string\"}\n                },\n                \"quantity\": {\n                    \"type\": \"array\",\n                    \"description\": \"A list of quantities corresponding to each item.\",\n                    \"items\": {\"type\": \"integer\"}\n                },\n                \"delivery_address\": {\n                    \"type\": \"string\",\n                    \"description\": \"The address where the items should be delivered.\"\n                },\n                \"payment_method\": {\n                    \"type\": \"string\",\n                    \"description\": \"The payment method to be used.\"\n                }\n            },\n            \"required\": [\"items\", \"quantity\", \"delivery_address\", \"payment_method\"]\n        },\n        \"returns\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"order_id\": {\n                    \"type\": \"string\",\n                    \"description\": \"The order ID.\"\n                }\n            }\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hi, I would like to place an online order.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can help you with that. What items would you like to order?\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"I would like to order apples, bananas, and oranges.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Great. How many of each item would you like to order?\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"I would like to order 3 apples, 2 bananas, and 4 oranges.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Please provide the delivery address.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"The delivery address is 123 Main Street.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"What payment method would you like to use?\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"I will pay with a credit card.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Thank you for providing the information. I will now place your online order.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"place_online_order\",\n        \"parameters\": {\n            \"items\": [\"apples\", \"bananas\", \"oranges\"],\n            \"quantity\": [3, 2, 4],\n            \"delivery_address\": \"123 Main Street\",\n            \"payment_method\": \"credit card\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "place_online_order",
+            "description": "Places an online order for groceries or other items.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "description": "A list of items to order.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "quantity": {
+                        "type": "array",
+                        "description": "A list of quantities corresponding to each item.",
+                        "items": {
+                            "type": "integer"
+                        }
+                    },
+                    "delivery_address": {
+                        "type": "string",
+                        "description": "The address where the items should be delivered."
+                    },
+                    "payment_method": {
+                        "type": "string",
+                        "description": "The payment method to be used."
+                    }
+                },
+                "required": [
+                    "items",
+                    "quantity",
+                    "delivery_address",
+                    "payment_method"
+                ]
+            },
+            "returns": {
+                "type": "object",
+                "properties": {
+                    "order_id": {
+                        "type": "string",
+                        "description": "The order ID."
+                    }
+                }
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hi, I would like to place an online order."
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can help you with that. What items would you like to order?"
+            },
+            {
+                "role": "user",
+                "text": "I would like to order apples, bananas, and oranges."
+            },
+            {
+                "role": "assistant",
+                "text": "Great. How many of each item would you like to order?"
+            },
+            {
+                "role": "user",
+                "text": "I would like to order 3 apples, 2 bananas, and 4 oranges."
+            },
+            {
+                "role": "assistant",
+                "text": "Please provide the delivery address."
+            },
+            {
+                "role": "user",
+                "text": "The delivery address is 123 Main Street."
+            },
+            {
+                "role": "assistant",
+                "text": "What payment method would you like to use?"
+            },
+            {
+                "role": "user",
+                "text": "I will pay with a credit card."
+            },
+            {
+                "role": "assistant",
+                "text": "Thank you for providing the information. I will now place your online order."
+            }
+        ],
+        "function_call": {
+            "function_name": "place_online_order",
+            "parameters": {
+                "items": [
+                    "apples",
+                    "bananas",
+                    "oranges"
+                ],
+                "quantity": [
+                    3,
+                    2,
+                    4
+                ],
+                "delivery_address": "123 Main Street",
+                "payment_method": "credit card"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def place_online_order(\\nitems: List[str],\\nquantity: List[int],\\ndelivery_address: str,\\npayment_method: str,\\n) -> Dict[str, str]:\\n    \"\"\"\\n    Places an online order for groceries or other items.\\n\\n    Parameters:\\n        items (List[str]): A list of items to order.\\n        quantity (List[int]): A list of quantities corresponding to each item.\\n        delivery_address (str): The address where the items should be delivered.\\n        payment_method (str): The payment method to be used.\\n\\n    Returns:\\n        Dict[str, str]: A dictionary with \\'order_id\\' as a key and the order ID as a value.\\n    \"\"\"', 'function_description': {'name': 'place_online_order', 'description': 'Places an online order for groceries or other items.', 'parameters': {'type': 'object', 'properties': {'items': {'type': 'array', 'description': 'A list of items to order.', 'items': {'type': 'string'}}, 'quantity': {'type': 'array', 'description': 'A list of quantities corresponding to each item.', 'items': {'type': 'integer'}}, 'delivery_address': {'type': 'string', 'description': 'The address where the items should be delivered.'}, 'payment_method': {'type': 'string', 'description': 'The payment method to be used.'}}, 'required': ['items', 'quantity', 'delivery_address', 'payment_method']}, 'returns': {'type': 'object', 'properties': {'order_id': {'type': 'string', 'description': 'The order ID.'}}}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "personal_assistant-6",
+    "description": {
+        "function_snippet": "def get_weather_forecast(location: str) -> Dict[str, Any]:\n    \"\"\"\n    Retrieves the weather forecast for a specific location.\n\n    Parameters:\n        location (str): The location for which to retrieve the weather forecast.\n\n    Returns:\n        Dict[str, Any]: A dictionary with the weather forecast details.\n    \"\"\"\n",
+        "function_description": {
+            "name": "get_weather_forecast",
+            "description": "Retrieves the weather forecast for a specific location.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "location": {
+                        "type": "string",
+                        "description": "The location for which to retrieve the weather forecast."
+                    }
+                },
+                "required": [
+                    "location"
+                ]
+            },
+            "returns": {
+                "type": "object",
+                "properties": {
+                    "weather_forecast_details": {
+                        "type": "any",
+                        "description": "A dictionary with the weather forecast details."
+                    }
+                }
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"get_weather_forecast\",\n        \"description\": \"Retrieves the weather forecast for a specific location.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"location\": {\n                    \"type\": \"string\",\n                    \"description\": \"The location for which to retrieve the weather forecast.\"\n                }\n            },\n            \"required\": [\"location\"]\n        },\n        \"returns\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"weather_forecast_details\": {\n                    \"type\": \"any\",\n                    \"description\": \"A dictionary with the weather forecast details.\"\n                }\n            }\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you retrieve the weather forecast for New York?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Please provide the location for which you want to retrieve the weather forecast.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"I want the weather forecast for New York.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Great, I'm retrieving the weather forecast for New York now.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"get_weather_forecast\",\n        \"parameters\": {\n            \"location\": \"New York\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "get_weather_forecast",
+            "description": "Retrieves the weather forecast for a specific location.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "location": {
+                        "type": "string",
+                        "description": "The location for which to retrieve the weather forecast."
+                    }
+                },
+                "required": [
+                    "location"
+                ]
+            },
+            "returns": {
+                "type": "object",
+                "properties": {
+                    "weather_forecast_details": {
+                        "type": "any",
+                        "description": "A dictionary with the weather forecast details."
+                    }
+                }
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you retrieve the weather forecast for New York?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Please provide the location for which you want to retrieve the weather forecast."
+            },
+            {
+                "role": "user",
+                "text": "I want the weather forecast for New York."
+            },
+            {
+                "role": "assistant",
+                "text": "Great, I'm retrieving the weather forecast for New York now."
+            }
+        ],
+        "function_call": {
+            "function_name": "get_weather_forecast",
+            "parameters": {
+                "location": "New York"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def get_weather_forecast(location: str) -> Dict[str, Any]:\\n    \"\"\"\\n    Retrieves the weather forecast for a specific location.\\n\\n    Parameters:\\n        location (str): The location for which to retrieve the weather forecast.\\n\\n    Returns:\\n        Dict[str, Any]: A dictionary with the weather forecast details.\\n    \"\"\"\\n', 'function_description': {'name': 'get_weather_forecast', 'description': 'Retrieves the weather forecast for a specific location.', 'parameters': {'type': 'object', 'properties': {'location': {'type': 'string', 'description': 'The location for which to retrieve the weather forecast.'}}, 'required': ['location']}, 'returns': {'type': 'object', 'properties': {'weather_forecast_details': {'type': 'any', 'description': 'A dictionary with the weather forecast details.'}}}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "personal_assistant-7",
+    "description": {
+        "function_snippet": "def manage_music_playlist(\n    playlist_name: str,\n    songs: List[str],\n    current_song: str,\n    play_count: Dict[str, int],\n) -> None:\n    \"\"\"\n    Manages and plays a music playlist.\n\n    Parameters:\n        playlist_name (str): The name of the playlist.\n        songs (List[str]): A list of songs in the playlist.\n        current_song (str): The currently playing song.\n        play_count (Dict[str, int]): A dictionary with song names as keys and play counts as values.\n\n    Returns:\n        None\n    \"\"\"\n\n    ",
+        "function_description": {
+            "name": "manage_music_playlist",
+            "description": "Manages and plays a music playlist.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "playlist_name": {
+                        "type": "string",
+                        "description": "The name of the playlist."
+                    },
+                    "songs": {
+                        "type": "array",
+                        "description": "A list of songs in the playlist.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "current_song": {
+                        "type": "string",
+                        "description": "The currently playing song."
+                    },
+                    "play_count": {
+                        "type": "object",
+                        "description": "A dictionary with song names as keys and play counts as values.",
+                        "additionalProperties": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "required": [
+                    "playlist_name",
+                    "songs",
+                    "current_song",
+                    "play_count"
+                ]
+            },
+            "returns": {
+                "type": "null"
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"manage_music_playlist\",\n        \"description\": \"Manages and plays a music playlist.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"playlist_name\": {\n                    \"type\": \"string\",\n                    \"description\": \"The name of the playlist.\"\n                },\n                \"songs\": {\n                    \"type\": \"array\",\n                    \"description\": \"A list of songs in the playlist.\",\n                    \"items\": {\n                        \"type\": \"string\"\n                    }\n                },\n                \"current_song\": {\n                    \"type\": \"string\",\n                    \"description\": \"The currently playing song.\"\n                },\n                \"play_count\": {\n                    \"type\": \"object\",\n                    \"description\": \"A dictionary with song names as keys and play counts as values.\",\n                    \"additionalProperties\": {\n                        \"type\": \"integer\"\n                    }\n                }\n            },\n            \"required\": [\"playlist_name\", \"songs\", \"current_song\", \"play_count\"]\n        },\n        \"returns\": {\n            \"type\": \"null\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you manage and play my music playlist?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Sure, I can do that. Please provide me with the name of your playlist, the list of songs, the currently playing song, and the play count of each song.\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"The name of my playlist is 'My Playlist', the songs are ['Song 1', 'Song 2', 'Song 3'], the currently playing song is 'Song 1', and the play count is {'Song 1': 5, 'Song 2': 3, 'Song 3': 2}.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Great, I'm now managing and playing your music playlist.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"manage_music_playlist\",\n        \"parameters\": {\n            \"playlist_name\": \"My Playlist\",\n            \"songs\": [\"Song 1\", \"Song 2\", \"Song 3\"],\n            \"current_song\": \"Song 1\",\n            \"play_count\": {\n                \"Song 1\": 5,\n                \"Song 2\": 3,\n                \"Song 3\": 2\n            }\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "manage_music_playlist",
+            "description": "Manages and plays a music playlist.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "playlist_name": {
+                        "type": "string",
+                        "description": "The name of the playlist."
+                    },
+                    "songs": {
+                        "type": "array",
+                        "description": "A list of songs in the playlist.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "current_song": {
+                        "type": "string",
+                        "description": "The currently playing song."
+                    },
+                    "play_count": {
+                        "type": "object",
+                        "description": "A dictionary with song names as keys and play counts as values.",
+                        "additionalProperties": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "required": [
+                    "playlist_name",
+                    "songs",
+                    "current_song",
+                    "play_count"
+                ]
+            },
+            "returns": {
+                "type": "null"
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you manage and play my music playlist?"
+            },
+            {
+                "role": "assistant",
+                "text": "Sure, I can do that. Please provide me with the name of your playlist, the list of songs, the currently playing song, and the play count of each song."
+            },
+            {
+                "role": "user",
+                "text": "The name of my playlist is 'My Playlist', the songs are ['Song 1', 'Song 2', 'Song 3'], the currently playing song is 'Song 1', and the play count is {'Song 1': 5, 'Song 2': 3, 'Song 3': 2}."
+            },
+            {
+                "role": "assistant",
+                "text": "Great, I'm now managing and playing your music playlist."
+            }
+        ],
+        "function_call": {
+            "function_name": "manage_music_playlist",
+            "parameters": {
+                "playlist_name": "My Playlist",
+                "songs": [
+                    "Song 1",
+                    "Song 2",
+                    "Song 3"
+                ],
+                "current_song": "Song 1",
+                "play_count": {
+                    "Song 1": 5,
+                    "Song 2": 3,
+                    "Song 3": 2
+                }
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def manage_music_playlist(\\n    playlist_name: str,\\n    songs: List[str],\\n    current_song: str,\\n    play_count: Dict[str, int],\\n) -> None:\\n    \"\"\"\\n    Manages and plays a music playlist.\\n\\n    Parameters:\\n        playlist_name (str): The name of the playlist.\\n        songs (List[str]): A list of songs in the playlist.\\n        current_song (str): The currently playing song.\\n        play_count (Dict[str, int]): A dictionary with song names as keys and play counts as values.\\n\\n    Returns:\\n        None\\n    \"\"\"\\n\\n    ', 'function_description': {'name': 'manage_music_playlist', 'description': 'Manages and plays a music playlist.', 'parameters': {'type': 'object', 'properties': {'playlist_name': {'type': 'string', 'description': 'The name of the playlist.'}, 'songs': {'type': 'array', 'description': 'A list of songs in the playlist.', 'items': {'type': 'string'}}, 'current_song': {'type': 'string', 'description': 'The currently playing song.'}, 'play_count': {'type': 'object', 'description': 'A dictionary with song names as keys and play counts as values.', 'additionalProperties': {'type': 'integer'}}}, 'required': ['playlist_name', 'songs', 'current_song', 'play_count']}, 'returns': {'type': 'null'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}
+{
+    "function_id": "personal_assistant-8",
+    "description": {
+        "function_snippet": "def control_smart_home_devices(\n    devices: List[str],\n    action: str\n) -> None:\n    \"\"\"\n    Turns smart home devices on or off.\n\n    Parameters:\n        devices (List[str]): A list of smart home devices to control.\n        action (str): The action to perform on the devices ('on' or 'off').\n\n    Returns:\n        None\n    \"\"\"\n    pass",
+        "function_description": {
+            "name": "control_smart_home_devices",
+            "description": "Turns smart home devices on or off.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "devices": {
+                        "type": "array",
+                        "description": "A list of smart home devices to control.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "action": {
+                        "type": "string",
+                        "description": "The action to perform on the devices ('on' or 'off')."
+                    }
+                },
+                "required": [
+                    "devices",
+                    "action"
+                ]
+            },
+            "returns": {
+                "type": "None"
+            }
+        }
+    },
+    "completion-content": "{\n    \"function_description\": {\n        \"name\": \"control_smart_home_devices\",\n        \"description\": \"Turns smart home devices on or off.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"devices\": {\n                    \"type\": \"array\",\n                    \"description\": \"A list of smart home devices to control.\",\n                    \"items\": {\n                        \"type\": \"string\"\n                    }\n                },\n                \"action\": {\n                    \"type\": \"string\",\n                    \"description\": \"The action to perform on the devices ('on' or 'off').\"\n                }\n            },\n            \"required\": [\"devices\", \"action\"]\n        },\n        \"returns\": {\n            \"type\": \"None\"\n        }\n    },\n    \"conversation\": [\n        {\n            \"role\": \"user\",\n            \"text\": \"Hey, can you help me control my smart home devices?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Of course! What action would you like to perform? ('on' or 'off')\"\n        },\n        {\n            \"role\": \"user\",\n            \"text\": \"I want to turn on all my lights.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"text\": \"Understood. I will turn on all your lights now.\"\n        }\n    ],\n    \"function_call\": {\n        \"function_name\": \"control_smart_home_devices\",\n        \"parameters\": {\n            \"devices\": [\"lights\"],\n            \"action\": \"on\"\n        }\n    }\n}",
+    "data": {
+        "function_description": {
+            "name": "control_smart_home_devices",
+            "description": "Turns smart home devices on or off.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "devices": {
+                        "type": "array",
+                        "description": "A list of smart home devices to control.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "action": {
+                        "type": "string",
+                        "description": "The action to perform on the devices ('on' or 'off')."
+                    }
+                },
+                "required": [
+                    "devices",
+                    "action"
+                ]
+            },
+            "returns": {
+                "type": "None"
+            }
+        },
+        "conversation": [
+            {
+                "role": "user",
+                "text": "Hey, can you help me control my smart home devices?"
+            },
+            {
+                "role": "assistant",
+                "text": "Of course! What action would you like to perform? ('on' or 'off')"
+            },
+            {
+                "role": "user",
+                "text": "I want to turn on all my lights."
+            },
+            {
+                "role": "assistant",
+                "text": "Understood. I will turn on all your lights now."
+            }
+        ],
+        "function_call": {
+            "function_name": "control_smart_home_devices",
+            "parameters": {
+                "devices": [
+                    "lights"
+                ],
+                "action": "on"
+            }
+        }
+    },
+    "metadata": {
+        "TEMPLATE": "\nBelow is the description of a function:\n    \"function_description\":\n    {FUNCTION_DESCRIPTION}\n\n\nA user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.\nReturn the output as this example:\n    {{\n        \"function_description\":\n        {FUNCTION_EXAMPLE},\n        \"conversation\": {PROMPT_EXAMPLE},\n        \"function_call\": {CALL_EXAMPLE}\n    }}\n",
+        "FUNCTION_DESCRIPTION": "{'function_snippet': 'def control_smart_home_devices(\\n    devices: List[str],\\n    action: str\\n) -> None:\\n    \"\"\"\\n    Turns smart home devices on or off.\\n\\n    Parameters:\\n        devices (List[str]): A list of smart home devices to control.\\n        action (str): The action to perform on the devices (\\'on\\' or \\'off\\').\\n\\n    Returns:\\n        None\\n    \"\"\"\\n    pass', 'function_description': {'name': 'control_smart_home_devices', 'description': 'Turns smart home devices on or off.', 'parameters': {'type': 'object', 'properties': {'devices': {'type': 'array', 'description': 'A list of smart home devices to control.', 'items': {'type': 'string'}}, 'action': {'type': 'string', 'description': \"The action to perform on the devices ('on' or 'off').\"}}, 'required': ['devices', 'action']}, 'returns': {'type': 'None'}}}",
+        "PROMPT_EXAMPLE": "\n[\n    {\n        \"role\": \"user\",\n        \"text\": \"Hey, can you show me my Twitter timeline?\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Sure, I can do that. May I know your Twitter user ID?\"\n    },\n    {\n        \"role\": \"user\",\n        \"text\": \"Yes, my Twitter user ID is '13579'.\"\n    },\n    {\n        \"role\": \"assistant\",\n        \"text\": \"Great, I'm retrieving your Twitter timeline now.\"\n    }\n]\n",
+        "FUNCTION_EXAMPLE": "\n\"function_description\": {\n    \"name\": \"example_function\",\n    \"description\": \"Retrieves a user's timeline, including tweets, retweets, and replies.\",\n    \"parameters\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"user_id\": {\n                \"type\": \"string\",\n                \"description\": \"The ID of the user.\"\n            }\n        },\n        \"required\": [\"user_id\"]\n    },\n    \"returns\": {\n        \"type\": \"object\",\n        \"properties\": {\n            \"tweet_id\": {\"type\": \"string\"},\n            \"text\": {\"type\": \"string\"},\n            \"author\": {\"type\": \"string\"},\n            \"date\": {\"type\": \"string\"}\n        }\n    }\n}\n",
+        "CALL_EXAMPLE": "\n{\n    \"function_name\": \"example_function\",\n    \"parameters\": {\n        \"user_id\": \"13579\"\n    }\n}\n"
+    }
+}

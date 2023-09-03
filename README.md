@@ -29,10 +29,12 @@ poetry run python run_generate.py --mode description --input_file_name "./output
 
 To generate data for training samples from the function descriptions:
 ```
-poetry run python run_generate_samples.py --n_samples 1 --input_file_name "./test_data/test_function_descriptions.jsonl" --output_file_name "./outputs/test_generate_samples.jsonl"
+poetry run python run_generate.py --mode sample --n_samples 1 --input_file_name "./outputs/descriptions/twitter_descriptions.jsonl" --output_file_name "./outputs/samples/twitter_samples.jsonl" > ./outputs/samples/twitter_samples.log
 ```
 
 ## Why this many steps?
 During testing this (task-> code snippet -> json description) was better than trying to go directly from task -> json description.
 
 Going directly to json description resulted in a lot of data with null in the parameters field.
+
+

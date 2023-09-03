@@ -44,7 +44,8 @@ if __name__ == "__main__":
                     data.append(json.loads(content))
                     content = ""
     else:
-        raise FileNotFoundError(f"File with name {input_file_name} does not exist!")
+        raise FileNotFoundError(
+            f"File with name {input_file_name} does not exist!")
 
     results = []
     if os.path.exists(output_file_name):
@@ -57,39 +58,41 @@ if __name__ == "__main__":
                     content = ""
 
     match mode:
-        case "snippet":
+        case "snippet" | "snippets":
             input_key = "task"
             output_key = "snippet"
             generate_function = generate_snippet_from
-        case "description":
+        case "description" | "descriptions":
             input_key = "snippet"
             output_key = "description"
             generate_function = generate_description_from
-        case "sample":
+        case "sample" | "samples":
             input_key = "description"
             output_key = "data"
             generate_function = generate_data_sample_from
         case _:
-            raise KeyError("Choose a mode from 'snippet', 'description', or 'sample'!")
-    
-    
+            raise KeyError(
+                "Choose a mode from 'snippet', 'description', or 'sample'!")
+
     for function in data:
         function_input = function.get(input_key)
         function_id = function.get("function_id")
 
         if function_input is None:
-            raise KeyError(f"Function data in {input_file_name} should have field '{input_key}'")
+            raise KeyError(
+                f"Function data in {input_file_name} should have field '{input_key}'")
 
-        messages, output, meta = generate_function(function_input, model, temperature)
+        messages, output, meta = generate_function(
+            function_input, model, temperature)
         messages.append(output["message"])
         pretty_print_conversation(messages)
-        
+
         try:
             completion_dict = json.loads(output.get("message").get("content"))
         except Exception:
-            completion_dict = output.get("message").get("content") 
+            completion_dict = output.get("message").get("content")
             if mode == "description":
-                completion_dict = None # set to null to see which failed
+                completion_dict = None  # set to null to see which failed
         result = {
             "function_id": function_id,
             input_key: function_input,
@@ -99,4 +102,3 @@ if __name__ == "__main__":
         }
         results.append(result)
         write_jsonl(output_file_name, results)
-

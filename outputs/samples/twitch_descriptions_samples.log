@@ -1,0 +1,3502 @@
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def start_stop_twitch_stream(stream_status: str) -> str:\n    """\n    Start or stop the Twitch stream.\n\n    Parameters:\n        stream_status (str): The current status of the stream.\n\n    Returns:\n        str: The updated status of the stream.\n    """\n    ', 'function_description': {'name': 'start_stop_twitch_stream', 'description': 'Start or stop the Twitch stream.', 'parameters': {'type': 'object', 'properties': {'stream_status': {'type': 'string', 'description': 'The current status of the stream.'}}, 'required': ['stream_status']}, 'returns': {'type': 'object', 'properties': {'updated_status': {'type': 'string', 'description': 'The updated status of the stream.'}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "start_stop_twitch_stream",
+        "description": "Start or stop the Twitch stream.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "stream_status": {
+                    "type": "string",
+                    "description": "The current status of the stream."
+                }
+            },
+            "required": ["stream_status"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "updated_status": {
+                    "type": "string",
+                    "description": "The updated status of the stream."
+                }
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you start or stop my Twitch stream?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can help you with that. Please provide the current status of your stream."
+        },
+        {
+            "role": "user",
+            "text": "The current status of my stream is 'offline'."
+        },
+        {
+            "role": "assistant",
+            "text": "Got it. I will start or stop your Twitch stream accordingly."
+        }
+    ],
+    "function_call": {
+        "function_name": "start_stop_twitch_stream",
+        "parameters": {
+            "stream_status": "offline"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def schedule_twitch_stream(\n    stream_name: str,\n    stream_date: str,\n    stream_time: str,\n    stream_duration: int,\n    stream_category: str,\n) -> None:\n    """\n    Schedule a future Twitch stream.\n\n    Parameters:\n        stream_name (str): The name of the Twitch stream.\n        stream_date (str): The date of the Twitch stream in YYYY-MM-DD format.\n        stream_time (str): The time of the Twitch stream in HH:MM format.\n        stream_duration (int): The duration of the Twitch stream in minutes.\n        stream_category (str): The category of the Twitch stream.\n\n    Returns:\n        None\n    """\n', 'function_description': {'name': 'schedule_twitch_stream', 'description': 'Schedule a future Twitch stream.', 'parameters': {'type': 'object', 'properties': {'stream_name': {'type': 'string', 'description': 'The name of the Twitch stream.'}, 'stream_date': {'type': 'string', 'description': 'The date of the Twitch stream in YYYY-MM-DD format.'}, 'stream_time': {'type': 'string', 'description': 'The time of the Twitch stream in HH:MM format.'}, 'stream_duration': {'type': 'integer', 'description': 'The duration of the Twitch stream in minutes.'}, 'stream_category': {'type': 'string', 'description': 'The category of the Twitch stream.'}}, 'required': ['stream_name', 'stream_date', 'stream_time', 'stream_duration', 'stream_category']}, 'returns': {'type': 'null'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "schedule_twitch_stream",
+        "description": "Schedule a future Twitch stream.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "stream_name": {
+                    "type": "string",
+                    "description": "The name of the Twitch stream."
+                },
+                "stream_date": {
+                    "type": "string",
+                    "description": "The date of the Twitch stream in YYYY-MM-DD format."
+                },
+                "stream_time": {
+                    "type": "string",
+                    "description": "The time of the Twitch stream in HH:MM format."
+                },
+                "stream_duration": {
+                    "type": "integer",
+                    "description": "The duration of the Twitch stream in minutes."
+                },
+                "stream_category": {
+                    "type": "string",
+                    "description": "The category of the Twitch stream."
+                }
+            },
+            "required": ["stream_name", "stream_date", "stream_time", "stream_duration", "stream_category"]
+        },
+        "returns": {
+            "type": "null"
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you help me schedule a Twitch stream?"
+        },
+        {
+            "role": "assistant",
+            "text": "Of course! Please provide me with the following details: stream name, stream date (YYYY-MM-DD format), stream time (HH:MM format), stream duration in minutes, and stream category."
+        },
+        {
+            "role": "user",
+            "text": "Sure! The stream name is 'Gaming Live', the stream date is '2022-10-25', the stream time is '20:00', the stream duration is 120 minutes, and the stream category is 'Gaming'."
+        },
+        {
+            "role": "assistant",
+            "text": "Thank you for providing the details. I will schedule the Twitch stream for you now."
+        }
+    ],
+    "function_call": {
+        "function_name": "schedule_twitch_stream",
+        "parameters": {
+            "stream_name": "Gaming Live",
+            "stream_date": "2022-10-25",
+            "stream_time": "20:00",
+            "stream_duration": 120,
+            "stream_category": "Gaming"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def change_stream_title_category(\n    stream_id: str,\n    new_title: str,\n    new_category: str,\n) -> None:\n    """\n    Changes the title and category of the current stream.\n\n    Parameters:\n        stream_id (str): The ID of the current stream.\n        new_title (str): The new title for the stream.\n        new_category (str): The new category for the stream.\n\n    Returns:\n        None\n    """\n', 'function_description': {'name': 'change_stream_title_category', 'description': 'Changes the title and category of the current stream.', 'parameters': {'type': 'object', 'properties': {'stream_id': {'type': 'string', 'description': 'The ID of the current stream.'}, 'new_title': {'type': 'string', 'description': 'The new title for the stream.'}, 'new_category': {'type': 'string', 'description': 'The new category for the stream.'}}, 'required': ['stream_id', 'new_title', 'new_category']}, 'returns': {'type': 'object', 'properties': {}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "change_stream_title_category",
+        "description": "Changes the title and category of the current stream.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "stream_id": {
+                    "type": "string",
+                    "description": "The ID of the current stream."
+                },
+                "new_title": {
+                    "type": "string",
+                    "description": "The new title for the stream."
+                },
+                "new_category": {
+                    "type": "string",
+                    "description": "The new category for the stream."
+                }
+            },
+            "required": ["stream_id", "new_title", "new_category"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {}
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, I want to change the title and category of my stream."
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, please provide me with the stream ID, new title, and new category."
+        },
+        {
+            "role": "user",
+            "text": "My stream ID is '12345', the new title is 'New Stream Title', and the new category is 'New Category'."
+        },
+        {
+            "role": "assistant",
+            "text": "Got it. I will change the title and category of your stream now."
+        }
+    ],
+    "function_call": {
+        "function_name": "change_stream_title_category",
+        "parameters": {
+            "stream_id": "12345",
+            "new_title": "New Stream Title",
+            "new_category": "New Category"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def retrieve_viewer_count_and_analytics() -> Dict[str, Any]:\n    """\n    Retrieves the current viewer count and other analytics.\n\n    Returns:\n        Dict[str, Any]: A dictionary containing the viewer count and other analytics.\n    """\n    pass', 'function_description': {'name': 'retrieve_viewer_count_and_analytics', 'description': 'Retrieves the current viewer count and other analytics.', 'parameters': {'type': 'object', 'properties': {}, 'required': []}, 'returns': {'type': 'object', 'properties': {'type': 'float', 'description': 'A dictionary containing the viewer count and other analytics.'}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "retrieve_viewer_count_and_analytics",
+        "description": "Retrieves the current viewer count and other analytics.",
+        "parameters": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "type": "float",
+                "description": "A dictionary containing the viewer count and other analytics."
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you retrieve the viewer count and analytics for me?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please hold on while I retrieve the information for you."
+        }
+    ],
+    "function_call": {
+        "function_name": "retrieve_viewer_count_and_analytics",
+        "parameters": {}
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def manage_and_post_messages(\n    chat_id: int,\n    messages: List[str],\n    interval: int,\n) -> None:\n    """\n    Manages and posts automated messages in the chat.\n\n    Parameters:\n        chat_id (int): The ID of the chat where the messages will be posted.\n        messages (List[str]): A list of messages to be posted.\n        interval (int): The time interval in seconds between each message.\n\n    Returns:\n        None\n    """\n', 'function_description': {'name': 'manage_and_post_messages', 'description': 'Manages and posts automated messages in the chat.', 'parameters': {'type': 'object', 'properties': {'chat_id': {'type': 'integer', 'description': 'The ID of the chat where the messages will be posted.'}, 'messages': {'type': 'array', 'description': 'A list of messages to be posted.', 'items': {'type': 'string'}}, 'interval': {'type': 'integer', 'description': 'The time interval in seconds between each message.'}}, 'required': ['chat_id', 'messages', 'interval']}, 'returns': {'type': 'None'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "manage_and_post_messages",
+        "description": "Manages and posts automated messages in the chat.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "chat_id": {
+                    "type": "integer",
+                    "description": "The ID of the chat where the messages will be posted."
+                },
+                "messages": {
+                    "type": "array",
+                    "description": "A list of messages to be posted.",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "interval": {
+                    "type": "integer",
+                    "description": "The time interval in seconds between each message."
+                }
+            },
+            "required": ["chat_id", "messages", "interval"]
+        },
+        "returns": {
+            "type": "None"
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you manage and post automated messages in the chat?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. May I know the chat ID where you want the messages to be posted?"
+        },
+        {
+            "role": "user",
+            "text": "Yes, the chat ID is 12345."
+        },
+        {
+            "role": "assistant",
+            "text": "Great. Now, please provide the list of messages to be posted."
+        },
+        {
+            "role": "user",
+            "text": "Sure, here are the messages: ['Hello', 'How are you?', 'Goodbye']"
+        },
+        {
+            "role": "assistant",
+            "text": "Got it. Lastly, please specify the time interval between each message in seconds."
+        },
+        {
+            "role": "user",
+            "text": "The interval is 10 seconds."
+        },
+        {
+            "role": "assistant",
+            "text": "Alright, I will manage and post the automated messages in the chat with the provided details."
+        }
+    ],
+    "function_call": {
+        "function_name": "manage_and_post_messages",
+        "parameters": {
+            "chat_id": 12345,
+            "messages": ["Hello", "How are you?", "Goodbye"],
+            "interval": 10
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def activate_deactivate_emotes(\nemotes: List[str],\nactivate: bool,\n) -> None:\n    """\n    Activate or deactivate certain emotes in the chat.\n\n    Parameters:\n        emotes (List[str]): A list of emotes to activate or deactivate.\n        activate (bool): A boolean value indicating whether to activate or deactivate the emotes.\n\n    Returns:\n        None\n    """\n', 'function_description': {'name': 'activate_deactivate_emotes', 'description': 'Activate or deactivate certain emotes in the chat.', 'parameters': {'type': 'object', 'properties': {'emotes': {'type': 'array', 'description': 'A list of emotes to activate or deactivate.', 'items': {'type': 'string'}}, 'activate': {'type': 'boolean', 'description': 'A boolean value indicating whether to activate or deactivate the emotes.'}}, 'required': ['emotes', 'activate']}, 'returns': {'type': 'None'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "activate_deactivate_emotes",
+        "description": "Activate or deactivate certain emotes in the chat.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "emotes": {
+                    "type": "array",
+                    "description": "A list of emotes to activate or deactivate.",
+                    "items": {"type": "string"}
+                },
+                "activate": {
+                    "type": "boolean",
+                    "description": "A boolean value indicating whether to activate or deactivate the emotes."
+                }
+            },
+            "required": ["emotes", "activate"]
+        },
+        "returns": {"type": "None"}
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you activate some emotes in the chat?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please provide the list of emotes you want to activate."
+        },
+        {
+            "role": "user",
+            "text": "I want to activate the emotes ['Kappa', 'PogChamp', 'LUL']."
+        },
+        {
+            "role": "assistant",
+            "text": "Got it. I will activate the emotes ['Kappa', 'PogChamp', 'LUL'] in the chat."
+        }
+    ],
+    "function_call": {
+        "function_name": "activate_deactivate_emotes",
+        "parameters": {
+            "emotes": ["Kappa", "PogChamp", "LUL"],
+            "activate": true
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def initiate_subscriber_only_mode() -> None:\n    """\n    Initiates subscriber-only mode in the chat.\n    """\n    # Code implementation goes here', 'function_description': {'name': 'initiate_subscriber_only_mode', 'description': 'Initiates subscriber-only mode in the chat.', 'parameters': {'type': 'object', 'properties': {}, 'required': []}, 'returns': {'type': 'None'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "initiate_subscriber_only_mode",
+        "description": "Initiates subscriber-only mode in the chat.",
+        "parameters": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "returns": {
+            "type": "None"
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you initiate subscriber-only mode in the chat?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Initiating subscriber-only mode now."
+        }
+    ],
+    "function_call": {
+        "function_name": "initiate_subscriber_only_mode",
+        "parameters": {}
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def run_advertisements(\n    intervals: List[int],\n    advertisements: List[str]\n) -> None:\n    """\n    Run advertisements at specified intervals.\n\n    Parameters:\n        intervals (List[int]): A list of intervals in seconds.\n        advertisements (List[str]): A list of advertisements to be displayed.\n\n    Returns:\n        None\n    """\n', 'function_description': {'name': 'run_advertisements', 'description': 'Run advertisements at specified intervals.', 'parameters': {'type': 'object', 'properties': {'intervals': {'type': 'array', 'description': 'A list of intervals in seconds.', 'items': {'type': 'integer'}}, 'advertisements': {'type': 'array', 'description': 'A list of advertisements to be displayed.', 'items': {'type': 'string'}}}, 'required': ['intervals', 'advertisements']}, 'returns': {'type': 'None'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "run_advertisements",
+        "description": "Run advertisements at specified intervals.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "intervals": {
+                    "type": "array",
+                    "description": "A list of intervals in seconds.",
+                    "items": {
+                        "type": "integer"
+                    }
+                },
+                "advertisements": {
+                    "type": "array",
+                    "description": "A list of advertisements to be displayed.",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": ["intervals", "advertisements"]
+        },
+        "returns": {
+            "type": "None"
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you run advertisements for me?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please provide the intervals and advertisements."
+        },
+        {
+            "role": "user",
+            "text": "I want to run the advertisements every 10 seconds. The advertisements are 'Ad1', 'Ad2', 'Ad3'."
+        },
+        {
+            "role": "assistant",
+            "text": "Great! I will run the advertisements for you."
+        }
+    ],
+    "function_call": {
+        "function_name": "run_advertisements",
+        "parameters": {
+            "intervals": [10],
+            "advertisements": ["Ad1", "Ad2", "Ad3"]
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def create_chat_command(\n    command_name: str,\n    command_function: Callable,\n    command_description: str,\n    command_usage: str,\n) -> None:\n    """\n    Creates a custom chat command.\n\n    Parameters:\n        command_name (str): The name of the command.\n        command_function (Callable): The function to be executed when the command is called.\n        command_description (str): A description of the command.\n        command_usage (str): An example of how to use the command.\n\n    Returns:\n        None\n    """', 'function_description': {'name': 'create_chat_command', 'description': 'Creates a custom chat command.', 'parameters': {'type': 'object', 'properties': {'command_name': {'type': 'string', 'description': 'The name of the command.'}, 'command_function': {'type': 'function', 'description': 'The function to be executed when the command is called.'}, 'command_description': {'type': 'string', 'description': 'A description of the command.'}, 'command_usage': {'type': 'string', 'description': 'An example of how to use the command.'}}, 'required': ['command_name', 'command_function', 'command_description', 'command_usage']}, 'returns': {'type': 'None'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "create_chat_command",
+        "description": "Creates a custom chat command.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "command_name": {
+                    "type": "string",
+                    "description": "The name of the command."
+                },
+                "command_function": {
+                    "type": "function",
+                    "description": "The function to be executed when the command is called."
+                },
+                "command_description": {
+                    "type": "string",
+                    "description": "A description of the command."
+                },
+                "command_usage": {
+                    "type": "string",
+                    "description": "An example of how to use the command."
+                }
+            },
+            "required": ["command_name", "command_function", "command_description", "command_usage"]
+        },
+        "returns": {
+            "type": "None"
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you create a custom chat command for me?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please provide the details of the command."
+        },
+        {
+            "role": "user",
+            "text": "The command name is 'greet', the function to be executed is 'greet_user()', the description is 'Greets the user', and the usage is 'greet'."
+        },
+        {
+            "role": "assistant",
+            "text": "Great! I am creating the custom chat command now."
+        }
+    ],
+    "function_call": {
+        "function_name": "create_chat_command",
+        "parameters": {
+            "command_name": "greet",
+            "command_function": "greet_user()",
+            "command_description": "Greets the user",
+            "command_usage": "greet"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def shout_out_to_new_subscribers_followers_donors():\n    """\n    Automatically shout-out to new subscribers, followers, or donors.\n    """', 'function_description': {'name': 'shout_out_to_new_subscribers_followers_donors', 'description': 'Automatically shout-out to new subscribers, followers, or donors.', 'parameters': {}, 'returns': {}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "shout_out_to_new_subscribers_followers_donors",
+        "description": "Automatically shout-out to new subscribers, followers, or donors.",
+        "parameters": {},
+        "returns": {}
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you give a shout-out to my new subscribers?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Just give me a moment."
+        }
+    ],
+    "function_call": {
+        "function_name": "shout_out_to_new_subscribers_followers_donors",
+        "parameters": {}
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def create_stream_marker(\n    stream_id: str,\n    marker_time: int,\n    marker_title: str,\n) -> str:\n    """\n    Creates a stream marker for a highlight.\n\n    Parameters:\n        stream_id (str): The ID of the stream.\n        marker_time (int): The timestamp of the marker in seconds.\n        marker_title (str): The title of the marker.\n\n    Returns:\n        str: The ID of the created stream marker.\n    """\n\n\n\ndef get_stream_marker(\n    stream_marker_id: str,\n) -> Dict[str, Union[str, int]]:\n    """\n    Retrieves information about a stream marker.\n\n    Parameters:\n        stream_marker_id (str): The ID of the stream marker.\n\n    Returns:\n        Dict[str, Union[str, int]]: A dictionary containing information about the stream marker.\n                                   The dictionary should have \'stream_id\', \'marker_time\', and \'marker_title\' keys.\n    """\n\n\ndef update_stream_marker(\n    stream_marker_id: str,\n    new_marker_title: str,\n) -> None:\n    """\n    Updates the title of a stream marker.\n\n    Parameters:\n        stream_marker_id (str): The ID of the stream marker to update.\n        new_marker_title (str): The new title for the stream marker.\n\n    Returns:\n        None\n    """\n\n\ndef delete_stream_marker(\n    stream_marker_id: str,\n) -> None:\n    """\n    Deletes a stream marker.\n\n    Parameters:\n        stream_marker_id (str): The ID of the stream marker to delete.\n\n    Returns:\n        None\n    """\n\n', 'function_description': {'name': 'create_stream_marker', 'description': 'Creates a stream marker for a highlight.', 'parameters': {'type': 'object', 'properties': {'stream_id': {'type': 'string', 'description': 'The ID of the stream.'}, 'marker_time': {'type': 'integer', 'description': 'The timestamp of the marker in seconds.'}, 'marker_title': {'type': 'string', 'description': 'The title of the marker.'}}, 'required': ['stream_id', 'marker_time', 'marker_title']}, 'returns': {'type': 'string', 'description': 'The ID of the created stream marker.'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "create_stream_marker",
+        "description": "Creates a stream marker for a highlight.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "stream_id": {
+                    "type": "string",
+                    "description": "The ID of the stream."
+                },
+                "marker_time": {
+                    "type": "integer",
+                    "description": "The timestamp of the marker in seconds."
+                },
+                "marker_title": {
+                    "type": "string",
+                    "description": "The title of the marker."
+                }
+            },
+            "required": ["stream_id", "marker_time", "marker_title"]
+        },
+        "returns": {
+            "type": "string",
+            "description": "The ID of the created stream marker."
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you help me create a stream marker?"
+        },
+        {
+            "role": "assistant",
+            "text": "Of course! Could you please provide me the stream ID, marker time, and marker title?"
+        },
+        {
+            "role": "user",
+            "text": "Sure, the stream ID is '12345', marker time is 3600, and marker title is 'Important Moment'."
+        },
+        {
+            "role": "assistant",
+            "text": "Got it! Creating the stream marker with the provided information."
+        }
+    ],
+    "function_call": {
+        "function_name": "create_stream_marker",
+        "parameters": {
+            "stream_id": "12345",
+            "marker_time": 3600,
+            "marker_title": "Important Moment"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def get_current_subscribers() -> List[str]:\n    """\n    Retrieves a list of current subscribers.\n\n    Returns:\n        List[str]: A list of current subscribers.\n    """\n    pass', 'function_description': {'name': 'get_current_subscribers', 'description': 'Retrieves a list of current subscribers.', 'parameters': {}, 'returns': {'type': 'object', 'properties': {'current_subscribers': {'type': 'array', 'items': {'type': 'string'}, 'description': 'A list of current subscribers.'}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "get_current_subscribers",
+        "description": "Retrieves a list of current subscribers.",
+        "parameters": {},
+        "returns": {
+            "type": "object",
+            "properties": {
+                "current_subscribers": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "A list of current subscribers."
+                }
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you show me the current subscribers?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please wait a moment while I retrieve the current subscribers."
+        }
+    ],
+    "function_call": {
+        "function_name": "get_current_subscribers",
+        "parameters": {}
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def ban_or_timeout_users(\nchat_logs: List[str],\nban_keywords: List[str],\ntimeout_keywords: List[str],\n) -> None:\n    """\n    Automatically bans or times out users based on their chat behavior.\n\n    Parameters:\n        chat_logs (List[str]): A list of chat logs.\n        ban_keywords (List[str]): A list of keywords indicating ban-worthy behavior.\n        timeout_keywords (List[str]): A list of keywords indicating timeout-worthy behavior.\n\n    Returns:\n        None\n    """\n', 'function_description': {'name': 'ban_or_timeout_users', 'description': 'Automatically bans or times out users based on their chat behavior.', 'parameters': {'type': 'object', 'properties': {'chat_logs': {'type': 'array', 'description': 'A list of chat logs.', 'items': {'type': 'string'}}, 'ban_keywords': {'type': 'array', 'description': 'A list of keywords indicating ban-worthy behavior.', 'items': {'type': 'string'}}, 'timeout_keywords': {'type': 'array', 'description': 'A list of keywords indicating timeout-worthy behavior.', 'items': {'type': 'string'}}}, 'required': ['chat_logs', 'ban_keywords', 'timeout_keywords']}, 'returns': {'type': 'none'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "ban_or_timeout_users",
+        "description": "Automatically bans or times out users based on their chat behavior.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "chat_logs": {
+                    "type": "array",
+                    "description": "A list of chat logs.",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "ban_keywords": {
+                    "type": "array",
+                    "description": "A list of keywords indicating ban-worthy behavior.",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "timeout_keywords": {
+                    "type": "array",
+                    "description": "A list of keywords indicating timeout-worthy behavior.",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": ["chat_logs", "ban_keywords", "timeout_keywords"]
+        },
+        "returns": {
+            "type": "none"
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you ban or timeout users based on their chat behavior?"
+        },
+        {
+            "role": "assistant",
+            "text": "Yes, I can do that. Please provide me with the necessary information."
+        },
+        {
+            "role": "user",
+            "text": "Sure. Here are the chat logs, ban keywords, and timeout keywords."
+        },
+        {
+            "role": "assistant",
+            "text": "Great, I will ban or timeout users based on their chat behavior using the provided information."
+        }
+    ],
+    "function_call": {
+        "function_name": "ban_or_timeout_users",
+        "parameters": {
+            "chat_logs": [],
+            "ban_keywords": [],
+            "timeout_keywords": []
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def example_function(\n    num_tickets: int,\n    ticket_type: Dict[str, str],\n    event_details: str,\n    attendees: List[Dict[str, str]],\n) -> Dict[str, float]:\n    """\n    Orders event tickets and returns the total price.\n\n    Parameters:\n        num_tickets (int): The number of tickets to buy.\n        ticket_type (str): The type of ticket.\n        event_details (Dict[str, str]): Details about the event, should contain a date in YYYY-MM-DD format.\n        passengers (List[Dict[str, str]]): A list of dictionaries containing attendee details.\n                                          Each dictionary should have \'name\' and \'age\' keys.\n\n    Returns:\n        Dict[str, float]: A dictionary with \'total_price\' as a key and the total price as a value.\n    """\n', 'function_description': {'name': 'example_function', 'description': 'Orders event tickets and returns the total price.', 'parameters': {'type': 'object', 'properties': {'num_tickets': {'type': 'integer', 'description': 'The number of tickets to buy.'}, 'ticket_type': {'type': 'object', 'description': 'The type of ticket.', 'properties': {'type': 'string'}}, 'event_details': {'type': 'object', 'description': 'Details about the event, should contain a date in YYYY-MM-DD format.', 'properties': {'date': {'type': 'string', 'description': 'Event data in YYYY-MM-DD format.'}}, 'required': ['date']}, 'attendees': {'type': 'array', 'description': "A list of dictionaries containing attendee details. Each dictionary should have 'name' and 'age' keys.", 'items': {'type': 'object', 'properties': {'name': {'type': 'string'}, 'age': {'type': 'string'}}, 'required': ['name', 'age']}}}, 'required': ['num_tickets', 'ticket_type', 'event_details', 'attendees']}, 'returns': {'type': 'object', 'properties': {'total_price': {'type': 'float', 'description': 'The total price for the tickets ordered.'}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "example_function",
+        "description": "Orders event tickets and returns the total price.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "num_tickets": {
+                    "type": "integer",
+                    "description": "The number of tickets to buy."
+                },
+                "ticket_type": {
+                    "type": "object",
+                    "description": "The type of ticket.",
+                    "properties": {
+                        "type": "string"
+                    }
+                },
+                "event_details": {
+                    "type": "object",
+                    "description": "Details about the event, should contain a date in YYYY-MM-DD format.",
+                    "properties": {
+                        "date": {
+                            "type": "string",
+                            "description": "Event data in YYYY-MM-DD format."
+                        }
+                    },
+                    "required": ["date"]
+                },
+                "attendees": {
+                    "type": "array",
+                    "description": "A list of dictionaries containing attendee details. Each dictionary should have 'name' and 'age' keys.",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "age": {"type": "string"}
+                        },
+                        "required": ["name", "age"]
+                    }
+                }
+            },
+            "required": ["num_tickets", "ticket_type", "event_details", "attendees"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "total_price": {
+                    "type": "float",
+                    "description": "The total price for the tickets ordered."
+                }
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you help me order event tickets?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. How many tickets would you like to buy?"
+        },
+        {
+            "role": "user",
+            "text": "I would like to buy 4 tickets."
+        },
+        {
+            "role": "assistant",
+            "text": "Great. What type of ticket would you like?"
+        },
+        {
+            "role": "user",
+            "text": "I would like the VIP ticket."
+        },
+        {
+            "role": "assistant",
+            "text": "Okay. Can you provide the event details? Please include the date in YYYY-MM-DD format."
+        },
+        {
+            "role": "user",
+            "text": "The event is on 2022-10-15."
+        },
+        {
+            "role": "assistant",
+            "text": "Thank you. Lastly, I need the details of the attendees. Please provide their names and ages."
+        },
+        {
+            "role": "user",
+            "text": "The attendees are John (25 years old), Sarah (30 years old), and Mike (28 years old)."
+        },
+        {
+            "role": "assistant",
+            "text": "Thank you for providing all the information. I will now proceed to order the tickets."
+        }
+    ],
+    "function_call": {
+        "function_name": "example_function",
+        "parameters": {
+            "num_tickets": 4,
+            "ticket_type": {"type": "VIP"},
+            "event_details": {"date": "2022-10-15"},
+            "attendees": [
+                {"name": "John", "age": "25"},
+                {"name": "Sarah", "age": "30"},
+                {"name": "Mike", "age": "28"}
+            ]
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def display_notifications(event: str) -> None:\n    """\n    Display alerts or notifications for in-stream events.\n\n    Parameters:\n        event (str): The event that occurred.\n\n    Returns:\n        None\n    """\n', 'function_description': {'name': 'display_notifications', 'description': 'Display alerts or notifications for in-stream events.', 'parameters': {'type': 'object', 'properties': {'event': {'type': 'string', 'description': 'The event that occurred.'}}, 'required': ['event']}, 'returns': {'type': 'none'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "display_notifications",
+        "description": "Display alerts or notifications for in-stream events.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "event": {
+                    "type": "string",
+                    "description": "The event that occurred."
+                }
+            },
+            "required": ["event"]
+        },
+        "returns": {
+            "type": "none"
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you display my notifications?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Can you please provide the event that occurred?"
+        },
+        {
+            "role": "user",
+            "text": "Yes, the event that occurred is 'message_received'."
+        },
+        {
+            "role": "assistant",
+            "text": "Great, I'm displaying your notifications for the 'message_received' event."
+        }
+    ],
+    "function_call": {
+        "function_name": "display_notifications",
+        "parameters": {
+            "event": "message_received"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def retrieve_historical_data() -> Tuple[List[str], List[Dict[str, str]], List[str]]:\n    """\n    Retrieves historical data such as past streams, viewer metrics, and chat logs.\n\n    Returns:\n        Tuple[List[str], List[Dict[str, str]], List[str]]: A tuple containing the following lists:\n                                                           - A list of past streams.\n                                                           - A list of viewer metrics.\n                                                           - A list of chat logs.\n    """\n    streams = []\n    viewer_metrics = []\n    chat_logs = []\n\n    # Code to retrieve past streams, viewer metrics, and chat logs\n\n    return streams, viewer_metrics, chat_logs', 'function_description': {'name': 'retrieve_historical_data', 'description': 'Retrieves historical data such as past streams, viewer metrics, and chat logs.', 'parameters': {'type': 'object', 'properties': {}, 'required': []}, 'returns': {'type': 'object', 'properties': {'streams': {'type': 'array', 'description': 'A list of past streams.'}, 'viewer_metrics': {'type': 'array', 'description': 'A list of viewer metrics.'}, 'chat_logs': {'type': 'array', 'description': 'A list of chat logs.'}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "retrieve_historical_data",
+        "description": "Retrieves historical data such as past streams, viewer metrics, and chat logs.",
+        "parameters": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "streams": {
+                    "type": "array",
+                    "description": "A list of past streams."
+                },
+                "viewer_metrics": {
+                    "type": "array",
+                    "description": "A list of viewer metrics."
+                },
+                "chat_logs": {
+                    "type": "array",
+                    "description": "A list of chat logs."
+                }
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you retrieve my historical data?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please provide the necessary parameters."
+        },
+        {
+            "role": "user",
+            "text": "Actually, no parameters are needed for this function."
+        },
+        {
+            "role": "assistant",
+            "text": "Alright, I'm retrieving your historical data now."
+        }
+    ],
+    "function_call": {
+        "function_name": "retrieve_historical_data",
+        "parameters": {}
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def manage_and_redeem_channel_points_or_rewards(user_id: str, action: str, points: int = None, rewards: List[str] = None) -> Union[str, List[str]]:\n    """\n    Manages and redeems channel points or rewards for a specific user.\n\n    Parameters:\n        user_id (str): The ID of the user.\n        action (str): The action to be performed. Can be \'check_points\', \'redeem_points\', or \'redeem_rewards\'.\n        points (int): The number of points to redeem. Optional, only required for \'redeem_points\' action.\n        rewards (List[str]): The list of rewards to redeem. Optional, only required for \'redeem_rewards\' action.\n\n    Returns:\n        Union[str, List[str]]: The result of the action performed. Can be a string message or a list of redeemed rewards.\n    """\n', 'function_description': {'name': 'manage_and_redeem_channel_points_or_rewards', 'description': 'Manages and redeems channel points or rewards for a specific user.', 'parameters': {'type': 'object', 'properties': {'user_id': {'type': 'string', 'description': 'The ID of the user.'}, 'action': {'type': 'string', 'description': "The action to be performed. Can be 'check_points', 'redeem_points', or 'redeem_rewards'."}, 'points': {'type': 'integer', 'description': "The number of points to redeem. Optional, only required for 'redeem_points' action."}, 'rewards': {'type': 'array', 'description': "The list of rewards to redeem. Optional, only required for 'redeem_rewards' action.", 'items': {'type': 'string'}}}, 'required': ['user_id', 'action']}, 'returns': {'type': 'object', 'properties': {'type': 'string', 'description': 'The result of the action performed. Can be a string message or a list of redeemed rewards.'}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "manage_and_redeem_channel_points_or_rewards",
+        "description": "Manages and redeems channel points or rewards for a specific user.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "user_id": {
+                    "type": "string",
+                    "description": "The ID of the user."
+                },
+                "action": {
+                    "type": "string",
+                    "description": "The action to be performed. Can be 'check_points', 'redeem_points', or 'redeem_rewards'."
+                },
+                "points": {
+                    "type": "integer",
+                    "description": "The number of points to redeem. Optional, only required for 'redeem_points' action."
+                },
+                "rewards": {
+                    "type": "array",
+                    "description": "The list of rewards to redeem. Optional, only required for 'redeem_rewards' action.",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": ["user_id", "action"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "type": "string",
+                "description": "The result of the action performed. Can be a string message or a list of redeemed rewards."
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Can you help me manage and redeem my channel points or rewards?"
+        },
+        {
+            "role": "assistant",
+            "text": "Of course! Please provide me with your user ID."
+        },
+        {
+            "role": "user",
+            "text": "My user ID is '12345'."
+        },
+        {
+            "role": "assistant",
+            "text": "Thank you. What action would you like to perform? You can choose 'check_points', 'redeem_points', or 'redeem_rewards'."
+        },
+        {
+            "role": "user",
+            "text": "I want to redeem my points."
+        },
+        {
+            "role": "assistant",
+            "text": "How many points would you like to redeem?"
+        },
+        {
+            "role": "user",
+            "text": "I want to redeem 100 points."
+        },
+        {
+            "role": "assistant",
+            "text": "Alright, I will now redeem 100 points for you."
+        }
+    ],
+    "function_call": {
+        "function_name": "manage_and_redeem_channel_points_or_rewards",
+        "parameters": {
+            "user_id": "12345",
+            "action": "redeem_points",
+            "points": 100
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def clip_segments(current_stream: str) -> str:\n    """\n    Clip segments of the current stream.\n\n    Parameters:\n        current_stream (str): The current stream to clip segments from.\n\n    Returns:\n        str: The clipped segments of the current stream.\n    """    ', 'function_description': {'name': 'clip_segments', 'description': 'Clip segments of the current stream.', 'parameters': {'type': 'object', 'properties': {'current_stream': {'type': 'string', 'description': 'The current stream to clip segments from.'}}, 'required': ['current_stream']}, 'returns': {'type': 'string', 'description': 'The clipped segments of the current stream.'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "clip_segments",
+        "description": "Clip segments of the current stream.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "current_stream": {
+                    "type": "string",
+                    "description": "The current stream to clip segments from."
+                }
+            },
+            "required": ["current_stream"]
+        },
+        "returns": {
+            "type": "string",
+            "description": "The clipped segments of the current stream."
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you clip segments from my current stream?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Can you provide me with your current stream?"
+        },
+        {
+            "role": "user",
+            "text": "Yes, my current stream is 'abcdefg'."
+        },
+        {
+            "role": "assistant",
+            "text": "Great, I'm clipping segments from your current stream now."
+        }
+    ],
+    "function_call": {
+        "function_name": "clip_segments",
+        "parameters": {
+            "current_stream": "abcdefg"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def configure_audio_video_settings(\n    audio_bitrate: int,\n    video_bitrate: int,\n    resolution: str,\n) -> None:\n    """\n    Configure audio and video settings, including bitrate and resolution.\n\n    Parameters:\n        audio_bitrate (int): The audio bitrate in kilobits per second.\n        video_bitrate (int): The video bitrate in kilobits per second.\n        resolution (str): The resolution of the video.\n\n    Returns:\n        None\n    """\n', 'function_description': {'name': 'configure_audio_video_settings', 'description': 'Configure audio and video settings, including bitrate and resolution.', 'parameters': {'type': 'object', 'properties': {'audio_bitrate': {'type': 'integer', 'description': 'The audio bitrate in kilobits per second.'}, 'video_bitrate': {'type': 'integer', 'description': 'The video bitrate in kilobits per second.'}, 'resolution': {'type': 'string', 'description': 'The resolution of the video.'}}, 'required': ['audio_bitrate', 'video_bitrate', 'resolution']}, 'returns': {'type': 'none'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "configure_audio_video_settings",
+        "description": "Configure audio and video settings, including bitrate and resolution.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "audio_bitrate": {
+                    "type": "integer",
+                    "description": "The audio bitrate in kilobits per second."
+                },
+                "video_bitrate": {
+                    "type": "integer",
+                    "description": "The video bitrate in kilobits per second."
+                },
+                "resolution": {
+                    "type": "string",
+                    "description": "The resolution of the video."
+                }
+            },
+            "required": ["audio_bitrate", "video_bitrate", "resolution"]
+        },
+        "returns": {
+            "type": "none"
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Can you help me configure my audio and video settings?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can assist you with that. Please provide the following details: audio bitrate, video bitrate, and resolution."
+        },
+        {
+            "role": "user",
+            "text": "My audio bitrate is 128, video bitrate is 256, and resolution is 1920x1080."
+        },
+        {
+            "role": "assistant",
+            "text": "Thank you for providing the details. I will configure your audio and video settings now."
+        }
+    ],
+    "function_call": {
+        "function_name": "configure_audio_video_settings",
+        "parameters": {
+            "audio_bitrate": 128,
+            "video_bitrate": 256,
+            "resolution": "1920x1080"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def host_or_raid_channel(\n    channel_name: str,\n    action: str,\n) -> str:\n    """\n    Hosts or raids another Twitch channel.\n\n    Parameters:\n        channel_name (str): The name of the channel to host or raid.\n        action (str): The action to perform, either \'host\' or \'raid\'.\n\n    Returns:\n        str: A message confirming the action performed.\n    """\n', 'function_description': {'name': 'host_or_raid_channel', 'description': 'Hosts or raids another Twitch channel.', 'parameters': {'type': 'object', 'properties': {'channel_name': {'type': 'string', 'description': 'The name of the channel to host or raid.'}, 'action': {'type': 'string', 'description': "The action to perform, either 'host' or 'raid'."}}, 'required': ['channel_name', 'action']}, 'returns': {'type': 'string', 'description': 'A message confirming the action performed.'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "host_or_raid_channel",
+        "description": "Hosts or raids another Twitch channel.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "channel_name": {
+                    "type": "string",
+                    "description": "The name of the channel to host or raid."
+                },
+                "action": {
+                    "type": "string",
+                    "description": "The action to perform, either 'host' or 'raid'."
+                }
+            },
+            "required": ["channel_name", "action"]
+        },
+        "returns": {
+            "type": "string",
+            "description": "A message confirming the action performed."
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you host or raid another Twitch channel for me?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please provide the name of the channel and the action you want to perform (either 'host' or 'raid')."
+        },
+        {
+            "role": "user",
+            "text": "The channel name is 'example_channel' and I want to perform a 'host' action."
+        },
+        {
+            "role": "assistant",
+            "text": "Got it, I will host the channel 'example_channel' for you."
+        }
+    ],
+    "function_call": {
+        "function_name": "host_or_raid_channel",
+        "parameters": {
+            "channel_name": "example_channel",
+            "action": "host"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def initiate_costream(streamer_id: str) -> str:\n    """\n    Initiates a co-stream with another streamer.\n\n    Parameters:\n        streamer_id (str): The ID of the streamer to co-stream with.\n\n    Returns:\n        str: A message confirming the co-stream initiation.\n    """\n    pass\n\n\ndef manage_costream(streamer_id: str) -> str:\n    """\n    Manages a co-stream with another streamer.\n\n    Parameters:\n        streamer_id (str): The ID of the streamer to co-stream with.\n\n    Returns:\n        str: A message confirming the successful management of the co-stream.\n    """\n    pass', 'function_description': {'name': 'initiate_costream', 'description': 'Initiates a co-stream with another streamer.', 'parameters': {'type': 'object', 'properties': {'streamer_id': {'type': 'string', 'description': 'The ID of the streamer to co-stream with.'}}, 'required': ['streamer_id']}, 'returns': {'type': 'object', 'properties': {'message': {'type': 'string', 'description': 'A message confirming the co-stream initiation.'}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "initiate_costream",
+        "description": "Initiates a co-stream with another streamer.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "streamer_id": {
+                    "type": "string",
+                    "description": "The ID of the streamer to co-stream with."
+                }
+            },
+            "required": ["streamer_id"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "message": {
+                    "type": "string",
+                    "description": "A message confirming the co-stream initiation."
+                }
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you help me initiate a co-stream?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can assist you with that. Please provide the ID of the streamer you want to co-stream with."
+        },
+        {
+            "role": "user",
+            "text": "The ID of the streamer I want to co-stream with is '9876'."
+        },
+        {
+            "role": "assistant",
+            "text": "Great, I will initiate the co-stream with the streamer ID '9876'."
+        }
+    ],
+    "function_call": {
+        "function_name": "initiate_costream",
+        "parameters": {
+            "streamer_id": "9876"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def manage_and_update_panels() -> None:\n    """\n    Manages and updates panels and other customizable areas below the video player.\n    """\n    # Code implementation to manage and update panels and other customizable areas below the video player', 'function_description': {'name': 'manage_and_update_panels', 'description': 'Manages and updates panels and other customizable areas below the video player.', 'parameters': {'type': 'None'}, 'returns': {'type': 'None'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "manage_and_update_panels",
+        "description": "Manages and updates panels and other customizable areas below the video player.",
+        "parameters": {
+            "type": "None"
+        },
+        "returns": {
+            "type": "None"
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you manage and update the panels below the video player?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Just give me a moment."
+        }
+    ],
+    "function_call": {
+        "function_name": "manage_and_update_panels"
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def activate_scenes_or_overlays(scenes: List[str], overlays: List[str]) -> None:', 'function_description': {'name': 'activate_scenes_or_overlays', 'description': 'Activates specific scenes or overlays.', 'parameters': {'type': 'object', 'properties': {'scenes': {'type': 'array', 'description': 'A list of scene names to activate.', 'items': {'type': 'string'}}, 'overlays': {'type': 'array', 'description': 'A list of overlay names to activate.', 'items': {'type': 'string'}}}, 'required': ['scenes', 'overlays']}, 'returns': {'type': 'None'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "activate_scenes_or_overlays",
+        "description": "Activates specific scenes or overlays.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "scenes": {
+                    "type": "array",
+                    "description": "A list of scene names to activate.",
+                    "items": {"type": "string"}
+                },
+                "overlays": {
+                    "type": "array",
+                    "description": "A list of overlay names to activate.",
+                    "items": {"type": "string"}
+                }
+            },
+            "required": ["scenes", "overlays"]
+        },
+        "returns": {"type": "None"}
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you activate some scenes and overlays for me?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please provide me with the list of scenes and overlays you want to activate."
+        },
+        {
+            "role": "user",
+            "text": "I want to activate scenes 'scene1' and 'scene2', and overlays 'overlay1' and 'overlay2'."
+        },
+        {
+            "role": "assistant",
+            "text": "Got it. I will activate the requested scenes and overlays for you."
+        }
+    ],
+    "function_call": {
+        "function_name": "activate_scenes_or_overlays",
+        "parameters": {
+            "scenes": ["scene1", "scene2"],
+            "overlays": ["overlay1", "overlay2"]
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def automatically_archive_past_broadcasts(\n    channel_id: str,\n    archive_duration: int,\n    api_key: str,\n) -> None:\n    """\n    Automatically archives past broadcasts of a given channel.\n\n    Parameters:\n        channel_id (str): The ID of the channel to archive broadcasts for.\n        archive_duration (int): The duration (in days) for which to archive the broadcasts.\n        api_key (str): The API key for accessing the Twitch API.\n\n    Returns:\n        None\n    """\n    # Implementation goes here', 'function_description': {'name': 'automatically_archive_past_broadcasts', 'description': 'Automatically archives past broadcasts of a given channel.', 'parameters': {'type': 'object', 'properties': {'channel_id': {'type': 'string', 'description': 'The ID of the channel to archive broadcasts for.'}, 'archive_duration': {'type': 'integer', 'description': 'The duration (in days) for which to archive the broadcasts.'}, 'api_key': {'type': 'string', 'description': 'The API key for accessing the Twitch API.'}}, 'required': ['channel_id', 'archive_duration', 'api_key']}, 'returns': {'type': 'object', 'properties': {}, 'description': 'None'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "automatically_archive_past_broadcasts",
+        "description": "Automatically archives past broadcasts of a given channel.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "channel_id": {
+                    "type": "string",
+                    "description": "The ID of the channel to archive broadcasts for."
+                },
+                "archive_duration": {
+                    "type": "integer",
+                    "description": "The duration (in days) for which to archive the broadcasts."
+                },
+                "api_key": {
+                    "type": "string",
+                    "description": "The API key for accessing the Twitch API."
+                }
+            },
+            "required": ["channel_id", "archive_duration", "api_key"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {},
+            "description": "None"
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you help me automatically archive past broadcasts of my Twitch channel?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Can you please provide me with your Twitch channel ID, archive duration (in days), and API key?"
+        },
+        {
+            "role": "user",
+            "text": "My Twitch channel ID is '12345', archive duration is '30' days, and my API key is 'abcd1234'."
+        },
+        {
+            "role": "assistant",
+            "text": "Great, I will automatically archive past broadcasts of your Twitch channel."
+        }
+    ],
+    "function_call": {
+        "function_name": "automatically_archive_past_broadcasts",
+        "parameters": {
+            "channel_id": "12345",
+            "archive_duration": 30,
+            "api_key": "abcd1234"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def enable_disable_slow_mode(chat_id: int, enable: bool) -> bool:\n    """\n    Enable or disable slow mode in the chat.\n\n    Parameters:\n        chat_id (int): The unique identifier of the chat.\n        enable (bool): Whether to enable or disable slow mode.\n\n    Returns:\n        bool: True if slow mode is successfully enabled or disabled, False otherwise.\n    """\n', 'function_description': {'name': 'enable_disable_slow_mode', 'description': 'Enable or disable slow mode in the chat.', 'parameters': {'type': 'object', 'properties': {'chat_id': {'type': 'integer', 'description': 'The unique identifier of the chat.'}, 'enable': {'type': 'boolean', 'description': 'Whether to enable or disable slow mode.'}}, 'required': ['chat_id', 'enable']}, 'returns': {'type': 'boolean', 'description': 'True if slow mode is successfully enabled or disabled, False otherwise.'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "enable_disable_slow_mode",
+        "description": "Enable or disable slow mode in the chat.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "chat_id": {
+                    "type": "integer",
+                    "description": "The unique identifier of the chat."
+                },
+                "enable": {
+                    "type": "boolean",
+                    "description": "Whether to enable or disable slow mode."
+                }
+            },
+            "required": ["chat_id", "enable"]
+        },
+        "returns": {
+            "type": "boolean",
+            "description": "True if slow mode is successfully enabled or disabled, False otherwise."
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you enable slow mode in the chat?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please provide me the chat ID."
+        },
+        {
+            "role": "user",
+            "text": "The chat ID is 12345."
+        },
+        {
+            "role": "assistant",
+            "text": "Got it. Enabling slow mode in the chat now."
+        }
+    ],
+    "function_call": {
+        "function_name": "enable_disable_slow_mode",
+        "parameters": {
+            "chat_id": 12345,
+            "enable": True
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def manage_subscriptions(channel_id: str, action: str, user_id: str) -> bool:\n    """\n    Monitor and manage subscriptions to other channels.\n\n    Parameters:\n        channel_id (str): The ID of the channel to manage subscriptions for.\n        action (str): The action to perform on the subscription (e.g. \'subscribe\', \'unsubscribe\').\n        user_id (str): The ID of the user performing the action.\n\n    Returns:\n        bool: True if the subscription was successfully managed, False otherwise.\n    """\n', 'function_description': {'name': 'manage_subscriptions', 'description': 'Monitor and manage subscriptions to other channels.', 'parameters': {'type': 'object', 'properties': {'channel_id': {'type': 'string', 'description': 'The ID of the channel to manage subscriptions for.'}, 'action': {'type': 'string', 'description': "The action to perform on the subscription (e.g. 'subscribe', 'unsubscribe')."}, 'user_id': {'type': 'string', 'description': 'The ID of the user performing the action.'}}, 'required': ['channel_id', 'action', 'user_id']}, 'returns': {'type': 'bool', 'description': 'True if the subscription was successfully managed, False otherwise.'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "manage_subscriptions",
+        "description": "Monitor and manage subscriptions to other channels.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "channel_id": {
+                    "type": "string",
+                    "description": "The ID of the channel to manage subscriptions for."
+                },
+                "action": {
+                    "type": "string",
+                    "description": "The action to perform on the subscription (e.g. 'subscribe', 'unsubscribe')."
+                },
+                "user_id": {
+                    "type": "string",
+                    "description": "The ID of the user performing the action."
+                }
+            },
+            "required": ["channel_id", "action", "user_id"]
+        },
+        "returns": {
+            "type": "bool",
+            "description": "True if the subscription was successfully managed, False otherwise."
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you help me manage my channel subscriptions?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please provide me with the channel ID, the action you want to perform (e.g. 'subscribe', 'unsubscribe'), and your user ID."
+        },
+        {
+            "role": "user",
+            "text": "The channel ID is '12345', I want to 'subscribe', and my user ID is '54321'."
+        },
+        {
+            "role": "assistant",
+            "text": "Got it. Let me manage the subscriptions for you."
+        }
+    ],
+    "function_call": {
+        "function_name": "manage_subscriptions",
+        "parameters": {
+            "channel_id": "12345",
+            "action": "subscribe",
+            "user_id": "54321"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def set_donation_goals(goals: Dict[str, float], donations: Dict[str, float]) -> Dict[str, Tuple[float, float]]:\n    \n    Parameters:\n        goals (Dict[str, float]): A dictionary with donation goals as keys and the target amounts as values.\n        donations (Dict[str, float]): A dictionary with donation amounts as keys and the current amounts as values.\n\n    Returns:\n        Dict[str, Tuple[float, float]]: A dictionary with donation goals as keys and a tuple of current amount and target amount as values.\n', 'function_description': {'name': 'set_donation_goals', 'description': 'Set up donation goals and progress bars.', 'parameters': {'type': 'object', 'properties': {'goals': {'type': 'object', 'description': 'A dictionary with donation goals as keys and the target amounts as values.'}, 'donations': {'type': 'object', 'description': 'A dictionary with donation amounts as keys and the current amounts as values.'}}, 'required': ['goals', 'donations']}, 'returns': {'type': 'object', 'properties': {'donation_goals': {'type': 'object', 'description': 'A dictionary with donation goals as keys and a tuple of current amount and target amount as values.'}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "set_donation_goals",
+        "description": "Set up donation goals and progress bars.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "goals": {
+                    "type": "object",
+                    "description": "A dictionary with donation goals as keys and the target amounts as values."
+                },
+                "donations": {
+                    "type": "object",
+                    "description": "A dictionary with donation amounts as keys and the current amounts as values."
+                }
+            },
+            "required": ["goals", "donations"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "donation_goals": {
+                    "type": "object",
+                    "description": "A dictionary with donation goals as keys and a tuple of current amount and target amount as values."
+                }
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you help me set up my donation goals and progress bars?"
+        },
+        {
+            "role": "assistant",
+            "text": "Of course! I'd be happy to assist you. Could you provide me with your donation goals and the current donation amounts?"
+        },
+        {
+            "role": "user",
+            "text": "Sure. My donation goals are {'Education': 1000, 'Healthcare': 500, 'Environment': 750}, and the current donation amounts are {'Education': 250, 'Healthcare': 150, 'Environment': 400}."
+        },
+        {
+            "role": "assistant",
+            "text": "Thank you for providing the information. Let me set up your donation goals and progress bars for you."
+        }
+    ],
+    "function_call": {
+        "function_name": "set_donation_goals",
+        "parameters": {
+            "goals": {
+                "Education": 1000,
+                "Healthcare": 500,
+                "Environment": 750
+            },
+            "donations": {
+                "Education": 250,
+                "Healthcare": 150,
+                "Environment": 400
+            }
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def manage_and_send_direct_messages(\n    recipients: List[str],\n    message: str,\n    subject: str,\n    attachments: List[str]\n) -> Dict[str, str]:\n    """\n    Manages and sends direct messages.\n\n    Parameters:\n        recipients (List[str]): A list of usernames or email addresses of the recipients.\n        message (str): The content of the direct message.\n        subject (str): The subject of the direct message.\n        attachments (List[str]): A list of file paths to be attached to the direct message.\n\n    Returns:\n        Dict[str, str]: A dictionary with \'status\' as a key and the status message as a value.\n    """', 'function_description': {'name': 'manage_and_send_direct_messages', 'description': 'Manages and sends direct messages.', 'parameters': {'type': 'object', 'properties': {'recipients': {'type': 'array', 'description': 'A list of usernames or email addresses of the recipients.', 'items': {'type': 'string'}}, 'message': {'type': 'string', 'description': 'The content of the direct message.'}, 'subject': {'type': 'string', 'description': 'The subject of the direct message.'}, 'attachments': {'type': 'array', 'description': 'A list of file paths to be attached to the direct message.', 'items': {'type': 'string'}}}, 'required': ['recipients', 'message', 'subject', 'attachments']}, 'returns': {'type': 'object', 'properties': {'status': {'type': 'string', 'description': 'The status message.'}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "manage_and_send_direct_messages",
+        "description": "Manages and sends direct messages.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "recipients": {
+                    "type": "array",
+                    "description": "A list of usernames or email addresses of the recipients.",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "message": {
+                    "type": "string",
+                    "description": "The content of the direct message."
+                },
+                "subject": {
+                    "type": "string",
+                    "description": "The subject of the direct message."
+                },
+                "attachments": {
+                    "type": "array",
+                    "description": "A list of file paths to be attached to the direct message.",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "recipients",
+                "message",
+                "subject",
+                "attachments"
+            ]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "string",
+                    "description": "The status message."
+                }
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you manage and send direct messages?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please provide the necessary details."
+        },
+        {
+            "role": "user",
+            "text": "I want to send a direct message to multiple recipients. The message is 'Hello everyone!' and the subject is 'Greetings'. I also have two attachments."
+        },
+        {
+            "role": "assistant",
+            "text": "Great! I will manage and send the direct messages with the provided details."
+        }
+    ],
+    "function_call": {
+        "function_name": "manage_and_send_direct_messages",
+        "parameters": {
+            "recipients": ["user1", "user2", "user3"],
+            "message": "Hello everyone!",
+            "subject": "Greetings",
+            "attachments": ["file1.jpg", "file2.pdf"]
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def configure_bots(\n    bot_name: str,\n    bot_type: str,\n    bot_token: str,\n    bot_config: Dict[str, str],\n) -> str:\n    """\n    Configures and manages bots for chat moderation or entertainment.\n\n    Parameters:\n        bot_name (str): The name of the bot.\n        bot_type (str): The type of the bot (e.g., chat moderation, entertainment).\n        bot_token (str): The token for the bot\'s API access.\n        bot_config (Dict[str, str]): A dictionary containing additional configuration options for the bot.\n\n    Returns:\n        str: A string indicating the success or failure of the bot configuration.\n    """\n', 'function_description': {'name': 'configure_bots', 'description': 'Configures and manages bots for chat moderation or entertainment.', 'parameters': {'type': 'object', 'properties': {'bot_name': {'type': 'string', 'description': 'The name of the bot.'}, 'bot_type': {'type': 'string', 'description': 'The type of the bot (e.g., chat moderation, entertainment).'}, 'bot_token': {'type': 'string', 'description': "The token for the bot's API access."}, 'bot_config': {'type': 'object', 'description': 'A dictionary containing additional configuration options for the bot.', 'properties': {'type': 'string'}}}, 'required': ['bot_name', 'bot_type', 'bot_token', 'bot_config']}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "configure_bots",
+        "description": "Configures and manages bots for chat moderation or entertainment.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "bot_name": {
+                    "type": "string",
+                    "description": "The name of the bot."
+                },
+                "bot_type": {
+                    "type": "string",
+                    "description": "The type of the bot (e.g., chat moderation, entertainment)."
+                },
+                "bot_token": {
+                    "type": "string",
+                    "description": "The token for the bot's API access."
+                },
+                "bot_config": {
+                    "type": "object",
+                    "description": "A dictionary containing additional configuration options for the bot.",
+                    "properties": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": ["bot_name", "bot_type", "bot_token", "bot_config"]
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you help me configure a chat moderation bot?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please provide the name of the bot."
+        },
+        {
+            "role": "user",
+            "text": "The name of the bot is 'ModeratorBot'."
+        },
+        {
+            "role": "assistant",
+            "text": "Great! Now, what type of bot is it? Is it for chat moderation or entertainment?"
+        },
+        {
+            "role": "user",
+            "text": "It is for chat moderation."
+        },
+        {
+            "role": "assistant",
+            "text": "Got it. Please provide the token for the bot's API access."
+        },
+        {
+            "role": "user",
+            "text": "The token is 'abcd1234'."
+        },
+        {
+            "role": "assistant",
+            "text": "Thank you. Lastly, if there are any additional configuration options for the bot, please provide them as a dictionary."
+        },
+        {
+            "role": "user",
+            "text": "Sure. Here is an example configuration: {'option1': 'value1', 'option2': 'value2'}."
+        },
+        {
+            "role": "assistant",
+            "text": "Thank you for providing the information. I will now configure the 'ModeratorBot' for chat moderation."
+        }
+    ],
+    "function_call": {
+        "function_name": "configure_bots",
+        "parameters": {
+            "bot_name": "ModeratorBot",
+            "bot_type": "chat moderation",
+            "bot_token": "abcd1234",
+            "bot_config": {
+                "option1": "value1",
+                "option2": "value2"
+            }
+        }
+    }
+}
+

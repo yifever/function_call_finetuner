@@ -1,0 +1,1408 @@
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def upload_video_to_youtube(\n    video_file_path: str,\n    title: str,\n    description: str,\n    category: str,\n    tags: List[str],\n) -> str:\n    """\n    Uploads a video file as a video to a YouTube channel.\n\n    Parameters:\n        video_file_path (str): The path to the video file.\n        title (str): The title of the video.\n        description (str): The description of the video.\n        category (str): The category of the video.\n        tags (List[str]): A list of tags for the video.\n\n    Returns:\n        str: The ID of the uploaded video.\n    """\n    pass', 'function_description': {'name': 'upload_video_to_youtube', 'description': 'Uploads a video file as a video to a YouTube channel.', 'parameters': {'type': 'object', 'properties': {'video_file_path': {'type': 'string', 'description': 'The path to the video file.'}, 'title': {'type': 'string', 'description': 'The title of the video.'}, 'description': {'type': 'string', 'description': 'The description of the video.'}, 'category': {'type': 'string', 'description': 'The category of the video.'}, 'tags': {'type': 'array', 'description': 'A list of tags for the video.', 'items': {'type': 'string'}}}, 'required': ['video_file_path', 'title', 'description', 'category', 'tags']}, 'returns': {'type': 'string', 'description': 'The ID of the uploaded video.'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "upload_video_to_youtube",
+        "description": "Uploads a video file as a video to a YouTube channel.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "video_file_path": {
+                    "type": "string",
+                    "description": "The path to the video file."
+                },
+                "title": {
+                    "type": "string",
+                    "description": "The title of the video."
+                },
+                "description": {
+                    "type": "string",
+                    "description": "The description of the video."
+                },
+                "category": {
+                    "type": "string",
+                    "description": "The category of the video."
+                },
+                "tags": {
+                    "type": "array",
+                    "description": "A list of tags for the video.",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": ["video_file_path", "title", "description", "category", "tags"]
+        },
+        "returns": {
+            "type": "string",
+            "description": "The ID of the uploaded video."
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you help me upload a video to my YouTube channel?"
+        },
+        {
+            "role": "assistant",
+            "text": "Of course! Please provide the following details:\n1. The path to the video file.\n2. The title of the video.\n3. The description of the video.\n4. The category of the video.\n5. A list of tags for the video."
+        },
+        {
+            "role": "user",
+            "text": "Sure! The path to the video file is 'example_video.mp4', the title is 'My Video', the description is 'Check out my latest video!', the category is 'Entertainment', and the tags are ['video', 'entertainment']."
+        },
+        {
+            "role": "assistant",
+            "text": "Got it! I will now proceed to upload the video to your YouTube channel."
+        }
+    ],
+    "function_call": {
+        "function_name": "upload_video_to_youtube",
+        "parameters": {
+            "video_file_path": "example_video.mp4",
+            "title": "My Video",
+            "description": "Check out my latest video!",
+            "category": "Entertainment",
+            "tags": ["video", "entertainment"]
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def delete_video_from_channel(\n    channel_id: str,\n    video_id: str,\n) -> bool:\n    """\n    Deletes a specific video from a channel.\n\n    Parameters:\n        channel_id (str): The ID of the channel from which the video should be deleted.\n        video_id (str): The ID of the video to be deleted.\n\n    Returns:\n        bool: True if the video was successfully deleted, False otherwise.\n    """\n\n    # Function implementation\n    pass\n', 'function_description': {'name': 'delete_video_from_channel', 'description': 'Deletes a specific video from a channel.', 'parameters': {'type': 'object', 'properties': {'channel_id': {'type': 'string', 'description': 'The ID of the channel from which the video should be deleted.'}, 'video_id': {'type': 'string', 'description': 'The ID of the video to be deleted.'}}, 'required': ['channel_id', 'video_id']}, 'returns': {'type': 'bool', 'description': 'True if the video was successfully deleted, False otherwise.'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "delete_video_from_channel",
+        "description": "Deletes a specific video from a channel.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "channel_id": {
+                    "type": "string",
+                    "description": "The ID of the channel from which the video should be deleted."
+                },
+                "video_id": {
+                    "type": "string",
+                    "description": "The ID of the video to be deleted."
+                }
+            },
+            "required": ["channel_id", "video_id"]
+        },
+        "returns": {
+            "type": "bool",
+            "description": "True if the video was successfully deleted, False otherwise."
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, I want to delete a video from my channel."
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can help with that. Please provide me with the channel ID and the video ID."
+        },
+        {
+            "role": "user",
+            "text": "The channel ID is '12345' and the video ID is '67890'."
+        },
+        {
+            "role": "assistant",
+            "text": "Got it. I will delete the video with ID '67890' from the channel with ID '12345'."
+        }
+    ],
+    "function_call": {
+        "function_name": "delete_video_from_channel",
+        "parameters": {
+            "channel_id": "12345",
+            "video_id": "67890"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def edit_video_details(\n    video_id: str,\n    new_title: str,\n    new_description: str,\n    new_tags: List[str],\n) -> Dict[str, str]:\n    """\n    Edits the details of a video and returns the new details.\n\n    Parameters:\n        video_id (str): The ID of the video to edit.\n        new_title (str): The new title of the video.\n        new_description (str): The new description of the video.\n        new_tags (List[str]): A list of new tags for the video.\n\n    Returns:\n        Dict[str, str]: A dictionary with the new video details.\n    """\n    pass', 'function_description': {'name': 'edit_video_details', 'description': 'Edits the details of a video and returns the new details.', 'parameters': {'type': 'object', 'properties': {'video_id': {'type': 'string', 'description': 'The ID of the video to edit.'}, 'new_title': {'type': 'string', 'description': 'The new title of the video.'}, 'new_description': {'type': 'string', 'description': 'The new description of the video.'}, 'new_tags': {'type': 'array', 'description': 'A list of new tags for the video.', 'items': {'type': 'string'}}}, 'required': ['video_id', 'new_title', 'new_description', 'new_tags']}, 'returns': {'type': 'object', 'properties': {'video_details': {'type': 'string', 'description': 'A dictionary with the new video details.'}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "edit_video_details",
+        "description": "Edits the details of a video and returns the new details.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "video_id": {
+                    "type": "string",
+                    "description": "The ID of the video to edit."
+                },
+                "new_title": {
+                    "type": "string",
+                    "description": "The new title of the video."
+                },
+                "new_description": {
+                    "type": "string",
+                    "description": "The new description of the video."
+                },
+                "new_tags": {
+                    "type": "array",
+                    "description": "A list of new tags for the video.",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "video_id",
+                "new_title",
+                "new_description",
+                "new_tags"
+            ]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "video_details": {
+                    "type": "string",
+                    "description": "A dictionary with the new video details."
+                }
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you help me edit the details of my video?"
+        },
+        {
+            "role": "assistant",
+            "text": "Of course! Please provide me with the ID of the video you want to edit, as well as the new title, description, and tags."
+        },
+        {
+            "role": "user",
+            "text": "Sure! The video ID is '12345', the new title is 'My Awesome Video', the new description is 'Check out my latest creation!', and the new tags are ['tutorial', 'video editing']."
+        },
+        {
+            "role": "assistant",
+            "text": "Got it! I will edit the details of your video now."
+        }
+    ],
+    "function_call": {
+        "function_name": "edit_video_details",
+        "parameters": {
+            "video_id": "12345",
+            "new_title": "My Awesome Video",
+            "new_description": "Check out my latest creation!",
+            "new_tags": ["tutorial", "video editing"]
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def set_video_public_time(\n    video_id: str,\n    schedule_time: str,\n) -> bool:\n    """\n    Sets a specific time for a video to be made public.\n\n    Parameters:\n        video_id (str): The unique identifier of the video.\n        schedule_time (str): The time to make the video public in YYYY-MM-DD HH:MM:SS format.\n\n    Returns:\n        bool: True if the operation was successful, False otherwise.\n    """\n    pass', 'function_description': {'name': 'set_video_public_time', 'description': 'Sets a specific time for a video to be made public.', 'parameters': {'type': 'object', 'properties': {'video_id': {'type': 'string', 'description': 'The unique identifier of the video.'}, 'schedule_time': {'type': 'string', 'description': 'The time to make the video public in YYYY-MM-DD HH:MM:SS format.'}}, 'required': ['video_id', 'schedule_time']}, 'returns': {'type': 'boolean', 'description': 'True if the operation was successful, False otherwise.'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "set_video_public_time",
+        "description": "Sets a specific time for a video to be made public.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "video_id": {
+                    "type": "string",
+                    "description": "The unique identifier of the video."
+                },
+                "schedule_time": {
+                    "type": "string",
+                    "description": "The time to make the video public in YYYY-MM-DD HH:MM:SS format."
+                }
+            },
+            "required": ["video_id", "schedule_time"]
+        },
+        "returns": {
+            "type": "boolean",
+            "description": "True if the operation was successful, False otherwise."
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you help me set a specific time for my video to be made public?"
+        },
+        {
+            "role": "assistant",
+            "text": "Of course! Please provide me with the unique identifier of the video and the desired schedule time in YYYY-MM-DD HH:MM:SS format."
+        },
+        {
+            "role": "user",
+            "text": "The video ID is '12345' and I want it to be made public on '2022-01-01 12:00:00'."
+        },
+        {
+            "role": "assistant",
+            "text": "Got it! I will set the video with ID '12345' to be made public on '2022-01-01 12:00:00'."
+        }
+    ],
+    "function_call": {
+        "function_name": "set_video_public_time",
+        "parameters": {
+            "video_id": "12345",
+            "schedule_time": "2022-01-01 12:00:00"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def generate_playlists(\n    video_data: List[Dict[str, str]],\n    categories: List[str],\n) -> Dict[str, List[str]]:\n    """\n    Generate new playlists for categorizing videos.\n\n    Parameters:\n        video_data (List[Dict[str, str]]): A list of dictionaries containing video details.\n                                           Each dictionary should have \'title\' and \'category\' keys.\n        categories (List[str]): A list of categories for which playlists will be created.\n\n    Returns:\n        Dict[str, List[str]]: A dictionary with categories as keys and list of video titles as values.\n    """\n', 'function_description': {'name': 'generate_playlists', 'description': 'Generate new playlists for categorizing videos.', 'parameters': {'type': 'object', 'properties': {'video_data': {'type': 'array', 'description': "A list of dictionaries containing video details. Each dictionary should have 'title' and 'category' keys.", 'items': {'type': 'object', 'properties': {'title': {'type': 'string'}, 'category': {'type': 'string'}}, 'required': ['title', 'category']}}, 'categories': {'type': 'array', 'description': 'A list of categories for which playlists will be created.', 'items': {'type': 'string'}}}, 'required': ['video_data', 'categories']}, 'returns': {'type': 'object', 'properties': {'category': {'type': 'array', 'items': {'type': 'string'}}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "generate_playlists",
+        "description": "Generate new playlists for categorizing videos.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "video_data": {
+                    "type": "array",
+                    "description": "A list of dictionaries containing video details. Each dictionary should have 'title' and 'category' keys.",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "title": {"type": "string"},
+                            "category": {"type": "string"}
+                        },
+                        "required": ["title", "category"]
+                    }
+                },
+                "categories": {
+                    "type": "array",
+                    "description": "A list of categories for which playlists will be created.",
+                    "items": {"type": "string"}
+                }
+            },
+            "required": ["video_data", "categories"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "category": {"type": "array", "items": {"type": "string"}}
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you help me generate playlists for categorizing my videos?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Can you provide me with the video data and the categories?"
+        },
+        {
+            "role": "user",
+            "text": "Yes, I have a list of video data and a list of categories."
+        },
+        {
+            "role": "assistant",
+            "text": "Great! Please provide me with the video data and the categories."
+        }
+    ],
+    "function_call": {
+        "function_name": "generate_playlists",
+        "parameters": {
+            "video_data": [],
+            "categories": []
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def insert_videos_into_playlist(\n    playlist_id: str,\n    video_ids: List[str],\n) -> str:\n    \n    Inserts specific videos into an existing playlist.\n\n    Parameters:\n        playlist_id (str): The ID of the playlist to which videos need to be added.\n        video_ids (List[str]): A list of IDs of the videos to be added to the playlist.\n\n    Returns:\n        str: A confirmation message stating successful addition of videos to the playlist.\n', 'function_description': {'name': 'insert_videos_into_playlist', 'description': 'Inserts specific videos into an existing playlist.', 'parameters': {'type': 'object', 'properties': {'playlist_id': {'type': 'string', 'description': 'The ID of the playlist to which videos need to be added.'}, 'video_ids': {'type': 'array', 'description': 'A list of IDs of the videos to be added to the playlist.', 'items': {'type': 'string'}}}, 'required': ['playlist_id', 'video_ids']}, 'returns': {'type': 'string', 'description': 'A confirmation message stating successful addition of videos to the playlist.'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "insert_videos_into_playlist",
+        "description": "Inserts specific videos into an existing playlist.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "playlist_id": {
+                    "type": "string",
+                    "description": "The ID of the playlist to which videos need to be added."
+                },
+                "video_ids": {
+                    "type": "array",
+                    "description": "A list of IDs of the videos to be added to the playlist.",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": ["playlist_id", "video_ids"]
+        },
+        "returns": {
+            "type": "string",
+            "description": "A confirmation message stating successful addition of videos to the playlist."
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you add some videos to my playlist?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please provide me the ID of the playlist and the IDs of the videos you want to add."
+        },
+        {
+            "role": "user",
+            "text": "The ID of the playlist is '12345' and the video IDs are ['6789', '9876']."
+        },
+        {
+            "role": "assistant",
+            "text": "Great, I'm adding the videos to your playlist now."
+        }
+    ],
+    "function_call": {
+        "function_name": "insert_videos_into_playlist",
+        "parameters": {
+            "playlist_id": "12345",
+            "video_ids": ["6789", "9876"]
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def delete_videos_from_playlist(\n    playlist_id: str,\n    video_ids: List[str]\n) -> Dict[str, str]:\n    """\n    Deletes videos from a playlist and returns a status message.\n\n    Parameters:\n        playlist_id (str): The ID of the playlist.\n        video_ids (List[str]): A list of video IDs to be deleted from the playlist.\n\n    Returns:\n        Dict[str, str]: A dictionary with \'status\' as a key and the status message as a value.\n    """\n', 'function_description': {'name': 'delete_videos_from_playlist', 'description': 'Deletes videos from a playlist and returns a status message.', 'parameters': {'type': 'object', 'properties': {'playlist_id': {'type': 'string', 'description': 'The ID of the playlist.'}, 'video_ids': {'type': 'array', 'description': 'A list of video IDs to be deleted from the playlist.', 'items': {'type': 'string'}}}, 'required': ['playlist_id', 'video_ids']}, 'returns': {'type': 'object', 'properties': {'status': {'type': 'string', 'description': 'The status message.'}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "delete_videos_from_playlist",
+        "description": "Deletes videos from a playlist and returns a status message.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "playlist_id": {
+                    "type": "string",
+                    "description": "The ID of the playlist."
+                },
+                "video_ids": {
+                    "type": "array",
+                    "description": "A list of video IDs to be deleted from the playlist.",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": ["playlist_id", "video_ids"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "string",
+                    "description": "The status message."
+                }
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, I want to delete some videos from a playlist."
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can help you with that. Please provide me the playlist ID and the video IDs you want to delete."
+        },
+        {
+            "role": "user",
+            "text": "The playlist ID is '12345' and the video IDs are ['abc123', 'def456']."
+        },
+        {
+            "role": "assistant",
+            "text": "Great, I will delete the videos from the playlist now."
+        }
+    ],
+    "function_call": {
+        "function_name": "delete_videos_from_playlist",
+        "parameters": {
+            "playlist_id": "12345",
+            "video_ids": ["abc123", "def456"]
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def modify_channel_details(\n    channel_id: str,\n    new_description: str,\n    new_profile_picture: str,\n    other_details: Dict[str, str]\n) -> None:\n    \n    """\n    Modifies the channel description, profile picture, and other details.\n\n    Parameters:\n        channel_id (str): The ID of the channel to modify.\n        new_description (str): The new description for the channel.\n        new_profile_picture (str): The new profile picture for the channel. This should be a URL or file path.\n        other_details (Dict[str, str]): A dictionary of other details to modify. The keys should be the detail names,\n                                         and the values should be the new values for those details.\n\n    Returns:\n        None\n    """\n\n', 'function_description': {'name': 'modify_channel_details', 'description': 'Modifies the channel description, profile picture, and other details.', 'parameters': {'type': 'object', 'properties': {'channel_id': {'type': 'string', 'description': 'The ID of the channel to modify.'}, 'new_description': {'type': 'string', 'description': 'The new description for the channel.'}, 'new_profile_picture': {'type': 'string', 'description': 'The new profile picture for the channel. This should be a URL or file path.'}, 'other_details': {'type': 'object', 'description': 'A dictionary of other details to modify. The keys should be the detail names, and the values should be the new values for those details.', 'additionalProperties': {'type': 'string'}}}, 'required': ['channel_id', 'new_description', 'new_profile_picture', 'other_details']}, 'returns': {'type': 'null'}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "modify_channel_details",
+        "description": "Modifies the channel description, profile picture, and other details.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "channel_id": {
+                    "type": "string",
+                    "description": "The ID of the channel to modify."
+                },
+                "new_description": {
+                    "type": "string",
+                    "description": "The new description for the channel."
+                },
+                "new_profile_picture": {
+                    "type": "string",
+                    "description": "The new profile picture for the channel. This should be a URL or file path."
+                },
+                "other_details": {
+                    "type": "object",
+                    "description": "A dictionary of other details to modify. The keys should be the detail names, and the values should be the new values for those details.",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": ["channel_id", "new_description", "new_profile_picture", "other_details"]
+        },
+        "returns": {
+            "type": "null"
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you help me modify my channel details?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can help you with that. Please provide me with the channel ID, new description, new profile picture, and other details you want to modify."
+        },
+        {
+            "role": "user",
+            "text": "My channel ID is '12345', the new description is 'Updated channel description', the new profile picture is 'https://example.com/profile.jpg', and I want to modify the 'website' detail to 'https://example.com'."
+        },
+        {
+            "role": "assistant",
+            "text": "Great! I will modify your channel details now."
+        }
+    ],
+    "function_call": {
+        "function_name": "modify_channel_details",
+        "parameters": {
+            "channel_id": "12345",
+            "new_description": "Updated channel description",
+            "new_profile_picture": "https://example.com/profile.jpg",
+            "other_details": {
+                "website": "https://example.com"
+            }
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def get_video_analytics(\n    video_id: str\n) -> Dict[str, Union[int, str]]:\n    """\n    Gets analytics such as views, watch time, and subscriber count for a specific video.\n\n    Parameters:\n        video_id (str): The ID of the video.\n\n    Returns:\n        Dict[str, Union[int, str]]: A dictionary with \'views\', \'watch_time\' and \'subscriber_count\' as keys, \n                                     and the corresponding values as values.\n    """\n    pass', 'function_description': {'name': 'get_video_analytics', 'description': 'Gets analytics such as views, watch time, and subscriber count for a specific video.', 'parameters': {'type': 'object', 'properties': {'video_id': {'type': 'string', 'description': 'The ID of the video.'}}, 'required': ['video_id']}, 'returns': {'type': 'object', 'properties': {'views': {'type': 'integer'}, 'watch_time': {'type': 'string'}, 'subscriber_count': {'type': 'integer'}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "get_video_analytics",
+        "description": "Gets analytics such as views, watch time, and subscriber count for a specific video.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "video_id": {
+                    "type": "string",
+                    "description": "The ID of the video."
+                }
+            },
+            "required": ["video_id"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "views": {"type": "integer"},
+                "watch_time": {"type": "string"},
+                "subscriber_count": {"type": "integer"}
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Can you provide me the analytics for a specific video?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Please provide me the ID of the video you want to get analytics for."
+        },
+        {
+            "role": "user",
+            "text": "The video ID is '123456789'."
+        },
+        {
+            "role": "assistant",
+            "text": "Great! I'm retrieving the analytics for the video with ID '123456789' now."
+        }
+    ],
+    "function_call": {
+        "function_name": "get_video_analytics",
+        "parameters": {
+            "video_id": "123456789"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def get_channel_analytics(channel_id: str) -> Dict[str, Any]:\n    """\n    Acquire broader analytics for the entire channel.\n\n    Parameters:\n        channel_id (str): The unique identifier for the channel.\n\n    Returns:\n        Dict[str, Any]: A dictionary containing various analytics data for the channel.\n    """\n    pass', 'function_description': {'name': 'get_channel_analytics', 'description': 'Acquire broader analytics for the entire channel.', 'parameters': {'type': 'object', 'properties': {'channel_id': {'type': 'string', 'description': 'The unique identifier for the channel.'}}, 'required': ['channel_id']}, 'returns': {'type': 'object', 'properties': {'type': 'any', 'description': 'A dictionary containing various analytics data for the channel.'}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "get_channel_analytics",
+        "description": "Acquire broader analytics for the entire channel.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "channel_id": {
+                    "type": "string",
+                    "description": "The unique identifier for the channel."
+                }
+            },
+            "required": ["channel_id"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "type": "any",
+                "description": "A dictionary containing various analytics data for the channel."
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you provide me with the analytics for my channel?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Can you please provide me with the channel ID?"
+        },
+        {
+            "role": "user",
+            "text": "Yes, the channel ID is '12345'."
+        },
+        {
+            "role": "assistant",
+            "text": "Great, I'm retrieving the analytics for your channel now."
+        }
+    ],
+    "function_call": {
+        "function_name": "get_channel_analytics",
+        "parameters": {
+            "channel_id": "12345"
+        }
+    }
+}
+
+user: 
+Below is the description of a function:
+    "function_description":
+    {'function_snippet': 'def capture_user_engagement(\nuser_id: str,\npost_id: str,\nlikes: int,\ndislikes: int,\ncomments: List[str],\n) -> Dict[str, Union[int, List[str]]]:\n    """\n    Captures user engagement data such as likes, dislikes, and comments.\n\n    Parameters:\n        user_id (str): The ID of the user.\n        post_id (str): The ID of the post.\n        likes (int): The number of likes the post has.\n        dislikes (int): The number of dislikes the post has.\n        comments (List[str]): A list of comments on the post.\n\n    Returns:\n        Dict[str, Union[int, List[str]]]: A dictionary containing \'likes\', \'dislikes\', and \'comments\' as keys,\n                                          and corresponding data as values.\n    """\n', 'function_description': {'name': 'capture_user_engagement', 'description': 'Captures user engagement data such as likes, dislikes, and comments.', 'parameters': {'type': 'object', 'properties': {'user_id': {'type': 'string', 'description': 'The ID of the user.'}, 'post_id': {'type': 'string', 'description': 'The ID of the post.'}, 'likes': {'type': 'integer', 'description': 'The number of likes the post has.'}, 'dislikes': {'type': 'integer', 'description': 'The number of dislikes the post has.'}, 'comments': {'type': 'array', 'description': 'A list of comments on the post.', 'items': {'type': 'string'}}}, 'required': ['user_id', 'post_id', 'likes', 'dislikes', 'comments']}, 'returns': {'type': 'object', 'properties': {'likes': {'type': 'integer', 'description': 'The number of likes the post has.'}, 'dislikes': {'type': 'integer', 'description': 'The number of dislikes the post has.'}, 'comments': {'type': 'array', 'description': 'A list of comments on the post.', 'items': {'type': 'string'}}}}}}
+
+
+A user is asking an assisstant a request that would eventually call the function, can you write that conversation for me.
+Return the output as this example:
+    {
+        "function_description":
+        
+"function_description": {
+    "name": "example_function",
+    "description": "Retrieves a user's timeline, including tweets, retweets, and replies.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "user_id": {
+                "type": "string",
+                "description": "The ID of the user."
+            }
+        },
+        "required": ["user_id"]
+    },
+    "returns": {
+        "type": "object",
+        "properties": {
+            "tweet_id": {"type": "string"},
+            "text": {"type": "string"},
+            "author": {"type": "string"},
+            "date": {"type": "string"}
+        }
+    }
+}
+,
+        "conversation": 
+[
+    {
+        "role": "user",
+        "text": "Hey, can you show me my Twitter timeline?"
+    },
+    {
+        "role": "assistant",
+        "text": "Sure, I can do that. May I know your Twitter user ID?"
+    },
+    {
+        "role": "user",
+        "text": "Yes, my Twitter user ID is '13579'."
+    },
+    {
+        "role": "assistant",
+        "text": "Great, I'm retrieving your Twitter timeline now."
+    }
+]
+,
+        "function_call": 
+{
+    "function_name": "example_function",
+    "parameters": {
+        "user_id": "13579"
+    }
+}
+
+    }
+
+
+assistant: {
+    "function_description": {
+        "name": "capture_user_engagement",
+        "description": "Captures user engagement data such as likes, dislikes, and comments.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "user_id": {
+                    "type": "string",
+                    "description": "The ID of the user."
+                },
+                "post_id": {
+                    "type": "string",
+                    "description": "The ID of the post."
+                },
+                "likes": {
+                    "type": "integer",
+                    "description": "The number of likes the post has."
+                },
+                "dislikes": {
+                    "type": "integer",
+                    "description": "The number of dislikes the post has."
+                },
+                "comments": {
+                    "type": "array",
+                    "description": "A list of comments on the post.",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": ["user_id", "post_id", "likes", "dislikes", "comments"]
+        },
+        "returns": {
+            "type": "object",
+            "properties": {
+                "likes": {
+                    "type": "integer",
+                    "description": "The number of likes the post has."
+                },
+                "dislikes": {
+                    "type": "integer",
+                    "description": "The number of dislikes the post has."
+                },
+                "comments": {
+                    "type": "array",
+                    "description": "A list of comments on the post.",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    },
+    "conversation": [
+        {
+            "role": "user",
+            "text": "Hey, can you capture my user engagement data?"
+        },
+        {
+            "role": "assistant",
+            "text": "Sure, I can do that. Can you provide me with your user ID?"
+        },
+        {
+            "role": "user",
+            "text": "Yes, my user ID is '12345'."
+        },
+        {
+            "role": "assistant",
+            "text": "Great! Now, please provide me with the post ID."
+        },
+        {
+            "role": "user",
+            "text": "The post ID is '98765'."
+        },
+        {
+            "role": "assistant",
+            "text": "Thank you. Lastly, please provide me with the number of likes and dislikes for the post."
+        },
+        {
+            "role": "user",
+            "text": "The post has 100 likes and 20 dislikes."
+        },
+        {
+            "role": "assistant",
+            "text": "Got it. Lastly, can you provide me with the comments on the post?"
+        },
+        {
+            "role": "user",
+            "text": "Sure, here are the comments: ['Great post!', 'I disagree with your point.', 'Nice work!']"
+        },
+        {
+            "role": "assistant",
+            "text": "Thank you for providing all the information. I will now capture your user engagement data."
+        }
+    ],
+    "function_call": {
+        "function_name": "capture_user_engagement",
+        "parameters": {
+            "user_id": "12345",
+            "post_id": "98765",
+            "likes": 100,
+            "dislikes": 20,
+            "comments": ["Great post!", "I disagree with your point.", "Nice work!"]
+        }
+    }
+}
+
